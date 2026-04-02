@@ -24,7 +24,7 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // Lógica de búsqueda
+  // Lógica de búsqueda mejorada
   const filteredData = useMemo(() => {
     if (!searchTerm) return yearsDataRaw;
     
@@ -40,11 +40,22 @@ export default function Home() {
     })).filter(year => year.subjects.length > 0);
   }, [searchTerm]);
 
+  // CIRUGÍA DE TABLAS: Limpieza y formateo del Markdown
   useEffect(() => {
     if (selectedMd) {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
-        .then(text => setContent(text))
+        .then(text => {
+          // 1. Asegura líneas vacías antes y después de las tablas (|)
+          // 2. Elimina etiquetas de citación residuales que rompen el formato
+          const formattedText = text
+            .replace(/\n\|/g, '\n\n|') 
+            .replace(/\|(\n\s*\n)?/g, '|\n')
+            .replace(/\/g, '')
+            .replace(/\[cite_start\]/g, '');
+          
+          setContent(formattedText);
+        })
         .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
     }
   }, [selectedMd]);
@@ -104,7 +115,7 @@ export default function Home() {
                         {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
                           <div className="ml-4 space-y-1">
                             {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-500 hover:text-gray-300'}`}>
+                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-300'}`}>
                                 • {topic.label}
                               </button>
                             ))}
@@ -133,7 +144,7 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12">
           {selectedMd ? (
-            <article className="max-w-3xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto">
+            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4">
               <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           ) : (
