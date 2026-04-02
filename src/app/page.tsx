@@ -113,20 +113,20 @@ export default function Home() {
             <Menu className="w-5 h-5" />
           </button>
           <div className="ml-4 flex items-center gap-2 text-xs text-gray-500">
-             <span>Medpath</span>
-             {selectedPdf && (
-               <>
-                 <ChevronRight className="w-3 h-3" />
-                 <span className="text-purple-400 uppercase">{selectedPdf.replace(/-/g, ' ')}</span>
-               </>
-             )}
+              <span>Medpath</span>
+              {selectedPdf && (
+                <>
+                  <ChevronRight className="w-3 h-3" />
+                  <span className="text-purple-400 uppercase">{selectedPdf.replace(/-/g, ' ')}</span>
+                </>
+              )}
           </div>
         </header>
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-hidden relative">
           {selectedPdf ? (
             <iframe 
-              src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`} 
-              className="w-full h-[calc(100%+56px)] -mt-[56px] border-none" 
+              src={`https://docs.google.com/viewer?url=https://biblioteca-medica.vercel.app/pdfs/${selectedPdf}.pdf&embedded=true`} 
+              className="absolute inset-0 w-full h-full border-none" 
               title="PDF Viewer" 
             />
           ) : (
