@@ -24,10 +24,8 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // Lógica de búsqueda
   const filteredData = useMemo(() => {
     if (!searchTerm) return yearsDataRaw;
-    
     return yearsDataRaw.map(year => ({
       ...year,
       subjects: year.subjects.map(sub => ({
@@ -40,13 +38,12 @@ export default function Home() {
     })).filter(year => year.subjects.length > 0);
   }, [searchTerm]);
 
-  // CIRUGÍA DE TABLAS Y FORMATEO
   useEffect(() => {
     if (selectedMd) {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // Aseguramos espacios para las tablas y removemos etiquetas de citación
+          // LIMPIEZA DE TABLAS Y ETIQUETAS
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
@@ -72,7 +69,6 @@ export default function Home() {
           <span className="font-bold text-lg text-white">Medpath</span>
         </div>
 
-        {/* BUSCADOR */}
         <div className="p-4 border-b border-[#30363d] shrink-0">
           <div className="relative group">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500 group-focus-within:text-purple-400 transition-colors" />
@@ -81,7 +77,7 @@ export default function Home() {
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
             />
             {searchTerm && (
               <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5">
@@ -130,7 +126,7 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
@@ -141,7 +137,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto p-6 md:p-12">
+        <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117]">
           {selectedMd ? (
             <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4">
               <Markdown>{content}</Markdown>
