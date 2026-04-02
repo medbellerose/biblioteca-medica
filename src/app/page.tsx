@@ -39,22 +39,24 @@ export default function Home() {
   }, [searchTerm]);
 
   useEffect(() => {
-    if (selectedMd) {
-      fetch(`/apuntes/${selectedMd}.md`)
-        .then(res => res.text())
-        .then(text => {
-          // LIMPIEZA DE TABLAS Y ETIQUETAS - VERSIÓN CORREGIDA
-          const formattedText = text
-            .replace(/\n\|/g, '\n\n|') 
-            .replace(/\|(\n\s*\n)?/g, '|\n')
-            .replace(/\/g, '')
-            .replace(/\[cite_start\]/g, '')
-            .replace(/\[cite_end\]/g, '');
-          
-          setContent(formattedText);
-        })
-        .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
-    }
+    if (!selectedMd) return;
+
+    const fetchContent = async () => {
+      try {
+        const res = await fetch(`/apuntes/${selectedMd}.md`);
+        const text = await res.text();
+        
+        // LIMPIEZA SEGURA: Usamos constantes separadas para evitar errores de sintaxis
+        const cleanTables = text.replace(/\n\|/g, '\n\n|').replace(/\|(\n\s*\n)?/g, '|\n');
+        const cleanCites = cleanTables.replace(/\/g, '').replace(/\[cite_start\]/g, '').replace(/\[cite_end\]/g, '');
+        
+        setContent(cleanCites);
+      } catch (err) {
+        setContent('# Error\nNo se pudo cargar el apunte.');
+      }
+    };
+
+    fetchContent();
   }, [selectedMd]);
 
   const handleSelection = (file: string) => {
@@ -71,7 +73,7 @@ export default function Home() {
         </div>
 
         <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative group text-white">
+          <div className="relative group">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
@@ -111,7 +113,7 @@ export default function Home() {
                         {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
                           <div className="ml-4 space-y-1">
                             {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-200'}`}>
+                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-300'}`}>
                                 • {topic.label}
                               </button>
                             ))}
@@ -127,7 +129,7 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden text-white">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
