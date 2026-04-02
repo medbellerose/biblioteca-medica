@@ -5,7 +5,7 @@ import {
   Brain, Menu, ChevronRight, BookOpen, ChevronDown,
   FileText, Microscope, Dna, Activity, Stethoscope, Search, X
 } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import yearsDataRaw from './apuntes.json';
 
 const iconMap: { [key: number]: any } = {
@@ -24,7 +24,7 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // Lógica de búsqueda mejorada
+  // Lógica de búsqueda
   const filteredData = useMemo(() => {
     if (!searchTerm) return yearsDataRaw;
     
@@ -40,14 +40,13 @@ export default function Home() {
     })).filter(year => year.subjects.length > 0);
   }, [searchTerm]);
 
-  // CIRUGÍA DE TABLAS: Limpieza y formateo del Markdown
+  // CIRUGÍA DE TABLAS Y FORMATEO
   useEffect(() => {
     if (selectedMd) {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // 1. Asegura líneas vacías antes y después de las tablas (|)
-          // 2. Elimina etiquetas de citación residuales que rompen el formato
+          // Aseguramos espacios para las tablas y removemos etiquetas de citación
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
@@ -145,7 +144,7 @@ export default function Home() {
         <div className="flex-1 overflow-y-auto p-6 md:p-12">
           {selectedMd ? (
             <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4">
-              <ReactMarkdown>{content}</ReactMarkdown>
+              <Markdown>{content}</Markdown>
             </article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
