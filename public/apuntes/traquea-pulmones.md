@@ -1,66 +1,277 @@
-# [cite_start]Compendio Integral de Anatomía Humana: Tráquea y Pulmones [cite: 1, 24]
+# TRAQUEA Y PULMONES
 
-## [cite_start]1. Introducción y Embriología [cite: 2, 25]
-[cite_start]El sistema respiratorio es vital para la **hematosis** (intercambio de oxígeno y expulsión de desechos)[cite: 26]. [cite_start]El desarrollo embriológico es crítico; fallos en este plano pueden causar[cite: 27]:
-* [cite_start]**Fístula traqueoesofágica:** Si el tabique entre el esófago y la tráquea no cierra correctamente[cite: 28].
-* [cite_start]**Agenesia pulmonar:** Si un pulmón no logra desarrollarse[cite: 28].
+| RELACIONES |  |
+| --- | --- |
+| [GENERALIDADES](https://www.notion.so/GENERALIDADES-08bb8bcf0e9f45bb9e7e414200fe7b94?pvs=21)  | HISTOLOGÍA |
+| [SISTEMA RESPIRATORIO](https://www.notion.so/SISTEMA-RESPIRATORIO-eef14908c16f49f1bd042bd2921a2fa2?pvs=21)  | EMBRIOLOGÍA |
 
+![Untitled](Untitled.png)
 
-## [cite_start]2. Análisis Funcional y Jerarquía [cite: 3, 29]
-[cite_start]El sistema se organiza en dos porciones principales[cite: 30]:
-* [cite_start]**Porción Superior:** Fosas nasales, faringe y laringe[cite: 31].
-* [cite_start]**Porción Inferior:** Tráquea, bronquios (principales, lobares, segmentarios) hasta la unidad alveolar[cite: 32, 41, 46].
+# TRAQUEA Y PULMONES
 
-### [cite_start]El Alvéolo: Unidad Crítica [cite: 4, 95]
-[cite_start]Es la superficie de intercambio gaseoso donde la barrera entre el aire y la sangre se reduce a micras para permitir una difusión eficiente[cite: 96, 97].
+- Porción superior
+    - Fosas nasales
+    - Faringe
+    - laringe
+- Porción Inferior
+    - Traquea
+    - bronquios fuentes principales
+    - bronquios lobares
+    - segmentarios
+    - subsegmentarios
+    - alveolos (UNIDAD FUNCIONAL: membrana alveolo-capilar)
 
+## ALVEOLO
 
-## [cite_start]3. La Tráquea: Arquitectura y Relaciones [cite: 5, 99]
-[cite_start]Es un conducto fibromusculocartilaginoso de unos 13 cm de longitud (6 cm cervicales) y 2 cm de diámetro[cite: 100, 103]. [cite_start]Se origina en el borde inferior del cartílago cricoides (C6) y termina bifurcándose en la **Carina** (T4)[cite: 104, 116].
+![Untitled](Untitled%201.png)
 
-### [cite_start]Tabla de Datos Clave: Tráquea [cite: 115]
-| Categoría | Detalles Anatómicos |
-| :--- | :--- |
-| **Niveles Vertebrales** | Origen: C6. [cite_start]Bifurcación: T4 (Carina)[cite: 116]. |
-| **Relación Anterior** | [cite_start]Istmo tiroideo ($2^{\circ}-3^{\circ}$ anillo), arco aórtico[cite: 117]. |
-| **Relación Posterior** | [cite_start]Siempre en contacto con el esófago[cite: 117]. |
-| **Relación Lateral** | [cite_start]Paquete vasculonervioso del cuello, nervios recurrentes[cite: 117]. |
-| **Vascularización** | Arterias tiroideas y bronquiales. [cite_start]Venas ácigos[cite: 117]. |
+![Untitled](Untitled%202.png)
 
-> [cite_start]**Nota clínica:** El nervio laríngeo recurrente izquierdo es más profundo porque rodea el arco de la aorta, mientras que el derecho rodea la arteria subclavia[cite: 118].
+# TRAQUEA
 
-## [cite_start]4. Bronquios Principales [cite: 13, 125]
-[cite_start]Existe una asimetría fundamental entre ambos bronquios, lo que explica por qué los cuerpos extraños suelen irse al lado derecho[cite: 123, 183].
+- Cartilaginoso
+- Desde parte inferior de laringe en cartilago cricoides (sexta vertebra cervical)  hasta T3-4 bifurca carina traqueal
+- Sucesion de anillos cartilaginosos unidos por depresiones interanulares
+- Incompletos ya que a posterior está el músculo traqueal
+- Estructura cilíndrica longitudinal de superior a inferior de anterior a posterior (es más superficial) y eje inclinado a la derecha
 
-| Característica | Bronquio Derecho | Bronquio Izquierdo |
-| :--- | :--- | :--- |
-| **Dirección** | [cite_start]Más vertical (aparta $20^{\circ}$)[cite: 127]. | [cite_start]Más horizontal (aparta $35^{\circ}$)[cite: 127]. |
-| **Dimensiones** | [cite_start]Más ancho y corto (35 mm)[cite: 127]. | [cite_start]Más estrecho y largo[cite: 127]. |
-| **División** | [cite_start]3 bronquios lobares[cite: 127]. | [cite_start]2 bronquios lobares[cite: 127]. |
+![capture-2022-09-26-18-37-45.jpg](capture-2022-09-26-18-37-45.jpg)
 
+## TRAQUEA: PORCIÓN CERVICAL
 
-## [cite_start]5. Anatomía del Pulmón [cite: 15, 133]
-[cite_start]Órganos elásticos con tres caras (costal, mediastínica y diafragmática)[cite: 137].
+ 
 
-| Característica | Pulmón Derecho | Pulmón Izquierdo |
-| :--- | :--- | :--- |
-| **Lóbulos** | [cite_start]3 (Superior, Medio, Inferior)[cite: 134]. | [cite_start]2 (Superior, Inferior)[cite: 134]. |
-| **Fisuras** | [cite_start]Oblicua y Horizontal[cite: 134]. | [cite_start]Solo Oblicua[cite: 134]. |
-| **Estructura Única** | - | [cite_start]Língula (homólogo al lóbulo medio)[cite: 134]. |
+![Untitled](Untitled%203.png)
 
-## [cite_start]6. Segmentación y Correlación Clínica [cite: 18, 142]
-[cite_start]Cada pulmón se divide en segmentos que funcionan como unidades independientes, permitiendo cirugías como la **segmentectomía**[cite: 184, 185].
-* [cite_start]**Pulmón Derecho:** 10 segmentos[cite: 181].
-* [cite_start]**Pulmón Izquierdo:** 8-9 segmentos[cite: 181].
+- Itsmo de glándula tiroides en 2do anillo traqueal
+- Relación con M. Esternohioideo y M. Esternotiroideo
 
+[Músculo esternotiroideo](https://dolopedia.com/articulo/musculo-esternotiroideo#.Y0aIUFKZOUk)
 
-## [cite_start]7. Pleura e Irrigación [cite: 22, 190]
-* **Pleura:** Serosa que permite el acoplamiento mecánico. [cite_start]El pulmón depende de la presión negativa para expandirse[cite: 192, 194].
-* **Doble Irrigación:**
-    * [cite_start]**Funcional:** Arterias pulmonares (hematosis)[cite: 192].
-    * [cite_start]**Nutricia:** Arterias bronquiales (oxigenan el tejido)[cite: 192, 196].
+### RELACIONES
+
+- Relación anterior característica por venas tiroideas inferiores
+- N. Laringeo recurrente
+- Arteria tiroidea inferior
+- Lateral con PVN del cuello
+- Esófago levemente hacia izquierda
+    - Relación con paquete laríngeo derecho sea desde su cara posterior
+    - paquete laríngeo izquierdo por ángulo traqueo-esofágico
+
+![capture-2022-09-26-18-40-11.jpg](capture-2022-09-26-18-40-11.jpg)
+
+## TRAQUEA: PORCIÓN TORÁCICA
+
+- Límite entre cuello y caja torácica por **ABERTURA TORACICA SUPERIOR**
+    - Posterior: borde superior de primera vertebra torácica o dorsal
+    - Lateral: Primera costilla
+    - Superior: Límite superior del manubrio esternal (escotadura yugular)
+
+### RELACIONES ANTERIORES
+
+![capture-2022-09-26-18-42-26.jpg](capture-2022-09-26-18-42-26.jpg)
+
+![capture-2022-09-26-18-43-31.jpg](capture-2022-09-26-18-43-31.jpg)
+
+### RELACIONES CARA LATERAL DERECHA 🚩
+
+![capture-2022-09-26-18-44-13.jpg](capture-2022-09-26-18-44-13.jpg)
+
+### RELACIONES CARA LATERAL IZQUIERDA
+
+![capture-2022-09-26-18-48-53.jpg](capture-2022-09-26-18-48-53.jpg)
+
+![capture-2022-09-26-18-50-19.jpg](capture-2022-09-26-18-50-19.jpg)
+
+## IRRIGACIÓN
+
+![capture-2022-09-26-18-50-37.jpg](capture-2022-09-26-18-50-37.jpg)
+
+### RELACIONES ANORMALES
+
+![Untitled](Untitled%204.png)
+
+- Nacimientos anómalos de alguno delos grandes vasos
+    - Izquierda nace rama izquierda de arteria pulmonar de manera patológica y pasa por detrás al igual que arteria subclavia derecha (compresión posterior de luz traqueal)
+
+![capture-2022-09-26-18-53-49.jpg](capture-2022-09-26-18-53-49.jpg)
+
+# LIMITE INFERIOR: BRONQUIOS PRINCIPALES
+
+![Untitled](Untitled%205.png)
+
+![Untitled](Untitled%206.png)
+
+![Untitled](Untitled%207.png)
+
+# PEDÍCULO PULMONAR
+
+![Untitled](Untitled%208.png)
+
+- VENAS PULMONARES DE ROJO
+- ARTERIA PULMONAR DE AZUL
+
+## PEDÍCULO PULMONAR DERECHO
+
+![capture-2022-09-26-19-12-12.jpg](capture-2022-09-26-19-12-12.jpg)
+
+![Untitled](Untitled%209.png)
+
+## PEDÍCULO PULMONAR IZQUIERDO
+
+![Untitled](Untitled%2010.png)
 
 ---
 
-### [cite_start]Referencia Bibliográfica [cite: 124]
-* *Anatomía Clínica, Eduardo Pró, 2ª Edición.*
+![Untitled](Untitled%2011.png)
+
+![capture-2022-09-26-19-17-52.jpg](capture-2022-09-26-19-17-52.jpg)
+
+![capture-2022-09-26-19-20-03.jpg](capture-2022-09-26-19-20-03.jpg)
+
+![capture-2022-09-26-19-20-48.jpg](capture-2022-09-26-19-20-48.jpg)
+
+![capture-2022-09-26-19-23-43.jpg](capture-2022-09-26-19-23-43.jpg)
+
+![capture-2022-09-26-19-24-30.jpg](capture-2022-09-26-19-24-30.jpg)
+
+## IRRIGACIÓN DE LOS BRONQUIOS PRINCIPALES
+
+![capture-2022-09-26-19-25-17.jpg](capture-2022-09-26-19-25-17.jpg)
+
+# SEGMENTACIÓN BRONCOPULMONAR
+
+![capture-2022-09-26-19-25-57.jpg](capture-2022-09-26-19-25-57.jpg)
+
+![capture-2022-09-26-19-26-14.jpg](capture-2022-09-26-19-26-14.jpg)
+
+![capture-2022-09-26-19-27-11.jpg](capture-2022-09-26-19-27-11.jpg)
+
+![capture-2022-09-26-19-27-29.jpg](capture-2022-09-26-19-27-29.jpg)
+
+![capture-2022-09-26-19-28-23.jpg](capture-2022-09-26-19-28-23.jpg)
+
+![Untitled](Untitled%2012.png)
+
+![capture-2022-09-26-19-29-07.jpg](capture-2022-09-26-19-29-07.jpg)
+
+![Untitled](Untitled%2013.png)
+
+![Untitled](Untitled%2014.png)
+
+![Untitled](Untitled%2015.png)
+
+# CUERPO EXTRAÑO EN VÍA AEREA
+
+![Untitled](Untitled%2016.png)
+
+![Untitled](Untitled%2017.png)
+
+# PULMÓN
+
+![Untitled](Untitled%2018.png)
+
+- Tejido con alta cantidd de fibras de ELASTINA
+- Estructuras:
+    - Parte del sistema de conducción
+    - Irrigación
+
+![Untitled](Untitled%2019.png)
+
+## PULMON DERECHO
+
+![capture-2022-09-26-19-15-22.jpg](capture-2022-09-26-19-15-22.jpg)
+
+![Untitled](Untitled%2020.png)
+
+## PULMON IZQUIERDO
+
+![capture-2022-09-26-19-16-45.jpg](capture-2022-09-26-19-16-45.jpg)
+
+![Untitled](Untitled%2021.png)
+
+## CARAS DEL PULMON
+
+### CARA COSTAL
+
+![Untitled](Untitled%2022.png)
+
+### CARA MEDIASTÍNICA
+
+- PULMON DERECHO
+
+![Untitled](Untitled%2023.png)
+
+- relaciones
+    - impronta cardiaca
+    - relacion con sistema venoso
+    - vena cana inferios o superior
+    - vena acigos
+    - esofago
+- PULMON IZQUIERDO
+
+![Untitled](Untitled%2024.png)
+
+### CARA INFERIOR O DIAFRAGMATICA
+
+- concava
+
+![Untitled](Untitled%2025.png)
+
+## BORDES
+
+![Untitled](Untitled%2026.png)
+
+## VÉRTICE
+
+- borde superior de primera costilla
+- porción que sobresale es vértice o cúpula pulmonar
+- relación con ganglio estrellado
+
+![Untitled](Untitled%2027.png)
+
+![Untitled](Untitled%2028.png)
+
+# IRRIGACIÓN PULMONAR
+
+![Untitled](Untitled%2029.png)
+
+- VENAS Y ARTERIAS PULMONARES
+- VENAS Y ARTERIAS BRONQUIALES
+
+# INERVACIÓN PULMONAR
+
+![Untitled](Untitled%2030.png)
+
+![Untitled](Untitled%2031.png)
+
+# PLEURA
+
+![Untitled](Untitled%2032.png)
+
+![Untitled](Untitled%2033.png)
+
+![Untitled](Untitled%2034.png)
+
+- HILEO PULMONAR ESTA LIBRE DE PLEURA: ya que aqui se encuentra la continuidad entre hojas parietales y viscerales de la pleura
+
+![Untitled](Untitled%2035.png)
+
+![Untitled](Untitled%2036.png)
+
+![capture-2022-09-26-19-39-06.jpg](capture-2022-09-26-19-39-06.jpg)
+
+- NEUMOTORAX
+
+![Untitled](Untitled%2037.png)
+
+---
+
+# BIOMECÁNICA
+
+[Biomecánica respiratoria. Dra. Gimena Donth Leger #BarcelóLive](https://www.youtube.com/watch?v=XKW2uQbnfKI)
+
+- Inspiración
+- Expiración
+
+Uso distintos músculos para cada uno, generando una diferencia de presión y volumen entre mi cavidad interna y la presión atmosférica.
