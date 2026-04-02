@@ -43,7 +43,7 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA DEFINITIVA SIN EXPRESIONES ROTAS
+          // LIMPIEZA SEGURA DE TABLAS Y ETIQUETAS
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
@@ -65,20 +65,20 @@ export default function Home() {
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
-        <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0">
+        <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
-          <span className="font-bold text-lg text-white">Medpath</span>
+          <span>Medpath</span>
         </div>
 
         <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative group">
-            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500 group-focus-within:text-purple-400 transition-colors" />
+          <div className="relative group text-white">
+            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
             />
             {searchTerm && (
               <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
@@ -111,7 +111,7 @@ export default function Home() {
                         {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
                           <div className="ml-4 space-y-1">
                             {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-300'}`}>
+                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-200'}`}>
                                 • {topic.label}
                               </button>
                             ))}
@@ -127,7 +127,7 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden text-white">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
