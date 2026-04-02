@@ -5,48 +5,23 @@ import {
   Brain, Menu, ChevronRight, BookOpen, ChevronDown,
   FileText, Microscope, Dna, Activity, Stethoscope
 } from 'lucide-react';
+import yearsDataRaw from './apuntes.json';
 
-const yearsData = [
-  {
-    year: 1, title: "Primer Año", icon: BookOpen,
-    subjects: [
-      { name: "Biología", topics: [{ label: "Célula", file: "celula" }, { label: "Metabolismo", file: "metabolismo" }] },
-      { name: "Anatomía", topics: [{ label: "Vértebras", file: "vertebras" }, { label: "Tráquea y Pulmones", file: "traquea-pulmones" }, { label: "SNC", file: "snc" }] },
-      { name: "Química", topics: [{ label: "Bioquímica Básica", file: "bioquimica-basica" }] }
-    ]
-  },
-  {
-    year: 2, title: "Segundo Año", icon: Microscope,
-    subjects: [
-      { name: "Histología", topics: [{ label: "Tejidos Básicos", file: "tejidos-basicos" }] },
-      { name: "Embriología", topics: [{ label: "Desarrollo Prenatal", file: "desarrollo-prenatal" }] },
-      { name: "Genética", topics: [{ label: "Herencia", file: "herencia" }] }
-    ]
-  },
-  {
-    year: 3, title: "Tercer Año", icon: Dna,
-    subjects: [
-      { name: "Fisiología", topics: [{ label: "Cardiovascular", file: "cardiovascular" }, { label: "Respiratoria", file: "respiratoria" }] },
-      { name: "Inmunología", topics: [{ label: "Innata", file: "innata" }, { label: "Adaptativa", file: "adaptativa" }] }
-    ]
-  },
-  {
-    year: 4, title: "Cuarto Año", icon: Activity,
-    subjects: [
-      { name: "Farmacología", topics: [{ label: "Farmacocinética", file: "farmacocinetica" }] },
-      { name: "Semiología", topics: [{ label: "Inspección", file: "inspeccion" }, { label: "Auscultación", file: "auscultacion" }] },
-      { name: "Patología", topics: [{ label: "Inflamación", file: "inflamacion" }] }
-    ]
-  },
-  {
-    year: 5, title: "Quinto Año", icon: Stethoscope,
-    subjects: [
-      { name: "Nutrición", topics: [{ label: "Evaluación Nutricional", file: "evaluacion-nutricional" }] },
-      { name: "Medicina Interna", topics: [{ label: "Cardiología", file: "cardiologia" }, { label: "Nefrología", file: "nefrologia" }] },
-      { name: "Psiquiatría", topics: [{ label: "Trastornos del Humor", file: "trastornos-humor" }] }
-    ]
-  }
-];
+const iconMap: { [key: number]: any } = {
+  1: BookOpen,
+  2: Microscope,
+  3: Dna,
+  4: Activity,
+  5: Stethoscope
+};
+
+const yearsTitles: { [key: number]: string } = {
+  1: "Primer Año",
+  2: "Segundo Año",
+  3: "Tercer Año",
+  4: "Cuarto Año",
+  5: "Quinto Año"
+};
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -65,21 +40,22 @@ export default function Home() {
           <span className="font-bold text-lg">Medpath</span>
         </div>
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
-          {yearsData.map((year) => {
-            const isYearExpanded = expandedYears[year.year];
+          {yearsDataRaw.map((yearData) => {
+            const YearIcon = iconMap[yearData.year] || BookOpen;
+            const isYearExpanded = expandedYears[yearData.year];
             return (
-              <div key={year.year} className="space-y-1">
-                <button onClick={() => toggleYear(year.year)} className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d] hover:text-white transition">
+              <div key={yearData.year} className="space-y-1">
+                <button onClick={() => toggleYear(yearData.year)} className="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d] hover:text-white transition">
                   <div className="flex items-center gap-2">
-                    <year.icon className="w-4 h-4 text-gray-500" />
-                    <span>{year.title}</span>
+                    <YearIcon className="w-4 h-4 text-gray-500" />
+                    <span>{yearsTitles[yearData.year]}</span>
                   </div>
                   <ChevronDown className={`w-4 h-4 text-gray-600 transition-transform ${isYearExpanded ? 'rotate-180' : ''}`} />
                 </button>
                 {isYearExpanded && (
                   <div className="ml-3 pl-1 space-y-1 border-l border-[#30363d]/50">
-                    {year.subjects.map((subject, idx) => {
-                      const subjectKey = `${year.year}-${subject.name}`;
+                    {yearData.subjects.map((subject, idx) => {
+                      const subjectKey = `${yearData.year}-${subject.name}`;
                       const isSubjectExpanded = expandedSubjects[subjectKey];
                       return (
                         <div key={idx}>
@@ -123,27 +99,27 @@ export default function Home() {
           </div>
         </header>
         <div className="flex-1 overflow-hidden relative bg-[#0d1117]">
-  {selectedPdf ? (
-    <object
-      data={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
-      type="application/pdf"
-      className="w-full h-full"
-      style={{ minHeight: 'calc(100vh - 56px)' }}
-    >
-      <iframe 
-        src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
-        className="w-full h-full border-none"
-        title="PDF Viewer"
-      />
-    </object>
-  ) : (
-    <div className="h-full flex flex-col items-center justify-center text-center">
-      <FileText className="w-12 h-12 text-gray-700 mb-4" />
-      <h2 className="text-xl font-bold">Medpath</h2>
-      <p className="text-gray-500 text-sm mt-2 px-4">Selecciona un apunte para comenzar a estudiar.</p>
-    </div>
-  )}
-</div>
+          {selectedPdf ? (
+            <object
+              key={selectedPdf}
+              data={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
+              type="application/pdf"
+              className="w-full h-full"
+            >
+              <iframe 
+                src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
+                className="w-full h-full border-none"
+                title="PDF Viewer"
+              />
+            </object>
+          ) : (
+            <div className="h-full flex flex-col items-center justify-center text-center">
+              <FileText className="w-12 h-12 text-gray-700 mb-4" />
+              <h2 className="text-xl font-bold">Medpath</h2>
+              <p className="text-gray-500 text-sm mt-2 px-4">Selecciona un apunte para comenzar a estudiar.</p>
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );

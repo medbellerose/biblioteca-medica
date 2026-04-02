@@ -1,0 +1,104 @@
+[
+  {
+    "year": 1,
+    "subjects": [
+      {
+        "name": "Biología",
+        "topics": [
+          { "label": "Célula", "file": "celula" },
+          { "label": "Metabolismo", "file": "metabolismo" }
+        ]
+      },
+      {
+        "name": "Anatomía",
+        "topics": [
+          { "label": "Vértebras", "file": "vertebras" },
+          { "label": "Tráquea y Pulmones", "file": "traquea-pulmones" },
+          { "label": "SNC", "file": "snc" }
+        ]
+      },
+      {
+        "name": "Química",
+        "topics": [
+          { "label": "Bioquímica Básica", "file": "bioquimica-basica" }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2,
+    "subjects": [
+      {
+        "name": "Histología",
+        "topics": [{ "label": "Tejidos Básicos", "file": "tejidos-basicos" }]
+      },
+      {
+        "name": "Embriología",
+        "topics": [{ "label": "Desarrollo Prenatal", "file": "desarrollo-prenatal" }]
+      },
+      {
+        "name": "Genética",
+        "topics": [{ "label": "Herencia", "file": "herencia" }]
+      }
+    ]
+  },
+  {
+    "year": 3,
+    "subjects": [
+      {
+        "name": "Fisiología",
+        "topics": [
+          { "label": "Cardiovascular", "file": "cardiovascular" },
+          { "label": "Respiratoria", "file": "respiratoria" }
+        ]
+      },
+      {
+        "name": "Inmunología",
+        "topics": [
+          { "label": "Innata", "file": "innata" },
+          { "label": "Adaptativa", "file": "adaptativa" }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 4,
+    "subjects": [
+      {
+        "name": "Farmacología",
+        "topics": [{ "label": "Farmacocinética", "file": "farmacocinetica" }]
+      },
+      {
+        "name": "Semiología",
+        "topics": [
+          { "label": "Inspección", "file": "inspeccion" },
+          { "label": "Auscultación", "file": "auscultacion" }
+        ]
+      },
+      {
+        "name": "Patología",
+        "topics": [{ "label": "Inflamación", "file": "inflamacion" }]
+      }
+    ]
+  },
+  {
+    "year": 5,
+    "subjects": [
+      {
+        "name": "Nutrición",
+        "topics": [{ "label": "Evaluación Nutricional", "file": "evaluacion-nutricional" }]
+      },
+      {
+        "name": "Medicina Interna",
+        "topics": [
+          { "label": "Cardiología", "file": "cardiologia" },
+          { "label": "Nefrología", "file": "nefrologia" }
+        ]
+      },
+      {
+        "name": "Psiquiatría",
+        "topics": [{ "label": "Trastornos del Humor", "file": "trastornos-humor" }]
+      }
+    ]
+  }
+]
