@@ -43,7 +43,8 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA SEGURA DE TABLAS Y ETIQUETAS (Línea corregida)
+          // LIMPIEZA DE CONTENIDO Y FORMATEO DE TABLAS
+          // Se eliminó la línea con error de sintaxis que causaba el fallo en Vercel
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
@@ -78,7 +79,7 @@ export default function Home() {
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
             />
             {searchTerm && (
               <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
