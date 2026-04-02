@@ -122,21 +122,28 @@ export default function Home() {
               )}
           </div>
         </header>
-        <div className="flex-1 overflow-hidden relative">
-          {selectedPdf ? (
-            <iframe 
-              src={`https://docs.google.com/viewer?url=https://biblioteca-medica.vercel.app/pdfs/${selectedPdf}.pdf&embedded=true`} 
-              className="absolute inset-0 w-full h-full border-none" 
-              title="PDF Viewer" 
-            />
-          ) : (
-            <div className="h-full flex flex-col items-center justify-center text-center">
-              <FileText className="w-12 h-12 text-gray-700 mb-4" />
-              <h2 className="text-xl font-bold">Medpath</h2>
-              <p className="text-gray-500 text-sm mt-2 px-4">Selecciona un apunte para comenzar a estudiar.</p>
-            </div>
-          )}
-        </div>
+        <div className="flex-1 overflow-hidden relative bg-[#0d1117]">
+  {selectedPdf ? (
+    <object
+      data={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
+      type="application/pdf"
+      className="w-full h-full"
+      style={{ minHeight: 'calc(100vh - 56px)' }}
+    >
+      <iframe 
+        src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
+        className="w-full h-full border-none"
+        title="PDF Viewer"
+      />
+    </object>
+  ) : (
+    <div className="h-full flex flex-col items-center justify-center text-center">
+      <FileText className="w-12 h-12 text-gray-700 mb-4" />
+      <h2 className="text-xl font-bold">Medpath</h2>
+      <p className="text-gray-500 text-sm mt-2 px-4">Selecciona un apunte para comenzar a estudiar.</p>
+    </div>
+  )}
+</div>
       </main>
     </div>
   );
