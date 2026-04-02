@@ -98,20 +98,14 @@ export default function Home() {
               )}
           </div>
         </header>
-        <div className="flex-1 overflow-hidden relative bg-[#0d1117]">
+        <div className="flex-1 overflow-hidden">
           {selectedPdf ? (
-            <object
+            <iframe 
               key={selectedPdf}
-              data={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
-              type="application/pdf"
-              className="w-full h-full"
-            >
-              <iframe 
-                src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`}
-                className="w-full h-full border-none"
-                title="PDF Viewer"
-              />
-            </object>
+              src={`/pdfs/${selectedPdf}.pdf#toolbar=0&navpanes=0`} 
+              className="w-full h-[calc(100%+56px)] -mt-[56px] border-none" 
+              title="PDF Viewer" 
+            />
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
               <FileText className="w-12 h-12 text-gray-700 mb-4" />
