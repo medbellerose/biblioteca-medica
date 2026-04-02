@@ -43,7 +43,7 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA SEGURA DE TABLAS Y ETIQUETAS
+          // LIMPIEZA SEGURA DE TABLAS Y ETIQUETAS (Línea corregida)
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
