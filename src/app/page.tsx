@@ -43,13 +43,13 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA DE TABLAS Y ETIQUETAS - CORREGIDO
+          // LIMPIEZA DE TABLAS Y ETIQUETAS - VERSION SEGURA
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
             .replace(/\/g, '')
             .replace(/\[cite_start\]/g, '')
-            .replace(/\[cite_end\]/g, ''); // Limpiamos también el final de cita
+            .replace(/\[cite_end\]/g, '');
           
           setContent(formattedText);
         })
@@ -81,8 +81,8 @@ export default function Home() {
               className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
             />
             {searchTerm && (
-              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5">
-                <X className="w-4 h-4 text-gray-500 hover:text-white" />
+              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
+                <X className="w-4 h-4" />
               </button>
             )}
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase text-white">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.replace(/-/g, ' ')}</span></>}
           </div>
@@ -145,4 +145,13 @@ export default function Home() {
             </article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
-              <Brain className="w-16 h-16 text-gray
+              <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
+              <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
+              <p className="text-gray-500 text-sm mt-2 font-white">Busca un tema y comienza a estudiar.</p>
+            </div>
+          )}
+        </div>
+      </main>
+    </div>
+  );
+}
