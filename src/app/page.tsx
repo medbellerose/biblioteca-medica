@@ -43,7 +43,7 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA DE TABLAS Y ETIQUETAS - VERSION SEGURA
+          // LIMPIEZA DEFINITIVA SIN EXPRESIONES ROTAS
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
@@ -127,12 +127,12 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden text-white">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase text-white">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.replace(/-/g, ' ')}</span></>}
           </div>
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="h-full flex flex-col items-center justify-center text-center">
               <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
               <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
-              <p className="text-gray-500 text-sm mt-2 font-white">Busca un tema y comienza a estudiar.</p>
+              <p className="text-gray-500 text-sm mt-2">Busca un tema y comienza a estudiar.</p>
             </div>
           )}
         </div>
