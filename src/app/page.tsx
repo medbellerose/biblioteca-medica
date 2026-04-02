@@ -43,12 +43,13 @@ export default function Home() {
       fetch(`/apuntes/${selectedMd}.md`)
         .then(res => res.text())
         .then(text => {
-          // LIMPIEZA DE TABLAS Y ETIQUETAS
+          // LIMPIEZA DE TABLAS Y ETIQUETAS - CORREGIDO
           const formattedText = text
             .replace(/\n\|/g, '\n\n|') 
             .replace(/\|(\n\s*\n)?/g, '|\n')
             .replace(/\/g, '')
-            .replace(/\[cite_start\]/g, '');
+            .replace(/\[cite_start\]/g, '')
+            .replace(/\[cite_end\]/g, ''); // Limpiamos también el final de cita
           
           setContent(formattedText);
         })
@@ -144,13 +145,4 @@ export default function Home() {
             </article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
-              <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
-              <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
-              <p className="text-gray-500 text-sm mt-2">Busca un tema y comienza a estudiar.</p>
-            </div>
-          )}
-        </div>
-      </main>
-    </div>
-  );
-}
+              <Brain className="w-16 h-16 text-gray
