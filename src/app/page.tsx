@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { 
   Brain, Menu, ChevronRight, BookOpen, ChevronDown,
-  FileText, Microscope, Dna, Activity, Stethoscope
+  FileText, Microscope, Dna, Activity, Stethoscope, Search, X
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import yearsDataRaw from './apuntes.json';
@@ -20,8 +20,25 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedMd, setSelectedMd] = useState<string | null>(null);
   const [content, setContent] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
+
+  // Lógica de búsqueda
+  const filteredData = useMemo(() => {
+    if (!searchTerm) return yearsDataRaw;
+    
+    return yearsDataRaw.map(year => ({
+      ...year,
+      subjects: year.subjects.map(sub => ({
+        ...sub,
+        topics: sub.topics.filter(topic => 
+          topic.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          sub.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      })).filter(sub => sub.topics.length > 0)
+    })).filter(year => year.subjects.length > 0);
+  }, [searchTerm]);
 
   useEffect(() => {
     if (selectedMd) {
@@ -39,14 +56,33 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      {/* Sidebar */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0">
           <Brain className="w-6 h-6 text-purple-500" />
           <span className="font-bold text-lg text-white">Medpath</span>
         </div>
+
+        {/* BUSCADOR */}
+        <div className="p-4 border-b border-[#30363d] shrink-0">
+          <div className="relative group">
+            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500 group-focus-within:text-purple-400 transition-colors" />
+            <input 
+              type="text"
+              placeholder="Buscar apuntes..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
+            />
+            {searchTerm && (
+              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5">
+                <X className="w-4 h-4 text-gray-500 hover:text-white" />
+              </button>
+            )}
+          </div>
+        </div>
+
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
-          {yearsDataRaw.map((yearData) => {
+          {filteredData.map((yearData) => {
             const YearIcon = iconMap[yearData.year] || BookOpen;
             return (
               <div key={yearData.year} className="space-y-1">
@@ -55,9 +91,9 @@ export default function Home() {
                     <YearIcon className="w-4 h-4 text-gray-500" />
                     <span>{yearsTitles[yearData.year]}</span>
                   </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[yearData.year] ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
                 </button>
-                {expandedYears[yearData.year] && (
+                {(expandedYears[yearData.year] || searchTerm) && (
                   <div className="ml-3 pl-1 border-l border-[#30363d]/50">
                     {yearData.subjects.map((sub, idx) => (
                       <div key={idx}>
@@ -65,7 +101,7 @@ export default function Home() {
                           <span>{sub.name}</span>
                           <ChevronDown className="w-3 h-3" />
                         </button>
-                        {expandedSubjects[`${yearData.year}-${sub.name}`] && (
+                        {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
                           <div className="ml-4 space-y-1">
                             {sub.topics.map(topic => (
                               <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-500 hover:text-gray-300'}`}>
@@ -84,7 +120,6 @@ export default function Home() {
         </nav>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
@@ -105,7 +140,7 @@ export default function Home() {
             <div className="h-full flex flex-col items-center justify-center text-center">
               <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
               <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
-              <p className="text-gray-500 text-sm mt-2">Selecciona un tema para estudiar sin distracciones.</p>
+              <p className="text-gray-500 text-sm mt-2">Busca un tema y comienza a estudiar.</p>
             </div>
           )}
         </div>
