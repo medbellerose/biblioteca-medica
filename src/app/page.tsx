@@ -5,6 +5,7 @@ import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
+import rehypeRaw from 'rehype-raw'; // <-- Añadimos esto para los <br/>
 import yearsDataRaw from './apuntes.json';
 
 const yearsTitles: { [key: number]: string } = {
@@ -39,22 +40,15 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- MOTOR DE LIMPIEZA PROFUNDA ---
+        // Usamos exactamente tu lógica de limpieza que funcionaba
         let cleanText = text
-          // 1. Convertir etiquetas de negrita HTML a formato Markdown
           .split('<b>').join('**')
           .split('</b>').join('**')
-          // 2. Convertir saltos de línea HTML a saltos reales de Markdown
-          .split('<br>').join('\n')
-          .split('<br/>').join('\n')
-          .split('<br />').join('\n')
-          // 3. Arreglar rutas de imágenes
-          .split('(/public/').join('(/');
+          .split('(/public/').join('(/'); 
 
         const lines = cleanText.split('\n');
         const finalLines = lines.map(line => {
           const trimmed = line.trim();
-          // Eliminar anclajes de títulos tipo {#id}
           if (trimmed.includes('{#')) {
             return line.split('{#')[0].trim();
           }
@@ -142,7 +136,13 @@ export default function Home() {
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth">
           {selectedMd ? (
             <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-              <Markdown remarkPlugins={[remarkGfm, remarkSlug]}>{content}</Markdown>
+              {/* Aquí añadimos rehypeRaw para que los <br/> funcionen de verdad */}
+              <Markdown 
+                remarkPlugins={[remarkGfm, remarkSlug]} 
+                rehypePlugins={[rehypeRaw]}
+              >
+                {content}
+              </Markdown>
             </article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
