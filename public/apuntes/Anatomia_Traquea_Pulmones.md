@@ -205,6 +205,7 @@ Ambos pulmones comparten las siguientes características estructurales:
 | **Lóbulo Medio:**<br/>• IV. Lateral<br/>• V. Medial | **Língula (equiv. L. Medio):**<br/>• IV. Superior<br/>• V. Inferior |
 | **Lóbulo Inferior:**<br/>• VI. Superior (de Nelson)<br/>• VII. Basal Medial<br/>• VIII. Basal Anterior<br/>• IX. Basal Lateral<br/>• X. Basal Posterior | **Lóbulo Inferior:**<br/>• VI. Superior<br/>• VII. Basal medial<br/>• VIII. Basal Anterior<br/>• IX. Basal Lateral<br/>• X. Basal Posterior |
 
+![Mapa de Segmentos Broncopulmonares](/public/imagenes/segmentacionbroncopulmonar.png)
 
 ### Correlaciones Clínicas Clave
 
