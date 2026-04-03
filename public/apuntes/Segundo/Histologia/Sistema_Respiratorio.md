@@ -18,17 +18,17 @@
 
 ---
 <div style="background-color: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; margin: 24px 0; font-family: system-ui, -apple-system, sans-serif;">
-  <div style="display: flex; items-center; gap: 8px; color: #8b5cf6; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+  <div style="display: flex; align-items: center; gap: 8px; color: #8b5cf6; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -2px;"><path d="m16 6 4 14-8-12-8 12 4-14"></path><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path></svg>
     Apuntes Relacionados
   </div>
-  <a href="/Primero/Anatomia/Anatomia_Traquea_Pulmones" style="display: flex; items-center; justify-content: space-between; text-decoration: none; padding: 12px; border-radius: 8px; background-color: #1a1f26; border: 1px solid transparent; transition: all 0.2s ease;">
+  <button onclick="window.dispatchEvent(new CustomEvent('changeDoc', {detail: 'Primero/Anatomia/Anatomia_Traquea_Pulmones'}))" style="width: 100%; display: flex; align-items: center; justify-content: space-between; text-decoration: none; padding: 12px; border-radius: 8px; background-color: #1a1f26; border: 1px solid #30363d; cursor: pointer; text-align: left; transition: all 0.2s ease;">
     <div style="display: flex; flex-direction: column; gap: 4px;">
-      <span style="color: #94a3b8; font-size: 12px; font-weight: 500;">Año 1</span>
+      <span style="color: #94a3b8; font-size: 11px; font-weight: 500; text-transform: uppercase;">Año 1</span>
       <span style="color: #e2e8f0; font-size: 14px; font-weight: 600; letter-spacing: -0.2px;">Anatomía: Tráquea y Pulmones</span>
     </div>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-  </a>
+  </button>
 </div>
 
 ## 1. Generalidades
