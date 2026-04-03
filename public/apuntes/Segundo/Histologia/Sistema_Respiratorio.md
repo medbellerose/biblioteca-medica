@@ -17,29 +17,21 @@
 7. [Barrera Hematogaseosa](#7-barrera-hematogaseosa)
 
 ---
-<div style="background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin: 24px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  
-  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
-    <div style="width: 4px; height: 16px; background-color: #8b5cf6; border-radius: 2px;"></div>
-    <span style="color: #8b949e; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">Contenido Relacionado</span>
+<div style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1px; margin: 24px 0;">
+  <div style="padding: 12px 16px 4px 16px; display: flex; align-items: center; gap: 8px;">
+    <div style="width: 3px; height: 14px; background: #8b5cf6; border-radius: 10px;"></div>
+    <span style="color: #8b949e; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Contenido Relacionado</span>
   </div>
-
-  <a href="/Primero/Anatomia/Anatomia_Traquea_Pulmones" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none !important; padding: 14px 18px; border-radius: 10px; background-color: #0d1117; border: 1px solid #30363d; transition: all 0.2s ease-in-out; group: hover;">
-    
-    <div style="display: flex; align-items: center; gap: 16px;">
-      <div style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 11px; font-weight: 800; flex-shrink: 0;">
-        A1
-      </div>
-      
-      <div style="display: flex; flex-direction: column; gap: 2px;">
-        <span style="color: #7d8590; font-size: 11px; font-weight: 500;">Anatomía Humana</span>
-        <span style="color: #e6edf3; font-size: 15px; font-weight: 600; text-decoration: none !important;">Tráquea y Pulmones</span>
+  <a href="/Primero/Anatomia/Anatomia_Traquea_Pulmones" style="display: flex; align-items: center; justify-content: space-between; text-decoration: none !important; padding: 16px; margin: 8px; border-radius: 8px; background: #0d1117; border: 1px solid #30363d;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(139, 92, 246, 0.1); color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; border: 1px solid rgba(139, 92, 246, 0.2);">A1</div>
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: #7d8590; font-size: 11px; margin-bottom: 2px;">Anatomía Humana</span>
+        <span style="color: #f0f6fc; font-size: 14px; font-weight: 600; text-decoration: none !important; border: none !important;">Tráquea y Pulmones</span>
       </div>
     </div>
-
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b949e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    <span style="color: #8b949e; font-size: 18px;">→</span>
   </a>
-
 </div>
 
 ## 1. Generalidades
