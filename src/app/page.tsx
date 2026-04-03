@@ -12,18 +12,24 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- COMPONENTE: ÍNDICE FANTASMA (TOC) ULTRAMINIMAL ---
+// --- COMPONENTE: ÍNDICE FANTASMA (TOC) SOLO TÍTULOS PRINCIPALES ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const headings = useMemo(() => {
     return content.split('\n')
-      .filter(line => line.startsWith('## ') || line.startsWith('### '))
+      .filter(line => line.startsWith('## ')) // SOLO títulos grandes
       .map(line => {
-        const level = line.startsWith('### ') ? 3 : 2;
-        const text = line.replace(/### |## /, '').trim();
-        const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-        return { text, id, level };
+        const text = line.replace('## ', '').trim();
+        // Limpieza profunda de ID: quita emojis, puntos iniciales y símbolos
+        const id = text
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Quita tildes
+          .replace(/^[\d.\s]+/, '') // Quita números al inicio (ej: "1. ")
+          .replace(/[^\w\s-]/g, '') // Quita emojis y símbolos
+          .trim()
+          .replace(/\s+/g, '-'); // Espacios a guiones
+        return { text, id };
       });
   }, [content]);
 
@@ -34,11 +40,10 @@ const TableOfContents = ({ content }: { content: string }) => {
       className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300 ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ width: isHovered ? '220px' : '40px' }}
+      style={{ width: isHovered ? '240px' : '40px' }}
     >
-      {/* Menú de texto (compacto y sutil) */}
       <div className={`
-        flex flex-col gap-1.5 py-4 pr-4 pl-2 transition-all duration-300
+        flex flex-col gap-2 py-4 pr-4 pl-2 transition-all duration-300
         ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}
       `}>
         {headings.map((heading, i) => (
@@ -47,28 +52,23 @@ const TableOfContents = ({ content }: { content: string }) => {
             href={`#${heading.id}`}
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });
+              const el = document.getElementById(heading.id);
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className={`
-              block whitespace-nowrap overflow-hidden text-right transition-colors no-underline
-              ${heading.level === 3 ? 'text-[9px] text-gray-500 pr-2' : 'text-[10px] text-gray-400 font-bold uppercase tracking-tight'}
-              hover:text-purple-400
-            `}
+            className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
             {heading.text}
           </a>
         ))}
       </div>
 
-      {/* Columna de puntos (Estilo barra de Notion) */}
-      <div className="flex flex-col gap-3 items-center pr-4 py-6">
-        {headings.map((heading, i) => (
+      <div className="flex flex-col gap-4 items-center pr-4 py-6">
+        {headings.map((_, i) => (
           <span 
             key={`dot-${i}`} 
             className={`
-              transition-all duration-300 rounded-full
-              ${heading.level === 3 ? 'w-1 h-1 bg-gray-700' : 'w-1.5 h-1.5 bg-gray-500'}
-              ${isHovered ? 'bg-purple-500 shadow-[0_0_5px_rgba(168,85,247,0.5)]' : ''}
+              w-1.5 h-1.5 rounded-full transition-all duration-300 bg-gray-500
+              ${isHovered ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]' : 'opacity-40'}
               hover:bg-white hover:scale-150
             `}
           ></span>
@@ -86,7 +86,6 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // --- ESCUCHADOR PARA ENLACES INTERNOS ---
   useEffect(() => {
     const handleChangeDoc = (e: any) => {
       if (e.detail) {
@@ -208,12 +207,17 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative">
           <div className="max-w-4xl mx-auto relative">
-            {/* ÍNDICE FANTASMA ULTRAMINIMAL */}
             {selectedMd && <TableOfContents content={content} />}
 
             {selectedMd ? (
               <article className="prose prose-invert prose-purple prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
+                <Markdown 
+                  remarkPlugins={[
+                    remarkGfm, 
+                    [remarkSlug, { prefix: '' }] // Quitamos prefijos raros
+                  ]} 
+                  rehypePlugins={[rehypeRaw]}
+                >
                   {content}
                 </Markdown>
               </article>
