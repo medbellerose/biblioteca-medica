@@ -39,17 +39,22 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- MOTOR DE LIMPIEZA RESPETUOSO ---
-        // Eliminamos las funciones que borraban los <br/>
+        // --- MOTOR DE LIMPIEZA PROFUNDA ---
         let cleanText = text
+          // 1. Convertir etiquetas de negrita HTML a formato Markdown
           .split('<b>').join('**')
           .split('</b>').join('**')
-          .split('(/public/').join('(/'); // Arregla rutas de imágenes automáticamente
+          // 2. Convertir saltos de línea HTML a saltos reales de Markdown
+          .split('<br>').join('\n')
+          .split('<br/>').join('\n')
+          .split('<br />').join('\n')
+          // 3. Arreglar rutas de imágenes
+          .split('(/public/').join('(/');
 
         const lines = cleanText.split('\n');
         const finalLines = lines.map(line => {
           const trimmed = line.trim();
-          // Eliminar anclajes de títulos tipo {#id} que ensucian la vista
+          // Eliminar anclajes de títulos tipo {#id}
           if (trimmed.includes('{#')) {
             return line.split('{#')[0].trim();
           }
@@ -68,7 +73,6 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      {/* SIDEBAR */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -124,7 +128,6 @@ export default function Home() {
         </nav>
       </aside>
 
-      {/* CONTENIDO PRINCIPAL */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
