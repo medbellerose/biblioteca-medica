@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-center';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-react'; // <-- Corregido aquí
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
