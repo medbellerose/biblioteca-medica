@@ -17,21 +17,34 @@
 7. [Barrera Hematogaseosa](#7-barrera-hematogaseosa)
 
 ---
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1px; margin: 24px 0; cursor: pointer;" onclick="window.dispatchEvent(new CustomEvent('changeDoc', {detail: 'Primero/Anatomia/Anatomia_Traquea_Pulmones'}))">
+<div style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1px; margin: 24px 0;">
+  
   <div style="padding: 12px 16px 4px 16px; display: flex; align-items: center; gap: 8px;">
     <div style="width: 3px; height: 14px; background: #8b5cf6; border-radius: 10px;"></div>
     <span style="color: #8b949e; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Contenido Relacionado</span>
   </div>
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; margin: 8px; border-radius: 8px; background: #0d1117; border: 1px solid #30363d; transition: background 0.2s;" onmouseover="this.style.background='#161b22'" onmouseout="this.style.background='#0d1117'">
+
+  <div 
+    style="display: flex; align-items: center; justify-content: space-between; padding: 16px; margin: 8px; border-radius: 8px; background: #0d1117; border: 1px solid #30363d; cursor: pointer; transition: all 0.2s ease-in-out;" 
+    onclick="window.dispatchEvent(new CustomEvent('changeDoc', {detail: 'Primero/Anatomia/Anatomia_Traquea_Pulmones'}))"
+    onmouseover="this.style.borderColor='#8b5cf6'; this.style.background='#161b22'" 
+    onmouseout="this.style.borderColor='#30363d'; this.style.background='#0d1117'"
+  >
+    
     <div style="display: flex; align-items: center; gap: 12px;">
-      <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(139, 92, 246, 0.1); color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; border: 1px solid rgba(139, 92, 246, 0.2);">A1</div>
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(139, 92, 246, 0.1); color: #a855f7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; border: 1px solid rgba(139, 92, 246, 0.2); flex-shrink: 0;">
+        1º
+      </div>
+      
       <div style="display: flex; flex-direction: column;">
         <span style="color: #7d8590; font-size: 11px; margin-bottom: 2px;">Anatomía Humana</span>
-        <span style="color: #f0f6fc; font-size: 14px; font-weight: 600;">Tráquea y Pulmones</span>
+        <span style="color: #f0f6fc; font-size: 14px; font-weight: 600; text-decoration: none !important;">Tráquea y Pulmones</span>
       </div>
     </div>
-    <span style="color: #8b949e; font-size: 18px;">→</span>
+
+    <span style="color: #8b949e; font-size: 18px; font-weight: 300; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(3px)'" onmouseout="this.style.transform='translateX(0)'">→</span>
   </div>
+
 </div>
 
 ## 1. Generalidades
