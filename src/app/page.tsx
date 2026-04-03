@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-react'; // <-- Corregido aquí
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -12,15 +12,15 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- FUNCIÓN DE LIMPIEZA UNIVERSAL ---
+// --- FUNCIÓN DE LIMPIEZA UNIVERSAL PARA IDs ---
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Quita tildes
-    .replace(/[^\w\s-]/g, '') // Quita símbolos, puntos, dos puntos, emojis
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s-]/g, '')
     .trim()
-    .replace(/\s+/g, '-'); // Espacios por guiones
+    .replace(/\s+/g, '-');
 };
 
 const TableOfContents = ({ content }: { content: string }) => {
@@ -95,11 +95,14 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
+  // --- ESCUCHADOR DE EVENTOS PARA NAVEGACIÓN INTERNA ---
   useEffect(() => {
     const handleChangeDoc = (e: any) => {
       if (e.detail) {
         setSelectedMd(e.detail);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Scrollear arriba al cambiar de documento
+        const mainContainer = document.querySelector('.overflow-y-auto');
+        if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
       }
     };
     window.addEventListener('changeDoc', handleChangeDoc);
