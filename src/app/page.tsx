@@ -38,24 +38,26 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- CIRUGÍA PLÁSTICA DE TABLAS ---
+        // --- LIMPIEZA PROFUNDA DE TABLAS ---
         let cleanText = text;
 
-        // 1. Quitamos espacios en blanco accidentales al inicio/final de las líneas de tabla
+        // 1. Eliminamos espacios en blanco al inicio de cada línea (esto rompe las tablas)
         cleanText = cleanText.split('\n ').join('\n');
-        cleanText = cleanText.split(' \n').join('\n');
+        cleanText = cleanText.split('\n  ').join('\n');
 
-        // 2. Forzamos que cada línea de tabla (|) tenga un salto de línea limpio
-        // y que haya espacio suficiente antes de la tabla
+        // 2. Aseguramos que las líneas de tabla (|) estén separadas del texto anterior
         cleanText = cleanText.split('\n|').join('\n\n|');
         
-        // 3. Limpiamos las etiquetas cite que suelen romper el renderizado
-        const trash = ['', '[cite_end]', ''];
+        // 3. Eliminamos etiquetas residuales del PDF/Word
+        const trash = ['', '[cite_end]', '', ''];
         trash.forEach(t => {
           cleanText = cleanText.split(t).join('');
         });
 
-        setContent(cleanText);
+        // 4. Limpieza final de referencias
+        const finalContent = cleanText.replace(/\/g, '').replace(/\{#.*?\}/g, '');
+
+        setContent(finalContent);
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
@@ -135,7 +137,7 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117]">
           {selectedMd ? (
-            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8">
+            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
               <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
             </article>
           ) : (
