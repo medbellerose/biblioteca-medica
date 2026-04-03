@@ -38,36 +38,34 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- MOTOR DE LIMPIEZA Y RECONSTRUCCIÓN ---
+        // --- MOTOR DE LIMPIEZA SEGURO ---
         let cleanText = text;
 
-        // 1. Limpieza de etiquetas HTML (como <br> o <b>) que Word/PDF suelen inyectar
+        // 1. Limpiar etiquetas HTML y arreglar rutas de imágenes
         cleanText = cleanText
           .split('<br>').join('\n')
           .split('<br/>').join('\n')
           .split('<b>').join('**')
-          .split('</b>').join('**');
+          .split('</b>').join('**')
+          .split('(/public/').join('(/');
 
-        // 2. Corrección de ruta de imágenes (elimina /public si existe en el .md)
-        cleanText = cleanText.split('(/public/').join('(/');
-
-        // 3. Procesamiento de líneas para tablas y anclajes
+        // 2. Procesar líneas para tablas y anclajes
         let lines = cleanText.split('\n');
         let processedLines = lines.map((line, index) => {
           let trimmed = line.trim();
           
-          // Estandarizar separadores de tabla defectuosos
+          // Estandarizar tablas
           if (trimmed.startsWith('|') && trimmed.endsWith('|') && !/[a-zA-Z0-9]/.test(trimmed)) {
              const columns = trimmed.split('|').length - 2;
              return '|' + ' :--- |'.repeat(columns);
           }
 
-          // Asegurar línea vacía antes de las tablas
+          // Salto de línea antes de tablas
           if (trimmed.startsWith('|') && index > 0 && !lines[index-1].trim().startsWith('|') && lines[index-1].trim() !== '') {
             return '\n' + line;
           }
 
-          // Eliminar anclajes de títulos tipo {#5.-anatomia...}
+          // Quitar anclas de títulos {#id}
           if (trimmed.includes('{#')) {
             return line.split('{#')[0].trim();
           }
@@ -75,18 +73,15 @@ export default function Home() {
           return line;
         });
 
-        // 4. Limpieza final de etiquetas de citación
+        // 3. Limpieza final de etiquetas de texto plano
         let finalContent = processedLines.join('\n');
         const trash = ['', '[cite_end]', '', ''];
-        trash.forEach(t => finalContent = finalContent.split(t).join(''));
+        trash.forEach(tag => {
+          finalContent = finalContent.split(tag).join('');
+        });
         
-        // Eliminar referencias tipo
-        finalContent = finalContent.replace(/\/g, '');
-
-        setContent(finalContent);
-      })
-      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
-  }, [selectedMd]);
+        // 4. Limpieza de referencias sin usar expresiones regulares peligrosas
+        // Esto elimina cualquier línea que contenga);
 
   const handleSelection = (file: string) => {
     setSelectedMd(file);
@@ -150,7 +145,7 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden text-white">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
