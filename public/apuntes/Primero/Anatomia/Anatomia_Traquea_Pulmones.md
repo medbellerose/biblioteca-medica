@@ -1,18 +1,3 @@
-# 🫁 Compendio Integral de Anatomía Humana: Tráquea y Pulmones
-
----
-
-## 📋 Tabla de Contenidos
-
-1. [Introducción al Sistema Respiratorio y Embriología](#1-introducción-al-sistema-respiratorio-y-embriología)
-2. [La Tráquea: Arquitectura y Topografía Cervical](#2-la-tráquea-arquitectura-y-topografía-cervical)
-3. [Relaciones Torácicas y Configuración de la Carina](#3-relaciones-torácicas-y-configuración-de-la-carina)
-4. [Bronquios Principales y Pedículos Pulmonares](#4-bronquios-principales-y-pedículos-pulmonares)
-5. [Anatomía Macroscópica del Pulmón](#5-anatomía-macroscópica-del-pulmón)
-6. [Segmentación Broncopulmonar y Correlación Clínica](#6-segmentación-broncopulmonar-y-correlación-clínica)
-7. [Pleura, Irrigación y Biomecánica Respiratoria](#7-pleura-irrigación-y-biomecánica-respiratoria)
-
----
 
 ## 1. Introducción al Sistema Respiratorio y Embriología
 
