@@ -12,6 +12,7 @@
 
 ![Mapa de las vías respiratorias](/public/imagenes/pulmon/esquema1.png)
 
+![Mapa de las vías respiratorias](/public/imagenes/pulmon/histologiavestibulonasal.png)
 
 
 > 📝 **Nota Importante:** La zona de transición muco-cutánea se encuentra en el exterior con epitelio plano estratificado.
@@ -22,7 +23,7 @@
 
 ### Epitelio Respiratorio
 
-> 📝 **Nota Importante:** El epitelio respiratorio es de tipo **cilíndrico pseudoestratificado ciliado con células caliciformes**.
+> 🧙‍♂️ **Nota Importante:** El epitelio respiratorio es de tipo **cilíndrico pseudoestratificado ciliado con células caliciformes**.
 
 Se conforma de **seis tipos de células**:
 
