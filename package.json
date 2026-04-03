@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
+    "remark-slug": "^7.0.1",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

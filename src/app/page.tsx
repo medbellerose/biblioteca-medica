@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, X } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkSlug from 'remark-slug';
 import yearsDataRaw from './apuntes.json';
 
 const yearsTitles: { [key: number]: string } = {
@@ -61,9 +62,9 @@ export default function Home() {
           .split('<br>').join('\n')
           .split('<b>').join('**')
           .split('</b>').join('**')
-          .split('(/public/').join('(/'); // Arregla la ruta de la imagen automáticamente
+          .split('(/public/').join('(/'); 
 
-        // 3. Eliminar anclajes de títulos tipo {#id}
+        // 3. Eliminar anclajes de títulos tipo {#id} para que no ensucien el texto
         const finalContent = cleanText.split('\n').map(line => {
           if (line.includes('{#')) return line.split('{#')[0].trim();
           return line;
@@ -149,10 +150,10 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117]">
+        <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth">
           {selectedMd ? (
             <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-              <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+              <Markdown remarkPlugins={[remarkGfm, remarkSlug]}>{content}</Markdown>
             </article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
