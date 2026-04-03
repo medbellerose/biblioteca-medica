@@ -37,18 +37,26 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // ESTRATEGIA SEGURA: Limpieza por reemplazo de palabras exactas
-        // Esto evita errores de "Unterminated regexp" en Vercel
-        let cleanText = text;
+        // ESTRATEGIA DE LIMPIEZA SEGURA
+        // 1. Forzamos doble salto de línea antes de cualquier línea que empiece con pipe (|)
+        // Esto soluciona el problema de renderizado de tablas en react-markdown
+        let cleanText = text.split('\n|').join('\n\n|');
         
-        // Arreglo de tablas: asegura que tengan espacio arriba
-        cleanText = cleanText.split('\n|').join('\n\n|');
-        
-        // Limpieza de etiquetas sobrantes (si existen)
+        // 2. Limpieza de etiquetas de citación y metadatos del PDF
+        // Usamos split/join para evitar errores de sintaxis con regex complejas
         cleanText = cleanText.split('').join('');
         cleanText = cleanText.split('[cite_end]').join('');
         
-        setContent(cleanText);
+        // 3. Eliminación de etiquetas de fuente tipo o
+        // Se realiza una limpieza por líneas para mantener la estabilidad
+        const lines = cleanText.split('\n');
+        const finalLines = lines.map(line => {
+          if (line.includes('/g, '');
+          }
+          return line;
+        });
+
+        setContent(finalLines.join('\n'));
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
@@ -135,7 +143,7 @@ export default function Home() {
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
           </div>
@@ -143,7 +151,7 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117]">
           {selectedMd ? (
-            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4">
+            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8">
               <Markdown>{content}</Markdown>
             </article>
           ) : (
