@@ -30,7 +30,7 @@
     "subjects": [
       {
         "name": "Histología",
-        "topics": [{ "label": "Tejidos Básicos", "file": "tejidos-basicos" }]
+        "topics": [{ "label": "Sistema Respiratorio", "file": "Sistema_Respiratorio_Notion" }]
       },
       {
         "name": "Embriología",

@@ -201,9 +201,9 @@ Ambos pulmones comparten las siguientes características estructurales:
 
 | Pulmón Derecho (10 Segmentos) | Pulmón Izquierdo (8-9 Segmentos) |
 | :--- | :--- |
-| **Lóbulo Superior:**<br>• I. Apical<br>• II. Posterior<br>• III. Anterior | **Lóbulo Superior:**<br>• I y II. Apicoposterior (fusionados)<br>• III. Anterior |
-| **Lóbulo Medio:**<br>• IV. Lateral<br>• V. Medial | **Língula (equiv. L. Medio):**<br>• IV. Superior<br>• V. Inferior |
-| **Lóbulo Inferior:**<br>• VI. Superior (de Nelson)<br>• VII. Basal Medial<br>• VIII. Basal Anterior<br>• IX. Basal Lateral<br>• X. Basal Posterior | **Lóbulo Inferior:**<br>• VI. Superior<br>• VII. Basal medial<br>• VIII. Basal Anterior<br>• IX. Basal Lateral<br>• X. Basal Posterior |
+| **Lóbulo Superior:**<br/>• I. Apical<br/>• II. Posterior<br/>• III. Anterior | **Lóbulo Superior:**<br/>• I y II. Apicoposterior (fusionados)<br/>• III. Anterior |
+| **Lóbulo Medio:**<br/>• IV. Lateral<br/>• V. Medial | **Língula (equiv. L. Medio):**<br/>• IV. Superior<br/>• V. Inferior |
+| **Lóbulo Inferior:**<br/>• VI. Superior (de Nelson)<br/>• VII. Basal Medial<br/>• VIII. Basal Anterior<br/>• IX. Basal Lateral<br/>• X. Basal Posterior | **Lóbulo Inferior:**<br/>• VI. Superior<br/>• VII. Basal medial<br/>• VIII. Basal Anterior<br/>• IX. Basal Lateral<br/>• X. Basal Posterior |
 
 
 
