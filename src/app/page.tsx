@@ -38,51 +38,23 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- MOTOR DE LIMPIEZA SEGURO ---
-        let cleanText = text;
-
-        // 1. Limpiar etiquetas HTML y arreglar rutas de imágenes
-        cleanText = cleanText
+        // LIMPIEZA SEGURA
+        let cleanText = text
           .split('<br>').join('\n')
-          .split('<br/>').join('\n')
           .split('<b>').join('**')
           .split('</b>').join('**')
-          .split('(/public/').join('(/');
+          .split('(/public/').join('(/')
+          .split('\n|').join('\n\n|');
 
-        // 2. Procesar líneas para tablas y anclajes
-        let lines = cleanText.split('\n');
-        let processedLines = lines.map((line, index) => {
-          let trimmed = line.trim();
-          
-          // Estandarizar tablas
-          if (trimmed.startsWith('|') && trimmed.endsWith('|') && !/[a-zA-Z0-9]/.test(trimmed)) {
-             const columns = trimmed.split('|').length - 2;
-             return '|' + ' :--- |'.repeat(columns);
-          }
-
-          // Salto de línea antes de tablas
-          if (trimmed.startsWith('|') && index > 0 && !lines[index-1].trim().startsWith('|') && lines[index-1].trim() !== '') {
-            return '\n' + line;
-          }
-
-          // Quitar anclas de títulos {#id}
-          if (trimmed.includes('{#')) {
-            return line.split('{#')[0].trim();
-          }
-
+        // PROCESAMIENTO DE LÍNEAS
+        const finalLines = cleanText.split('\n').map(line => {
+          const trimmed = line.trim();
+          // Quitar anclas de títulos
+          if (trimmed.includes('{#')) return line.split('{#')[0].trim();
           return line;
-        });
-
-        // 3. Limpieza final de etiquetas de texto plano
-        let finalContent = processedLines.join('\n');
-        const trash = ['', '[cite_end]', '', ''];
-        trash.forEach(tag => {
-          finalContent = finalContent.split(tag).join('');
-        });
-        
-        // 4. Limpieza de referencias sin usar expresiones regulares peligrosas
-        const finalLines = finalContent.split('\n').filter(line => {
+        }).filter(line => {
           const l = line.toLowerCase();
+          // Filtrar líneas de basura
           return !l.includes(');
 
   const handleSelection = (file: string) => {
