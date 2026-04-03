@@ -12,7 +12,7 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- COMPONENTE: ÍNDICE FANTASMA (TOC) ---
+// --- COMPONENTE: ÍNDICE FANTASMA (TOC) ULTRAMINIMAL ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,12 +31,16 @@ const TableOfContents = ({ content }: { content: string }) => {
 
   return (
     <aside 
-      className="fixed right-6 top-32 z-40 transition-all duration-300 ease-in-out bg-[#161b22]/90 backdrop-blur-md rounded-2xl border border-[#30363d] p-3 shadow-2xl overflow-hidden group"
+      className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300 ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ width: isHovered ? '260px' : '48px' }}
+      style={{ width: isHovered ? '220px' : '40px' }}
     >
-      <div className={`relative border-l-2 transition-colors duration-300 ${isHovered ? 'border-purple-500/40' : 'border-gray-800'} ml-2 py-1`}>
+      {/* Menú de texto (compacto y sutil) */}
+      <div className={`
+        flex flex-col gap-1.5 py-4 pr-4 pl-2 transition-all duration-300
+        ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}
+      `}>
         {headings.map((heading, i) => (
           <a
             key={i}
@@ -45,25 +49,29 @@ const TableOfContents = ({ content }: { content: string }) => {
               e.preventDefault();
               document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex items-center h-9 no-underline relative group/item"
+            className={`
+              block whitespace-nowrap overflow-hidden text-right transition-colors no-underline
+              ${heading.level === 3 ? 'text-[9px] text-gray-500 pr-2' : 'text-[10px] text-gray-400 font-bold uppercase tracking-tight'}
+              hover:text-purple-400
+            `}
           >
-            {/* Punto minimalista */}
-            <span className={`
-              absolute left-[-5px] w-2 h-2 rounded-full transition-all duration-300
-              ${isHovered ? 'bg-purple-500' : 'bg-gray-600'}
-              group-hover/item:bg-white group-hover/item:shadow-[0_0_8px_#a855f7]
-            `}></span>
-
-            {/* Texto deslizable */}
-            <span className={`
-              ml-7 whitespace-nowrap overflow-hidden transition-all duration-300 text-[11px] uppercase tracking-wider
-              ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}
-              ${heading.level === 3 ? 'text-gray-500 font-medium pl-3' : 'text-gray-300 font-bold'}
-              group-hover/item:text-purple-400
-            `}>
-              {heading.text}
-            </span>
+            {heading.text}
           </a>
+        ))}
+      </div>
+
+      {/* Columna de puntos (Estilo barra de Notion) */}
+      <div className="flex flex-col gap-3 items-center pr-4 py-6">
+        {headings.map((heading, i) => (
+          <span 
+            key={`dot-${i}`} 
+            className={`
+              transition-all duration-300 rounded-full
+              ${heading.level === 3 ? 'w-1 h-1 bg-gray-700' : 'w-1.5 h-1.5 bg-gray-500'}
+              ${isHovered ? 'bg-purple-500 shadow-[0_0_5px_rgba(168,85,247,0.5)]' : ''}
+              hover:bg-white hover:scale-150
+            `}
+          ></span>
         ))}
       </div>
     </aside>
@@ -78,7 +86,7 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // --- ESCUCHADOR PARA ENLACES INTERNOS (Cuadros Relacionados) ---
+  // --- ESCUCHADOR PARA ENLACES INTERNOS ---
   useEffect(() => {
     const handleChangeDoc = (e: any) => {
       if (e.detail) {
@@ -134,7 +142,6 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      {/* Sidebar */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -201,15 +208,12 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative">
           <div className="max-w-4xl mx-auto relative">
-            {/* ÍNDICE FANTASMA INTEGRADO */}
+            {/* ÍNDICE FANTASMA ULTRAMINIMAL */}
             {selectedMd && <TableOfContents content={content} />}
 
             {selectedMd ? (
-              <article className="prose prose-invert prose-purple prose-headings:scroll-mt-20 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                <Markdown 
-                  remarkPlugins={[remarkGfm, remarkSlug]} 
-                  rehypePlugins={[rehypeRaw]}
-                >
+              <article className="prose prose-invert prose-purple prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
+                <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
                   {content}
                 </Markdown>
               </article>
