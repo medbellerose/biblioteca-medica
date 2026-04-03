@@ -38,23 +38,38 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // LIMPIEZA DE CONTENIDO
-        let cleanText = text
-          .split('<br>').join('\n')
-          .split('<b>').join('**')
-          .split('</b>').join('**')
-          .split('(/public/').join('(/')
-          .split('\n|').join('\n\n|');
+        // --- MOTOR DE REPARACIÓN DE TABLAS Y LIMPIEZA ---
+        let lines = text.split('\n');
+        let processedLines = lines.map((line, index) => {
+          let trimmed = line.trim();
+          
+          // 1. Detectar y estandarizar líneas de separación (como |-------|-------|)
+          if (trimmed.startsWith('|') && trimmed.endsWith('|') && !/[a-zA-Z0-9]/.test(trimmed)) {
+             const columns = trimmed.split('|').length - 2;
+             return '|' + ' :--- |'.repeat(columns);
+          }
 
-        // PROCESAMIENTO DE LÍNEAS
-        const finalLines = cleanText.split('\n').map(line => {
-          const trimmed = line.trim();
-          // Quitar anclas de títulos {#id}
-          if (trimmed.includes('{#')) return line.split('{#')[0].trim();
+          // 2. Asegurar que haya una línea vacía antes de que empiece la tabla
+          if (trimmed.startsWith('|') && index > 0 && !lines[index-1].trim().startsWith('|') && lines[index-1].trim() !== '') {
+            return '\n' + line;
+          }
+
           return line;
         });
 
-        setContent(finalLines.join('\n'));
+        let cleanText = processedLines.join('\n')
+          .split('<br>').join('\n')
+          .split('<b>').join('**')
+          .split('</b>').join('**')
+          .split('(/public/').join('(/'); // Arregla la ruta de la imagen automáticamente
+
+        // 3. Eliminar anclajes de títulos tipo {#id}
+        const finalContent = cleanText.split('\n').map(line => {
+          if (line.includes('{#')) return line.split('{#')[0].trim();
+          return line;
+        }).join('\n');
+
+        setContent(finalContent);
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
@@ -66,6 +81,7 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
+      {/* SIDEBAR */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -80,7 +96,7 @@ export default function Home() {
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
             />
           </div>
         </div>
@@ -121,6 +137,7 @@ export default function Home() {
         </nav>
       </aside>
 
+      {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
