@@ -38,26 +38,32 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- LIMPIEZA PROFUNDA DE TABLAS ---
+        // --- LIMPIEZA SEGURA DE TABLAS ---
+        // Usamos split y join para evitar errores de sintaxis con barras invertidas
         let cleanText = text;
 
-        // 1. Eliminamos espacios en blanco al inicio de cada línea (esto rompe las tablas)
-        cleanText = cleanText.split('\n ').join('\n');
-        cleanText = cleanText.split('\n  ').join('\n');
-
-        // 2. Aseguramos que las líneas de tabla (|) estén separadas del texto anterior
+        // 1. Corregimos el espaciado de las tablas
         cleanText = cleanText.split('\n|').join('\n\n|');
         
-        // 3. Eliminamos etiquetas residuales del PDF/Word
-        const trash = ['', '[cite_end]', '', ''];
-        trash.forEach(t => {
-          cleanText = cleanText.split(t).join('');
+        // 2. Quitamos espacios accidentales que rompen las celdas
+        cleanText = cleanText.split('\n ').join('\n');
+
+        // 3. Eliminamos etiquetas residuales de forma segura
+        const tags = ['', '[cite_end]', '', ''];
+        tags.forEach(tag => {
+          cleanText = cleanText.split(tag).join('');
         });
 
-        // 4. Limpieza final de referencias
-        const finalContent = cleanText.replace(/\/g, '').replace(/\{#.*?\}/g, '');
+        // 4. Quitamos anclas de títulos (como {#id}) de forma simple
+        const lines = cleanText.split('\n');
+        const finalLines = lines.map(line => {
+          if (line.includes('{#')) {
+            return line.split('{#')[0].trim();
+          }
+          return line;
+        });
 
-        setContent(finalContent);
+        setContent(finalLines.join('\n'));
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
@@ -144,7 +150,7 @@ export default function Home() {
             <div className="h-full flex flex-col items-center justify-center text-center">
               <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
               <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
-              <p className="text-gray-500 text-sm mt-2">Busca un tema y comienza a estudiar.</p>
+              <p className="text-gray-500 text-sm mt-2 font-medium">Busca un tema y comienza a estudiar.</p>
             </div>
           )}
         </div>
