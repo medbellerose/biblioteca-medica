@@ -129,7 +129,7 @@ Reviste el interior del conducto.
 | **División** | 3 bronquios lobares (superior, medio e inferior) | 2 bronquios lobares (superior e inferior) |
 | **Particularidad** | Posee **bronquio intermediario** antes del lobar medio | Trayecto más sinuoso para enmarcar el **corazón** |
 
-![Bronquios Principales](/public/imagenes/segmentacion%20broncopulmonar.png)
+![Bronquios Principales](/imagenes/segmentacion%20broncopulmonar.png)
 
 ### Puntos Clave para el Examen
 

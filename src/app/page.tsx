@@ -38,32 +38,51 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // --- MOTOR DE RECONSTRUCCIÓN DE TABLAS ---
-        let lines = text.split('\n');
+        // --- MOTOR DE LIMPIEZA Y RECONSTRUCCIÓN ---
+        let cleanText = text;
+
+        // 1. Limpieza de etiquetas HTML (como <br> o <b>) que Word/PDF suelen inyectar
+        cleanText = cleanText
+          .split('<br>').join('\n')
+          .split('<br/>').join('\n')
+          .split('<b>').join('**')
+          .split('</b>').join('**');
+
+        // 2. Corrección de ruta de imágenes (elimina /public si existe en el .md)
+        cleanText = cleanText.split('(/public/').join('(/');
+
+        // 3. Procesamiento de líneas para tablas y anclajes
+        let lines = cleanText.split('\n');
         let processedLines = lines.map((line, index) => {
           let trimmed = line.trim();
           
-          // 1. Detectar líneas de separación de tabla defectuosas (ej: |---|---|)
-          // Si la línea tiene pipes y solo guiones, la estandarizamos
+          // Estandarizar separadores de tabla defectuosos
           if (trimmed.startsWith('|') && trimmed.endsWith('|') && !/[a-zA-Z0-9]/.test(trimmed)) {
-             // Contamos cuántas columnas hay para crear separadores estándar
              const columns = trimmed.split('|').length - 2;
              return '|' + ' :--- |'.repeat(columns);
           }
 
-          // 2. Asegurar que la cabecera de la tabla tenga una línea vacía arriba
+          // Asegurar línea vacía antes de las tablas
           if (trimmed.startsWith('|') && index > 0 && !lines[index-1].trim().startsWith('|') && lines[index-1].trim() !== '') {
             return '\n' + line;
+          }
+
+          // Eliminar anclajes de títulos tipo {#5.-anatomia...}
+          if (trimmed.includes('{#')) {
+            return line.split('{#')[0].trim();
           }
 
           return line;
         });
 
-        // 3. Limpieza de etiquetas raras
+        // 4. Limpieza final de etiquetas de citación
         let finalContent = processedLines.join('\n');
         const trash = ['', '[cite_end]', '', ''];
         trash.forEach(t => finalContent = finalContent.split(t).join(''));
         
+        // Eliminar referencias tipo
+        finalContent = finalContent.replace(/\/g, '');
+
         setContent(finalContent);
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
@@ -90,7 +109,7 @@ export default function Home() {
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
             />
           </div>
         </div>
@@ -131,12 +150,12 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
+      <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden text-white">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
           </div>
