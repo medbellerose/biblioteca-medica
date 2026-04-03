@@ -38,7 +38,7 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // LIMPIEZA SEGURA
+        // LIMPIEZA DE CONTENIDO
         let cleanText = text
           .split('<br>').join('\n')
           .split('<b>').join('**')
@@ -49,12 +49,10 @@ export default function Home() {
         // PROCESAMIENTO DE LÍNEAS
         const finalLines = cleanText.split('\n').map(line => {
           const trimmed = line.trim();
-          // Quitar anclas de títulos
           if (trimmed.includes('{#')) return line.split('{#')[0].trim();
           return line;
         }).filter(line => {
           const l = line.toLowerCase();
-          // Filtrar líneas de basura
           return !l.includes(');
 
   const handleSelection = (file: string) => {
