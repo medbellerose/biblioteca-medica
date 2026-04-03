@@ -1,18 +1,20 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
 import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 
+// --- IMPORTACIONES DE CLERK ---
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- FUNCIÓN DE LIMPIEZA UNIVERSAL PARA IDs ---
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
@@ -58,10 +60,6 @@ const TableOfContents = ({ content }: { content: string }) => {
               const target = document.getElementById(heading.id);
               if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                const allHeadings = document.querySelectorAll('h2');
-                const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
-                if (found) found.scrollIntoView({ behavior: 'smooth' });
               }
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
@@ -95,25 +93,13 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // --- NAVEGACIÓN GLOBAL Y ESCUCHADOR DE EVENTOS ---
   useEffect(() => {
-    // Definimos la función en window para que el HTML del Markdown pueda llamarla
     (window as any).navegarApunte = (ruta: string) => {
-      console.log("Navegando a:", ruta);
       setSelectedMd(ruta);
-      
-      // Scroll al inicio suave
       window.scrollTo({ top: 0, behavior: 'smooth' });
       const mainContainer = document.querySelector('.overflow-y-auto');
       if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
     };
-
-    const handleChangeDoc = (e: any) => {
-      if (e.detail) (window as any).navegarApunte(e.detail);
-    };
-
-    window.addEventListener('changeDoc', handleChangeDoc);
-    return () => window.removeEventListener('changeDoc', handleChangeDoc);
   }, []);
 
   const filteredData = useMemo(() => {
@@ -125,8 +111,7 @@ export default function Home() {
         ...sub,
         topics: sub.topics.filter(topic => 
           topic.label.toLowerCase().includes(term) ||
-          sub.name.toLowerCase().includes(term) ||
-          (topic.keywords && topic.keywords.some(kw => kw.toLowerCase().includes(term)))
+          sub.name.toLowerCase().includes(term)
         )
       })).filter(sub => sub.topics.length > 0)
     })).filter(year => year.subjects.length > 0);
@@ -137,11 +122,7 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        let cleanText = text
-          .split('<b>').join('**')
-          .split('</b>').join('**')
-          .split('(/public/').join('(/'); 
-
+        let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
         const lines = cleanText.split('\n');
         const finalLines = lines.map(line => {
           const trimmed = line.trim();
@@ -170,7 +151,7 @@ export default function Home() {
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
-              placeholder="Buscar por título o concepto..."
+              placeholder="Buscar apunte..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
@@ -214,13 +195,29 @@ export default function Home() {
       </aside>
 
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
-        <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
-          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
-            <Menu className="w-5 h-5" />
-          </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
+        <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
+          <div className="flex items-center">
+            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
+              <Menu className="w-5 h-5" />
+            </button>
+            <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('_').join(' ')}</span></>}
+            </div>
+          </div>
+          
+          {/* BOTÓN DE PERFIL / LOGIN */}
+          <div className="flex items-center gap-3">
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-full font-bold transition-all shadow-lg">
+                  Iniciar Sesión
+                </button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         </header>
 
@@ -229,41 +226,46 @@ export default function Home() {
             {selectedMd && <TableOfContents content={content} />}
 
             {selectedMd ? (
-              <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                <Markdown 
-  remarkPlugins={[remarkGfm, remarkSlug]} 
-  rehypePlugins={[rehypeRaw]}
-  components={{
-    // Interceptamos todos los enlaces (<a>)
-    a: ({ node, ...props }) => {
-      const isInternal = props.href && !props.href.startsWith('http');
-      
-      if (isInternal) {
-        return (
-          <a 
-            {...props} 
-            onClick={(e) => {
-              e.preventDefault();
-              if (props.href) {
-                setSelectedMd(props.href);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                const container = document.querySelector('.overflow-y-auto');
-                if (container) container.scrollTo({ top: 0, behavior: 'smooth' });
-              }
-            }}
-            className={props.className}
-          >
-            {props.children}
-          </a>
-        );
-      }
-      return <a {...props} target="_blank" rel="noopener noreferrer" />;
-    }
-  }}
->
-  {content}
-</Markdown>
-              </article>
+              <>
+                <SignedIn>
+                  <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
+                    <Markdown 
+                      remarkPlugins={[remarkGfm, remarkSlug]} 
+                      rehypePlugins={[rehypeRaw]}
+                      components={{
+                        a: ({ node, ...props }) => {
+                          const isInternal = props.href && !props.href.startsWith('http');
+                          if (isInternal) {
+                            return (
+                              <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} className={props.className}>
+                                {props.children}
+                              </a>
+                            );
+                          }
+                          return <a {...props} target="_blank" rel="noopener noreferrer" />;
+                        }
+                      }}
+                    >
+                      {content}
+                    </Markdown>
+                  </article>
+                </SignedIn>
+
+                <SignedOut>
+                  <div className="mt-20 flex flex-col items-center text-center p-12 border border-dashed border-[#30363d] rounded-3xl bg-[#161b22]/30">
+                    <Lock className="w-12 h-12 text-purple-500 mb-4 animate-pulse" />
+                    <h2 className="text-2xl font-bold text-white">Contenido Protegido</h2>
+                    <p className="text-gray-400 mt-2 mb-8 max-w-sm">
+                      Inicia sesión con tu cuenta para desbloquear este apunte y continuar tu estudio en Medpath.
+                    </p>
+                    <SignInButton mode="modal">
+                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-xl">
+                        Entrar a la Biblioteca
+                      </button>
+                    </SignInButton>
+                  </div>
+                </SignedOut>
+              </>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center mt-20">
                 <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />
