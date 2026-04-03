@@ -38,7 +38,7 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // LIMPIEZA DE CONTENIDO
+        // LIMPIEZA DE CONTENIDO SIN COMILLAS PELIGROSAS
         let cleanText = text
           .split('<br>').join('\n')
           .split('<b>').join('**')
@@ -51,9 +51,12 @@ export default function Home() {
           const trimmed = line.trim();
           if (trimmed.includes('{#')) return line.split('{#')[0].trim();
           return line;
-        }).filter(line => {
-          const l = line.toLowerCase();
-          return !l.includes(');
+        });
+
+        setContent(finalLines.join('\n'));
+      })
+      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
+  }, [selectedMd]);
 
   const handleSelection = (file: string) => {
     setSelectedMd(file);
