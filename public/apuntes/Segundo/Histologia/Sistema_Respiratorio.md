@@ -32,19 +32,19 @@
 
 > 📍 **Resumen de Transición**
 > 
-> [cite_start]Desde el exterior hacia el interior, el epitelio se especializa y reduce su altura para facilitar el intercambio gaseoso[cite: 102, 258].
+> Desde el exterior hacia el interior, el epitelio se especializa y reduce su altura para facilitar el intercambio gaseoso.
 
 | Estructura | Tipo de Epitelio | Células y Detalles Clave |
 | :--- | :--- | :--- |
-| **Vestíbulo Nasal** | Plano estratificado | [cite_start]Vibrisas, glándulas sebáceas y zona de transición[cite: 66, 67, 68, 69, 70]. |
-| **Región Respiratoria** | Cilíndrico pseudoestratificado ciliado | [cite_start]El "epitelio respiratorio" estándar con células caliciformes[cite: 73, 74, 100]. |
-| **Región Olfatoria** | Cilíndrico pseudoestratificado | [cite_start]Células olfatorias, basales y de sostén[cite: 123, 124, 125]. |
-| **Tráquea** | Cilíndrico pseudoestratificado ciliado | 6 tipos celulares; [cite_start]única con 4 capas[cite: 102, 159]. |
-| **Bronquios** | Pseudoestratificado cilíndrico ciliado | [cite_start]Placas de cartílago y capa muscular grande[cite: 187, 188, 190, 192]. |
-| **Bronquiolos P.D.** | Cilíndrico simple ciliado | [cite_start]**❌ Sin cartílago**; luz estrellada[cite: 221, 222, 226, 263]. |
-| **Bronquiolos Terminales** | Cúbico simple | [cite_start]**Células de Clara**; sin células caliciformes[cite: 240, 241, 243, 263]. |
-| **Bronquiolos Resp.** | Cúbico a plano (interrumpido) | [cite_start]Inicio de la **hematosis**[cite: 253, 258, 263]. |
-| **Alvéolos** | Plano simple | [cite_start]Neumonocitos Tipo I (hematosis) y Tipo II (surfactante)[cite: 280, 281, 285, 289]. |
+| **Vestíbulo Nasal** | Plano estratificado | Vibrisas, glándulas sebáceas y zona de transición. |
+| **Región Respiratoria** | Cilíndrico pseudoestratificado ciliado | El "epitelio respiratorio" estándar con células caliciformes. |
+| **Región Olfatoria** | Cilíndrico pseudoestratificado | Células olfatorias, basales y de sostén. |
+| **Tráquea** | Cilíndrico pseudoestratificado ciliado | 6 tipos celulares; única con 4 capas. |
+| **Bronquios** | Pseudoestratificado cilíndrico ciliado | Placas de cartílago y capa muscular grande. |
+| **Bronquiolos P.D.** | Cilíndrico simple ciliado | **❌ Sin cartílago**; luz estrellada. |
+| **Bronquiolos Terminales** | Cúbico simple | **Células de Clara**; sin células caliciformes. |
+| **Bronquiolos Resp.** | Cúbico a plano (interrumpido) | Inicio de la **hematosis**. |
+| **Alvéolos** | Plano simple | Neumonocitos Tipo I (hematosis) y Tipo II (surfactante). |
 ---
 
 ## 2. Células del Epitelio Respiratorio
