@@ -95,19 +95,23 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
-  // --- ESCUCHADOR DE EVENTOS PARA NAVEGACIÓN INTERNA ---
+  // --- NAVEGACIÓN GLOBAL Y ESCUCHADOR DE EVENTOS ---
   useEffect(() => {
-    const handleChangeDoc = (e: any) => {
-      console.log("Intentando cargar:", e.detail); 
-      if (e.detail) {
-        setSelectedMd(e.detail);
-        // Scrollear arriba al cambiar de documento
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        // También scrollear el contenedor interno si existe
-        const mainContainer = document.querySelector('.overflow-y-auto');
-        if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+    // Definimos la función en window para que el HTML del Markdown pueda llamarla
+    (window as any).navegarApunte = (ruta: string) => {
+      console.log("Navegando a:", ruta);
+      setSelectedMd(ruta);
+      
+      // Scroll al inicio suave
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const mainContainer = document.querySelector('.overflow-y-auto');
+      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
+    const handleChangeDoc = (e: any) => {
+      if (e.detail) (window as any).navegarApunte(e.detail);
+    };
+
     window.addEventListener('changeDoc', handleChangeDoc);
     return () => window.removeEventListener('changeDoc', handleChangeDoc);
   }, []);
