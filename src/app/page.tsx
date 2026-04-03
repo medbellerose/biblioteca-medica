@@ -206,7 +206,6 @@ export default function Home() {
             </div>
           </div>
           
-          {/* BOTÓN DE PERFIL / LOGIN */}
           <div className="flex items-center gap-3">
             <SignedOut>
               <SignInButton mode="modal">
