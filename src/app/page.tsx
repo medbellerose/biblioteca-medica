@@ -1,16 +1,9 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { 
-  Brain, Menu, ChevronRight, BookOpen, ChevronDown,
-  FileText, Microscope, Dna, Activity, Stethoscope, Search, X
-} from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, X } from 'lucide-react';
 import Markdown from 'react-markdown';
 import yearsDataRaw from './apuntes.json';
-
-const iconMap: { [key: number]: any } = {
-  1: BookOpen, 2: Microscope, 3: Dna, 4: Activity, 5: Stethoscope
-};
 
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
@@ -41,22 +34,23 @@ export default function Home() {
   useEffect(() => {
     if (!selectedMd) return;
 
-    const fetchContent = async () => {
-      try {
-        const res = await fetch(`/apuntes/${selectedMd}.md`);
-        const text = await res.text();
+    fetch(`/apuntes/${selectedMd}.md`)
+      .then(res => res.text())
+      .then(text => {
+        // ESTRATEGIA SEGURA: Limpieza por reemplazo de palabras exactas
+        // Esto evita errores de "Unterminated regexp" en Vercel
+        let cleanText = text;
         
-        // LIMPIEZA SEGURA: Usamos constantes separadas para evitar errores de sintaxis
-        const cleanTables = text.replace(/\n\|/g, '\n\n|').replace(/\|(\n\s*\n)?/g, '|\n');
-        const cleanCites = cleanTables.replace(/\/g, '').replace(/\[cite_start\]/g, '').replace(/\[cite_end\]/g, '');
+        // Arreglo de tablas: asegura que tengan espacio arriba
+        cleanText = cleanText.split('\n|').join('\n\n|');
         
-        setContent(cleanCites);
-      } catch (err) {
-        setContent('# Error\nNo se pudo cargar el apunte.');
-      }
-    };
-
-    fetchContent();
+        // Limpieza de etiquetas sobrantes (si existen)
+        cleanText = cleanText.split('').join('');
+        cleanText = cleanText.split('[cite_end]').join('');
+        
+        setContent(cleanText);
+      })
+      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
 
   const handleSelection = (file: string) => {
@@ -73,14 +67,14 @@ export default function Home() {
         </div>
 
         <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative group">
+          <div className="relative group text-white">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
             />
             {searchTerm && (
               <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
@@ -91,41 +85,48 @@ export default function Home() {
         </div>
 
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
-          {filteredData.map((yearData) => {
-            const YearIcon = iconMap[yearData.year] || BookOpen;
-            return (
-              <div key={yearData.year} className="space-y-1">
-                <button onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]">
-                  <div className="flex items-center gap-2">
-                    <YearIcon className="w-4 h-4 text-gray-500" />
-                    <span>{yearsTitles[yearData.year]}</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
-                </button>
-                {(expandedYears[yearData.year] || searchTerm) && (
-                  <div className="ml-3 pl-1 border-l border-[#30363d]/50">
-                    {yearData.subjects.map((sub, idx) => (
-                      <div key={idx}>
-                        <button onClick={() => setExpandedSubjects(prev => ({...prev, [`${yearData.year}-${sub.name}`]: !prev[`${yearData.year}-${sub.name}`]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-gray-400 hover:text-white">
-                          <span>{sub.name}</span>
-                          <ChevronDown className="w-3 h-3" />
-                        </button>
-                        {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
-                          <div className="ml-4 space-y-1">
-                            {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-300'}`}>
-                                • {topic.label}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {filteredData.map((yearData) => (
+            <div key={yearData.year} className="space-y-1">
+              <button 
+                onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} 
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]"
+              >
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-gray-500" />
+                  <span>{yearsTitles[yearData.year]}</span>
+                </div>
+                <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
+              </button>
+              {(expandedYears[yearData.year] || searchTerm) && (
+                <div className="ml-3 pl-1 border-l border-[#30363d]/50">
+                  {yearData.subjects.map((sub, idx) => (
+                    <div key={idx}>
+                      <button 
+                        onClick={() => setExpandedSubjects(prev => ({...prev, [`${yearData.year}-${sub.name}`]: !prev[`${yearData.year}-${sub.name}`]}))} 
+                        className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-gray-400 hover:text-white"
+                      >
+                        <span>{sub.name}</span>
+                        <ChevronDown className="w-3 h-3" />
+                      </button>
+                      {(expandedSubjects[`${yearData.year}-${sub.name}`] || searchTerm) && (
+                        <div className="ml-4 space-y-1">
+                          {sub.topics.map(topic => (
+                            <button 
+                              key={topic.file} 
+                              onClick={() => handleSelection(topic.file)} 
+                              className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-200'}`}
+                            >
+                              • {topic.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </nav>
       </aside>
 
@@ -136,7 +137,7 @@ export default function Home() {
           </button>
           <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
               <span>Medpath</span>
-              {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.replace(/-/g, ' ')}</span></>}
+              {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
           </div>
         </header>
 
