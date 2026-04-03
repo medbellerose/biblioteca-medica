@@ -37,21 +37,19 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // LIMPIEZA SEGURA DE TABLAS (Doble salto de línea para renderizado)
+        // LIMPIEZA DE TABLAS: Aseguramos el espacio necesario
         let cleanText = text.split('\n|').join('\n\n|');
         
-        // LIMPIEZA DE ETIQUETAS RESIDUALEAS DEL PDF
-        // Usamos split/join con palabras exactas para evitar errores de sintaxis
-        const tagsToRemove = ['', '[cite_end]', ''];
-        tagsToRemove.forEach(tag => {
+        // LIMPIEZA DE ETIQUETAS: Quitamos las marcas de citación del PDF
+        const tags = ['', '[cite_end]', ''];
+        tags.forEach(tag => {
           cleanText = cleanText.split(tag).join('');
         });
 
-        // LIMPIEZA DE LÍNEAS DE METADATOS (source y cite)
-        const lines = cleanText.split('\n');
-        const finalLines = lines.filter(line => {
-          const lowerLine = line.toLowerCase();
-          return !lowerLine.includes('text-[#e6edf3]">
+        // FILTRADO DE LÍNEAS: Quitamos referencias de origen
+        const finalContent = cleanText.split('\n').filter(line => {
+          const l = line.toLowerCase();
+          return !l.includes('text-[#e6edf3]">
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -69,14 +67,14 @@ export default function Home() {
               className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
             />
             {searchTerm && (
-              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
+              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500">
                 <X className="w-4 h-4" />
               </button>
             )}
           </div>
         </div>
 
-        <nav className="flex-1 overflow-y-auto p-3 space-y-2 font-medium">
+        <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {filteredData.map((yearData) => (
             <div key={yearData.year} className="space-y-1">
               <button 
@@ -127,7 +125,7 @@ export default function Home() {
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
           </div>
