@@ -80,32 +80,41 @@ Se conforma de **seis tipos de células**:
 
 | Capa | Descripción |
 |------|-------------|
-| **Túnica Mucosa** | En contacto con la luz. Epitelio cilíndrico ciliado con células caliciformes |
-| **Submucosa** | Tejido conectivo con glándulas |
-| **Muscular** | Capa de músculo liso |
-| **Adventicia** | Tejido conectivo externo con cartílagos |
+| **Túnica Mucosa** | En contacto con la luz. Epitelio respiratorio: Epitelio cilíndrico ciliado con células caliciformes. Debajo una lámina propia formada por Tejido Conectivo Común Laxo con Fibras elásticas. Tejido linfoide asociado |
+| **Submucosa** | Tejido conectivo con fibras colágenas y glándulas mucosas, serosas y mixtas; compuestas ramificadas |
+| **Cartílago-Muscular** | Placas de cartílago hialino con forma de herradura abierta hacia atrás. Capa de músculo liso |
+| **Adventicia** | Tejido Conectivo Común Laxo, vasos, nervios, adiposo |
 
 ---
 🔬 Atlas: [Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
 
 ## 4. Bronquios
 
-### Características Estructurales
-
-> 🔍 **Observación Microscópica**
-> 
-> Entre la mucosa y la submucosa hay una **capa de músculo liso muy grande** (entre lámina propia y las glándulas).
-
-**Estructura:**
-- Placas cartilaginosas unidas por tejido conjuntivo
-- Por fuera: túnica adventicia
-- Tejido respiratorio con neumonocitos
+### 🔬 Características Estructurales
 
 > 💡 **Regla Mnemotécnica:** *"Siempre el cartílago va junto a la glándula"*
 
-> 📊 **Relación Presión-Musculatura**
-> 
-> Dependiendo de la cantidad de músculo, será la cantidad que se va a estrechar la vía aérea.
+A diferencia de la tráquea, los bronquios se encuentran dentro del parénquima pulmonar y presentan una capa muscular circular completa y cartílago dispuesto en placas.
+
+| Capa Histológica | Descripción Detallada |
+| :--- | :--- |
+| **1. Túnica Mucosa** | Epitelio pseudoestratificado cilíndrico ciliado con células caliciformes. Posee una lámina propia con glándulas mucosas. |
+| **2. Túnica Muscular** | Una capa de **músculo liso muy grande** ubicada entre la mucosa y la submucosa. Sus células son alargadas y acidófilas. |
+| **3. Submucosa** | Tejido Conectivo Laxo (TCCL) con glándulas mucosas, serosas y tejido adiposo. |
+| **4. Cartílago Hialino** | Se presenta en **placas** unidas por tejido conjuntivo. |
+| **5. Túnica Adventicia** | Capa externa que une el bronquio al tejido pulmonar. |
+
+
+
+### 🔍 Observación Microscópica
+
+* **Relación Presión-Musculatura**: La capacidad de la vía aérea para estrecharse (broncoconstricción) depende directamente de la cantidad de músculo liso presente. A mayor musculatura, mayor capacidad de cierre ante estímulos.
+* **Entorno Pulmonar**: Al ser estructuras intrapulmonares, por fuera de la adventicia es visible el tejido respiratorio con presencia de **neumonocitos**.
+* **Ubicación del Músculo**: Es clave notar que el músculo liso se sitúa específicamente entre la lámina propia y las glándulas submucosas.
+
+---
+
+🔬 **Atlas:** [Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
 
 ---
 
