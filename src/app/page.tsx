@@ -259,7 +259,7 @@ export default function Home() {
                       <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu cuenta está activa, pero requiere el pase de acceso para visualizar los apuntes.</p>
                       
                       {/* BOTÓN WHATSAPP MINIMALISTA */}
-                      <a href="https://wa.me/TUNUMERO" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
+                      <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
                         <MessageCircle className="w-4 h-4" />
                         <span>Solicitar activación</span>
                       </a>
