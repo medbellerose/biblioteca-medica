@@ -16,6 +16,7 @@
 
 
 > 📝 **Nota Importante:** La zona de transición muco-cutánea se encuentra en el exterior con epitelio plano estratificado.
+> 🧠 **Ubicación Especial:** El epitelio olfatorio se encuentra en el techo de la cavidad nasal, cerca de los nervios olfatorios.
 
 ---
 
@@ -37,8 +38,6 @@ Se conforma de **seis tipos de células**:
 | **6. Células del SNED** | Sistema Neuroendócrino Difuso | Funciones neuroendócrinas |
 
 > 💡 **Dato Clínico:** Las células caliciformes aumentan en número durante la irritación crónica de las vías aéreas.
-
-> 🧠 **Ubicación Especial:** El epitelio olfatorio se encuentra en el techo de la cavidad nasal, cerca de los nervios olfatorios.
 
 ---
 

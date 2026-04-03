@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide-center';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -13,7 +13,6 @@ const yearsTitles: { [key: number]: string } = {
 };
 
 // --- FUNCIÓN DE LIMPIEZA UNIVERSAL ---
-// La sacamos fuera para usarla en el TOC y asegurar coincidencia
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
@@ -60,7 +59,6 @@ const TableOfContents = ({ content }: { content: string }) => {
               if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
               } else {
-                // Intento de búsqueda por aproximación si el ID exacto falla
                 const allHeadings = document.querySelectorAll('h2');
                 const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
                 if (found) found.scrollIntoView({ behavior: 'smooth' });
@@ -221,7 +219,7 @@ export default function Home() {
             {selectedMd && <TableOfContents content={content} />}
 
             {selectedMd ? (
-              <article className="prose prose-invert prose-purple prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
+              <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
                 <Markdown 
                   remarkPlugins={[remarkGfm, remarkSlug]} 
                   rehypePlugins={[rehypeRaw]}
