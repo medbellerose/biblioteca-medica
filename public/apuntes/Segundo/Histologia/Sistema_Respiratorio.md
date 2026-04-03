@@ -26,8 +26,6 @@
 
 ![Mapa de las vías respiratorias](/public/imagenes/pulmon/esquema1.png)
 
-![Mapa de las vías respiratorias](/public/imagenes/pulmon/histologiavestibulonasal.png)
-
 ### 🗺️ Mapa de Epitelios (Trayecto Completo)
 
 > 📍 **Resumen de Transición**
@@ -46,6 +44,8 @@
 | **Bronquiolos Resp.** | Cúbico a plano (interrumpido) | Inicio de la **hematosis**. |
 | **Alvéolos** | Plano simple | Neumonocitos Tipo I (hematosis) y Tipo II (surfactante). |
 ---
+
+![Mapa de las vías respiratorias](/public/imagenes/pulmon/histologiavestibulonasal.png)
 
 ## 2. Células del Epitelio Respiratorio
 
