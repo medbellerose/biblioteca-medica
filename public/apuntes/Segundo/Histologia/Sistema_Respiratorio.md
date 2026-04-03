@@ -16,7 +16,7 @@
   </a>
 </div>
 
-## 1. Generalidades
+## Generalidades
 
 > 🎯 **Concepto Clave**
 > 
@@ -35,8 +35,8 @@
 | Estructura | Tipo de Epitelio | Células y Detalles Clave |
 | :--- | :--- | :--- |
 | **Vestíbulo Nasal** | Plano estratificado | Vibrisas, glándulas sebáceas y zona de transición. |
-| **Región Respiratoria** | Cilíndrico pseudoestratificado ciliado | El "epitelio respiratorio" estándar con células caliciformes. |
-| **Región Olfatoria** | Cilíndrico pseudoestratificado | Células olfatorias, basales y de sostén. |
+| **Mucosa Respiratoria** | Cilíndrico pseudoestratificado ciliado con células caliciformes | Tejido conectivo Denso Colágeno Irregular Capilares Sanguíneos y Glandulas Mucosas y Serosas |
+| **Mucosa Olfatoria** | Cilíndrico pseudoestratificado | Células olfatorias, basales y de sostén. En el techo de la cavidad nasal, cerca de nervios olfatorios.  |
 | **Tráquea** | Cilíndrico pseudoestratificado ciliado | 6 tipos celulares; única con 4 capas. |
 | **Bronquios** | Pseudoestratificado cilíndrico ciliado | Placas de cartílago y capa muscular grande. |
 | **Bronquiolos P.D.** | Cilíndrico simple ciliado | **❌ Sin cartílago**; luz estrellada. |
@@ -44,8 +44,10 @@
 | **Bronquiolos Resp.** | Cúbico a plano (interrumpido) | Inicio de la **hematosis**. |
 | **Alvéolos** | Plano simple | Neumonocitos Tipo I (hematosis) y Tipo II (surfactante). |
 ---
+## 1. Mucosa Olfatoria
 
 ![Mapa de las vías respiratorias](/public/imagenes/pulmon/histologiavestibulonasal.png)
+![Mapa de las vías respiratorias](/public/imagenes/pulmon/mucosarespiratoria.webp)
 
 ## 2. Células del Epitelio Respiratorio
 
