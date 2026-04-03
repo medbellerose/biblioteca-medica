@@ -12,7 +12,18 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- COMPONENTE: ÍNDICE FANTASMA (TOC) COMPATIBLE ---
+// --- FUNCIÓN DE LIMPIEZA UNIVERSAL ---
+// La sacamos fuera para usarla en el TOC y asegurar coincidencia
+const cleanId = (text: string) => {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Quita tildes
+    .replace(/[^\w\s-]/g, '') // Quita símbolos, puntos, dos puntos, emojis
+    .trim()
+    .replace(/\s+/g, '-'); // Espacios por guiones
+};
+
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -21,15 +32,7 @@ const TableOfContents = ({ content }: { content: string }) => {
       .filter(line => line.startsWith('## ')) 
       .map(line => {
         const text = line.replace('## ', '').trim();
-        
-        // --- LÓGICA DE ID ESTÁNDAR DE GITHUB/REMARK ---
-        const id = text
-          .toLowerCase()
-          .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Quita tildes
-          .replace(/[^\w\s-]/g, '') // Quita símbolos y emojis (pero mantiene números)
-          .trim()
-          .replace(/\s+/g, '-'); // Espacios por guiones
-
+        const id = cleanId(text);
         return { text, id };
       });
   }, [content]);
@@ -41,7 +44,7 @@ const TableOfContents = ({ content }: { content: string }) => {
       className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300 ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ width: isHovered ? '240px' : '40px' }}
+      style={{ width: isHovered ? '260px' : '40px' }}
     >
       <div className={`
         flex flex-col gap-2 py-4 pr-4 pl-2 transition-all duration-300
@@ -56,6 +59,11 @@ const TableOfContents = ({ content }: { content: string }) => {
               const target = document.getElementById(heading.id);
               if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Intento de búsqueda por aproximación si el ID exacto falla
+                const allHeadings = document.querySelectorAll('h2');
+                const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
+                if (found) found.scrollIntoView({ behavior: 'smooth' });
               }
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
@@ -215,10 +223,7 @@ export default function Home() {
             {selectedMd ? (
               <article className="prose prose-invert prose-purple prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
                 <Markdown 
-                  remarkPlugins={[
-                    remarkGfm, 
-                    [remarkSlug, { prefix: '' }]
-                  ]} 
+                  remarkPlugins={[remarkGfm, remarkSlug]} 
                   rehypePlugins={[rehypeRaw]}
                 >
                   {content}
