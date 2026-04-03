@@ -5,22 +5,22 @@
       {
         "name": "Biología",
         "topics": [
-          { "label": "Célula", "file": "celula" },
-          { "label": "Metabolismo", "file": "metabolismo" }
+          { "label": "Célula", "file": "celula", "keywords": ["organelos", "mitocondria", "núcleo", "citoplasma"] },
+          { "label": "Metabolismo", "file": "metabolismo", "keywords": ["enzimas", "atp", "ciclo de krebs", "glucólisis"] }
         ]
       },
       {
         "name": "Anatomía",
         "topics": [
-          { "label": "Vértebras", "file": "vertebras" },
-          { "label": "Tráquea y Pulmones", "file": "Anatomia_Traquea_Pulmones" },
-          { "label": "SNC", "file": "snc" }
+          { "label": "Vértebras", "file": "vertebras", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
+          { "label": "Tráquea y Pulmones", "file": "Anatomia_Traquea_Pulmones", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos"] },
+          { "label": "SNC", "file": "snc", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
         ]
       },
       {
         "name": "Química",
         "topics": [
-          { "label": "Bioquímica Básica", "file": "bioquimica-basica" }
+          { "label": "Bioquímica Básica", "file": "bioquimica-basica", "keywords": ["ph", "enlaces", "moléculas", "aminoácidos"] }
         ]
       }
     ]
@@ -30,15 +30,15 @@
     "subjects": [
       {
         "name": "Histología",
-        "topics": [{ "label": "Sistema Respiratorio", "file": "Sistema_Respiratorio_Notion" }]
+        "topics": [{ "label": "Sistema Respiratorio", "file": "Sistema_Respiratorio", "keywords": ["epitelio", "neumocitos", "tejido", "microscopía"] }]
       },
       {
         "name": "Embriología",
-        "topics": [{ "label": "Desarrollo Prenatal", "file": "desarrollo-prenatal" }]
+        "topics": [{ "label": "Desarrollo Prenatal", "file": "desarrollo-prenatal", "keywords": ["fecundación", "blastocisto", "gastrulación", "órganos"] }]
       },
       {
         "name": "Genética",
-        "topics": [{ "label": "Herencia", "file": "herencia" }]
+        "topics": [{ "label": "Herencia", "file": "herencia", "keywords": ["adn", "genes", "mendel", "cromosomas", "familiar"] }]
       }
     ]
   },
@@ -48,15 +48,15 @@
       {
         "name": "Fisiología",
         "topics": [
-          { "label": "Cardiovascular", "file": "cardiovascular" },
-          { "label": "Respiratoria", "file": "respiratoria" }
+          { "label": "Cardiovascular", "file": "cardiovascular", "keywords": ["corazón", "presión", "ciclo cardíaco", "gasto"] },
+          { "label": "Respiratoria", "file": "respiratoria", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio"] }
         ]
       },
       {
         "name": "Inmunología",
         "topics": [
-          { "label": "Innata", "file": "innata" },
-          { "label": "Adaptativa", "file": "adaptativa" }
+          { "label": "Innata", "file": "innata", "keywords": ["barreras", "macrófagos", "inflamación", "complemento"] },
+          { "label": "Adaptativa", "file": "adaptativa", "keywords": ["linfocitos", "anticuerpos", "antígenos", "memoria"] }
         ]
       }
     ]
@@ -66,18 +66,18 @@
     "subjects": [
       {
         "name": "Farmacología",
-        "topics": [{ "label": "Farmacocinética", "file": "farmacocinetica" }]
+        "topics": [{ "label": "Farmacocinética", "file": "farmacocinetica", "keywords": ["absorción", "distribución", "metabolismo", "excreción", "ladme"] }]
       },
       {
         "name": "Semiología",
         "topics": [
-          { "label": "Inspección", "file": "inspeccion" },
-          { "label": "Auscultación", "file": "auscultacion" }
+          { "label": "Inspección", "file": "inspeccion", "keywords": ["examen físico", "observación", "signos", "facies"] },
+          { "label": "Auscultación", "file": "auscultacion", "keywords": ["estetoscopio", "murmullo", "ruidos", "soplos"] }
         ]
       },
       {
         "name": "Patología",
-        "topics": [{ "label": "Inflamación", "file": "inflamacion" }]
+        "topics": [{ "label": "Inflamación", "file": "inflamacion", "keywords": ["aguda", "crónica", "reparación", "necrosis"] }]
       }
     ]
   },
@@ -86,18 +86,18 @@
     "subjects": [
       {
         "name": "Nutrición",
-        "topics": [{ "label": "Evaluación Nutricional", "file": "evaluacion-nutricional" }]
+        "topics": [{ "label": "Evaluación Nutricional", "file": "evaluacion-nutricional", "keywords": ["imc", "antropometría", "dieta", "clínica", "abuela", "madre"] }]
       },
       {
         "name": "Medicina Interna",
         "topics": [
-          { "label": "Cardiología", "file": "cardiologia" },
-          { "label": "Nefrología", "file": "nefrologia" }
+          { "label": "Cardiología", "file": "cardiologia", "keywords": ["ecg", "falla cardíaca", "hipertensión", "infarto"] },
+          { "label": "Nefrología", "file": "nefrologia", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
         ]
       },
       {
         "name": "Psiquiatría",
-        "topics": [{ "label": "Trastornos del Humor", "file": "trastornos-humor" }]
+        "topics": [{ "label": "Trastornos del Humor", "file": "trastornos-humor", "keywords": ["depresión", "bipolaridad", "ánimo", "terapia"] }]
       }
     ]
   }

@@ -5,7 +5,7 @@ import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search } from 'lucide
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
-import rehypeRaw from 'rehype-raw'; // <-- Añadimos esto para los <br/>
+import rehypeRaw from 'rehype-raw'; // Soporte para <br/>
 import yearsDataRaw from './apuntes.json';
 
 const yearsTitles: { [key: number]: string } = {
@@ -20,15 +20,22 @@ export default function Home() {
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
 
+  // --- BUSCADOR OPTIMIZADO CON KEYWORDS ---
   const filteredData = useMemo(() => {
     if (!searchTerm) return yearsDataRaw;
+    const term = searchTerm.toLowerCase();
+
     return yearsDataRaw.map(year => ({
       ...year,
       subjects: year.subjects.map(sub => ({
         ...sub,
         topics: sub.topics.filter(topic => 
-          topic.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          sub.name.toLowerCase().includes(searchTerm.toLowerCase())
+          // 1. Busca en el título (Tráquea, etc.)
+          topic.label.toLowerCase().includes(term) ||
+          // 2. Busca en la materia (Anatomía, etc.)
+          sub.name.toLowerCase().includes(term) ||
+          // 3. BUSQUEDA PROFUNDA: Busca en el array de keywords del JSON
+          (topic.keywords && topic.keywords.some(kw => kw.toLowerCase().includes(term)))
         )
       })).filter(sub => sub.topics.length > 0)
     })).filter(year => year.subjects.length > 0);
@@ -40,7 +47,7 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // Usamos exactamente tu lógica de limpieza que funcionaba
+        // Tu lógica de limpieza estable
         let cleanText = text
           .split('<b>').join('**')
           .split('</b>').join('**')
@@ -78,7 +85,7 @@ export default function Home() {
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
-              placeholder="Buscar apuntes..."
+              placeholder="Buscar por título o concepto..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
@@ -136,7 +143,6 @@ export default function Home() {
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth">
           {selectedMd ? (
             <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-              {/* Aquí añadimos rehypeRaw para que los <br/> funcionen de verdad */}
               <Markdown 
                 remarkPlugins={[remarkGfm, remarkSlug]} 
                 rehypePlugins={[rehypeRaw]}
