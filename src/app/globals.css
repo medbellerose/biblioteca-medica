@@ -3,46 +3,48 @@
 @tailwind utilities;
 
 @layer base {
+  /* Configuración base del cuerpo */
   body {
     @apply bg-[#0d1117] text-[#e6edf3];
   }
 
-  /* --- ESTILO DE TABLAS MEDPATH (DISEÑO DE CUADRÍCULA) --- */
+  /* --- ESTILO DE TABLAS MEDPATH (DISEÑO DE CUADRÍCULA PROFESIONAL) --- */
   .prose table {
     @apply w-full my-8;
     border-collapse: separate; 
     border-spacing: 0;
-    border-radius: 12px; 
+    border-radius: 12px; /* Redondeado de esquinas */
     overflow: hidden;
-    border: 1px solid #30363d; /* Borde exterior principal */
+    border: 1px solid #30363d; /* Borde exterior */
     background-color: #0d1117;
   }
 
-  /* Estilo para los encabezados y celdas */
+  /* Estilo para los encabezados y celdas individuales */
   .prose th, 
   .prose td {
     @apply p-4 text-sm align-top;
-    border: 1px solid #30363d; /* Esto crea la cuadrícula interna */
+    border: 0.5px solid #30363d; /* Líneas divisorias de la cuadrícula */
     line-height: 1.6;
   }
 
-  /* Color especial para el encabezado */
+  /* Estilo específico para la fila de títulos */
   .prose th {
     @apply font-bold text-left;
     background-color: #161b22;
+    border-bottom: 2px solid #30363d; /* Resalta la separación del encabezado */
   }
 
-  /* Efecto hover sutil para estudiar mejor */
+  /* Efecto de resaltado al pasar el mouse (útil para lectura de segmentos) */
   .prose tr:hover td {
-    background-color: rgba(139, 92, 246, 0.03);
+    background-color: rgba(139, 92, 246, 0.05); 
   }
 
-  /* --- MEJORAS DE IMÁGENES --- */
+  /* --- ESTILO DE IMÁGENES (ESQUEMAS ANATÓMICOS) --- */
   .prose img {
-    @apply rounded-xl border border-[#30363d] shadow-2xl my-10;
+    @apply rounded-xl border border-[#30363d] shadow-2xl my-10 mx-auto;
   }
 
-  /* --- SCROLLBAR ESTILO DARK --- */
+  /* --- PERSONALIZACIÓN DE LA BARRA DE DESPLAZAMIENTO --- */
   ::-webkit-scrollbar {
     width: 8px;
   }
