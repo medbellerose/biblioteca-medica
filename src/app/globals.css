@@ -3,42 +3,38 @@
 @tailwind utilities;
 
 @layer base {
-  /* Estilo base para el cuerpo de la página */
   body {
     @apply bg-[#0d1117] text-[#e6edf3];
   }
 
-  /* --- ESTILO DE TABLAS MEDPATH --- */
+  /* --- ESTILO DE TABLAS MEDPATH (DISEÑO DE CUADRÍCULA) --- */
   .prose table {
     @apply w-full my-8;
-    border-collapse: separate; /* Obligatorio para que funcione el border-radius */
+    border-collapse: separate; 
     border-spacing: 0;
-    border-radius: 12px; /* Redondeado de las esquinas */
+    border-radius: 12px; 
     overflow: hidden;
-    border: 1px solid #30363d; /* Color del borde igual al de GitHub Dark */
+    border: 1px solid #30363d; /* Borde exterior principal */
+    background-color: #0d1117;
   }
 
-  /* Estilo del encabezado (Th) */
-  .prose th {
-    @apply p-4 font-bold text-left;
-    background-color: #161b22;
-    border-bottom: 1px solid #30363d;
-  }
-
-  /* Estilo de las celdas (Td) */
+  /* Estilo para los encabezados y celdas */
+  .prose th, 
   .prose td {
     @apply p-4 text-sm align-top;
-    border-bottom: 1px solid #21262d;
+    border: 1px solid #30363d; /* Esto crea la cuadrícula interna */
+    line-height: 1.6;
   }
 
-  /* Quitar el borde inferior a la última fila para no romper el redondeado */
-  .prose tr:last-child td {
-    border-bottom: none;
+  /* Color especial para el encabezado */
+  .prose th {
+    @apply font-bold text-left;
+    background-color: #161b22;
   }
 
-  /* Efecto hover opcional para resaltar filas al estudiar */
+  /* Efecto hover sutil para estudiar mejor */
   .prose tr:hover td {
-    background-color: rgba(139, 92, 246, 0.05); /* Un toque sutil de púrpura */
+    background-color: rgba(139, 92, 246, 0.03);
   }
 
   /* --- MEJORAS DE IMÁGENES --- */
