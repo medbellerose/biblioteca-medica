@@ -15,7 +15,6 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- TU FUNCIÓN DE LIMPIEZA DE IDs ---
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
@@ -91,8 +90,9 @@ const TableOfContents = ({ content }: { content: string }) => {
 };
 
 export default function Home() {
+  // --- LÓGICA DE PERMISOS POR NIVEL ---
   const { user } = useUser();
-  const isPaid = user?.publicMetadata?.plan === 'pago'; // Verifica el sello en Clerk
+  const userLevel = Number(user?.publicMetadata?.plan) || 0;
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedMd, setSelectedMd] = useState<string | null>(null);
@@ -100,6 +100,19 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
+
+  // Detectamos a qué año pertenece el apunte actual
+  const currentYear = useMemo(() => {
+    if (!selectedMd) return 0;
+    for (const yearObj of yearsDataRaw) {
+      for (const sub of yearObj.subjects) {
+        if (sub.topics.some(t => t.file === selectedMd)) return yearObj.year;
+      }
+    }
+    return 0;
+  }, [selectedMd]);
+
+  const hasAccess = userLevel >= currentYear;
 
   useEffect(() => {
     (window as any).navegarApunte = (ruta: string) => {
@@ -188,6 +201,7 @@ export default function Home() {
                 </div>
                 <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
               </button>
+
               {(expandedYears[yearData.year] || searchTerm) && (
                 <div className="ml-3 pl-1 border-l border-[#30363d]/50">
                   {yearData.subjects.map((sub, idx) => {
@@ -248,17 +262,34 @@ export default function Home() {
             {selectedMd ? (
               <>
                 <SignedIn>
-                  {isPaid ? (
+                  {hasAccess ? (
                     <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+                      <Markdown 
+                        remarkPlugins={[remarkGfm, remarkSlug]} 
+                        rehypePlugins={[rehypeRaw]}
+                        components={{
+                          a: ({ node, ...props }) => {
+                            const isInternal = props.href && !props.href.startsWith('http');
+                            if (isInternal) {
+                              return (
+                                <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} className={props.className}>
+                                  {props.children}
+                                </a>
+                              );
+                            }
+                            return <a {...props} target="_blank" rel="noopener noreferrer" />;
+                          }
+                        }}
+                      >
+                        {content}
+                      </Markdown>
                     </article>
                   ) : (
                     <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
                       <Lock className="w-10 h-10 text-purple-400 mb-4" />
                       <h2 className="text-xl font-bold text-white tracking-tight">Acceso Restringido</h2>
-                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu cuenta está activa, pero requiere el pase de acceso para visualizar los apuntes.</p>
+                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase de estudio actual ({userLevel === 0 ? 'Sin suscripción' : `Año ${userLevel}`}) no incluye el material de {currentYear}° Año.</p>
                       
-                      {/* BOTÓN WHATSAPP MINIMALISTA */}
                       <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
                         <MessageCircle className="w-4 h-4" />
                         <span>Solicitar activación</span>
