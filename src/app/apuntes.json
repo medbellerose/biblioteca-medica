@@ -13,7 +13,7 @@
         "name": "Anatomía",
         "topics": [
           { "label": "Vértebras", "file": "vertebras" },
-          { "label": "Tráquea y Pulmones", "file": "traquea-pulmones" },
+          { "label": "Tráquea y Pulmones", "file": "Anatomia_Traquea_Pulmones" },
           { "label": "SNC", "file": "snc" }
         ]
       },
