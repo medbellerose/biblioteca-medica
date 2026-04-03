@@ -39,26 +39,42 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // PROCESAMIENTO SEGURO DE TEXTO
-        let cleanText = text
+        // --- MOTOR DE RECONSTRUCCIÓN DE TABLAS ---
+        let lines = text.split('\n');
+        let processedLines = lines.map((line, index) => {
+          let trimmed = line.trim();
+          
+          // 1. Detectar líneas de separación de tabla defectuosas (ej: |---|---|)
+          // Si la línea tiene pipes y solo guiones, la estandarizamos para que Markdown la reconozca
+          if (trimmed.startsWith('|') && trimmed.endsWith('|') && !/[a-zA-Z0-9]/.test(trimmed)) {
+             const columns = (trimmed.match(/\|/g) || []).length - 1;
+             return '|' + ' :--- |'.repeat(columns);
+          }
+
+          // 2. Asegurar que la cabecera de la tabla tenga una línea vacía arriba
+          // Si no hay espacio, Markdown a veces no "entiende" que es una tabla
+          if (trimmed.startsWith('|') && index > 0 && !lines[index-1].trim().startsWith('|') && lines[index-1].trim() !== '') {
+            return '\n' + line;
+          }
+
+          return line;
+        });
+
+        // 3. Limpieza de etiquetas y rutas
+        let cleanText = processedLines.join('\n')
           .split('<br>').join('\n')
           .split('<br/>').join('\n')
           .split('<b>').join('**')
           .split('</b>').join('**')
-          .split('(/public/').join('(/')
-          .split('\n|').join('\n\n|');
+          .split('(/public/').join('(/'); 
 
-        const lines = cleanText.split('\n');
-        const finalLines = lines.map(line => {
-          const trimmed = line.trim();
-          // Eliminar anclajes de títulos
-          if (trimmed.includes('{#')) {
-            return line.split('{#')[0].trim();
-          }
+        // 4. Eliminar anclajes de títulos tipo {#id}
+        const finalContent = cleanText.split('\n').map(line => {
+          if (line.includes('{#')) return line.split('{#')[0].trim();
           return line;
-        });
+        }).join('\n');
 
-        setContent(finalLines.join('\n'));
+        setContent(finalContent);
       })
       .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
   }, [selectedMd]);
