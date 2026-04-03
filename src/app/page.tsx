@@ -81,7 +81,9 @@ export default function Home() {
         });
         
         // 4. Limpieza de referencias sin usar expresiones regulares peligrosas
-        // Esto elimina cualquier línea que contenga);
+        const finalLines = finalContent.split('\n').filter(line => {
+          const l = line.toLowerCase();
+          return !l.includes(');
 
   const handleSelection = (file: string) => {
     setSelectedMd(file);
