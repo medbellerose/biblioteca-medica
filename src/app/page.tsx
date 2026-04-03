@@ -12,23 +12,24 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- COMPONENTE: ÍNDICE FANTASMA (TOC) SOLO TÍTULOS PRINCIPALES ---
+// --- COMPONENTE: ÍNDICE FANTASMA (TOC) COMPATIBLE ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const headings = useMemo(() => {
     return content.split('\n')
-      .filter(line => line.startsWith('## ')) // SOLO títulos grandes
+      .filter(line => line.startsWith('## ')) 
       .map(line => {
         const text = line.replace('## ', '').trim();
-        // Limpieza profunda de ID: quita emojis, puntos iniciales y símbolos
+        
+        // --- LÓGICA DE ID ESTÁNDAR DE GITHUB/REMARK ---
         const id = text
           .toLowerCase()
           .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Quita tildes
-          .replace(/^[\d.\s]+/, '') // Quita números al inicio (ej: "1. ")
-          .replace(/[^\w\s-]/g, '') // Quita emojis y símbolos
+          .replace(/[^\w\s-]/g, '') // Quita símbolos y emojis (pero mantiene números)
           .trim()
-          .replace(/\s+/g, '-'); // Espacios a guiones
+          .replace(/\s+/g, '-'); // Espacios por guiones
+
         return { text, id };
       });
   }, [content]);
@@ -52,8 +53,10 @@ const TableOfContents = ({ content }: { content: string }) => {
             href={`#${heading.id}`}
             onClick={(e) => {
               e.preventDefault();
-              const el = document.getElementById(heading.id);
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
+              const target = document.getElementById(heading.id);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -214,7 +217,7 @@ export default function Home() {
                 <Markdown 
                   remarkPlugins={[
                     remarkGfm, 
-                    [remarkSlug, { prefix: '' }] // Quitamos prefijos raros
+                    [remarkSlug, { prefix: '' }]
                   ]} 
                   rehypePlugins={[rehypeRaw]}
                 >
