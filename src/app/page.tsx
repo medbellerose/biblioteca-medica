@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -9,13 +9,13 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 
 // --- IMPORTACIONES DE CLERK ---
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- FUNCIÓN DE LIMPIEZA UNIVERSAL PARA IDs (Tu versión corregida) ---
+// --- TU FUNCIÓN DE LIMPIEZA DE IDs ---
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
@@ -91,6 +91,9 @@ const TableOfContents = ({ content }: { content: string }) => {
 };
 
 export default function Home() {
+  const { user } = useUser();
+  const isPaid = user?.publicMetadata?.plan === 'pago'; // Verifica el sello en Clerk
+
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedMd, setSelectedMd] = useState<string | null>(null);
   const [content, setContent] = useState<string>('');
@@ -158,7 +161,6 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      {/* SIDEBAR */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -169,7 +171,7 @@ export default function Home() {
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
-              placeholder="Buscar por título o concepto..."
+              placeholder="Buscar apunte..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
@@ -179,44 +181,28 @@ export default function Home() {
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {filteredData.map((yearData) => (
             <div key={yearData.year} className="space-y-1">
-              {/* BOTÓN DE AÑO */}
-              <button 
-                onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} 
-                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]"
-              >
+              <button onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]">
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-gray-500" />
                   <span>{yearsTitles[yearData.year]}</span>
                 </div>
                 <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
               </button>
-
-              {/* LISTA DE MATERIAS (MENÚ ANIDADO) */}
               {(expandedYears[yearData.year] || searchTerm) && (
                 <div className="ml-3 pl-1 border-l border-[#30363d]/50">
                   {yearData.subjects.map((sub, idx) => {
                     const subKey = `${yearData.year}-${sub.name}`;
                     const isSubExpanded = expandedSubjects[subKey] || searchTerm !== '';
-                    
                     return (
                       <div key={idx}>
-                        <button 
-                          onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))}
-                          className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-gray-400 hover:text-white"
-                        >
+                        <button onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-gray-400 hover:text-white">
                           <span>{sub.name}</span>
                           <ChevronDown className={`w-3 h-3 transition-transform ${isSubExpanded ? 'rotate-180' : ''}`} />
                         </button>
-
-                        {/* LISTA DE TEMAS */}
                         {isSubExpanded && (
                           <div className="ml-4 space-y-1">
                             {sub.topics.map(topic => (
-                              <button 
-                                key={topic.file} 
-                                onClick={() => handleSelection(topic.file)} 
-                                className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-200'}`}
-                              >
+                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400 font-bold' : 'text-gray-400 hover:text-gray-200'}`}>
                                 • {topic.label}
                               </button>
                             ))}
@@ -243,14 +229,10 @@ export default function Home() {
                 {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('_').join(' ')}</span></>}
             </div>
           </div>
-
-          {/* BOTONES DE CLERK */}
           <div className="flex items-center gap-3">
             <SignedOut>
               <SignInButton mode="modal">
-                <button className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-full font-bold shadow-lg transition-all">
-                  Iniciar Sesión
-                </button>
+                <button className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-full font-bold shadow-lg transition-all">Iniciar Sesión</button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
@@ -266,40 +248,32 @@ export default function Home() {
             {selectedMd ? (
               <>
                 <SignedIn>
-                  <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                    <Markdown 
-                      remarkPlugins={[remarkGfm, remarkSlug]} 
-                      rehypePlugins={[rehypeRaw]}
-                      components={{
-                        a: ({ node, ...props }) => {
-                          const isInternal = props.href && !props.href.startsWith('http');
-                          if (isInternal) {
-                            return (
-                              <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} className={props.className}>
-                                {props.children}
-                              </a>
-                            );
-                          }
-                          return <a {...props} target="_blank" rel="noopener noreferrer" />;
-                        }
-                      }}
-                    >
-                      {content}
-                    </Markdown>
-                  </article>
+                  {isPaid ? (
+                    <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
+                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+                    </article>
+                  ) : (
+                    <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
+                      <Lock className="w-10 h-10 text-purple-400 mb-4" />
+                      <h2 className="text-xl font-bold text-white tracking-tight">Acceso Restringido</h2>
+                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu cuenta está activa, pero requiere el pase de acceso para visualizar los apuntes.</p>
+                      
+                      {/* BOTÓN WHATSAPP MINIMALISTA */}
+                      <a href="https://wa.me/TUNUMERO" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
+                        <MessageCircle className="w-4 h-4" />
+                        <span>Solicitar activación</span>
+                      </a>
+                    </div>
+                  )}
                 </SignedIn>
 
                 <SignedOut>
                   <div className="mt-20 flex flex-col items-center text-center p-12 border border-dashed border-[#30363d] rounded-3xl bg-[#161b22]/30">
-                    <Lock className="w-12 h-12 text-purple-500 mb-4 animate-pulse" />
-                    <h2 className="text-2xl font-bold text-white">Contenido Protegido</h2>
-                    <p className="text-gray-400 mt-2 mb-8 max-w-sm">
-                      Inicia sesión para desbloquear este apunte y continuar tu estudio en Medpath.
-                    </p>
+                    <Lock className="w-10 h-10 text-purple-500 mb-4" />
+                    <h2 className="text-xl font-bold text-white tracking-tight">Biblioteca Digital</h2>
+                    <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Identifícate para desbloquear tu material de estudio.</p>
                     <SignInButton mode="modal">
-                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-xl font-bold shadow-xl transition-all">
-                        Entrar a la Biblioteca
-                      </button>
+                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2.5 rounded-xl font-bold text-xs shadow-xl transition-all">Entrar a la Biblioteca</button>
                     </SignInButton>
                   </div>
                 </SignedOut>
