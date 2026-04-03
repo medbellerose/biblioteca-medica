@@ -152,9 +152,9 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth">
           {selectedMd ? (
-            <article className="max-w-4xl mx-auto prose prose-invert prose-purple prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-              <Markdown remarkPlugins={[remarkGfm, remarkSlug]}>{content}</Markdown>
-            </article>
+         <article className="max-w-4xl mx-auto prose prose-invert prose-purple overflow-x-auto ...">
+  <Markdown remarkPlugins={[remarkGfm, remarkSlug]}>{content}</Markdown>
+</article>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center">
               <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse" />

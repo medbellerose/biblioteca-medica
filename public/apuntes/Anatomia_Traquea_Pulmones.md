@@ -45,6 +45,8 @@ Anatómicamente, el sistema se organiza en una jerarquía funcional:
 
 El alvéolo representa la superficie de intercambio gaseoso por excelencia. Su funcionalidad depende de la integridad de la **membrana alveolo-capilar**, donde la barrera entre el aire inspirado y los eritrocitos se reduce a micras para permitir la difusión eficiente de gases.
 
+
+
 > 🔬 Esta red microscópica es el destino final de un sistema de conducción dinámico liderado por la tráquea.
 
 ---
@@ -56,7 +58,7 @@ La tráquea es un conducto **fibromusculocartilaginoso**, semirrígido y elásti
 ### Aspectos Generales y Configuración
 
 | Característica | Descripción |
-|----------------|-------------|
+| :--- | :--- |
 | **Forma** | Cilindro aplastado en su parte posterior (donde es plana y musculofibrosa) |
 | **Longitud** | ~13 cm total (6 cm = segmento cervical) |
 | **Diámetro** | ~2 cm |
@@ -82,7 +84,7 @@ Reviste el interior del conducto.
 ### Anatomía Sintetizada de la Tráquea
 
 | Categoría | Detalles Anatómicos Clave |
-|-----------|---------------------------|
+| :--- | :--- |
 | **Niveles Vertebrales** | Origen: C6 (borde inferior del cricoides) / Bifurcación: T4 (Ángulo de Louis/Carina) |
 | **Relación Anterior** | Istmo tiroideo (2º-3º anillo), músculos infrahioideos, arco aórtico, tronco braquiocefálico y venas tiroideas inferiores |
 | **Relación Posterior** | Siempre en contacto con el esófago (ligeramente desplazado a la izquierda). Relación con paquete laríngeo derecho e izquierdo |
@@ -122,12 +124,17 @@ Reviste el interior del conducto.
 ### Comparación de Bronquios Principales
 
 | Característica | Bronquio Principal Derecho | Bronquio Principal Izquierdo |
-|----------------|---------------------------|------------------------------|
+| :--- | :--- | :--- |
 | **Dirección** | Más vertical (20º del eje) | Más horizontal (>35º) |
 | **Dimensiones** | Más ancho (1-2 mm más) y más corto (35 mm inf. / 25 mm sup.) | Más estrecho y largo; describe una **doble curva** |
 | **Relaciones Vasculares** | Pasa por detrás de la **vena cava superior**. Cruzado por la **arteria pulmonar derecha** | Cruzado por el **arco aórtico** (superior) y la **arteria pulmonar izquierda** (anterior/superior) |
 | **División** | 3 bronquios lobares (superior, medio e inferior) | 2 bronquios lobares (superior e inferior) |
 | **Particularidad** | Posee **bronquio intermediario** antes del lobar medio | Trayecto más sinuoso para enmarcar el **corazón** |
+
+
+
+[Image of the human trachea and bronchi anatomy]
+
 
 ### Puntos Clave para el Examen
 
@@ -150,7 +157,7 @@ Reviste el interior del conducto.
 ### Comparación Pulmonar
 
 | Característica | Pulmón Derecho | Pulmón Izquierdo |
-|----------------|----------------|------------------|
+| :--- | :--- | :--- |
 | **Peso y Volumen** | Más voluminoso (500-600g) | Menos voluminoso por la posición del corazón |
 | **Lóbulos** | **3 Lóbulos**: Superior, Medio e Inferior | **2 Lóbulos**: Superior e Inferior |
 | **Fisuras** | Oblicua y Horizontal | Solo Fisura Oblicua |
@@ -182,7 +189,7 @@ Ambos pulmones comparten las siguientes características estructurales:
 ### Jerarquía del Árbol Respiratorio
 
 | Nivel Jerárquico | Generaciones | Características de Soporte | Unidad Funcional / Notas |
-|------------------|--------------|---------------------------|--------------------------|
+| :--- | :--- | :--- | :--- |
 | **Tráquea** | 0 | Anillos de cartílago en forma de "C" | Punto de inicio (Carina) |
 | **Bronquios Principales** | 1 | Cartílago completo/placas | **Derecho**: Más corto, ancho y vertical |
 | **Bronquios Lobares** | 2 | Placas de cartílago | 3 en el derecho, 2 en el izquierdo |
@@ -193,10 +200,12 @@ Ambos pulmones comparten las siguientes características estructurales:
 ### Mapeo de Segmentos Broncopulmonares
 
 | Pulmón Derecho (10 Segmentos) | Pulmón Izquierdo (8-9 Segmentos) |
-|-------------------------------|----------------------------------|
+| :--- | :--- |
 | **Lóbulo Superior:**<br>• I. Apical<br>• II. Posterior<br>• III. Anterior | **Lóbulo Superior:**<br>• I y II. Apicoposterior (fusionados)<br>• III. Anterior |
 | **Lóbulo Medio:**<br>• IV. Lateral<br>• V. Medial | **Língula (equiv. L. Medio):**<br>• IV. Superior<br>• V. Inferior |
 | **Lóbulo Inferior:**<br>• VI. Superior (de Nelson)<br>• VII. Basal Medial<br>• VIII. Basal Anterior<br>• IX. Basal Lateral<br>• X. Basal Posterior | **Lóbulo Inferior:**<br>• VI. Superior<br>• VII. Basal medial<br>• VIII. Basal Anterior<br>• IX. Basal Lateral<br>• X. Basal Posterior |
+
+
 
 ### Correlaciones Clínicas Clave
 
@@ -212,10 +221,6 @@ Ambos pulmones comparten las siguientes características estructurales:
 > 
 > Vital para evitar el colapso alveolar. Aparece hacia la **semana 24** de gestación; de ahí la importancia de la maduración pulmonar en prematuros.
 
-> 🏥 **Patología Obstructiva**
-> 
-> El asma y el EPOC afectan principalmente a los niveles donde el cartílago desaparece y el músculo liso predomina (bronquiolos), causando atrapamiento aéreo.
-
 ---
 
 ## 7. Pleura, Irrigación y Biomecánica Respiratoria
@@ -223,13 +228,12 @@ Ambos pulmones comparten las siguientes características estructurales:
 ### Resumen: Anatomía y Fisiología del Sistema Pleuropulmonar
 
 | Categoría | Componente / Concepto | Descripción y Función Clave | Relevancia Clínica / Biomecánica |
-|-----------|----------------------|----------------------------|----------------------------------|
+| :--- | :--- | :--- | :--- |
 | **Serosa Pleural** | Pleuras y Espacio Pleural | Las hojas visceral y parietal están separadas por una fina película de líquido | Crea la **presión negativa** necesaria para el acoplamiento mecánico entre tórax y pulmón |
 | **Irrigación Funcional** | Arterias y Venas Pulmonares | Las arterias llevan sangre desoxigenada y las venas sangre oxigenada | Su objetivo exclusivo es la **hematosis** (intercambio gaseoso) |
 | **Irrigación Nutricia** | Arterias Bronquiales | Nacen de la **aorta torácica descendente** | Aportan oxígeno y nutrientes al parénquima pulmonar y los bronquios |
-| **Biomecánica** | Gradientes de Presión | El diafragma e intercostales modifican el volumen torácico | Al aumentar el volumen, la presión intrapulmonar baja (menor a la atmosférica) y el aire entra |
-| **Anatomía de Vía Aérea** | Asimetría Bronquial | El bronquio derecho es más vertical, corto y ancho que el izquierdo | Explica por qué la **patología aspirativa** (cuerpos extraños) suele lateralizarse a la derecha |
-| **Integración Estructural** | Relaciones Anatómicas | Nervios recurrentes en ángulo traqueoesofágico; cartílago hasta la 10ma generación | Determina cómo las anomalías vasculares o masas pueden comprometer la ventilación |
+| **Biomecánica** | Gradientes de Presión | El diafragma e intercostales modifican el volumen torácico | Al aumentar el volumen, la presión intrapulmonar baja y el aire entra |
+| **Anatomía de Vía Aérea** | Asimetría Bronquial | El bronquio derecho es más vertical, corto y ancho que el izquierdo | Explica por qué la **patología aspirativa** suele lateralizarse a la derecha |
 
 ### Puntos Clave para Recordar
 
@@ -240,10 +244,6 @@ Ambos pulmones comparten las siguientes características estructurales:
 > 💡 **Doble Circulación**
 > 
 > Es fundamental no confundir la sangre que va a intercambiar gases (pulmonar) con la que mantiene vivo al tejido (bronquial).
-
-> 💡 **La Forma es Función**
-> 
-> La verticalidad del bronquio derecho no es un detalle menor, es el "camino de menor resistencia" para cualquier objeto o secreción que descienda accidentalmente por la tráquea.
 
 ---
 

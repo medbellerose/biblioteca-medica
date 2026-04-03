@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Estilo base para el cuerpo de la página */
+  body {
+    @apply bg-[#0d1117] text-[#e6edf3];
+  }
+
+  /* --- ESTILO DE TABLAS MEDPATH --- */
+  .prose table {
+    @apply w-full my-8;
+    border-collapse: separate; /* Obligatorio para que funcione el border-radius */
+    border-spacing: 0;
+    border-radius: 12px; /* Redondeado de las esquinas */
+    overflow: hidden;
+    border: 1px solid #30363d; /* Color del borde igual al de GitHub Dark */
+  }
+
+  /* Estilo del encabezado (Th) */
+  .prose th {
+    @apply p-4 font-bold text-left;
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+  }
+
+  /* Estilo de las celdas (Td) */
+  .prose td {
+    @apply p-4 text-sm align-top;
+    border-bottom: 1px solid #21262d;
+  }
+
+  /* Quitar el borde inferior a la última fila para no romper el redondeado */
+  .prose tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Efecto hover opcional para resaltar filas al estudiar */
+  .prose tr:hover td {
+    background-color: rgba(139, 92, 246, 0.05); /* Un toque sutil de púrpura */
+  }
+
+  /* --- MEJORAS DE IMÁGENES --- */
+  .prose img {
+    @apply rounded-xl border border-[#30363d] shadow-2xl my-10;
+  }
+
+  /* --- SCROLLBAR ESTILO DARK --- */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0d1117;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #484f58;
+  }
+}
