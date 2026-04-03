@@ -97,22 +97,52 @@ export default function Home() {
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {filteredData.map((yearData) => (
             <div key={yearData.year}>
-              <button onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} className="w-full flex items-center justify-between px-3 py-2 text-sm font-semibold text-gray-300 hover:bg-[#21262d] rounded-lg">
-                <span>{yearsTitles[yearData.year]}</span>
-                <ChevronDown className={`w-4 h-4 ${expandedYears[yearData.year] ? 'rotate-180' : ''}`} />
+              {/* NIVEL 1: AÑO */}
+              <button 
+                onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} 
+                className="w-full flex items-center justify-between px-3 py-2 text-sm font-semibold text-gray-300 hover:bg-[#21262d] rounded-lg transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-gray-500" />
+                  <span>{yearsTitles[yearData.year]}</span>
+                </div>
+                <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[yearData.year] ? 'rotate-180' : ''}`} />
               </button>
+
+              {/* NIVEL 2: MATERIAS */}
               {expandedYears[yearData.year] && (
-                <div className="ml-3 border-l border-[#30363d]/50">
-                  {yearData.subjects.map((sub, idx) => (
-                    <div key={idx}>
-                      <p className="px-3 py-1 text-[10px] uppercase text-gray-500 font-bold">{sub.name}</p>
-                      {sub.topics.map(topic => (
-                        <button key={topic.file} onClick={() => setSelectedMd(topic.file)} className={`w-full text-left px-3 py-1 text-xs ${selectedMd === topic.file ? 'text-purple-400' : 'text-gray-400 hover:text-white'}`}>
-                          • {topic.label}
+                <div className="ml-3 border-l border-[#30363d]/50 mt-1 space-y-1">
+                  {yearData.subjects.map((sub, idx) => {
+                    const subKey = `${yearData.year}-${sub.name}`;
+                    const isSubExpanded = expandedSubjects[subKey] || searchTerm !== '';
+                    
+                    return (
+                      <div key={idx} className="space-y-1">
+                        <button 
+                          onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))}
+                          className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-gray-500 hover:text-white transition-colors"
+                        >
+                          <span>{sub.name}</span>
+                          <ChevronDown className={`w-3 h-3 transition-transform ${isSubExpanded ? 'rotate-180' : ''}`} />
                         </button>
-                      ))}
-                    </div>
-                  ))}
+
+                        {/* NIVEL 3: TEMAS */}
+                        {isSubExpanded && (
+                          <div className="ml-3 space-y-1 pb-2">
+                            {sub.topics.map(topic => (
+                              <button 
+                                key={topic.file} 
+                                onClick={() => setSelectedMd(topic.file)} 
+                                className={`w-full text-left px-3 py-1 text-xs rounded-md transition-colors ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}
+                              >
+                                • {topic.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
