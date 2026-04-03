@@ -231,11 +231,38 @@ export default function Home() {
             {selectedMd ? (
               <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
                 <Markdown 
-                  remarkPlugins={[remarkGfm, remarkSlug]} 
-                  rehypePlugins={[rehypeRaw]}
-                >
-                  {content}
-                </Markdown>
+  remarkPlugins={[remarkGfm, remarkSlug]} 
+  rehypePlugins={[rehypeRaw]}
+  components={{
+    // Interceptamos todos los enlaces (<a>)
+    a: ({ node, ...props }) => {
+      const isInternal = props.href && !props.href.startsWith('http');
+      
+      if (isInternal) {
+        return (
+          <a 
+            {...props} 
+            onClick={(e) => {
+              e.preventDefault();
+              if (props.href) {
+                setSelectedMd(props.href);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                const container = document.querySelector('.overflow-y-auto');
+                if (container) container.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            className={props.className}
+          >
+            {props.children}
+          </a>
+        );
+      }
+      return <a {...props} target="_blank" rel="noopener noreferrer" />;
+    }
+  }}
+>
+  {content}
+</Markdown>
               </article>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center mt-20">
