@@ -114,7 +114,7 @@ A diferencia de la tráquea, los bronquios se encuentran dentro del parénquima 
 
 ---
 
-🔬 **Atlas:** [Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
+🔬 **Atlas:** [Imagen histológica de tráquea y esófago](https://www.proteinatlas.org/learn/dictionary/normal/bronchus)
 
 ---
 
