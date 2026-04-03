@@ -86,7 +86,7 @@ Se conforma de **seis tipos de células**:
 | **Adventicia** | Tejido conectivo externo con cartílagos |
 
 ---
-[Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
+🔬 Atlas: [Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
 
 ## 4. Bronquios
 
