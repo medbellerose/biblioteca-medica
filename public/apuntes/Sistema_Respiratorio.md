@@ -17,6 +17,10 @@
 7. [Barrera Hematogaseosa](#7-barrera-hematogaseosa)
 
 ---
+<div style="background-color: #161b22; border: 1px solid #30363d; border-left: 4px solid #8b5cf6; padding: 15px; border-radius: 8px; margin: 20px 0;">
+  <strong>Apuntes relacionados:</strong><br/>
+  • <a href="/Anatomia_Traquea_Pulmones" style="color: #a855f7; text-decoration: none;">Anatomía: Tráquea y Pulmones (1er Año)</a>
+</div>
 
 ## 1. Generalidades
 
