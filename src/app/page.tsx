@@ -37,37 +37,21 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // ESTRATEGIA DE LIMPIEZA SEGURA
-        // 1. Forzamos doble salto de línea antes de cualquier línea que empiece con pipe (|)
-        // Esto soluciona el problema de renderizado de tablas en react-markdown
+        // LIMPIEZA SEGURA DE TABLAS (Doble salto de línea para renderizado)
         let cleanText = text.split('\n|').join('\n\n|');
         
-        // 2. Limpieza de etiquetas de citación y metadatos del PDF
-        // Usamos split/join para evitar errores de sintaxis con regex complejas
-        cleanText = cleanText.split('').join('');
-        cleanText = cleanText.split('[cite_end]').join('');
-        
-        // 3. Eliminación de etiquetas de fuente tipo o
-        // Se realiza una limpieza por líneas para mantener la estabilidad
-        const lines = cleanText.split('\n');
-        const finalLines = lines.map(line => {
-          if (line.includes('/g, '');
-          }
-          return line;
+        // LIMPIEZA DE ETIQUETAS RESIDUALEAS DEL PDF
+        // Usamos split/join con palabras exactas para evitar errores de sintaxis
+        const tagsToRemove = ['', '[cite_end]', ''];
+        tagsToRemove.forEach(tag => {
+          cleanText = cleanText.split(tag).join('');
         });
 
-        setContent(finalLines.join('\n'));
-      })
-      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
-  }, [selectedMd]);
-
-  const handleSelection = (file: string) => {
-    setSelectedMd(file);
-    if (window.innerWidth < 768) setSidebarOpen(false);
-  };
-
-  return (
-    <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
+        // LIMPIEZA DE LÍNEAS DE METADATOS (source y cite)
+        const lines = cleanText.split('\n');
+        const finalLines = lines.filter(line => {
+          const lowerLine = line.toLowerCase();
+          return !lowerLine.includes('text-[#e6edf3]">
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -92,7 +76,7 @@ export default function Home() {
           </div>
         </div>
 
-        <nav className="flex-1 overflow-y-auto p-3 space-y-2">
+        <nav className="flex-1 overflow-y-auto p-3 space-y-2 font-medium">
           {filteredData.map((yearData) => (
             <div key={yearData.year} className="space-y-1">
               <button 
@@ -143,7 +127,7 @@ export default function Home() {
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
               <span>Medpath</span>
               {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
           </div>
