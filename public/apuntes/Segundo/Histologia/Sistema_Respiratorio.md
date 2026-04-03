@@ -19,6 +19,7 @@
 ---
 ## Imágenes Histológicas
 🔬 Atlas: [Imagen histológica de tráquea y esófago](https://commons.wikimedia.org/wiki/File:Trachea_and_esophagus_seen_from_a_histological_section.jpg)
+
 🔬 **Atlas:** [Imagen histológica de pulmón (Desde Bronquios hasta conducto alveolar)](https://www.proteinatlas.org/learn/dictionary/normal/bronchus)
 
 ---
@@ -129,6 +130,7 @@ Los bronquiolos se dividen en **tres tipos**:
 | **Músculo** | ✅ Sí tiene músculo liso |
 
 > ⚠️ **Importante:** Primero pierde el cartílago, pero mantiene músculo.
+
 > ⚠️ **Importante:** Al no tener cartílago, dependen casi exclusivamente del músculo liso (que es discontinuo en estas zonas) para mantener su forma. En una crisis asmática, la falta de soporte cartilaginoso en los bronquiolos hace que la contracción muscular cierre la vía con mucha más facilidad
 
 ### 2. Bronquiolo Terminal
