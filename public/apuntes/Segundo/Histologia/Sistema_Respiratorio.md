@@ -27,6 +27,9 @@
 > - **Porción de conducción:** Tráquea, bronquios, bronquiolos
 > - **Porción respiratoria:** Bronquiolos respiratorios, conductos alveolares, alvéolos
 
+![Mapa de las vías respiratorias](/public/imagenes/pulmon/esquema1.png)
+
+
 ### Estructuras Principales
 
 | Estructura | Descripción |
