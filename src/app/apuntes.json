@@ -13,7 +13,7 @@
         "name": "Anatomía",
         "topics": [
           { "label": "Vértebras", "file": "vertebras", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
-          { "label": "Tráquea y Pulmones", "file": "Anatomia_Traquea_Pulmones", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos"] },
+          { "label": "Tráquea y Pulmones", "file": "Anatomia_Traquea_Pulmones", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon","pulmón"] },
           { "label": "SNC", "file": "snc", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
         ]
       },
@@ -30,7 +30,7 @@
     "subjects": [
       {
         "name": "Histología",
-        "topics": [{ "label": "Sistema Respiratorio", "file": "Sistema_Respiratorio", "keywords": ["epitelio", "neumocitos", "tejido", "microscopía"] }]
+        "topics": [{ "label": "Sistema Respiratorio", "file": "Sistema_Respiratorio", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }]
       },
       {
         "name": "Embriología",
@@ -49,7 +49,7 @@
         "name": "Fisiología",
         "topics": [
           { "label": "Cardiovascular", "file": "cardiovascular", "keywords": ["corazón", "presión", "ciclo cardíaco", "gasto"] },
-          { "label": "Respiratoria", "file": "respiratoria", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio"] }
+          { "label": "Respiratoria", "file": "respiratoria", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio", "pulmon", "pulmón"] }
         ]
       },
       {
