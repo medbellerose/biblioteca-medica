@@ -37,19 +37,28 @@ export default function Home() {
     fetch(`/apuntes/${selectedMd}.md`)
       .then(res => res.text())
       .then(text => {
-        // LIMPIEZA DE TABLAS: Aseguramos el espacio necesario
+        // PASO 1: Arreglar tablas (forzar línea vacía antes del pipe)
         let cleanText = text.split('\n|').join('\n\n|');
         
-        // LIMPIEZA DE ETIQUETAS: Quitamos las marcas de citación del PDF
-        const tags = ['', '[cite_end]', ''];
-        tags.forEach(tag => {
-          cleanText = cleanText.split(tag).join('');
+        // PASO 2: Limpiar etiquetas de citación (cite_start, cite_end)
+        const labels = ['', '[cite_end]'];
+        labels.forEach(label => {
+          cleanText = cleanText.split(label).join('');
         });
 
-        // FILTRADO DE LÍNEAS: Quitamos referencias de origen
-        const finalContent = cleanText.split('\n').filter(line => {
-          const l = line.toLowerCase();
-          return !l.includes('text-[#e6edf3]">
+        setContent(cleanText);
+      })
+      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
+  }, [selectedMd]);
+
+  const handleSelection = (file: string) => {
+    setSelectedMd(file);
+    if (window.innerWidth < 768) setSidebarOpen(false);
+  };
+
+  return (
+    <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
+      {/* SIDEBAR */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -57,17 +66,17 @@ export default function Home() {
         </div>
 
         <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative group text-white">
+          <div className="relative group">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
             <input 
               type="text"
               placeholder="Buscar apuntes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all"
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
             />
             {searchTerm && (
-              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500">
+              <button onClick={() => setSearchTerm('')} className="absolute right-2 top-2.5 text-gray-500 hover:text-white">
                 <X className="w-4 h-4" />
               </button>
             )}
@@ -120,14 +129,20 @@ export default function Home() {
         </nav>
       </aside>
 
+      {/* CONTENIDO PRINCIPAL */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
             <Menu className="w-5 h-5" />
           </button>
-          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
+          <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase">
               <span>Medpath</span>
-              {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span></>}
+              {selectedMd && (
+                <>
+                  <ChevronRight className="w-3 h-3" /> 
+                  <span className="text-purple-400">{selectedMd.split('-').join(' ')}</span>
+                </>
+              )}
           </div>
         </header>
 
