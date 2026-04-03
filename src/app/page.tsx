@@ -98,9 +98,12 @@ export default function Home() {
   // --- ESCUCHADOR DE EVENTOS PARA NAVEGACIÓN INTERNA ---
   useEffect(() => {
     const handleChangeDoc = (e: any) => {
+      console.log("Intentando cargar:", e.detail); 
       if (e.detail) {
         setSelectedMd(e.detail);
         // Scrollear arriba al cambiar de documento
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // También scrollear el contenedor interno si existe
         const mainContainer = document.querySelector('.overflow-y-auto');
         if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
       }
