@@ -15,7 +15,6 @@ const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
-// --- TU FUNCIÓN DE LIMPIEZA DE IDs REUPERADA ---
 const cleanId = (text: string) => {
   return text
     .toLowerCase()
@@ -74,7 +73,6 @@ const TableOfContents = ({ content }: { content: string }) => {
         ))}
       </div>
 
-      {/* TUS PUNTOS DEL ÍNDICE RECUPERADOS */}
       <div className="flex flex-col gap-4 items-center pr-4 py-6">
         {headings.map((_, i) => (
           <span 
@@ -94,11 +92,13 @@ const TableOfContents = ({ content }: { content: string }) => {
 export default function Home() {
   const { user } = useUser();
   
-  // --- LÓGICA DE PERMISOS POR AÑO ---
+  // --- LÓGICA DE PERMISOS ESTRICTA POR LISTA ---
   const allowedYears = useMemo(() => {
     const plan = String(user?.publicMetadata?.plan || "");
-    if (plan === "5") return [1, 2, 3, 4, 5]; // Acceso total si pones "5"
-    return plan.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
+    // Ahora solo dividimos por comas. No hay "atajos" para el nivel 5.
+    return plan.split(',')
+      .map(num => parseInt(num.trim()))
+      .filter(num => !isNaN(num));
   }, [user]);
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -118,6 +118,7 @@ export default function Home() {
     return 0;
   }, [selectedMd]);
 
+  // Solo tiene acceso si el año del apunte está EXPLÍCITAMENTE en su lista de Clerk
   const hasAccess = allowedYears.includes(currentYear);
 
   useEffect(() => {
@@ -219,7 +220,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <SignedOut><SignInButton mode="modal"><button className="text-xs bg-purple-600 px-4 py-1.5 rounded-full font-bold">Entrar</button></SignInButton></SignedOut>
+            <SignedOut><SignInButton mode="modal"><button className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-full font-bold shadow-lg transition-all">Iniciar Sesión</button></SignInButton></SignedOut>
             <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
           </div>
         </header>
@@ -232,7 +233,6 @@ export default function Home() {
               <>
                 <SignedIn>
                   {hasAccess ? (
-                    /* TUS ESTILOS DE ARTÍCULO RECUPERADOS */
                     <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
                       <Markdown 
                         remarkPlugins={[remarkGfm, remarkSlug]} 
@@ -249,11 +249,10 @@ export default function Home() {
                       </Markdown>
                     </article>
                   ) : (
-                    /* BLOQUEO POR NIVEL */
                     <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
                       <Lock className="w-10 h-10 text-purple-400 mb-4" />
                       <h2 className="text-xl font-bold text-white tracking-tight">Módulo no adquirido</h2>
-                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase no incluye el material de {currentYear}° año. Solicita el acceso a través de WhatsApp.</p>
+                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase de acceso no incluye el material de {currentYear}° año. Solicita tu activación vía WhatsApp.</p>
                       <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
                         <MessageCircle className="w-4 h-4" />
                         <span>Solicitar acceso al nivel</span>
@@ -266,14 +265,14 @@ export default function Home() {
                      <Lock className="w-10 h-10 text-purple-500 mb-4" />
                      <h2 className="text-xl font-bold text-white tracking-tight">Biblioteca Digital</h2>
                      <p className="text-gray-400 mt-2 mb-8 text-sm">Inicia sesión para desbloquear tu material de estudio.</p>
-                     <SignInButton mode="modal"><button className="bg-purple-600 text-white px-8 py-2.5 rounded-xl font-bold text-xs">Entrar a la Biblioteca</button></SignInButton>
+                     <SignInButton mode="modal"><button className="bg-purple-600 text-white px-8 py-2.5 rounded-xl font-bold text-xs shadow-xl transition-all">Entrar a la Biblioteca</button></SignInButton>
                    </div>
                 </SignedOut>
               </>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center mt-20">
                 <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse mx-auto" />
-                <h2 className="text-xl font-bold text-gray-300">Medpath Digital</h2>
+                <h2 className="text-xl font-bold text-gray-300 tracking-tight">Medpath Digital</h2>
                 <p className="text-gray-500 text-sm mt-2">Busca un tema y comienza a estudiar.</p>
               </div>
             )}
