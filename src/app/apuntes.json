@@ -91,7 +91,12 @@
       {
         "name": "Medicina Interna",
         "topics": [
-          { "label": "Cardiología", "file": "Quinto/Medicina_Interna/cardiologia", "keywords": ["ecg", "falla cardíaca", "hipertensión", "infarto"] },
+          { 
+            "label": "Neumonología", 
+            "subtopics": [
+              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer-pulmon", "keywords": ["neoplasia", "pulmón", "adenocarcinoma", "biopsia", "oncología"] }
+            ]
+          },
           { "label": "Nefrología", "file": "Quinto/Medicina_Interna/nefrologia", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
         ]
       },
