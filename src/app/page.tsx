@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
-// --- UTILIDADES ---
+// --- 1. UTILIDADES (FUERA DEL COMPONENTE) ---
 const yearsTitles: Record<number, string> = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// --- COMPONENTE: ÍNDICE ---
+// --- 2. COMPONENTE DE ÍNDICE ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -62,7 +62,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
-// --- COMPONENTE PRINCIPAL ---
+// --- 3. COMPONENTE PRINCIPAL (SIN LÓGICA INTERNA SOBRECARGADA) ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
