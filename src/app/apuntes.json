@@ -1,91 +1,37 @@
 [
   {
-    "year": 1,
-    "subjects": [
-      {
-        "name": "Biología",
-        "topics": [
-          { "label": "Célula", "file": "Primero/Biologia/celula", "keywords": ["organelos", "mitocondria", "núcleo", "citoplasma"] },
-          { "label": "Metabolismo", "file": "Primero/Biologia/metabolismo", "keywords": ["enzimas", "atp", "ciclo de krebs", "glucólisis"] }
-        ]
-      },
-      {
-        "name": "Anatomía",
-        "topics": [
-          { "label": "Vértebras", "file": "Primero/Anatomia/vertebras", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
-          { "label": "Tráquea y Pulmones", "file": "Primero/Anatomia/Anatomia_Traquea_Pulmones", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon", "pulmón"] },
-          { "label": "SNC", "file": "Primero/Anatomia/snc", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
-        ]
-      },
-      {
-        "name": "Química",
-        "topics": [
-          { "label": "Bioquímica Básica", "file": "Primero/Quimica/bioquimica-basica", "keywords": ["ph", "enlaces", "moléculas", "aminoácidos"] }
-        ]
-      }
-    ]
-  },
-  {
-    "year": 2,
-    "subjects": [
-      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio", "keywords": ["cilios", "neumocitos"] }] },
-      { "name": "Embriología", "topics": [{ "label": "Desarrollo Prenatal", "file": "Segundo/Embriologia/desarrollo-prenatal", "keywords": ["fecundación", "órganos"] }] },
-      { "name": "Genética", "topics": [{ "label": "Herencia", "file": "Segundo/Genetica/herencia", "keywords": ["adn", "genes"] }] }
-    ]
-  },
-  {
-    "year": 3,
-    "subjects": [
-      {
-        "name": "Fisiología",
-        "topics": [
-          { "label": "Cardiovascular", "file": "Tercero/Fisiologia/cardiovascular", "keywords": ["corazón", "presión"] },
-          { "label": "Respiratoria", "file": "Tercero/Fisiologia/respiratoria", "keywords": ["volúmenes", "espirometría"] }
-        ]
-      },
-      { "name": "Inmunología", "topics": [{ "label": "Innata", "file": "Tercero/Inmunologia/innata", "keywords": ["macrófagos"] }] }
-    ]
-  },
-  {
-    "year": 4,
-    "subjects": [
-      { "name": "Farmacología", "topics": [{ "label": "Farmacocinética", "file": "Cuarto/Farmacologia/farmacocinetica", "keywords": ["absorción"] }] },
-      { "name": "Semiología", "topics": [{ "label": "Inspección", "file": "Cuarto/Semiologia/inspeccion", "keywords": ["signos"] }] }
-    ]
-  },
-  {
     "year": 5,
     "subjects": [
       {
-        "name": "Nutrición",
-        "topics": [{ "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion-nutricional", "keywords": ["imc", "dieta"] }]
-      },
-      {
-        "name": "Medicina Interna",
+        "name": "NUTRICIÓN",
         "topics": [
-          {
-            "label": "Neumonología",
-            "topics": [
-              { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón", "cancer"] }
-            ]
-          },
-          {
-            "label": "Cardiología",
-            "topics": [
-              { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia_cardiaca", "keywords": ["corazón", "falla"] }
-            ]
-          },
-          {
-            "label": "Nefrología",
-            "topics": [
-              { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias", "keywords": ["riñón", "filtrado"] }
-            ]
-          }
+          { "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion", "keywords": ["imc", "dieta"] }
         ]
       },
       {
-        "name": "Psiquiatría",
-        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor", "keywords": ["depresión"] }]
+        "name": "MEDICINA INTERNA: NEUMONOLOGÍA",
+        "topics": [
+          { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón", "adenocarcinoma"] },
+          { "label": "EPOC", "file": "Quinto/Interna/Pulmon/EPOC", "keywords": ["tabaco", "obstrucción"] }
+        ]
+      },
+      {
+        "name": "MEDICINA INTERNA: CARDIOLOGÍA",
+        "topics": [
+          { "label": "Insuficiencia Cardíaca", "file": "Quinto/Interna/Cardio/IC", "keywords": ["falla", "corazón"] }
+        ]
+      },
+      {
+        "name": "MEDICINA INTERNA: NEFROLOGÍA",
+        "topics": [
+          { "label": "Glomerulopatías", "file": "Quinto/Interna/Nefro/Glomerulo", "keywords": ["riñón", "filtrado"] }
+        ]
+      },
+      {
+        "name": "PSIQUIATRÍA",
+        "topics": [
+          { "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/humor", "keywords": ["depresión", "bipolaridad"] }
+        ]
       }
     ]
   }
