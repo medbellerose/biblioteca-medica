@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-center';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
-// --- UTILIDADES FUERA DEL COMPONENTE PARA EVITAR ERRORES ---
+// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// --- COMPONENTE: ÍNDICE ---
+// --- COMPONENTE: ÍNDICE DE CONTENIDOS ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -108,7 +108,8 @@ export default function Home() {
     if (isPdf) {
       setContent('---PDF_MODE---');
     } else {
-      fetch(`/apuntes/${selectedMd}`)
+      const path = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
+      fetch(`/apuntes/${path}`)
         .then(res => res.text())
         .then(text => {
           let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
