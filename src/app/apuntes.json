@@ -16,13 +16,83 @@
           { "label": "Tráquea y Pulmones", "file": "Primero/Anatomia/Anatomia_Traquea_Pulmones.md", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon", "pulmón"] },
           { "label": "SNC", "file": "Primero/Anatomia/snc.pdf", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
         ]
+      },
+      {
+        "name": "Química",
+        "topics": [
+          { "label": "Bioquímica Básica", "file": "Primero/Quimica/bioquimica-basica.md", "keywords": ["ph", "enlaces", "moléculas", "aminoácidos"] }
+        ]
       }
     ]
   },
   {
     "year": 2,
     "subjects": [
-      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio.md", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }] }
+      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio.md", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }] },
+      { "name": "Embriología", "topics": [{ "label": "Desarrollo Prenatal", "file": "Segundo/Embriologia/desarrollo-prenatal.md", "keywords": ["fecundación", "blastocisto", "gastrulación", "órganos"] }] },
+      { "name": "Genética", "topics": [{ "label": "Herencia", "file": "Segundo/Genetica/herencia.md", "keywords": ["adn", "genes", "mendel", "cromosomas", "familiar"] }] }
+    ]
+  },
+  {
+    "year": 3,
+    "subjects": [
+      {
+        "name": "Fisiología",
+        "topics": [
+          { "label": "Cardiovascular", "file": "Tercero/Fisiologia/cardiovascular.md", "keywords": ["corazón", "presión", "ciclo cardíaco", "gasto"] },
+          { "label": "Respiratoria", "file": "Tercero/Fisiologia/respiratoria.md", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio", "pulmon", "pulmón"] }
+        ]
+      },
+      {
+        "name": "Inmunología",
+        "topics": [
+          { "label": "Innata", "file": "Tercero/Inmunologia/innata.md", "keywords": ["barreras", "macrófagos", "inflamación", "complemento"] },
+          { "label": "Adaptativa", "file": "Tercero/Inmunologia/adaptativa.md", "keywords": ["linfocitos", "anticuerpos", "antígenos", "memoria"] }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 4,
+    "subjects": [
+      { "name": "Farmacología", "topics": [{ "label": "Farmacocinética", "file": "Cuarto/Farmacologia/farmacocinetica.md", "keywords": ["absorción", "distribución", "metabolismo", "excreción", "ladme"] }] },
+      { "name": "Semiología", "topics": [
+          { "label": "Inspección", "file": "Cuarto/Semiologia/inspeccion.md", "keywords": ["examen físico", "observación", "signos", "facies"] },
+          { "label": "Auscultación", "file": "Cuarto/Semiologia/auscultacion.md", "keywords": ["estetoscopio", "murmullo", "ruidos", "soplos"] }
+        ]
+      },
+      { "name": "Patología", "topics": [{ "label": "Inflamación", "file": "Cuarto/Patologia/inflamacion.md", "keywords": ["aguda", "crónica", "reparación", "necrosis"] }] }
+    ]
+  },
+  {
+    "year": 5,
+    "subjects": [
+      {
+        "name": "NUTRICIÓN",
+        "topics": [{ "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion-nutricional.md", "keywords": ["imc", "antropometría", "dieta", "clínica"] }]
+      },
+      {
+        "name": "M. INTERNA: NEUMONOLOGÍA",
+        "topics": [
+          { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer.md", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] }
+        ]
+      },
+      {
+        "name": "M. INTERNA: CARDIOLOGÍA",
+        "topics": [
+          { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia_cardiaca.md", "keywords": ["corazón", "falla"] }
+        ]
+      },
+      {
+        "name": "M. INTERNA: NEFROLOGÍA",
+        "topics": [
+          { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias.md", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
+        ]
+      },
+      {
+        "name": "PSIQUIATRÍA",
+        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor.md", "keywords": ["depresión", "bipolaridad", "ánimo", "terapia"] }]
+      }
     ]
   }
 ]
