@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle, FileText } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -43,7 +43,13 @@ const TableOfContents = ({ content }: { content: string }) => {
           <a key={i} href={`#${heading.id}`} onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById(heading.id);
-              if (target) target.scrollIntoView({ behavior: 'smooth' });
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                const allHeadings = document.querySelectorAll('h2');
+                const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
+                if (found) found.scrollIntoView({ behavior: 'smooth' });
+              }
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -89,8 +95,16 @@ export default function Home() {
   const hasAccess = allowedYears.includes(currentYear);
 
   useEffect(() => {
-    if (!selectedMd) return;
+    (window as any).navegarApunte = (ruta: string) => {
+      setSelectedMd(ruta);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const mainContainer = document.querySelector('.overflow-y-auto');
+      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  }, []);
 
+  useEffect(() => {
+    if (!selectedMd) return;
     if (isPdf) {
       setContent('---PDF_MODE---');
     } else {
@@ -188,7 +202,19 @@ export default function Home() {
                     </div>
                   ) : (
                     <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+                      <Markdown 
+                        remarkPlugins={[remarkGfm, remarkSlug]} 
+                        rehypePlugins={[rehypeRaw]}
+                        components={{
+                          a: ({ node, ...props }) => {
+                            const isInternal = props.href && !props.href.startsWith('http');
+                            if (isInternal) return <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} />;
+                            return <a {...props} target="_blank" />;
+                          }
+                        }}
+                      >
+                        {content}
+                      </Markdown>
                     </article>
                   )
                 ) : (
