@@ -66,7 +66,7 @@
           {
             "label": "Neumonología",
             "subtopics": [
-              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer_de_pulmon", "keywords": ["oncología", "pulmón"] }
+              { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón","cancer"] }
             ]
           },
           {
