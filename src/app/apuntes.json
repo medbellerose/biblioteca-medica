@@ -5,22 +5,16 @@
       {
         "name": "Biología",
         "topics": [
-          { "label": "Célula", "file": "Primero/Biologia/celula", "keywords": ["organelos", "mitocondria", "núcleo", "citoplasma"] },
-          { "label": "Metabolismo", "file": "Primero/Biologia/metabolismo", "keywords": ["enzimas", "atp", "ciclo de krebs", "glucólisis"] }
+          { "label": "Célula", "file": "Primero/Biologia/celula.md", "keywords": ["organelos", "mitocondria", "núcleo", "citoplasma"] },
+          { "label": "Metabolismo", "file": "Primero/Biologia/metabolismo.md", "keywords": ["enzimas", "atp", "ciclo de krebs", "glucólisis"] }
         ]
       },
       {
         "name": "Anatomía",
         "topics": [
-          { "label": "Vértebras", "file": "Primero/Anatomia/vertebras", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
-          { "label": "Tráquea y Pulmones", "file": "Primero/Anatomia/Anatomia_Traquea_Pulmones", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon", "pulmón"] },
-          { "label": "SNC", "file": "Primero/Anatomia/snc", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
-        ]
-      },
-      {
-        "name": "Química",
-        "topics": [
-          { "label": "Bioquímica Básica", "file": "Primero/Quimica/bioquimica-basica", "keywords": ["ph", "enlaces", "moléculas", "aminoácidos"] }
+          { "label": "Vértebras", "file": "Primero/Anatomia/vertebras.pdf", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
+          { "label": "Tráquea y Pulmones", "file": "Primero/Anatomia/Anatomia_Traquea_Pulmones.md", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon", "pulmón"] },
+          { "label": "SNC", "file": "Primero/Anatomia/snc.pdf", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
         ]
       }
     ]
@@ -28,71 +22,7 @@
   {
     "year": 2,
     "subjects": [
-      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }] },
-      { "name": "Embriología", "topics": [{ "label": "Desarrollo Prenatal", "file": "Segundo/Embriologia/desarrollo-prenatal", "keywords": ["fecundación", "blastocisto", "gastrulación", "órganos"] }] },
-      { "name": "Genética", "topics": [{ "label": "Herencia", "file": "Segundo/Genetica/herencia", "keywords": ["adn", "genes", "mendel", "cromosomas", "familiar"] }] }
-    ]
-  },
-  {
-    "year": 3,
-    "subjects": [
-      {
-        "name": "Fisiología",
-        "topics": [
-          { "label": "Cardiovascular", "file": "Tercero/Fisiologia/cardiovascular", "keywords": ["corazón", "presión", "ciclo cardíaco", "gasto"] },
-          { "label": "Respiratoria", "file": "Tercero/Fisiologia/respiratoria", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio", "pulmon", "pulmón"] }
-        ]
-      },
-      {
-        "name": "Inmunología",
-        "topics": [
-          { "label": "Innata", "file": "Tercero/Inmunologia/innata", "keywords": ["barreras", "macrófagos", "inflamación", "complemento"] },
-          { "label": "Adaptativa", "file": "Tercero/Inmunologia/adaptativa", "keywords": ["linfocitos", "anticuerpos", "antígenos", "memoria"] }
-        ]
-      }
-    ]
-  },
-  {
-    "year": 4,
-    "subjects": [
-      { "name": "Farmacología", "topics": [{ "label": "Farmacocinética", "file": "Cuarto/Farmacologia/farmacocinetica", "keywords": ["absorción", "distribución", "metabolismo", "excreción", "ladme"] }] },
-      { "name": "Semiología", "topics": [
-          { "label": "Inspección", "file": "Cuarto/Semiologia/inspeccion", "keywords": ["examen físico", "observación", "signos", "facies"] },
-          { "label": "Auscultación", "file": "Cuarto/Semiologia/auscultacion", "keywords": ["estetoscopio", "murmullo", "ruidos", "soplos"] }
-        ]
-      },
-      { "name": "Patología", "topics": [{ "label": "Inflamación", "file": "Cuarto/Patologia/inflamacion", "keywords": ["aguda", "crónica", "reparación", "necrosis"] }] }
-    ]
-  },
-  {
-    "year": 5,
-    "subjects": [
-      {
-        "name": "NUTRICIÓN",
-        "topics": [{ "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion-nutricional", "keywords": ["imc", "antropometría", "dieta", "clínica", "abuela", "madre"] }]
-      },
-      {
-        "name": "M. INTERNA: NEUMONOLOGÍA",
-        "topics": [
-          { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] }
-        ]
-      },
-      {
-        "name": "M. INTERNA: CARDIOLOGÍA",
-        "topics": [
-          { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia_cardiaca", "keywords": ["corazón", "falla"] }
-        ]
-      },
-      {
-        "name": "M. INTERNA: NEFROLOGÍA",
-        "topics": [
-          { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
-        ]
-      },
-      {
-        "name": "PSIQUIATRÍA",
-        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor", "keywords": ["depresión", "bipolaridad", "ánimo", "terapia"] }]
-      }
+      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio.md", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }] }
     ]
   }
 ]

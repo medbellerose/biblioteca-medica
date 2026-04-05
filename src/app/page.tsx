@@ -1,14 +1,12 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
+import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle, FileText } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
 import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
-
-// --- IMPORTACIONES DE CLERK ---
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
 const yearsTitles: { [key: number]: string } = {
@@ -16,18 +14,11 @@ const yearsTitles: { [key: number]: string } = {
 };
 
 const cleanId = (text: string) => {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-');
+  return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
-
   const headings = useMemo(() => {
     return content.split('\n')
       .filter(line => line.startsWith('## ')) 
@@ -47,24 +38,12 @@ const TableOfContents = ({ content }: { content: string }) => {
       onMouseLeave={() => setIsHovered(false)}
       style={{ width: isHovered ? '260px' : '40px' }}
     >
-      <div className={`
-        flex flex-col gap-2 py-4 pr-4 pl-2 transition-all duration-300
-        ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}
-      `}>
+      <div className={`flex flex-col gap-2 py-4 pr-4 pl-2 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}>
         {headings.map((heading, i) => (
-          <a
-            key={i}
-            href={`#${heading.id}`}
-            onClick={(e) => {
+          <a key={i} href={`#${heading.id}`} onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById(heading.id);
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                const allHeadings = document.querySelectorAll('h2');
-                const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
-                if (found) found.scrollIntoView({ behavior: 'smooth' });
-              }
+              if (target) target.scrollIntoView({ behavior: 'smooth' });
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -72,17 +51,9 @@ const TableOfContents = ({ content }: { content: string }) => {
           </a>
         ))}
       </div>
-
       <div className="flex flex-col gap-4 items-center pr-4 py-6">
         {headings.map((_, i) => (
-          <span 
-            key={`dot-${i}`} 
-            className={`
-              w-1.5 h-1.5 rounded-full transition-all duration-300 bg-gray-500
-              ${isHovered ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]' : 'opacity-40'}
-              hover:bg-white hover:scale-150
-            `}
-          ></span>
+          <span key={`dot-${i}`} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 bg-gray-500 ${isHovered ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]' : 'opacity-40'} hover:bg-white hover:scale-150`}></span>
         ))}
       </div>
     </aside>
@@ -91,14 +62,9 @@ const TableOfContents = ({ content }: { content: string }) => {
 
 export default function Home() {
   const { user } = useUser();
-  
-  // --- LÓGICA DE PERMISOS ESTRICTA POR LISTA ---
   const allowedYears = useMemo(() => {
     const plan = String(user?.publicMetadata?.plan || "");
-    // Ahora solo dividimos por comas. No hay "atajos" para el nivel 5.
-    return plan.split(',')
-      .map(num => parseInt(num.trim()))
-      .filter(num => !isNaN(num));
+    return plan.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
   }, [user]);
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -107,6 +73,8 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
+
+  const isPdf = useMemo(() => selectedMd?.toLowerCase().endsWith('.pdf'), [selectedMd]);
 
   const currentYear = useMemo(() => {
     if (!selectedMd) return 0;
@@ -118,34 +86,23 @@ export default function Home() {
     return 0;
   }, [selectedMd]);
 
-  // Solo tiene acceso si el año del apunte está EXPLÍCITAMENTE en su lista de Clerk
   const hasAccess = allowedYears.includes(currentYear);
 
   useEffect(() => {
-    (window as any).navegarApunte = (ruta: string) => {
-      setSelectedMd(ruta);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      const mainContainer = document.querySelector('.overflow-y-auto');
-      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  }, []);
-
-  useEffect(() => {
     if (!selectedMd) return;
-    fetch(`/apuntes/${selectedMd}.md`)
-      .then(res => res.text())
-      .then(text => {
-        let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
-        const lines = cleanText.split('\n');
-        const finalLines = lines.map(line => {
-          const trimmed = line.trim();
-          if (trimmed.includes('{#')) return line.split('{#')[0].trim();
-          return line;
-        });
-        setContent(finalLines.join('\n'));
-      })
-      .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
-  }, [selectedMd]);
+
+    if (isPdf) {
+      setContent('---PDF_MODE---');
+    } else {
+      fetch(`/apuntes/${selectedMd}`)
+        .then(res => res.text())
+        .then(text => {
+          let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
+          setContent(cleanText);
+        })
+        .catch(() => setContent('# Error\nNo se pudo cargar el apunte.'));
+    }
+  }, [selectedMd, isPdf]);
 
   const handleSelection = (file: string) => {
     setSelectedMd(file);
@@ -162,13 +119,7 @@ export default function Home() {
         <div className="p-4 border-b border-[#30363d] shrink-0">
           <div className="relative group text-white">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
-            <input 
-              type="text"
-              placeholder="Buscar apunte..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white"
-            />
+            <input type="text" placeholder="Buscar apunte..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white" />
           </div>
         </div>
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
@@ -195,7 +146,7 @@ export default function Home() {
                           <div className="ml-3 space-y-1 pb-2">
                             {sub.topics.map(topic => (
                               <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>
-                                • {topic.label}
+                                {topic.file.endsWith('.pdf') ? '📄 ' : '• '} {topic.label}
                               </button>
                             ))}
                           </div>
@@ -216,59 +167,39 @@ export default function Home() {
             <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400"><Menu className="w-5 h-5" /></button>
             <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
                 <span>Medpath</span>
-                {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('_').join(' ')}</span></>}
+                {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('.')[0].replace(/_/g, ' ')}</span></>}
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <SignedOut><SignInButton mode="modal"><button className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-full font-bold shadow-lg transition-all">Iniciar Sesión</button></SignInButton></SignedOut>
             <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
           </div>
         </header>
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative">
-          <div className="max-w-4xl mx-auto relative">
-            {selectedMd && <TableOfContents content={content} />}
+          <div className="max-w-5xl mx-auto relative h-full">
+            {selectedMd && !isPdf && <TableOfContents content={content} />}
 
             {selectedMd ? (
-              <>
-                <SignedIn>
-                  {hasAccess ? (
-                    <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                      <Markdown 
-                        remarkPlugins={[remarkGfm, remarkSlug]} 
-                        rehypePlugins={[rehypeRaw]}
-                        components={{
-                          a: ({ node, ...props }) => {
-                            const isInternal = props.href && !props.href.startsWith('http');
-                            if (isInternal) return <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} />;
-                            return <a {...props} target="_blank" />;
-                          }
-                        }}
-                      >
-                        {content}
-                      </Markdown>
-                    </article>
-                  ) : (
-                    <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
-                      <Lock className="w-10 h-10 text-purple-400 mb-4" />
-                      <h2 className="text-xl font-bold text-white tracking-tight">Módulo no adquirido</h2>
-                      <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase de acceso no incluye el material de {currentYear}° año. Solicita tu activación vía WhatsApp.</p>
-                      <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
-                        <MessageCircle className="w-4 h-4" />
-                        <span>Solicitar acceso al nivel</span>
-                      </a>
+              <SignedIn>
+                {hasAccess ? (
+                  isPdf ? (
+                    <div className="w-full h-[85vh] rounded-xl overflow-hidden border border-[#30363d] bg-[#161b22]">
+                      <iframe src={`/apuntes/${selectedMd}#toolbar=0`} className="w-full h-full" title="PDF Viewer" />
                     </div>
-                  )}
-                </SignedIn>
-                <SignedOut>
-                   <div className="mt-20 flex flex-col items-center text-center p-12 border border-dashed border-[#30363d] rounded-3xl bg-[#161b22]/30">
-                     <Lock className="w-10 h-10 text-purple-500 mb-4" />
-                     <h2 className="text-xl font-bold text-white tracking-tight">Biblioteca Digital</h2>
-                     <p className="text-gray-400 mt-2 mb-8 text-sm">Inicia sesión para desbloquear tu material de estudio.</p>
-                     <SignInButton mode="modal"><button className="bg-purple-600 text-white px-8 py-2.5 rounded-xl font-bold text-xs shadow-xl transition-all">Entrar a la Biblioteca</button></SignInButton>
-                   </div>
-                </SignedOut>
-              </>
+                  ) : (
+                    <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
+                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+                    </article>
+                  )
+                ) : (
+                  <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
+                    <Lock className="w-10 h-10 text-purple-400 mb-4" />
+                    <h2 className="text-xl font-bold text-white tracking-tight">Módulo no adquirido</h2>
+                    <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase no incluye el material de {currentYear}° año.</p>
+                    <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all"><MessageCircle className="w-4 h-4" /><span>Solicitar acceso</span></a>
+                  </div>
+                )
+              </SignedIn>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center mt-20">
                 <Brain className="w-16 h-16 text-gray-800 mb-4 animate-pulse mx-auto" />
