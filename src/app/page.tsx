@@ -10,14 +10,8 @@ import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
 const yearsTitles: Record<number, string> = { 1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año" };
 
-// Función de limpieza de IDs unificada para evitar desajustes
 const cleanId = (t: string) => {
-  return t.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\w\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-');
+  return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
 const TableOfContents = ({ content }: { content: string }) => {
@@ -70,6 +64,7 @@ export default function Home() {
   const [content, setContent] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<Record<number, boolean>>({ 1: true });
+  // Estado para materias corregido
   const [expandedSubjects, setExpandedSubjects] = useState<Record<string, boolean>>({});
 
   const allowedYears = useMemo(() => String(user?.publicMetadata?.plan || "").split(',').map(n => parseInt(n.trim())).filter(n => !isNaN(n)), [user]);
@@ -84,6 +79,11 @@ export default function Home() {
     }
     return 0;
   }, [selectedMd]);
+
+  const toggleSubject = (year: number, subjectName: string) => {
+    const key = `${year}-${subjectName}`;
+    setExpandedSubjects(prev => ({ ...prev, [key]: !prev[key] }));
+  };
 
   useEffect(() => {
     if (!selectedMd) return;
@@ -109,19 +109,29 @@ export default function Home() {
           {yearsDataRaw.map((y) => (
             <div key={y.year}>
               <button onClick={() => setExpandedYears(p => ({...p, [y.year]: !p[y.year]}))} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-300 hover:bg-[#21262d]">
-                <div className="flex items-center gap-2">Año {y.year}</div>
-                <ChevronDown className={`w-4 h-4 ${expandedYears[y.year] ? 'rotate-180' : ''}`} />
+                <div className="flex items-center gap-2 font-bold">Año {y.year}</div>
+                <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[y.year] ? 'rotate-180' : ''}`} />
               </button>
               {expandedYears[y.year] && (
                 <div className="ml-3 border-l border-[#30363d]/50">
                   {y.subjects.map((sub, i) => (
                     <div key={i}>
-                      <p className="px-3 py-1 text-[10px] text-gray-500 font-bold uppercase">{sub.name}</p>
-                      {sub.topics.map(t => (
-                        <button key={t.file} onClick={() => setSelectedMd(t.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === t.file ? 'text-purple-400 bg-purple-500/10' : 'text-gray-400 hover:text-white'}`}>
-                          {t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}
-                        </button>
-                      ))}
+                      <button 
+                        onClick={() => toggleSubject(y.year, sub.name)} 
+                        className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] text-gray-500 font-bold uppercase hover:text-white transition-colors"
+                      >
+                        <span>{sub.name}</span>
+                        <ChevronDown className={`w-3 h-3 transition-transform ${expandedSubjects[`${y.year}-${sub.name}`] ? 'rotate-180' : ''}`} />
+                      </button>
+                      {expandedSubjects[`${y.year}-${sub.name}`] && (
+                        <div className="ml-3 space-y-1 pb-2">
+                          {sub.topics.map(t => (
+                            <button key={t.file} onClick={() => setSelectedMd(t.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === t.file ? 'text-purple-400 bg-purple-500/10' : 'text-gray-400 hover:text-white'}`}>
+                              {t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
