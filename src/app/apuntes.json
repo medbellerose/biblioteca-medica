@@ -12,7 +12,7 @@
       {
         "name": "Anatomía",
         "topics": [
-          { "label": "Vértebras", "file": "Primero/Anatomia/vertebras.pdf", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
+          { "label": "Vértebras", "file": "public/pdfs/traquea-pulmones.pdf", "keywords": ["columna", "cervical", "torácica", "lumbar", "atlas", "axis"] },
           { "label": "Tráquea y Pulmones", "file": "Primero/Anatomia/Anatomia_Traquea_Pulmones.md", "keywords": ["segmentación", "bronquios", "carina", "hematosis", "alveolos", "pulmon", "pulmón"] },
           { "label": "SNC", "file": "Primero/Anatomia/snc.pdf", "keywords": ["cerebro", "médula", "neuronas", "glaucoma", "nervio óptico"] }
         ]
