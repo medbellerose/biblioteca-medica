@@ -9,10 +9,7 @@ import yearsDataRaw from './apuntes.json';
 import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
 const yearsTitles: Record<number, string> = { 1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año" };
-
-const cleanId = (text: string) => {
-  return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
-};
+const cleanId = (t: string) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,23 +25,14 @@ const TableOfContents = ({ content }: { content: string }) => {
   if (headings.length === 0) return null;
 
   return (
-    <aside 
-      className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300 ease-in-out" 
-      onMouseEnter={() => setIsHovered(true)} 
-      onMouseLeave={() => setIsHovered(false)} 
-      style={{ width: isHovered ? '240px' : '40px' }}
-    >
-      <div className={`flex flex-col gap-2 py-4 pr-4 pl-2 transition-all duration-300 ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}>
+    <aside className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={{ width: isHovered ? '260px' : '40px' }}>
+      <div className={`flex flex-col gap-2 py-4 pr-4 pl-2 transition-all ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}>
         {headings.map((h, i) => (
-          <a key={i} href={`#${h.id}`} onClick={(e) => { e.preventDefault(); document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' }); }} className="block text-right no-underline text-[10px] text-gray-400 font-bold uppercase hover:text-purple-400 truncate tracking-tighter">
-            {h.text}
-          </a>
+          <a key={i} href={`#${h.id}`} onClick={(e) => { e.preventDefault(); document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' }); }} className="block text-right no-underline text-[10px] text-gray-400 font-bold uppercase hover:text-purple-400 truncate tracking-tighter">{h.text}</a>
         ))}
       </div>
-      <div className="flex flex-col gap-4 pr-4 py-6 items-center">
-        {headings.map((_, i) => (
-          <span key={i} className={`w-1.5 h-1.5 rounded-full bg-gray-500 transition-all duration-300 ${isHovered ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]' : 'opacity-40'}`}></span>
-        ))}
+      <div className="flex flex-col gap-4 pr-4 py-6 items-center shrink-0">
+        {headings.map((_, i) => <span key={i} className={`w-1.5 h-1.5 rounded-full bg-gray-500 transition-all ${isHovered ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)]' : 'opacity-40'}`}></span>)}
       </div>
     </aside>
   );
@@ -61,44 +49,25 @@ export default function Home() {
 
   const allowedYears = useMemo(() => String(user?.publicMetadata?.plan || "").split(',').map(n => parseInt(n.trim())).filter(n => !isNaN(n)), [user]);
   const isPdf = useMemo(() => selectedMd?.toLowerCase().endsWith('.pdf'), [selectedMd]);
-  
   const currentYear = useMemo(() => {
     if (!selectedMd) return 0;
-    for (const y of yearsDataRaw) { 
-      for (const s of y.subjects) { 
-        if (s.topics.some(t => t.file === selectedMd)) return y.year; 
-      } 
-    }
+    for (const y of yearsDataRaw) { for (const s of y.subjects) { if (s.topics.some(t => t.file === selectedMd)) return y.year; } }
     return 0;
   }, [selectedMd]);
 
   useEffect(() => {
     if (!selectedMd) return;
-    if (isPdf) {
-      setContent('---PDF_MODE---');
-    } else {
-      const fileName = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
-      fetch(`/apuntes/${fileName}`)
-        .then(res => res.text())
-        .then(t => setContent(t.split('<b>').join('**').split('</b>').join('**')))
-        .catch(() => setContent('# Error al cargar el contenido'));
+    if (isPdf) { setContent('---PDF---'); } else {
+      fetch(`/apuntes/${selectedMd.includes('.') ? selectedMd : selectedMd + '.md'}`)
+        .then(res => res.text()).then(t => setContent(t.split('<b>').join('**').split('</b>').join('**'))).catch(() => setContent('# Error'));
     }
   }, [selectedMd, isPdf]);
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      {/* SIDEBAR */}
-      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
-        <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
-          <Brain className="w-6 h-6 text-purple-500" />
-          <span>Medpath</span>
-        </div>
-        <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative text-white">
-            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
-            <input type="text" placeholder="Buscar apunte..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 text-xs focus:outline-none focus:border-purple-500 text-white" />
-          </div>
-        </div>
+      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
+        <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg"><Brain className="w-6 h-6 text-purple-500" /><span>Medpath</span></div>
+        <div className="p-4 border-b border-[#30363d] shrink-0"><div className="relative text-white"><Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" /><input type="text" placeholder="Buscar..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 text-xs focus:outline-none focus:border-purple-500 text-white" /></div></div>
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {yearsDataRaw.map((y) => (
             <div key={y.year} className="space-y-1">
@@ -110,16 +79,11 @@ export default function Home() {
                 <div className="ml-3 pl-1 border-l border-[#30363d]/50">
                   {y.subjects.map((s, idx) => (
                     <div key={idx}>
-                      <button onClick={() => setExpandedSubjects(p => ({...p, [y.year+s.name]: !p[y.year+s.name]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors">
-                        <span>{s.name}</span>
-                        <ChevronDown className="w-3 h-3" />
-                      </button>
+                      <button onClick={() => setExpandedSubjects(p => ({...p, [y.year+s.name]: !p[y.year+s.name]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors"><span>{s.name}</span><ChevronDown className="w-3 h-3" /></button>
                       {(expandedSubjects[y.year+s.name] || searchTerm) && (
                         <div className="ml-3 space-y-1 pb-2">
                           {s.topics.map(t => (
-                            <button key={t.file} onClick={() => { setSelectedMd(t.file); if(window.innerWidth < 768) setSidebarOpen(false); }} className={`w-full text-left px-3 py-1 text-xs rounded-md transition-colors ${selectedMd === t.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>
-                              {t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}
-                            </button>
+                            <button key={t.file} onClick={() => { setSelectedMd(t.file); if(window.innerWidth < 768) setSidebarOpen(false); }} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === t.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>{t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}</button>
                           ))}
                         </div>
                       )}
@@ -132,48 +96,32 @@ export default function Home() {
         </nav>
       </aside>
 
-      {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] overflow-hidden">
         <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
-          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
-            <Menu className="w-5 h-5" />
-          </button>
+          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400"><Menu className="w-5 h-5" /></button>
           <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
         </header>
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 scroll-smooth relative">
           <div className="max-w-5xl mx-auto h-full flex flex-col">
             {selectedMd && !isPdf && <TableOfContents content={content} />}
-            
             {selectedMd ? (
               <SignedIn>
                 {allowedYears.includes(currentYear) ? (
                   isPdf ? (
-                    <div className="w-full h-[85vh] rounded-xl overflow-hidden border border-[#30363d] bg-[#161b22] shadow-2xl">
-                      <iframe src={selectedMd} className="w-full h-full border-0" title="PDF Viewer" />
+                    <div className="w-full h-[85vh] rounded-xl overflow-hidden border border-[#30363d] bg-[#161b22]">
+                      <iframe src={`${selectedMd}#view=FitH`} className="w-full h-full border-0" title="PDF Viewer" />
                     </div>
                   ) : (
-                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-20">
-                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
-                        {content}
-                      </Markdown>
-                    </article>
+                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-20"><Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown></article>
                   )
                 ) : (
-                  <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40">
-                    <Lock className="w-10 h-10 text-purple-400 mb-4" />
-                    <h2 className="text-xl font-bold text-white tracking-tight">Módulo no adquirido</h2>
-                    <p className="text-gray-400 mt-2 text-sm">Tu suscripción actual no incluye el material de {currentYear}° año.</p>
-                  </div>
+                  <div className="mt-20 flex flex-col items-center text-center p-12 border border-purple-500/20 rounded-3xl bg-[#161b22]/40"><Lock className="w-10 h-10 text-purple-400 mb-4" /><h2 className="text-xl font-bold text-white">Módulo no adquirido</h2><p className="text-gray-400 mt-2 text-sm">Tu suscripción no incluye el año {currentYear}.</p></div>
                 )
               }
               </SignedIn>
             ) : (
-              <div className="h-full flex flex-col items-center justify-center text-center opacity-40">
-                <Brain className="w-16 h-16 mb-4 animate-pulse mx-auto text-gray-500" />
-                <h2 className="text-xl font-bold text-white uppercase tracking-widest">Medpath Digital</h2>
-                <p className="text-sm text-gray-400 mt-2">Selecciona un tema para comenzar a estudiar</p>
-              </div>
+              <div className="h-full flex flex-col items-center justify-center text-center opacity-40"><Brain className="w-16 h-16 mb-4 animate-pulse mx-auto" /><h2 className="text-xl font-bold text-white">Medpath Digital</h2></div>
             )}
           </div>
         </div>
