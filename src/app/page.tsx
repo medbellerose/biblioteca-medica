@@ -43,13 +43,7 @@ const TableOfContents = ({ content }: { content: string }) => {
           <a key={i} href={`#${heading.id}`} onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById(heading.id);
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                const allHeadings = document.querySelectorAll('h2');
-                const found = Array.from(allHeadings).find(h => cleanId(h.innerText) === heading.id);
-                if (found) found.scrollIntoView({ behavior: 'smooth' });
-              }
+              if (target) target.scrollIntoView({ behavior: 'smooth' });
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -68,17 +62,17 @@ const TableOfContents = ({ content }: { content: string }) => {
 
 export default function Home() {
   const { user } = useUser();
-  const allowedYears = useMemo(() => {
-    const plan = String(user?.publicMetadata?.plan || "");
-    return plan.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
-  }, [user]);
-
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedMd, setSelectedMd] = useState<string | null>(null);
   const [content, setContent] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
   const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
+
+  const allowedYears = useMemo(() => {
+    const plan = String(user?.publicMetadata?.plan || "");
+    return plan.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
+  }, [user]);
 
   const isPdf = useMemo(() => selectedMd?.toLowerCase().endsWith('.pdf'), [selectedMd]);
 
