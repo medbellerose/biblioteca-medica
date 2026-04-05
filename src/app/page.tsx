@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
-// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL) ---
+// --- UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL PARA EVITAR ERRORES) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
