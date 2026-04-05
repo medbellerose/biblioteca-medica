@@ -90,14 +90,26 @@
       },
       {
         "name": "Medicina Interna",
-        "topics": [
-          { 
-            "label": "Neumonología", 
-            "subtopics": [
-              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer-pulmon", "keywords": ["neoplasia", "pulmón", "adenocarcinoma", "biopsia", "oncología"] }
+        "isSubmenu": true,
+        "specialties": [
+          {
+            "name": "Neumonología",
+            "topics": [
+              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer_de_pulmon", "keywords": ["oncología", "pulmón", "neoplasia"] }
             ]
           },
-          { "label": "Nefrología", "file": "Quinto/Medicina_Interna/nefrologia", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
+          {
+            "name": "Nefrología",
+            "topics": [
+              { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias", "keywords": ["riñón", "filtrado"] }
+            ]
+          },
+          {
+            "name": "Cardiología",
+            "topics": [
+              { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia-cardiaca", "keywords": ["corazón", "falla"] }
+            ]
+          }
         ]
       },
       {
