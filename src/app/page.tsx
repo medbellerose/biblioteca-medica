@@ -1,16 +1,16 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
 import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
-import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
+import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
-// --- UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL PARA EVITAR ERRORES) ---
-const yearsTitles: { [key: number]: string } = {
+// --- UTILIDADES ---
+const yearsTitles: Record<number, string> = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
 
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// --- COMPONENTE: ÍNDICE DE CONTENIDOS ---
+// --- COMPONENTE: ÍNDICE ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -69,8 +69,8 @@ export default function Home() {
   const [selectedMd, setSelectedMd] = useState<string | null>(null);
   const [content, setContent] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedYears, setExpandedYears] = useState<{[key: number]: boolean}>({ 1: true });
-  const [expandedSubjects, setExpandedSubjects] = useState<{[key: string]: boolean}>({});
+  const [expandedYears, setExpandedYears] = useState<Record<number, boolean>>({ 1: true });
+  const [expandedSubjects, setExpandedSubjects] = useState<Record<string, boolean>>({});
 
   const allowedYears = useMemo(() => {
     const plan = String(user?.publicMetadata?.plan || "");
@@ -108,8 +108,8 @@ export default function Home() {
     if (isPdf) {
       setContent('---PDF_MODE---');
     } else {
-      const path = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
-      fetch(`/apuntes/${path}`)
+      const fileName = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
+      fetch(`/apuntes/${fileName}`)
         .then(res => res.text())
         .then(text => {
           let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
