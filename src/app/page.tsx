@@ -45,7 +45,9 @@ const TableOfContents = ({ content }: { content: string }) => {
           <a key={i} href={`#${heading.id}`} onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById(heading.id);
-              if (target) target.scrollIntoView({ behavior: 'smooth' });
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -62,6 +64,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
+// --- COMPONENTE PRINCIPAL ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
