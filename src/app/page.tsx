@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
-// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE) ---
+// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -100,8 +100,6 @@ export default function Home() {
     (window as any).navegarApunte = (ruta: string) => {
       handleSelection(ruta);
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      const mainContainer = document.querySelector('.overflow-y-auto');
-      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
     };
   }, []);
 
