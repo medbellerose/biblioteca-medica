@@ -37,16 +37,6 @@
 3. Biopsia transtorácica → 90% diagnóstico, riesgo neumotórax
 4. Toracotomía → si todo lo demás falla
 ```
-
----
-
-## 🧠 Patognomónico
-
-| Hallazgo | Diagnóstico |
-|:---|:---|
-| **Grasa en TAC** | **Hamartoma** |
-| **Calcificación "palomitas de maíz"** | **Hamartoma** |
-
 ---
 
 ## 🎯 Criterio de Benignidad en Jóvenes
