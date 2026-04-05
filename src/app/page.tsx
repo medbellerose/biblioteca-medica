@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
-// --- CONFIGURACIÓN Y UTILIDADES ---
+// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// --- COMPONENTE: ÍNDICE ---
+// --- COMPONENTE: ÍNDICE DE CONTENIDOS ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -45,9 +45,7 @@ const TableOfContents = ({ content }: { content: string }) => {
           <a key={i} href={`#${heading.id}`} onClick={(e) => {
               e.preventDefault();
               const target = document.getElementById(heading.id);
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-              }
+              if (target) target.scrollIntoView({ behavior: 'smooth' });
             }}
             className="block whitespace-nowrap overflow-hidden text-right transition-colors no-underline text-[10px] text-gray-400 font-bold uppercase tracking-tight hover:text-purple-400"
           >
@@ -102,6 +100,8 @@ export default function Home() {
     (window as any).navegarApunte = (ruta: string) => {
       handleSelection(ruta);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      const mainContainer = document.querySelector('.overflow-y-auto');
+      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
     };
   }, []);
 
