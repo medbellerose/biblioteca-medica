@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Brain, Menu, ChevronRight, BookOpen, ChevronDown, Search, Lock, MessageCircle } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -122,13 +122,22 @@ export default function Home() {
         <div className="p-4 border-b border-[#30363d] shrink-0">
           <div className="relative group text-white">
             <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
-            <input type="text" placeholder="Buscar apunte..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white" />
+            <input 
+              type="text" 
+              placeholder="Buscar apunte..." 
+              value={searchTerm} 
+              onChange={(e) => setSearchTerm(e.target.value)} 
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white" 
+            />
           </div>
         </div>
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {yearsDataRaw.map((yearData) => (
             <div key={yearData.year} className="space-y-1">
-              <button onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]">
+              <button 
+                onClick={() => setExpandedYears(prev => ({...prev, [yearData.year]: !prev[yearData.year]}))} 
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold text-gray-300 hover:bg-[#21262d]"
+              >
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-gray-500" />
                   <span>{yearsTitles[yearData.year]}</span>
@@ -141,14 +150,21 @@ export default function Home() {
                     const subKey = `${yearData.year}-${sub.name}`;
                     return (
                       <div key={idx}>
-                        <button onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors">
+                        <button 
+                          onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))} 
+                          className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors"
+                        >
                           <span>{sub.name}</span>
                           <ChevronDown className={`w-3 h-3 transition-transform ${expandedSubjects[subKey] ? 'rotate-180' : ''}`} />
                         </button>
                         {(expandedSubjects[subKey] || searchTerm) && (
                           <div className="ml-3 space-y-1 pb-2">
                             {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>
+                              <button 
+                                key={topic.file} 
+                                onClick={() => handleSelection(topic.file)} 
+                                className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}
+                              >
                                 {topic.file.endsWith('.pdf') ? '📄 ' : '• '} {topic.label}
                               </button>
                             ))}
@@ -167,10 +183,17 @@ export default function Home() {
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <div className="flex items-center">
-            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400"><Menu className="w-5 h-5" /></button>
+            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
+              <Menu className="w-5 h-5" />
+            </button>
             <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
                 <span>Medpath</span>
-                {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('.')[0].replace(/_/g, ' ')}</span></>}
+                {selectedMd && (
+                  <>
+                    <ChevronRight className="w-3 h-3" /> 
+                    <span className="text-purple-400">{selectedMd.split('/').pop()?.split('.')[0].replace(/_/g, ' ')}</span>
+                  </>
+                )}
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -178,7 +201,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative">
+        <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative text-white">
           <div className="max-w-5xl mx-auto relative h-full">
             {selectedMd && !isPdf && <TableOfContents content={content} />}
 
@@ -191,7 +214,9 @@ export default function Home() {
                     </div>
                   ) : (
                     <article className="prose prose-invert prose-purple max-w-none">
-                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
+                        {content}
+                      </Markdown>
                     </article>
                   )
                 ) : (
@@ -205,7 +230,7 @@ export default function Home() {
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center mt-20 opacity-50">
                 <Brain className="w-16 h-16 mb-4 animate-pulse mx-auto" />
-                <h2 className="text-xl font-bold tracking-tight">Medpath Digital</h2>
+                <h2 className="text-xl font-bold tracking-tight text-white">Medpath Digital</h2>
               </div>
             )}
           </div>
