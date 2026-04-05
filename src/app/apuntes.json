@@ -92,3 +92,8 @@
       },
       {
         "name": "PSIQUIATRÍA",
+        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor.md", "keywords": ["depresión", "bipolaridad", "ánimo", "terapia"] }]
+      }
+    ]
+  }
+]
