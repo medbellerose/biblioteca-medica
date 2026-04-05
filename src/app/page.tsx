@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
-// 1. UTILIDADES (FUERA PARA EVITAR ERRORES DE SINTAXIS)
+// --- CONFIGURACIÓN Y UTILIDADES (FUERA DEL COMPONENTE PRINCIPAL) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// 2. COMPONENTE DEL ÍNDICE
+// --- COMPONENTE: ÍNDICE DE CONTENIDOS ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -62,7 +62,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
-// 3. COMPONENTE PRINCIPAL
+// --- COMPONENTE PRINCIPAL ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -108,8 +108,8 @@ export default function Home() {
     if (isPdf) {
       setContent('---PDF_MODE---');
     } else {
-      const fileName = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
-      fetch(`/apuntes/${fileName}`)
+      const path = selectedMd.includes('.') ? selectedMd : `${selectedMd}.md`;
+      fetch(`/apuntes/${path}`)
         .then(res => res.text())
         .then(text => {
           let cleanText = text.split('<b>').join('**').split('</b>').join('**').split('(/public/').join('(/'); 
