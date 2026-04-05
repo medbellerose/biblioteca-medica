@@ -65,19 +65,19 @@
         "topics": [
           {
             "label": "Neumonología",
-            "subtopics": [
-              { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón","cancer"] }
+            "topics": [
+              { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer", "keywords": ["oncología", "pulmón", "cancer"] }
             ]
           },
           {
             "label": "Cardiología",
-            "subtopics": [
+            "topics": [
               { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia_cardiaca", "keywords": ["corazón", "falla"] }
             ]
           },
           {
             "label": "Nefrología",
-            "subtopics": [
+            "topics": [
               { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias", "keywords": ["riñón", "filtrado"] }
             ]
           }
