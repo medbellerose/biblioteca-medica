@@ -28,18 +28,9 @@
   {
     "year": 2,
     "subjects": [
-      {
-        "name": "Histología",
-        "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio", "keywords": ["cilios", "neumocitos", "pulmon", "pulmón", "alveolos"] }]
-      },
-      {
-        "name": "Embriología",
-        "topics": [{ "label": "Desarrollo Prenatal", "file": "Segundo/Embriologia/desarrollo-prenatal", "keywords": ["fecundación", "blastocisto", "gastrulación", "órganos"] }]
-      },
-      {
-        "name": "Genética",
-        "topics": [{ "label": "Herencia", "file": "Segundo/Genetica/herencia", "keywords": ["adn", "genes", "mendel", "cromosomas", "familiar"] }]
-      }
+      { "name": "Histología", "topics": [{ "label": "Sistema Respiratorio", "file": "Segundo/Histologia/Sistema_Respiratorio", "keywords": ["cilios", "neumocitos"] }] },
+      { "name": "Embriología", "topics": [{ "label": "Desarrollo Prenatal", "file": "Segundo/Embriologia/desarrollo-prenatal", "keywords": ["fecundación", "órganos"] }] },
+      { "name": "Genética", "topics": [{ "label": "Herencia", "file": "Segundo/Genetica/herencia", "keywords": ["adn", "genes"] }] }
     ]
   },
   {
@@ -48,37 +39,18 @@
       {
         "name": "Fisiología",
         "topics": [
-          { "label": "Cardiovascular", "file": "Tercero/Fisiologia/cardiovascular", "keywords": ["corazón", "presión", "ciclo cardíaco", "gasto"] },
-          { "label": "Respiratoria", "file": "Tercero/Fisiologia/respiratoria", "keywords": ["volúmenes", "capacidades", "espirometría", "intercambio", "pulmon", "pulmón"] }
+          { "label": "Cardiovascular", "file": "Tercero/Fisiologia/cardiovascular", "keywords": ["corazón", "presión"] },
+          { "label": "Respiratoria", "file": "Tercero/Fisiologia/respiratoria", "keywords": ["volúmenes", "espirometría"] }
         ]
       },
-      {
-        "name": "Inmunología",
-        "topics": [
-          { "label": "Innata", "file": "Tercero/Inmunologia/innata", "keywords": ["barreras", "macrófagos", "inflamación", "complemento"] },
-          { "label": "Adaptativa", "file": "Tercero/Inmunologia/adaptativa", "keywords": ["linfocitos", "anticuerpos", "antígenos", "memoria"] }
-        ]
-      }
+      { "name": "Inmunología", "topics": [{ "label": "Innata", "file": "Tercero/Inmunologia/innata", "keywords": ["macrófagos"] }] }
     ]
   },
   {
     "year": 4,
     "subjects": [
-      {
-        "name": "Farmacología",
-        "topics": [{ "label": "Farmacocinética", "file": "Cuarto/Farmacologia/farmacocinetica", "keywords": ["absorción", "distribución", "metabolismo", "excreción", "ladme"] }]
-      },
-      {
-        "name": "Semiología",
-        "topics": [
-          { "label": "Inspección", "file": "Cuarto/Semiologia/inspeccion", "keywords": ["examen físico", "observación", "signos", "facies"] },
-          { "label": "Auscultación", "file": "Cuarto/Semiologia/auscultacion", "keywords": ["estetoscopio", "murmullo", "ruidos", "soplos"] }
-        ]
-      },
-      {
-        "name": "Patología",
-        "topics": [{ "label": "Inflamación", "file": "Cuarto/Patologia/inflamacion", "keywords": ["aguda", "crónica", "reparación", "necrosis"] }]
-      }
+      { "name": "Farmacología", "topics": [{ "label": "Farmacocinética", "file": "Cuarto/Farmacologia/farmacocinetica", "keywords": ["absorción"] }] },
+      { "name": "Semiología", "topics": [{ "label": "Inspección", "file": "Cuarto/Semiologia/inspeccion", "keywords": ["signos"] }] }
     ]
   },
   {
@@ -86,23 +58,34 @@
     "subjects": [
       {
         "name": "Nutrición",
-        "topics": [{ "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion-nutricional", "keywords": ["imc", "antropometría", "dieta", "clínica", "abuela", "madre"] }]
+        "topics": [{ "label": "Evaluación Nutricional", "file": "Quinto/Nutricion/evaluacion-nutricional", "keywords": ["imc", "dieta"] }]
       },
       {
         "name": "Medicina Interna",
         "topics": [
-          { 
-            "label": "Neumonología", 
+          {
+            "label": "Neumonología",
             "subtopics": [
-              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer-pulmon", "keywords": ["neoplasia", "pulmón", "adenocarcinoma", "biopsia", "oncología"] }
+              { "label": "Cáncer de pulmón", "file": "Quinto/Medicina_Interna/Neumonologia/cancer_de_pulmon", "keywords": ["oncología", "pulmón"] }
             ]
           },
-          { "label": "Nefrología", "file": "Quinto/Medicina_Interna/nefrologia", "keywords": ["riñón", "filtrado", "electrolitos", "orina"] }
+          {
+            "label": "Cardiología",
+            "subtopics": [
+              { "label": "Insuficiencia Cardíaca", "file": "Quinto/Medicina_Interna/Cardiologia/insuficiencia_cardiaca", "keywords": ["corazón", "falla"] }
+            ]
+          },
+          {
+            "label": "Nefrología",
+            "subtopics": [
+              { "label": "Glomerulopatías", "file": "Quinto/Medicina_Interna/Nefrologia/glomerulopatias", "keywords": ["riñón", "filtrado"] }
+            ]
+          }
         ]
       },
       {
         "name": "Psiquiatría",
-        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor", "keywords": ["depresión", "bipolaridad", "ánimo", "terapia"] }]
+        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Psiquiatria/trastornos-humor", "keywords": ["depresión"] }]
       }
     ]
   }
