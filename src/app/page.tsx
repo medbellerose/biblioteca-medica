@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
-// --- 1. UTILIDADES ---
+// --- UTILIDADES ---
 const yearsTitles: Record<number, string> = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -18,7 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
-// --- 2. COMPONENTE DE ÍNDICE ---
+// --- COMPONENTE: ÍNDICE ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -62,7 +62,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
-// --- 3. COMPONENTE PRINCIPAL ---
+// --- COMPONENTE PRINCIPAL ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -126,12 +126,6 @@ export default function Home() {
           <Brain className="w-6 h-6 text-purple-500" />
           <span>Medpath</span>
         </div>
-        <div className="p-4 border-b border-[#30363d] shrink-0">
-          <div className="relative group text-white">
-            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
-            <input type="text" placeholder="Buscar apunte..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 pr-8 text-xs focus:outline-none focus:border-purple-500 transition-all text-white" />
-          </div>
-        </div>
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {yearsDataRaw.map((yearData) => (
             <div key={yearData.year} className="space-y-1">
@@ -140,30 +134,25 @@ export default function Home() {
                   <BookOpen className="w-4 h-4 text-gray-500" />
                   <span>{yearsTitles[yearData.year]}</span>
                 </div>
-                <ChevronDown className={`w-4 h-4 transition-transform ${(expandedYears[yearData.year] || searchTerm) ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[yearData.year] ? 'rotate-180' : ''}`} />
               </button>
-              {(expandedYears[yearData.year] || searchTerm) && (
+              {expandedYears[yearData.year] && (
                 <div className="ml-3 pl-1 border-l border-[#30363d]/50">
-                  {yearData.subjects.map((sub, idx) => {
-                    const subKey = `${yearData.year}-${sub.name}`;
-                    return (
-                      <div key={idx}>
-                        <button onClick={() => setExpandedSubjects(prev => ({...prev, [subKey]: !prev[subKey]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors">
-                          <span>{sub.name}</span>
-                          <ChevronDown className={`w-3 h-3 transition-transform ${expandedSubjects[subKey] ? 'rotate-180' : ''}`} />
-                        </button>
-                        {(expandedSubjects[subKey] || searchTerm) && (
-                          <div className="ml-3 space-y-1 pb-2">
-                            {sub.topics.map(topic => (
-                              <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>
-                                {topic.file.endsWith('.pdf') ? '📄 ' : '• '} {topic.label}
-                              </button>
-                            ))}
-                          </div>
-                        )}
+                  {yearData.subjects.map((sub, idx) => (
+                    <div key={idx}>
+                      <button onClick={() => setExpandedSubjects(prev => ({...prev, [sub.name]: !prev[sub.name]}))} className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] uppercase font-bold text-gray-500 hover:text-white transition-colors">
+                        <span>{sub.name}</span>
+                        <ChevronDown className="w-3 h-3" />
+                      </button>
+                      <div className="ml-3 space-y-1 pb-2">
+                        {sub.topics.map(topic => (
+                          <button key={topic.file} onClick={() => handleSelection(topic.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === topic.file ? 'text-purple-400 font-bold bg-purple-500/10' : 'text-gray-400 hover:text-white hover:bg-[#21262d]'}`}>
+                            {topic.file.endsWith('.pdf') ? '📄 ' : '• '} {topic.label}
+                          </button>
+                        ))}
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
@@ -173,16 +162,10 @@ export default function Home() {
 
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
-          <div className="flex items-center">
-            <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400"><Menu className="w-5 h-5" /></button>
-            <div className="ml-4 flex items-center gap-2 text-[10px] text-gray-500 truncate uppercase font-medium">
-                <span>Medpath</span>
-                {selectedMd && <><ChevronRight className="w-3 h-3" /> <span className="text-purple-400">{selectedMd.split('/').pop()?.split('.')[0].replace(/_/g, ' ')}</span></>}
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
-          </div>
+          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-[#21262d] rounded-lg text-gray-400">
+            <Menu className="w-5 h-5" />
+          </button>
+          <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
         </header>
 
         <div className="flex-1 overflow-y-auto p-6 md:p-12 bg-[#0d1117] scroll-smooth relative">
@@ -197,18 +180,8 @@ export default function Home() {
                       <iframe src={`/apuntes/${selectedMd}#toolbar=0`} className="w-full h-full" title="PDF Viewer" />
                     </div>
                   ) : (
-                    <article className="prose prose-invert prose-purple max-w-none prose-blockquote:not-italic prose-headings:scroll-mt-24 prose-headings:text-white prose-p:text-gray-300 prose-img:rounded-xl prose-img:mx-auto prose-table:border prose-table:border-[#30363d] prose-th:bg-[#161b22] prose-th:p-4 prose-td:p-4 prose-table:my-8 prose-table:w-full">
-                      <Markdown 
-                        remarkPlugins={[remarkGfm, remarkSlug]} 
-                        rehypePlugins={[rehypeRaw]}
-                        components={{
-                          a: ({ node, ...props }) => {
-                            const isInternal = props.href && !props.href.startsWith('http');
-                            if (isInternal) return <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} className="cursor-pointer" />;
-                            return <a {...props} target="_blank" />;
-                          }
-                        }}
-                      >
+                    <article className="prose prose-invert prose-purple max-w-none">
+                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
                         {content}
                       </Markdown>
                     </article>
@@ -218,7 +191,9 @@ export default function Home() {
                     <Lock className="w-10 h-10 text-purple-400 mb-4" />
                     <h2 className="text-xl font-bold text-white tracking-tight">Módulo no adquirido</h2>
                     <p className="text-gray-400 mt-2 mb-8 text-sm max-w-xs">Tu pase no incluye el material de {currentYear}° año.</p>
-                    <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all"><MessageCircle className="w-4 h-4" /><span>Solicitar acceso</span></a>
+                    <a href="https://wa.me/56968250136" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
+                      <MessageCircle className="w-4 h-4" /><span>Solicitar acceso</span>
+                    </a>
                   </div>
                 )
               </SignedIn>
