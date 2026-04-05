@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, UserButton, useUser } from '@clerk/nextjs';
 
-// --- 1. UTILIDADES (FUERA DEL COMPONENTE) ---
+// --- 1. UTILIDADES (FUERA PARA EVITAR ERRORES DE SINTAXIS) ---
 const yearsTitles: Record<number, string> = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -62,7 +62,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
-// --- 3. COMPONENTE PRINCIPAL (SIN LÓGICA INTERNA SOBRECARGADA) ---
+// --- 3. COMPONENTE PRINCIPAL ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
