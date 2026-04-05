@@ -74,6 +74,7 @@
       {
         "name": "M. INTERNA: NEUMONOLOGÍA",
         "topics": [
+          { "label": "PDF REY", "file": "Quinto/Interna/Pulmon/Rey1 2026.pdf", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] }
           { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer.md", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] }
         ]
       },
