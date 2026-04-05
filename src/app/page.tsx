@@ -9,6 +9,7 @@ import rehypeRaw from 'rehype-raw';
 import yearsDataRaw from './apuntes.json';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs';
 
+// --- FUNCIONES DE ESTILO Y UTILIDAD (FUERA DEL COMPONENTE PARA EVITAR ERRORES) ---
 const yearsTitles: { [key: number]: string } = {
   1: "Primer Año", 2: "Segundo Año", 3: "Tercer Año", 4: "Cuarto Año", 5: "Quinto Año"
 };
@@ -17,6 +18,7 @@ const cleanId = (text: string) => {
   return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 };
 
+// --- COMPONENTE: ÍNDICE DE CONTENIDOS ---
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
@@ -60,6 +62,7 @@ const TableOfContents = ({ content }: { content: string }) => {
   );
 };
 
+// --- COMPONENTE PRINCIPAL ---
 export default function Home() {
   const { user } = useUser();
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -88,12 +91,15 @@ export default function Home() {
 
   const hasAccess = allowedYears.includes(currentYear);
 
+  const handleSelection = (file: string) => {
+    setSelectedMd(file);
+    if (window.innerWidth < 768) setSidebarOpen(false);
+  };
+
   useEffect(() => {
     (window as any).navegarApunte = (ruta: string) => {
-      setSelectedMd(ruta);
+      handleSelection(ruta);
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      const mainContainer = document.querySelector('.overflow-y-auto');
-      if (mainContainer) mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
     };
   }, []);
 
@@ -112,13 +118,9 @@ export default function Home() {
     }
   }, [selectedMd, isPdf]);
 
-  const handleSelection = (file: string) => {
-    setSelectedMd(file);
-    if (window.innerWidth < 768) setSidebarOpen(false);
-  };
-
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
+      {/* SIDEBAR */}
       <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all duration-300 bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg">
           <Brain className="w-6 h-6 text-purple-500" />
@@ -169,6 +171,7 @@ export default function Home() {
         </nav>
       </aside>
 
+      {/* CONTENIDO PRINCIPAL */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#0d1117] relative overflow-hidden">
         <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] bg-[#161b22]/50 shrink-0">
           <div className="flex items-center">
@@ -202,7 +205,7 @@ export default function Home() {
                         components={{
                           a: ({ node, ...props }) => {
                             const isInternal = props.href && !props.href.startsWith('http');
-                            if (isInternal) return <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} />;
+                            if (isInternal) return <a {...props} onClick={(e) => { e.preventDefault(); if (props.href) handleSelection(props.href); }} className="cursor-pointer" />;
                             return <a {...props} target="_blank" />;
                           }
                         }}
