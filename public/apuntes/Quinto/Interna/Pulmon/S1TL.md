@@ -12,8 +12,6 @@ Sensación subjetiva de falta de aire. Se produce por una desproporción entre e
 * **Índice de Diferenciación (IDD):** Se calcula como `(Pico Flujo x PaO2) / 1000`. Si el resultado es > 13 es de causa cardíaca; si es < 13 es respiratoria.
 * **Péptido Natriurético (PPNA):** Si es > 400 pg/ml es cardíaco; < 100 pg/ml es respiratorio.
 
-# 🫁 Resumen de Disnea (Tablas)
-
 ---
 
 ## ⏳ CAUSAS DE DISNEA CRÓNICA RESPIRATORIAS
