@@ -18,7 +18,7 @@ Fibrosis Quística.
 
 | Tipo | Causa Principal | Características Clave |
 | :--- | :--- | :--- |
-| **Benigno** | Granulomas infecciosos | Antecedentes de TBC, Histoplasmosis o Coccidioidomicosis. |
+| **Benigno** | Granulomas infecciosos | Antecedentes de TBC (lóbulo superior), Histoplasmosis o Coccidioidomicosis. (preguntar px dónde vive?) |
 | **Benigno** | Hamartoma | 3ra causa global. Calcificación en **"pochoclo/palomita de maíz"**. Contiene grasa. |
 | **Maligno** | Cáncer de Pulmón | 44% de los casos (Adenocarcinoma es el más frecuente). |
 | **Maligno** | Metástasis | 10-30%. Origen: Cabeza y cuello, mama, riñón, colon, melanoma. |
@@ -26,29 +26,54 @@ Fibrosis Quística.
 
 
 
-## 🚩 Factores de Riesgo de Malignidad
+### 🚩 Factores de Riesgo: Benignidad vs. Malignidad en NPS
 
-1. **Edad:** A mayor edad, mayor riesgo.
-2. **Tabaquismo:** Factor de riesgo principal para carcinoma brongogénico.
-3. **Tasa de Duplicación:** Velocidad con la que duplica su volumen (25% de aumento de diámetro).
-4. **Tamaño:** A mayor diámetro, mayor probabilidad de cáncer.
-5. **Contorno:** * **Benigno:** Liso, bien definido.
-    * **Maligno:** Espiculado o lobulado.
-6. **Patrón de Calcificación:**
-    * **Benigno:** Central, concéntrica o en "pochoclo".
-    * **Maligno:** Excéntrica, distrófica o asimétrica.
+| Factor de Riesgo | Sugiere Benignidad ✅ | Sugiere Malignidad 🚨 |
+| :--- | :--- | :--- |
+| **Edad** | < 35 años | > 35 años (Riesgo ↑ con la edad) |
+| **Tabaquismo** | No fumador | Fumador (Actual o pasado) |
+| **Tamaño** | < 2 cm | > 3 cm (A mayor tamaño, mayor riesgo) |
+| **Bordes / Contorno** | Lisos, nítidos, bien definidos | **Espiculados**, lobulados o irregulares |
+| **Calcificación** | Central, concéntrica o en **"Pochoclo"** | Excéntrica, irregular o asimétrica |
+| **Crecimiento** | Estable por > 2 años | **Duplicación rápida** de volumen |
+| **Contenido** | Presencia de **grasa** (Hamartoma) | Sólido o vidrio esmerilado persistente |
+| **Ubicación Geográfica** | Zonas de Histoplasmosis/TBC | Sin relación específica |
 
 
-## 🛠️ Metodología de Estudio (Algoritmo)
+## 📋 Cuadro de Métodos Diagnósticos
 
-* **1. Radiografía (Rx) Comparativa:** Fundamental solicitar placas antiguas para ver estabilidad temporal.
-* **2. TAC de Alta Resolución:** Detalla grasa (hamartoma), calcificaciones y nódulos satélites.
-* **3. TAC con Contraste:** Alta sensibilidad (98%), pero baja especificidad.
-* **4. PET (Tomografía por Emisión de Positrones):** * El método **más preciso** actualmente.
-    * Sensibilidad 82-95%, Especificidad >85%.
-* **5. Punción Biopsia Transtorácica:** Diagnostica el 90% de malignos, pero riesgo de **neumotórax**.
-* **6. Toracotomía:** Reservada para nódulos sin diagnóstico tras métodos previos.
+| Método | Utilidad Principal | Observaciones |
+| :--- | :--- | :--- |
+| **Rx de Tórax Comparativa** | Evaluación de estabilidad temporal | Comparar con placas antiguas (estabilidad >2 años = benignidad). |
+| **TAC de Alta Resolución** | Detalle anatómico y densidad | Evalúa presencia de **grasa** (Hamartoma) y tipo de calcificación. |
+| **TAC con Contraste** | Evaluación de vascularización | Alta sensibilidad (98%), ayuda a decidir técnicas invasivas. |
+| **PET-Scan** | Actividad metabólica (Glucosa) | El más preciso (especificidad >85%). Costo elevado. |
+| **Punción (PAAF/BAG)** | Diagnóstico histológico | Ideal para lesiones **periféricas**. Riesgo de neumotórax. |
+| **Fibrobroncoscopia** | Visualización directa y biopsia | De elección en lesiones **centrales intraluminales**. |
+| **Toracotomía** | Resección y diagnóstico definitivo | Cuando otros métodos no son concluyentes (especialmente extraluminales). |
 
+## 🔄 Algoritmo Clínico (Criterio del Profesor)
+
+Ante un paciente con **Nódulo Pulmonar Solitario (NPS)**, el flujo de decisión se basa en el riesgo basal y la localización:
+
+### 1️⃣ Evaluación Inicial por Factores de Riesgo
+* **Bajo Riesgo:** `< 35 años` + `No fumador`
+  * **Conducta:** Acompañamiento radiológico cada **3 a 6 meses**.
+* **Alto Riesgo:** `> 35 años` + `Fumador`
+  * **Siguiente paso:** Realizar **Radiografía de Tórax**.
+
+### 2️⃣ Hallazgos en Radiografía
+* **Características Benignas:** Continuar con acompañamiento/seguimiento.
+* **Características Malignas/Dudosas:** Realizar **TAC o Tomografía con contraste**.
+
+### 3️⃣ Conducta según Localización en TAC
+Si se sospecha malignidad por TAC, la técnica de biopsia depende de la ubicación:
+
+* **📍 Zona Periférica:**
+  * Procedimiento: **Punción con aguja fina o gruesa** (Transtorácica).
+* **📍 Zona Central:** Se divide según su relación con la vía aérea:
+  1. **Intraluminal:** Se realiza **Fibrobroncoscopia**.
+  2. **Extraluminal:** Se procede a **Toracotomía**.
 
 ## 2. Hamartomas y Tumores Carcinoides
 
