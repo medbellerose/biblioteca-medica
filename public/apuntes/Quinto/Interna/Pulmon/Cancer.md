@@ -1,4 +1,4 @@
-# 🩺 RESUMEN DE NEUMONOLOGÍA:
+# 🩺 RESUMEN DE CLASE:
 Nódulo Pulmonar Solitario (NPS),
 Hamartomas y Tumores Carcinoides,
 Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos),
@@ -6,27 +6,49 @@ Bronquiolitis,
 Fibrosis Quística.
 
 ## 1. Nódulo Pulmonar Solitario (NPS)
-Se define como una opacidad radiológica única, redondeada, de bordes netos, rodeada de pulmón aireado, con un diámetro **≤ 3 cm**. Si mide > 3 cm, se considera "masa" (alta probabilidad de malignidad).
 
-### 📊 Tabla: Evaluación de Riesgo en NPS
-| Característica | Sugiere Benignidad | Sugiere Malignidad |
+## 📌 Definición y Generalidades
+* **Definición:** Lesión redonda u ovalada, claramente delimitada, de hasta **5 cm** de diámetro visible en radiografía.
+* **Regla de Oro:** * < 35 años: Probablemente benigno (seguimiento cauto).
+    * > 35 años: **Maligno hasta que se demuestre lo contrario.**
+* **Estadística:** ~60% son benignos (principalmente granulomas infecciosos).
+
+
+## 📊 Etiología del NPS
+
+| Tipo | Causa Principal | Características Clave |
 | :--- | :--- | :--- |
-| **Edad** | < 35 años | > 50 años |
-| **Tabaquismo** | No fumador | Fumador activo / ex-fumador |
-| **Bordes** | Lisos, netos | Espiculados (corona radiata), lobulados |
-| **Calcificación** | Central, difusa, "pochoclo" | Excéntrica, punteada |
-| **Crecimiento** | Estable por > 2 años | Duplicación entre 20 y 400 días |
+| **Benigno** | Granulomas infecciosos | Antecedentes de TBC, Histoplasmosis o Coccidioidomicosis. |
+| **Benigno** | Hamartoma | 3ra causa global. Calcificación en **"pochoclo/palomita de maíz"**. Contiene grasa. |
+| **Maligno** | Cáncer de Pulmón | 44% de los casos (Adenocarcinoma es el más frecuente). |
+| **Maligno** | Metástasis | 10-30%. Origen: Cabeza y cuello, mama, riñón, colon, melanoma. |
+| **Otros** | Vasculitis | Granulomatosis de Wegener. |
 
-### 🔬 Metodología de Estudio y Manejo
-1.  **Revisión de Imágenes Previas:** Paso fundamental para determinar estabilidad.
-2.  **TAC de Tórax:** Estudio de elección para caracterizar densidad y bordes.
-3.  **PET-CT:** Utilizado en nódulos > 8-10 mm con riesgo intermedio.
-4.  **Decisión de Extirpación:**
-    * **Bajo riesgo:** Seguimiento radiológico seriado.
-    * **Riesgo intermedio:** Biopsia (transtorácica o broncoscopía) o PET.
-    * **Alto riesgo:** Resección quirúrgica directa (videotoracoscopía).
 
----
+
+## 🚩 Factores de Riesgo de Malignidad
+
+1. **Edad:** A mayor edad, mayor riesgo.
+2. **Tabaquismo:** Factor de riesgo principal para carcinoma brongogénico.
+3. **Tasa de Duplicación:** Velocidad con la que duplica su volumen (25% de aumento de diámetro).
+4. **Tamaño:** A mayor diámetro, mayor probabilidad de cáncer.
+5. **Contorno:** * **Benigno:** Liso, bien definido.
+    * **Maligno:** Espiculado o lobulado.
+6. **Patrón de Calcificación:**
+    * **Benigno:** Central, concéntrica o en "pochoclo".
+    * **Maligno:** Excéntrica, distrófica o asimétrica.
+
+
+## 🛠️ Metodología de Estudio (Algoritmo)
+
+* **1. Radiografía (Rx) Comparativa:** Fundamental solicitar placas antiguas para ver estabilidad temporal.
+* **2. TAC de Alta Resolución:** Detalla grasa (hamartoma), calcificaciones y nódulos satélites.
+* **3. TAC con Contraste:** Alta sensibilidad (98%), pero baja especificidad.
+* **4. PET (Tomografía por Emisión de Positrones):** * El método **más preciso** actualmente.
+    * Sensibilidad 82-95%, Especificidad >85%.
+* **5. Punción Biopsia Transtorácica:** Diagnostica el 90% de malignos, pero riesgo de **neumotórax**.
+* **6. Toracotomía:** Reservada para nódulos sin diagnóstico tras métodos previos.
+
 
 ## 2. Hamartomas y Tumores Carcinoides
 
