@@ -1,4 +1,9 @@
-# 🩺 RESUMEN DE NEUMONOLOGÍA 2026: PATOLOGÍA PULMONAR
+# 🩺 RESUMEN DE NEUMONOLOGÍA:
+Nódulo Pulmonar Solitario (NPS)
+Hamartomas y Tumores Carcinoides
+Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos)
+Bronquiolitis
+Fibrosis Quística
 
 ## 1. Nódulo Pulmonar Solitario (NPS)
 Se define como una opacidad radiológica única, redondeada, de bordes netos, rodeada de pulmón aireado, con un diámetro **≤ 3 cm**. Si mide > 3 cm, se considera "masa" (alta probabilidad de malignidad).
