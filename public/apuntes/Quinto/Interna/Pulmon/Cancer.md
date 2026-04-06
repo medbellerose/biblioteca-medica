@@ -1,167 +1,69 @@
+# 🩺 RESUMEN DE NEUMONOLOGÍA 2026: PATOLOGÍA PULMONAR
 
+## 1. Nódulo Pulmonar Solitario (NPS)
+Se define como una opacidad radiológica única, redondeada, de bordes netos, rodeada de pulmón aireado, con un diámetro **≤ 3 cm**. Si mide > 3 cm, se considera "masa" (alta probabilidad de malignidad).
 
-# 🫁 Nódulo Pulmonar Solitario (NPS)
+### 📊 Tabla: Evaluación de Riesgo en NPS
+| Característica | Sugiere Benignidad | Sugiere Malignidad |
+| :--- | :--- | :--- |
+| **Edad** | < 35 años | > 50 años |
+| **Tabaquismo** | No fumador | Fumador activo / ex-fumador |
+| **Bordes** | Lisos, netos | Espiculados (corona radiata), lobulados |
+| **Calcificación** | Central, difusa, "pochoclo" | Excéntrica, punteada |
+| **Crecimiento** | Estable por > 2 años | Duplicación entre 20 y 400 días |
 
-> **Def:** Lesión ≤5 cm, redondeada, bien delimitada.  
-> **Importancia:** Descartar tumor primario o metástasis.
-
----
-
-## 📊 Frecuencias (clave para el examen)
-
-| Tipo | % | Causas principales |
-|:---|:---:|:---|
-| 🟢 **Benigno** | **60%** | Granulomas infecciosos (histoplasmosis, TBC) |
-| 🔴 **Maligno** | **40%** | Ca pulmón (44%), Ca broncogénico (25%), Metástasis (10-30%) |
-
----
-
-## ⚡ Factores de Riesgo de Malignidad
-
-| Factor | Qué recordar |
-|:---|:---|
-| Edad | ↑ edad = ↑ riesgo |
-| Tabaquismo | Principal factor |
-| Tamaño | Mayor = más maligno |
-| Contorno | Espiculado/lobulado = malo |
-| **Calcificación** | Central/"palomitas" = **BENIGNO** \| Excéntrica = **MALIGNO** |
-| Crecimiento | Rápida duplicación = maligno |
+### 🔬 Metodología de Estudio y Manejo
+1.  **Revisión de Imágenes Previas:** Paso fundamental para determinar estabilidad.
+2.  **TAC de Tórax:** Estudio de elección para caracterizar densidad y bordes.
+3.  **PET-CT:** Utilizado en nódulos > 8-10 mm con riesgo intermedio.
+4.  **Decisión de Extirpación:**
+    * **Bajo riesgo:** Seguimiento radiológico seriado.
+    * **Riesgo intermedio:** Biopsia (transtorácica o broncoscopía) o PET.
+    * **Alto riesgo:** Resección quirúrgica directa (videotoracoscopía).
 
 ---
 
-## 🔬 Estudio (orden)
+## 2. Hamartomas y Tumores Carcinoides
 
-```
-1. TAC alta resolución → mejor detalle, detecta grasa (hamartoma)
-2. PET → más preciso (82-95% sensibilidad), pero caro
-3. Biopsia transtorácica → 90% diagnóstico, riesgo neumotórax
-4. Toracotomía → si todo lo demás falla
-```
----
+### 📊 Tabla Comparativa: Tumores Broncopulmonares
+| Característica | Hamartoma | Tumor Carcinoide |
+| :--- | :--- | :--- |
+| **Naturaleza** | Benigno (tejido mesenquimático) | Malignidad de bajo grado (Neuroendocrino) |
+| **Frecuencia** | Tumor benigno más frecuente | 1-2% de todos los tumores pulmonares |
+| **Imagen Típica** | Calcificación en "Pop-corn" | Masa hiliar/central bien definida |
+| **Clínica** | Suele ser asintomático | Hemoptisis recurrente, tos, neumonías |
+| **Manejo** | Observación o enucleación | Resección quirúrgica |
 
-## 🎯 Criterio de Benignidad en Jóvenes
-
-- **<35 años + granuloma infeccioso** → considerar **BENIGNO** hasta demostrar lo contrario
-
----
-
-## 📋 Para el examen (flashcard rápida)
-
-```
-□ NPS: 60% benignos, 40% malignos
-□ Maligno más frecuente: Ca pulmón (44%)
-□ Benigno más frecuente: Granulomas infecciosos  
-□ Hamartoma: 3ª causa, grasa, "palomitas de maíz"
-□ <35 años → pensar benigno
-□ Estudio: TAC → PET → Biopsia → Cirugía
-```
-Aquí tienes el resumen de **Hamartoma** en formato Notion-style, ultra organizado para estudiar rápido:
+> **Nota:** El **Síndrome Carcinoide** (flushing, diarrea) es raro en pulmón (<5%) y suele indicar metástasis hepáticas.
 
 ---
 
-# 🍿 Hamartoma Pulmonar
+## 3. Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos)
+Constituyen una respuesta excesiva del tejido linfoide asociado a bronquios (BALT).
 
-> **Tumor benigno de origen mesenquimático** — No maligniza
-
----
-
-## 🧬 Características Generales
-
-| Aspecto | Descripción |
-|:---|:---|
-| 📍 **Origen** | Mesenquimático (músculo liso, colágeno, cartílago) |
-| 👥 **Sexo** | Más frecuente en **hombres** |
-| 🎂 **Edad** | **50-60 años** (añosos) |
-| 📊 **Frecuencia** | **3ª causa global** de NPS |
-| 🎯 **Localización** | **80-90% periféricos** (periféricos) |
-| 📈 **Crecimiento** | Lento — **duplica tamaño cada 14 años** |
+* **Hiperplasia Linfoide Reactiva:** Generalmente benigna, asociada a enfermedades autoinmunes.
+* **Linfoma MALT:** Malignidad de bajo grado, crecimiento lento.
+* **Granulomatosis Linfoide:** Relacionada con el virus de Epstein-Barr; presenta nódulos que tienden a la cavitación.
 
 ---
 
-## 🔍 Hallazgos Radiológicos Patognomónicos
+## 4. Bronquiolitis y Fibrosis Quística
 
-| Hallazgo | Frecuencia | Descripción |
-|:---|:---:|:---|
-| 🍿 **Calcificación "pop corn/pochoclo/palomita de maíz"** | **25%** | Patrón característico |
-| 🥩 **Contenido de grasa** | Variable | **Patognomónico en TAC** |
+### 🧪 Bronquiolitis en el Adulto
+Inflamación de las vías aéreas de pequeño calibre (< 2 mm).
+* **Bronquiolitis Obliterante:** Obstrucción fija por fibrosis. Común en post-trasplante o AR.
+* **Bronquiolitis Folicular:** Presencia de folículos linfoides; asociada a colagenopatías.
+* **Panbronquiolitis Difusa:** Entidad idiopática (frecuente en Japón) que responde bien a macrólidos a dosis bajas.
 
-### 📋 Diferenciación con Malignidad
+### 🧬 Fibrosis Quística (FQ)
+Enfermedad autosómica recesiva por mutación en el gen **CFTR**.
 
-| Característica | Hamartoma | Maligno |
-|:---|:---:|:---:|
-| Calcificación | Central/"pop corn" | Excéntrica/irregular |
-| Grasa en TAC | ✅ Presente | ❌ Ausente |
-| Crecimiento | Muy lento (14 años) | Rápido |
-| Contorno | Liso, bien definido | Espiculado/lobulado |
-
----
-
-## 🔬 Diagnóstico por Imágenes
-
-```
-📷 Radiografía → Nódulo redondeado, bien delimitado
-
-    ↓
-
-🖥️ TAC ALTA RESOLUCIÓN (10-20x más detalle)
-   ├── Buscar: calcificación "pop corn"
-   └── Buscar: GRASA (patognomónico de hamartoma)
-
-    ↓
-
-⚛️ PET (si hay duda)
-   └── Hamartoma: captación baja (benigno)
-
-    ↓
-
-🎯 Biopsia/Resección → Solo si duda persistente
-```
+| Afectación | Manifestación Clínica |
+| :--- | :--- |
+| **Respiratorio** | Bronquiectasias, infecciones por *P. aeruginosa*, sinusitis. |
+| **Pancreático** | Insuficiencia exocrina (esteatorrea), diabetes asociada a FQ. |
+| **Diagnóstico** | Test del sudor (Cloro > 60 mEq/L) y estudio genético. |
+| **Tratamiento** | Kinesiología, ADNasa, moduladores de CFTR, antibióticos. |
 
 ---
-
-## 🏥 Manejo
-
-| Situación | Acción |
-|:---|:---|
-| ✅ Diagnóstico seguro por imagen | Observación |
-| ❓ Duda con tumor maligno | **Biopsia** o **Extirpación** |
-
----
-
-## 🆚 Otros Tumores Benignos de Pulmón
-
-| Tumor | Característica Clave |
-|:---|:---|
-| 🌬️ **Adenoma bronquial** | Síntomas de **obstrucción de vía aérea** |
-| 💪 **Leiomioma bronquial** | Más común en **mujeres jóvenes** |
-| 🥩 **Lipoma** | Tejido adiposo |
-| 🦴 **Condroma** | Tejido cartilaginoso |
-| 👶 **Teratoma** | **Tricoptisis** (expectoración de pelos) |
-| 🩸 **Endometriosis pulmonar** | **Hemoptisis catamenial** + neumotórax derecho repetido |
-
----
-
-## 🧠 Resumen Flashcard
-
-```
-┌─────────────────────────────────────┐
-│           HAMARTOMA                 │
-├─────────────────────────────────────┤
-│ • 3ª causa global de NPS            │
-│ • Hombres 50-60 años                │
-│ • Origen: mesenquimático            │
-│ • NO maligniza                      │
-│ • 80-90% periféricos                │
-│ • Crecimiento: duplica cada 14 años │
-│ • 25% calcifican ("pop corn")       │
-│ • Grasa en TAC = patognomónico      │
-│ • Duda → biopsia/resección          │
-└─────────────────────────────────────┘
-```
-
----
-
-## ⚡ Dato de Oro para el Examen
-
-> **"Hombre >50 años + NPS periférico lento = Pensar Hamartoma"**
-
+*Resumen basado en: Rey, R. J. Medicina Interna, Tomo 5: Neumonología 2026.*

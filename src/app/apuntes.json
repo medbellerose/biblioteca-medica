@@ -75,7 +75,7 @@
         "name": "M. INTERNA: NEUMONOLOGÍA",
         "topics": [
           { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer1", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] },
-          { "label": "Nódulo Pulmonar Solitario", "file": "Quinto/Interna/Pulmon/Cancer.md", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] }
+          { "label": "NPS, bronquiolitis, FQ", "file": "Quinto/Interna/Pulmon/Cancer.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] }
         ]
       },
       {
