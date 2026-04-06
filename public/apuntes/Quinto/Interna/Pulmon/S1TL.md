@@ -12,6 +12,33 @@ Sensación subjetiva de falta de aire. Se produce por una desproporción entre e
 * **Índice de Diferenciación (IDD):** Se calcula como `(Pico Flujo x PaO2) / 1000`. Si el resultado es > 13 es de causa cardíaca; si es < 13 es respiratoria.
 * **Péptido Natriurético (PPNA):** Si es > 400 pg/ml es cardíaco; < 100 pg/ml es respiratorio.
 
+# 🫁 Resumen de Disnea (Tablas)
+
+---
+
+## ⏳ CAUSAS DE DISNEA CRÓNICA RESPIRATORIAS
+
+| Mecanismo fisiopatológico | Qué ocurre | Enfermedades |
+| :--- | :--- | :--- |
+| **1️⃣ Obstrucción al flujo de aire** | Aumenta la resistencia de la vía aérea → el aire entra con dificultad | Asma, Enfermedad pulmonar obstructiva crónica, Fibrosis quística, oclusión de vía aérea superior |
+| **2️⃣ Pulmón rígido o alteración del parénquima** | Disminuye la distensibilidad pulmonar o la superficie de intercambio gaseoso | Enfermedad pulmonar intersticial (EPIC), neumonías crónicas, neoplasias pulmonares o pleurales, linfangitis pulmonar, enfermedad pulmonar laboral |
+| **3️⃣ Alteración de la circulación pulmonar** | El problema está en el flujo sanguíneo pulmonar → mala perfusión o intercambio | Hipertensión pulmonar, Tromboembolismo pulmonar crónico, malformaciones arteriovenosas pulmonares, vasculitis pulmonares |
+| **4️⃣ Limitación mecánica ventilatoria** | El pulmón podría funcionar, pero el sistema respiratorio no puede expandirse adecuadamente | enfermedad neuromuscular, cifoescoliosis severa |
+
+---
+
+## ⚡ CAUSAS DE DISNEA AGUDA
+
+| Tipo de Falla | Causas del Texto | ¿Qué está pasando? |
+| :--- | :--- | :--- |
+| **1. "Espacio"** | Neumotórax / D. pleural / Atelectasia | Algo (aire o agua) ocupa el lugar del pulmón y lo aplasta. |
+| **2. "Bomba/Tubería"** | IC Descompensada / Arritmias | El corazón no mueve la sangre o el ritmo es caótico. |
+| **3. "Filtro"** | TEP (Tromboembolismo) | Un coágulo tapa el paso de sangre hacia el pulmón. |
+| **4. "Tubo de aire"** | Asma / EPOC | Los bronquios se cierran (broncoespasmo). |
+| **5. "Tejido"** | Neumonía / SDRA / Hemorragia | El alveolo se llena de pus, agua o sangre. |
+
+---
+
 ### 🗣️ Tos y Expectación
 * **Tos Crónica:** Se define como la que persiste por más de **2 meses**.
 * **Causa Farmacológica:** Los **IECA** provocan tos seca por aumento de la bradiquinina a nivel pulmonar.
