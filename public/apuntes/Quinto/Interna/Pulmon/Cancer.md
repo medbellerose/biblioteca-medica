@@ -168,12 +168,53 @@ La decisión de operar (metastasectomía) depende de:
 
 > **Nota:** El **Síndrome Carcinoide** (flushing, diarrea) es raro en pulmón (<5%) y suele indicar metástasis hepáticas.
 
-# 4. Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos)
-Constituyen una respuesta excesiva del tejido linfoide asociado a bronquios (BALT).
+# 4. 🧬 Linfoproliferación Pulmonar
 
-* **Hiperplasia Linfoide Reactiva:** Generalmente benigna, asociada a enfermedades autoinmunes.
-* **Linfoma MALT:** Malignidad de bajo grado, crecimiento lento.
-* **Granulomatosis Lioide:** Relacionada con el virus de Epstein-Barr; presenta nódulos que tienden a la cavitación.
+Se definen como un grupo de enfermedades caracterizadas por la **proliferación endopulmonar de linfocitos**. Se clasifican según su comportamiento biológico en benignas y malignas.
+
+---
+
+# 🟢 1. Linfoproliferación Pulmonar Benigna
+*Procesos reactivos o hiperplásicos que no presentan criterios de malignidad inicial.*
+
+| Patología | Perfil del Paciente | Hallazgos Radiológicos | Tratamiento / Notas |
+| :--- | :--- | :--- | :--- |
+| **Pseudolinfoma** | Mayores de 40 años. | Nódulo único o infiltrado consolidado (central o periférico). | Resección quirúrgica. Puede recurrir. Responde a **Ciclofosfamida**. |
+| **Bronquiolitis Folicular** | Asociada a **AR**, inmunodeficiencias o bronquiectasias. | Compromiso bilateral intersticial **reticulonodulillar**. | Respuesta relativa a **Corticosteroides**. |
+| **Enf. de Castleman** | Variable. | Masas ganglionares (generalmente mediastinales). | (Ver tomo de Hematología). |
+
+---
+
+# 🔴 2. Linfoproliferación Pulmonar Maligna
+*Procesos neoplásicos con capacidad de invasión y progresión sistémica.*
+
+### 📋 Cuadro Comparativo: Formas Principales
+
+| Patología | Clínica Sugerente | Patrón Radiológico | Evolución / Pronóstico |
+| :--- | :--- | :--- | :--- |
+| **Granulomatosis Linfoidea** | Edad media. Fiebre, sudor nocturno y pérdida de peso. | Consolidación crónica (patrón alveolar), broncograma aéreo. Infiltrados evanescentes. | Enfermedad de células T. **Respeta vértices**. Progresa frecuentemente a **Linfoma**. |
+| **Linfoma Pulmonar** | Tos, fiebre, hemoptisis, dolor torácico y pérdida de peso. | Nódulos únicos/múltiples, infiltrados mal definidos, **derrame pleural**. | Puede ser primario o secundario. Más común en el **pulmón derecho**. |
+
+---
+
+### 🔍 Otras Variedades Malignas
+Además de los anteriores, el espectro de linfoproliferación maligna incluye:
+
+* **Linfomas Hodgkin y No Hodgkin:** Primarios o secundarios.
+* **Linfadenopatía angioinmunoblástica.**
+* **Patologías de Células Plasmáticas:** Plasmocitoma extramedular y Mieloma múltiple.
+* **Gammapatías:** Macroglobulinemia de Waldenström.
+* **Leucemia:** Leucemia linfática crónica (LLC) con afectación pulmonar.
+
+---
+
+## 🚩 Puntos Clave para el Diagnóstico
+1.  **Biopsia:** Es fundamental para diferenciar un Pseudolinfoma de un Linfoma verdadero.
+2.  **Cavitación:** En la **Granulomatosis Linfoidea**, los nódulos tienen tendencia a cavitarse.
+3.  **Adenomegalias:** El Linfoma suele presentar adenomegalias mediastinales asociadas, a diferencia de las formas benignas puras.
+
+> [!CAUTION]
+> **Nota:** La Granulomatosis Linfoidea es especialmente engañosa porque sus infiltrados pueden ser "evanescentes" (aparecen y desaparecen), pero su progresión a linfoma de células B es un riesgo alto.
 
 # 5. Bronquiolitis
 
