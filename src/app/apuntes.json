@@ -76,6 +76,7 @@
         "topics": [
           { "label": "S1TL: Semiología y Diagnóstico", "file": "Quinto/Interna/Pulmon/S1TL.md", "keywords": ["disnea", "tos", "cianosis", "semiotecnia", "auscultación", "broncoscopía", "LBA", "hemoptisis"] },
           { "label": "S1TC: Síndromes Mediastinales", "file": "Quinto/Interna/Pulmon/S1TC.md", "keywords": ["mediastino", "SVCS", "mediastinitis", "ecopleura", "TEP", "EAB", "insuficiencia-respiratoria"] },
+          { "label": "S3TL: Asma Bronquial", "file": "Quinto/Interna/Pulmon/S3TL.md", "keywords": ["asma-bronquial", "hiperreactividad-bronquial", "espirometria-PBD", "GINA-2026", "corticoides-inhalados", "SABA-LABA", "asma-atopico", "montelukast", "fenotipos-asma", "crisis-asmática"] },
           { "label": "Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/Cancer1.md", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] },
           { "label": "NPS, bronquiolitis, FQ", "file": "Quinto/Interna/Pulmon/Cancer.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] }
         ]
