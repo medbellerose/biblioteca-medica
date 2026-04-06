@@ -181,21 +181,155 @@ Constituyen una respuesta excesiva del tejido linfoide asociado a bronquios (BAL
 
 ## 5. Bronquiolitis
 
-### 🧪 Bronquiolitis en el Adulto
-Inflamación de las vías aéreas de pequeño calibre (< 2 mm).
-* **Bronquiolitis Obliterante:** Obstrucción fija por fibrosis. Común en post-trasplante o AR.
-* **Bronquiolitis Folicular:** Presencia de folículos linfoides; asociada a colagenopatías.
-* **Panbronquiolitis Difusa:** Entidad idiopática (frecuente en Japón) que responde bien a macrólidos a dosis bajas.
+### 📌 Conceptos Generales
+La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos** (vías aéreas < 2 mm de diámetro, sin cartílago).
 
-### 🧬 Fibrosis Quística (FQ)
-Enfermedad autosómica recesiva por mutación en el gen **CFTR**.
-
-| Afectación | Manifestación Clínica |
-| :--- | :--- |
-| **Respiratorio** | Bronquiectasias, infecciones por *P. aeruginosa*, sinusitis. |
-| **Pancreático** | Insuficiencia exocrina (esteatorrea), diabetes asociada a FQ. |
-| **Diagnóstico** | Test del sudor (Cloro > 60 mEq/L) y estudio genético. |
-| **Tratamiento** | Kinesiología, ADNasa, moduladores de CFTR, antibióticos. |
+* **Diagnóstico de elección:** Tomografía Computada de Alta Resolución (TCAR).
+* **Hallazgos en TCAR:** * Si están enfermos, se ven dilatados y con paredes engrosadas.
+    * **Signos indirectos:** Patrón en "mosaico" o "geográfico" (tonos de gris por hipoventilación y vasoconstricción refleja).
 
 ---
-*Resumen basado en: Rey, R. J. Medicina Interna, Tomo 5: Neumonología 2026.*
+
+### 🦠 Bronquiolitis Aguda
+*Es la forma más común, especialmente en pediatría.*
+
+- **Causas:** Infecciones virales (VSR), aspiraciones, inhalación de toxinas o bacterias (*Mycoplasma*, *Chlamydias*).
+- **Anatomía Patológica:** Inflamación, necrosis epitelial, edema y aumento de moco.
+- **TCAR:** Imágenes centrilobulillares nodulillares (moco e inflamación).
+- **Tratamiento:** Soporte (oxígeno, broncodilatadores, corticoides). Mortalidad < 1%.
+
+---
+
+### 🌏 Pan-bronquiolitis Difusa
+*Relacionada estrechamente con poblaciones asiáticas.*
+
+- **Asociación:** Siempre asociada a **sinusitis crónica**.
+- **Clínica:** Tos, expectoración purulenta, disnea y sibilancias.
+- **Laboratorio:** Aumento de aglutininas frías, eritrosedimentación y leucocitosis.
+- **Tratamiento:** **Eritromicina** (400-600 mg/día) por su efecto inmunomodulador (baja citoquinas y moco).
+
+---
+
+### 🚬 Bronquiolitis por Tabaquismo
+- **Hallazgos:** Fibrosis intersticial y presencia de **macrófagos pigmentados** (distribución bronquiolocéntrica).
+- **Clínica:** Tos, disnea, rales crepitantes y dedos en palillo de tambor.
+- **Espirometría:** Patrón mixto (obstructivo y restrictivo).
+- **Acción:** Cese inmediato del hábito de fumar.
+
+---
+
+### 🏗️ Asociada a Exposiciones y Otras Causas
+- **Neumoconiosis / Polvos Orgánicos:** Fibrosis pulmonar con bronquiolitis asociada.
+- **Histiocitosis:** Presenta fibrosis y compromiso bronquiolar simultáneo.
+
+---
+
+### ⚠️ Bronquiolitis Obliterante
+*Se caracteriza por fibrosis peribronquiolar que ocluye la luz de forma progresiva.*
+
+| Característica | Detalle |
+| :--- | :--- |
+| **Diagnóstico** | Requiere biopsia por toracoscopía. |
+| **Causas Principales** | Colagenopatías (Artritis Reumatoidea), secuelas virales (Adenovirus). |
+| **Exposiciones** | Gases de guerra, amoníaco, saborizantes (diacetil). |
+| **Trasplantes** | Rechazo crónico en trasplante de pulmón o médula ósea. |
+| **Pronóstico** | Enfermedad progresiva con **mala respuesta** a corticoides. |
+
+---
+> [!IMPORTANT]
+> **Nota clínica:** La espirometría en la mayoría de estos cuadros suele mostrar un **patrón obstructivo**.
+
+## 6. Fibrosis Quística (FQ) 🧬 (Mucoviscidosis)
+
+### 📌 Perfil de la Enfermedad
+La **Fibrosis Quística (FQ)** es una enfermedad genética autosómica recesiva producida por una mutación en el **cromosoma 7q31**.
+
+* **Proteína afectada:** CFTR (Proteína reguladora de la conductancia transmembránica).
+* **Defecto:** Canal de cloro anómalo en la membrana apical de las células epiteliales.
+* **Epidemiología:** * Incidencia: 1 en 2.500 recién nacidos.
+    * Portadores: 1 de cada 25 personas.
+    * Esperanza de vida: ~30 años.
+
+---
+
+### 🤒 Manifestaciones Clínicas
+La característica principal es la producción de **secreciones espesas** que obstruyen los conductos orgánicos.
+
+### 🫁 Sistema Respiratorio
+* **Pulmón:** Moco espeso, tapones bronquiales, infecciones recurrentes y bronquiectasias.
+* **Microbiología:** Alta incidencia de *Pseudomonas aeruginosa* y *S. aureus*.
+* **Complicaciones:** Atelectasias, neumotórax, hemoptisis e insuficiencia cardíaca derecha.
+* **Vía aérea superior:** Sinusitis recurrente y pólipos nasales.
+
+### Sistema Digestivo y Exocrino
+* **Páncreas:** Insuficiencia pancreática (malabsorción, esteatorrea) y diabetes mellitus (por fibrosis de los islotes).
+* **Hígado:** Bilis espesa, dificultad para absorber grasas y vitaminas liposolubles (A, D, E, K), posible cirrosis.
+* **Intestino:** Íleo meconial (recién nacidos), prolapso rectal y cuadros suboclusivos.
+* **Sudor:** Excesivamente rico en sal (**Na+**). Riesgo de deshidratación por pérdida de sal.
+
+### 👶 Reproducción y Crecimiento
+* **Hombres:** Esterilidad por moco viscoso en el epidídimo.
+* **Mujeres:** Disminución de la fecundidad por viscosidad del moco cervical.
+* **General:** Retraso del crecimiento por malabsorción.
+
+---
+
+### 🔍 Metodología de Estudio
+1.  **Test del Sudor:** Determinación de Na+ elevado (Prueba diagnóstica clave).
+2.  **Pruebas Genéticas:** Confirmación de mutaciones.
+3.  **Imágenes:** Rx y TCAR de tórax (cortes milimétricos).
+4.  **Laboratorio:** Prueba de van de Kamer (esteatorrea), glucemia y hepatograma.
+5.  **Microbiología:** Endoscopía con cepillo envainado para detectar gérmenes específicos.
+
+---
+
+### 💊 Tratamiento
+
+### 🛠️ Manejo Respiratorio
+* **Kinesioterapia:** Percusión y drenaje postural (2 veces al día).
+* **Antibióticos:** Tratamiento enérgico de infecciones. 
+    * *Profilaxis:* Cefalexina/Rifampicina (S. aureus) o Tobramicina nebulizada (Pseudomona).
+* **Mucolíticos:** N-acetilcisteína y **ADNasa** para fluidez del esputo.
+* **Broncodilatadores:** Si hay broncoespasmo documentado.
+
+### 🥗 Manejo Nutricional y Metabólico
+* **Enzimas pancreáticas:** Vía oral para tratar la malabsorción.
+* **Suplementos:** Vitaminas liposolubles (A-D-E-K) y soporte nutricional.
+* **Insulina:** Para el manejo de la diabetes asociada.
+
+### 🚀 Terapias Avanzadas
+* **Trasplante pulmonar:** Principal indicación en estadios terminales.
+* **Terapia génica:** Actualmente en fase experimental.
+
+---
+> [!TIP]
+> **Dato Genético:** Si ambos padres son portadores, el riesgo de un hijo enfermo es del **25%** y de un hijo portador sano del **50%**.
+
+## 6. Linfoproliferación Pulmonar
+
+Grupo de enfermedades caracterizadas por la **proliferación endopulmonar de linfocitos**. Se dividen en categorías benignas y malignas.
+
+---
+
+## 📊 Cuadro Comparativo de Patologías
+
+| Clasificación | Patología | Características Clínicas | Hallazgos Radiológicos / Diagnóstico | Tratamiento |
+| :--- | :--- | :--- | :--- | :--- |
+| **Benigna** | **Pseudolinfoma** | Pacientes > 40 años. Generalmente asintomáticos o nódulo aislado. | Nódulo o infiltrado consolidado (central o periférico). Biopsia necesaria. | Resección quirúrgica. Ciclofosfamida en algunos casos. |
+| **Benigna** | **Bronquiolitis Folicular** | Asociada a Artritis Reumatoidea, inmunodeficiencias o bronquiectasias. | Compromiso bilateral intersticial reticulonodulillar. | Corticosteroides (respuesta relativa). |
+| **Maligna** | **Granulomatosis Linfoidea** | Enfermedad de células T. Edad media. Presenta fiebre, pérdida de peso y sudor nocturno. | Consolidación crónica, broncograma aéreo, nódulos cavitados. Respeta vértices. | Progresa frecuentemente a Linfoma. |
+| **Maligna** | **Linfoma Pulmonar** | Primario o secundario. Síntomas B (fiebre, sudor, pérdida de peso), tos y hemoptisis. | Nódulos únicos/múltiples, infiltrados, derrame pleural y adenomegalias. | Según protocolo oncológico (Quimioterapia/Radioterapia). |
+
+---
+
+## 📋 Otras Formas Malignas
+Además de los anteriores, se incluyen en esta categoría:
+* **Linfoma de Hodgkin y no Hodgkin** (primarios o secundarios).
+* **Linfadenopatía angioinmunoblástica**.
+* **Plasmocitoma extramedular** y **Mieloma múltiple**.
+* **Macroglobulinemia de Waldenström**.
+* **Leucemia linfática crónica**.
+
+---
+> [!NOTE]
+> **Dato clave:** El Linfoma Pulmonar es más frecuente en el **pulmón derecho** y suele presentar compromiso mediastinal asociado.
