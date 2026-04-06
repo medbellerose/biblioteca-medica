@@ -1,4 +1,4 @@
-# 🫁 SEMIOLOGÍA Y DIAGNÓSTICO RESPIRATORIO (Cátedra Dr. Rey / Diapositivas 2026)
+# 🫁 SEMIOLOGÍA Y DIAGNÓSTICO RESPIRATORIO 
 
 ## 1. Síntomas Cardinales y Fisiopatología
 
