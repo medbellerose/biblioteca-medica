@@ -5,7 +5,7 @@ Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos),
 Bronquiolitis,
 Fibrosis Quística.
 
-## 1. Nódulo Pulmonar Solitario (NPS)
+# 1. Nódulo Pulmonar Solitario (NPS)
 
 ## 📌 Definición y Generalidades
 * **Definición:** Lesión redonda u ovalada, claramente delimitada, de hasta **5 cm** de diámetro visible en radiografía.
@@ -14,7 +14,7 @@ Fibrosis Quística.
 * **Estadística:** ~60% son benignos (principalmente granulomas infecciosos).
 
 
-### 🟢 BENIGNAS
+## 🟢 BENIGNAS
 
 | Etiología | Características Clave | Hallazgo TAC |
 |-----------|----------------------|--------------|
@@ -24,7 +24,7 @@ Fibrosis Quística.
 | **Bronquiolitis folicular con hiperplasia linfoide** | Asociada a AR, inmunodeficiencias, bronquiectasias | Patrón reticulonodulillar bilateral |
 | **Inflamatorias** | Neumonías organizadas, abscesos resueltos | Bordes irregulares, a veces neumonía en resolución |
 
-### 🟡 COMPORTAMIENTO INTERMEDIO / POTENCIALMENTE MALIGNAS
+## 🟡 COMPORTAMIENTO INTERMEDIO / POTENCIALMENTE MALIGNAS
 
 | Etiología | Características | Comportamiento |
 |-----------|---------------|--------------|
@@ -32,7 +32,7 @@ Fibrosis Quística.
 | | Signos: hemoptisis persistente, sibilancias localizadas | Obstrucción endobronquial → neumonía recurrente segmental |
 | | **Patrón flujo-volumen:** obstrucción fija (aplanamiento ambas ramas) | |
 
-### 🔴 MALIGNAS
+## 🔴 MALIGNAS
 
 | Etiología | Características | Presentación |
 |-----------|---------------|--------------|
@@ -43,7 +43,7 @@ Fibrosis Quística.
 | **Granulomatosis linfoidea pulmonar** | Proliferación células T. Progresa a linfoma | Consolidación alveolar crónica, broncograma aéreo, infiltrados evanescentes, **respeta vértices** |
 | | Edad media, pérdida de peso, fiebre, sudor nocturno. Puede cavitarse | |
 
-### 🟣 ETIOLOGÍAS ESPECIALES / ECTÓPICAS
+## 🟣 ETIOLOGÍAS ESPECIALES / ECTÓPICAS
 
 | Etiología | Características | Notas |
 |-----------|---------------|-------|
@@ -54,7 +54,7 @@ Fibrosis Quística.
 
 ---
 
-### 🚩 Factores de Riesgo: Benignidad vs. Malignidad en NPS
+## 🚩 Factores de Riesgo: Benignidad vs. Malignidad en NPS
 
 | Factor de Riesgo | Sugiere Benignidad ✅ | Sugiere Malignidad 🚨 |
 | :--- | :--- | :--- |
@@ -155,9 +155,9 @@ La decisión de operar (metastasectomía) depende de:
   * **Esternotomía Media:** Recomendada para exploración bilateral (un 40% de los casos "unilaterales" tienen nódulos ocultos en el otro pulmón).
 
 
-## 3. Hamartomas y Tumores Carcinoides
+# 3. Hamartomas y Tumores Carcinoides
 
-### 📊 Tabla Comparativa: Tumores Broncopulmonares
+## 📊 Tabla Comparativa: Tumores Broncopulmonares
 | Característica | Hamartoma | Tumor Carcinoide |
 | :--- | :--- | :--- |
 | **Naturaleza** | Benigno (tejido mesenquimático) | Malignidad de bajo grado (Neuroendocrino) |
@@ -168,20 +168,16 @@ La decisión de operar (metastasectomía) depende de:
 
 > **Nota:** El **Síndrome Carcinoide** (flushing, diarrea) es raro en pulmón (<5%) y suele indicar metástasis hepáticas.
 
----
-
-## 4. Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos)
+# 4. Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos)
 Constituyen una respuesta excesiva del tejido linfoide asociado a bronquios (BALT).
 
 * **Hiperplasia Linfoide Reactiva:** Generalmente benigna, asociada a enfermedades autoinmunes.
 * **Linfoma MALT:** Malignidad de bajo grado, crecimiento lento.
-* **Granulomatosis Linfoide:** Relacionada con el virus de Epstein-Barr; presenta nódulos que tienden a la cavitación.
+* **Granulomatosis Lioide:** Relacionada con el virus de Epstein-Barr; presenta nódulos que tienden a la cavitación.
 
----
+# 5. Bronquiolitis
 
-## 5. Bronquiolitis
-
-### 📌 Conceptos Generales
+## 📌 Conceptos Generales
 La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos** (vías aéreas < 2 mm de diámetro, sin cartílago).
 
 * **Diagnóstico de elección:** Tomografía Computada de Alta Resolución (TCAR).
@@ -190,7 +186,7 @@ La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos*
 
 ---
 
-### 🦠 Bronquiolitis Aguda
+## 🦠 Bronquiolitis Aguda
 *Es la forma más común, especialmente en pediatría.*
 
 - **Causas:** Infecciones virales (VSR), aspiraciones, inhalación de toxinas o bacterias (*Mycoplasma*, *Chlamydias*).
@@ -200,7 +196,7 @@ La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos*
 
 ---
 
-### 🌏 Pan-bronquiolitis Difusa
+## 🌏 Pan-bronquiolitis Difusa
 *Relacionada estrechamente con poblaciones asiáticas.*
 
 - **Asociación:** Siempre asociada a **sinusitis crónica**.
@@ -210,7 +206,7 @@ La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos*
 
 ---
 
-### 🚬 Bronquiolitis por Tabaquismo
+## 🚬 Bronquiolitis por Tabaquismo
 - **Hallazgos:** Fibrosis intersticial y presencia de **macrófagos pigmentados** (distribución bronquiolocéntrica).
 - **Clínica:** Tos, disnea, rales crepitantes y dedos en palillo de tambor.
 - **Espirometría:** Patrón mixto (obstructivo y restrictivo).
@@ -218,13 +214,13 @@ La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos*
 
 ---
 
-### 🏗️ Asociada a Exposiciones y Otras Causas
+## 🏗️ Asociada a Exposiciones y Otras Causas
 - **Neumoconiosis / Polvos Orgánicos:** Fibrosis pulmonar con bronquiolitis asociada.
 - **Histiocitosis:** Presenta fibrosis y compromiso bronquiolar simultáneo.
 
 ---
 
-### ⚠️ Bronquiolitis Obliterante
+## ⚠️ Bronquiolitis Obliterante
 *Se caracteriza por fibrosis peribronquiolar que ocluye la luz de forma progresiva.*
 
 | Característica | Detalle |
@@ -239,9 +235,9 @@ La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos*
 > [!IMPORTANT]
 > **Nota clínica:** La espirometría en la mayoría de estos cuadros suele mostrar un **patrón obstructivo**.
 
-## 6. Fibrosis Quística (FQ) 🧬 (Mucoviscidosis)
+# 6. Fibrosis Quística (FQ) 🧬 (Mucoviscidosis)
 
-### 📌 Perfil de la Enfermedad
+## 📌 Perfil de la Enfermedad
 La **Fibrosis Quística (FQ)** es una enfermedad genética autosómica recesiva producida por una mutación en el **cromosoma 7q31**.
 
 * **Proteína afectada:** CFTR (Proteína reguladora de la conductancia transmembránica).
@@ -252,7 +248,7 @@ La **Fibrosis Quística (FQ)** es una enfermedad genética autosómica recesiva 
 
 ---
 
-### 🤒 Manifestaciones Clínicas
+## 🤒 Manifestaciones Clínicas
 La característica principal es la producción de **secreciones espesas** que obstruyen los conductos orgánicos.
 
 ### 🫁 Sistema Respiratorio
@@ -274,7 +270,7 @@ La característica principal es la producción de **secreciones espesas** que ob
 
 ---
 
-### 🔍 Metodología de Estudio
+## 🔍 Metodología de Estudio
 1.  **Test del Sudor:** Determinación de Na+ elevado (Prueba diagnóstica clave).
 2.  **Pruebas Genéticas:** Confirmación de mutaciones.
 3.  **Imágenes:** Rx y TCAR de tórax (cortes milimétricos).
@@ -283,7 +279,7 @@ La característica principal es la producción de **secreciones espesas** que ob
 
 ---
 
-### 💊 Tratamiento
+## 💊 Tratamiento
 
 ### 🛠️ Manejo Respiratorio
 * **Kinesioterapia:** Percusión y drenaje postural (2 veces al día).
@@ -305,7 +301,7 @@ La característica principal es la producción de **secreciones espesas** que ob
 > [!TIP]
 > **Dato Genético:** Si ambos padres son portadores, el riesgo de un hijo enfermo es del **25%** y de un hijo portador sano del **50%**.
 
-## 6. Linfoproliferación Pulmonar
+# 7. Linfoproliferación Pulmonar
 
 Grupo de enfermedades caracterizadas por la **proliferación endopulmonar de linfocitos**. Se dividen en categorías benignas y malignas.
 
