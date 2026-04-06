@@ -14,17 +14,6 @@ Sensación subjetiva de falta de aire. Se produce por una desproporción entre e
 
 ---
 
-## ⏳ CAUSAS DE DISNEA CRÓNICA RESPIRATORIAS
-
-| Mecanismo fisiopatológico | Qué ocurre | Enfermedades |
-| :--- | :--- | :--- |
-| **1️⃣ Obstrucción al flujo de aire** | Aumenta la resistencia de la vía aérea → el aire entra con dificultad | Asma, Enfermedad pulmonar obstructiva crónica, Fibrosis quística, oclusión de vía aérea superior |
-| **2️⃣ Pulmón rígido o alteración del parénquima** | Disminuye la distensibilidad pulmonar o la superficie de intercambio gaseoso | Enfermedad pulmonar intersticial (EPIC), neumonías crónicas, neoplasias pulmonares o pleurales, linfangitis pulmonar, enfermedad pulmonar laboral |
-| **3️⃣ Alteración de la circulación pulmonar** | El problema está en el flujo sanguíneo pulmonar → mala perfusión o intercambio | Hipertensión pulmonar, Tromboembolismo pulmonar crónico, malformaciones arteriovenosas pulmonares, vasculitis pulmonares |
-| **4️⃣ Limitación mecánica ventilatoria** | El pulmón podría funcionar, pero el sistema respiratorio no puede expandirse adecuadamente | enfermedad neuromuscular, cifoescoliosis severa |
-
----
-
 ## ⚡ CAUSAS DE DISNEA AGUDA
 
 | Tipo de Falla | Causas del Texto | ¿Qué está pasando? |
@@ -34,6 +23,16 @@ Sensación subjetiva de falta de aire. Se produce por una desproporción entre e
 | **3. "Filtro"** | TEP (Tromboembolismo) | Un coágulo tapa el paso de sangre hacia el pulmón. |
 | **4. "Tubo de aire"** | Asma / EPOC | Los bronquios se cierran (broncoespasmo). |
 | **5. "Tejido"** | Neumonía / SDRA / Hemorragia | El alveolo se llena de pus, agua o sangre. |
+---
+
+## ⏳ CAUSAS DE DISNEA CRÓNICA RESPIRATORIAS
+
+| Mecanismo fisiopatológico | Qué ocurre | Enfermedades |
+| :--- | :--- | :--- |
+| **1️⃣ Obstrucción al flujo de aire** | Aumenta la resistencia de la vía aérea → el aire entra con dificultad | Asma, Enfermedad pulmonar obstructiva crónica, Fibrosis quística, oclusión de vía aérea superior |
+| **2️⃣ Pulmón rígido o alteración del parénquima** | Disminuye la distensibilidad pulmonar o la superficie de intercambio gaseoso | Enfermedad pulmonar intersticial (EPIC), neumonías crónicas, neoplasias pulmonares o pleurales, linfangitis pulmonar, enfermedad pulmonar laboral |
+| **3️⃣ Alteración de la circulación pulmonar** | El problema está en el flujo sanguíneo pulmonar → mala perfusión o intercambio | Hipertensión pulmonar, Tromboembolismo pulmonar crónico, malformaciones arteriovenosas pulmonares, vasculitis pulmonares |
+| **4️⃣ Limitación mecánica ventilatoria** | El pulmón podría funcionar, pero el sistema respiratorio no puede expandirse adecuadamente | enfermedad neuromuscular, cifoescoliosis severa |
 
 ---
 
