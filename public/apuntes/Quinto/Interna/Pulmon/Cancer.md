@@ -14,17 +14,45 @@ Fibrosis Quística.
 * **Estadística:** ~60% son benignos (principalmente granulomas infecciosos).
 
 
-## 📊 Etiología del NPS
+### 🟢 BENIGNAS
 
-| Tipo | Causa Principal | Características Clave |
-| :--- | :--- | :--- |
-| **Benigno** | Granulomas infecciosos | Antecedentes de TBC (lóbulo superior), Histoplasmosis o Coccidioidomicosis. (preguntar px dónde vive?) |
-| **Benigno** | Hamartoma | 3ra causa global. Calcificación en **"pochoclo/palomita de maíz"**. Contiene grasa. |
-| **Maligno** | Cáncer de Pulmón | 44% de los casos (Adenocarcinoma es el más frecuente). |
-| **Maligno** | Metástasis | 10-30%. Origen: Cabeza y cuello, mama, riñón, colon, melanoma. |
-| **Otros** | Vasculitis | Granulomatosis de Wegener. |
+| Etiología | Características Clave | Hallazgo TAC |
+|-----------|----------------------|--------------|
+| **Granuloma (TBC/hongos)** | Más frecuente. Calcificación laminada/concéntrica | Calcificación central, laminada o difusa |
+| **Hamartoma** | Tejidos pulmonares desorganizados. Más común en hombres 40-60 años | **"Popcorn calcification"** (patognomónica), bordes lisos |
+| **Pseudolinfoma** | >40 años. Nódulo único o infiltrado consolidado. Puede ser recurrente post-resección | Nódulo único o consolidación lobar |
+| **Bronquiolitis folicular con hiperplasia linfoide** | Asociada a AR, inmunodeficiencias, bronquiectasias | Patrón reticulonodulillar bilateral |
+| **Inflamatorias** | Neumonías organizadas, abscesos resueltos | Bordes irregulares, a veces neumonía en resolución |
 
+### 🟡 COMPORTAMIENTO INTERMEDIO / POTENCIALMENTE MALIGNAS
 
+| Etiología | Características | Comportamiento |
+|-----------|---------------|--------------|
+| **Tumor Carcinoide Bronquial** | Baja malignidad, alta invasión vascular local | Puede ser central o periférico. **Carcinoide típico:** benigno. **Carcinoide atípico:** maligno |
+| | Signos: hemoptisis persistente, sibilancias localizadas | Obstrucción endobronquial → neumonía recurrente segmental |
+| | **Patrón flujo-volumen:** obstrucción fija (aplanamiento ambas ramas) | |
+
+### 🔴 MALIGNAS
+
+| Etiología | Características | Presentación |
+|-----------|---------------|--------------|
+| **Cáncer broncogénico primario** | Adenocarcinoma, epidermoide, etc. | Bordes espiculados, signo corona radiada, crecimiento rápido |
+| **Metástasis pulmonar** | Historia de cáncer primario. Múltiples > único | Bordes lisos ("cannonball"), múltiples |
+| **Linfoma pulmonar primario** | Nódulo único o múltiples, infiltrados mal definidos | Derrame pleural, adenomegalias mediastínicas. Más común en pulmón derecho |
+| | Síntomas: tos, fiebre, sudoración, pérdida de peso, hemoptisis | |
+| **Granulomatosis linfoidea pulmonar** | Proliferación células T. Progresa a linfoma | Consolidación alveolar crónica, broncograma aéreo, infiltrados evanescentes, **respeta vértices** |
+| | Edad media, pérdida de peso, fiebre, sudor nocturno. Puede cavitarse | |
+
+### 🟣 ETIOLOGÍAS ESPECIALES / ECTÓPICAS
+
+| Etiología | Características | Notas |
+|-----------|---------------|-------|
+| **Endometriosis pulmonar (Endometrioma)** | **Tejido endometrial ectópico en pulmón** | Comportamiento benigno pero con **características de malignidad local** (invasión, recurrencia) |
+| | **Hemoptisis cíclica (catamenial):** sangrado sincronizado con menstruación | Mujeres en edad fértil |
+| | Puede presentar como NPS único o múltiples | Diagnóstico: correlación clínica + biopsia |
+| | Tratamiento: hormonal (anticonceptivos, GnRH análogos) o quirúrgico | |
+
+---
 
 ### 🚩 Factores de Riesgo: Benignidad vs. Malignidad en NPS
 
