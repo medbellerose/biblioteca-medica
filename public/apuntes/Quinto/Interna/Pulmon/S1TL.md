@@ -1,4 +1,3 @@
-```markdown
 # 🫁 SEMIOLOGÍA Y DIAGNÓSTICO RESPIRATORIO (Cátedra Dr. Rey / Diapositivas 2026)
 
 ## 1. Síntomas Cardinales y Fisiopatología
@@ -72,4 +71,3 @@ Coloración azulada por hemoglobina reducida > 5 g/dl (Saturación < 85%).
 * El **90%** de los casos se origina en las **arterias bronquiales** (circulación sistémica de alta presión).
 * La principal causa de muerte en hemoptisis masiva es la **asfixia**, no el shock hipovolémico.
 * **Manejo:** Reposo en **decúbito lateral sobre el lado afectado** para evitar que la sangre inunde el pulmón sano.
-```
