@@ -64,7 +64,6 @@ export default function Home() {
   const [content, setContent] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedYears, setExpandedYears] = useState<Record<number, boolean>>({ 1: true });
-  // Estado para materias corregido
   const [expandedSubjects, setExpandedSubjects] = useState<Record<string, boolean>>({});
 
   const allowedYears = useMemo(() => String(user?.publicMetadata?.plan || "").split(',').map(n => parseInt(n.trim())).filter(n => !isNaN(n)), [user]);
@@ -105,14 +104,29 @@ export default function Home() {
           <Brain className="w-6 h-6 text-purple-500" />
           <span>Medpath</span>
         </div>
+
+        {/* BARRA DE BÚSQUEDA AÑADIDA SIN TOCAR LO DEMÁS */}
+        <div className="p-4 border-b border-[#30363d] shrink-0">
+          <div className="relative text-white">
+            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-500" />
+            <input 
+              type="text" 
+              placeholder="Buscar apunte..." 
+              value={searchTerm} 
+              onChange={(e) => setSearchTerm(e.target.value)} 
+              className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg py-2 pl-10 text-xs focus:outline-none focus:border-purple-500 text-white" 
+            />
+          </div>
+        </div>
+
         <nav className="flex-1 overflow-y-auto p-3 space-y-2">
           {yearsDataRaw.map((y) => (
             <div key={y.year}>
               <button onClick={() => setExpandedYears(p => ({...p, [y.year]: !p[y.year]}))} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-300 hover:bg-[#21262d]">
                 <div className="flex items-center gap-2 font-bold">Año {y.year}</div>
-                <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[y.year] ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform ${expandedYears[y.year] || searchTerm ? 'rotate-180' : ''}`} />
               </button>
-              {expandedYears[y.year] && (
+              {(expandedYears[y.year] || searchTerm) && (
                 <div className="ml-3 border-l border-[#30363d]/50">
                   {y.subjects.map((sub, i) => (
                     <div key={i}>
@@ -121,15 +135,20 @@ export default function Home() {
                         className="w-full flex items-center justify-between px-3 py-1.5 text-[10px] text-gray-500 font-bold uppercase hover:text-white transition-colors"
                       >
                         <span>{sub.name}</span>
-                        <ChevronDown className={`w-3 h-3 transition-transform ${expandedSubjects[`${y.year}-${sub.name}`] ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-3 h-3 transition-transform ${expandedSubjects[`${y.year}-${sub.name}`] || searchTerm ? 'rotate-180' : ''}`} />
                       </button>
-                      {expandedSubjects[`${y.year}-${sub.name}`] && (
+                      {(expandedSubjects[`${y.year}-${sub.name}`] || searchTerm) && (
                         <div className="ml-3 space-y-1 pb-2">
-                          {sub.topics.map(t => (
-                            <button key={t.file} onClick={() => setSelectedMd(t.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === t.file ? 'text-purple-400 bg-purple-500/10' : 'text-gray-400 hover:text-white'}`}>
-                              {t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}
-                            </button>
-                          ))}
+                          {sub.topics
+                            .filter(t => 
+                              t.label.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                              (t.keywords && t.keywords.some(k => k.toLowerCase().includes(searchTerm.toLowerCase())))
+                            )
+                            .map(t => (
+                              <button key={t.file} onClick={() => setSelectedMd(t.file)} className={`w-full text-left px-3 py-1 text-xs rounded-md ${selectedMd === t.file ? 'text-purple-400 bg-purple-500/10 font-bold' : 'text-gray-400 hover:text-white'}`}>
+                                {t.file.endsWith('.pdf') ? '📄 ' : '• '} {t.label}
+                              </button>
+                            ))}
                         </div>
                       )}
                     </div>
