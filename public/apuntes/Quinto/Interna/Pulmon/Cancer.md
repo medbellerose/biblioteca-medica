@@ -36,7 +36,7 @@ Fibrosis Quística.
 
 | Etiología | Características | Presentación |
 |-----------|---------------|--------------|
-| **Cáncer broncogénico primario** | Adenocarcinoma, epidermoide, etc. | Bordes espiculados, signo corona radiada, crecimiento rápido |
+| **Cáncer broncogénico primario** | Adenocarcinoma 44% de los casos, epidermoide, etc. | Bordes espiculados, signo corona radiada, crecimiento rápido |
 | **Metástasis pulmonar** | Historia de cáncer primario. Múltiples > único | Bordes lisos ("cannonball"), múltiples |
 | **Linfoma pulmonar primario** | Nódulo único o múltiples, infiltrados mal definidos | Derrame pleural, adenomegalias mediastínicas. Más común en pulmón derecho |
 | | Síntomas: tos, fiebre, sudoración, pérdida de peso, hemoptisis | |
@@ -73,8 +73,8 @@ Fibrosis Quística.
 | Método | Utilidad Principal | Observaciones |
 | :--- | :--- | :--- |
 | **Rx de Tórax Comparativa** | Evaluación de estabilidad temporal | Comparar con placas antiguas (estabilidad >2 años = benignidad). |
-| **TAC de Alta Resolución** | Detalle anatómico y densidad | Evalúa presencia de **grasa** (Hamartoma) y tipo de calcificación. |
-| **TAC con Contraste** | Evaluación de vascularización | Alta sensibilidad (98%), ayuda a decidir técnicas invasivas. |
+| **TAC de Alta Resolución** | Detalle anatómico y densidad | Evalúa presencia de **grasa** (Hamartoma) y tipo de calcificación. **Importante** Recodar pedir ventana pulmonar y mediastínica, por que talvez la masa está en el mediastino... |
+| **TAC con Contraste** | Evaluación de vascularización | Alta sensibilidad (98%), ayuda a decidir técnicas invasivas. Profesor: Tinte dibuja mejor paredes del pulmón. **Importante**: Verificar que paciente no tenga alergias al contraste. Px con IRC no puede excepto si ya se dialisa. |
 | **PET-Scan** | Actividad metabólica (Glucosa) | El más preciso (especificidad >85%). Costo elevado. |
 | **Punción (PAAF/BAG)** | Diagnóstico histológico | Ideal para lesiones **periféricas**. Riesgo de neumotórax. |
 | **Fibrobroncoscopia** | Visualización directa y biopsia | De elección en lesiones **centrales intraluminales**. |
