@@ -74,3 +74,33 @@ El **Overlap Syndrome (ACO)** se da en pacientes (usualmente fumadores) que pres
 
 > [!NOTE]
 > **Recordatorio de Tratamiento:** Según GINA 2024, el uso de SABA solo ya no se recomienda; se prefiere el uso de **CI-Formoterol** como rescate y mantenimiento (terapia MART) para reducir el riesgo de crisis graves.
+
+### 🔑 Keywords: Asma y Patología Respiratoria
+
+#### 🧬 Fisiopatología y Etiología
+* **Hiperreactividad Bronquial (HRB):** Respuesta exagerada de la vía aérea a estímulos.
+* **Remodelado de la vía aérea:** Cambios estructurales irreversibles (hipertrofia muscular).
+* **Atopia:** Predisposición genética a producir IgE ante alérgenos.
+* **Th2 (Linfocitos T Helper 2):** Vía inmunológica predominante en asma alérgico.
+* **Mediadores:** Histamina, Leucotrienos (CysLT), IL-4, IL-5, IL-13.
+
+#### 🩺 Diagnóstico y Clínica
+* **Sibilancias Espiratorias:** Sonido clásico de la obstrucción bronquial.
+* **Espirometría con PBD:** Prueba reina (Positiva: ↑12% y 200ml en VEF1).
+* **Variabilidad del PEF:** Cambio en el flujo espiratorio pico durante el día.
+* **Prueba de Metacolina:** Test de provocación para descartar asma con espirometría normal.
+* **Fenotipos:** Alérgico vs. No atópico (Neutrofílico).
+
+#### 💊 Farmacoterapia y Manejo
+* **ICS (Corticoides Inhalados):** Piedra angular del tratamiento (Budesonida/Fluticasona).
+* **SABA (Acción corta):** Rescate (Salbutamol).
+* **LABA (Acción prolongada):** Mantenimiento (Salmeterol/Formoterol).
+* **Terapia MART:** Uso de un solo inhalador (ICS + Formoterol) para rescate y mantenimiento.
+* **Antileucotrienos:** Montelukast (especialmente útil en asma por ejercicio o rinitis).
+* **Anticolinérgicos (SAMA/LAMA):** Bromuro de Ipratropio / Tiotropio.
+
+#### ⚠️ Conceptos Avanzados
+* **ACO (Asthma-COPD Overlap):** Superposición asma-EPOC en fumadores.
+* **Crisis Asmática:** Exacerbación aguda que requiere corticoides sistémicos.
+* **Omalizumab:** Terapia biológica anti-IgE para asma grave.
+* **Termoplastia Bronquial:** Procedimiento endoscópico para reducir músculo liso.
