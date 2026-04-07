@@ -1,360 +1,372 @@
-# 🫁 Cáncer de Pulmón
+# 🩺 RESUMEN DE CLASE:
+Nódulo Pulmonar Solitario (NPS),
+Hamartomas y Tumores Carcinoides,
+Síndromes Mieloproliferativos Pulmonares (Linfoproliferativos),
+Bronquiolitis,
+Fibrosis Quística.
 
-&gt; **Dr. Ricardo Juan Rey** | Págs. 126-134
+## 1. Nódulo Pulmonar Solitario (NPS)
 
----
+### 📌 Definición y Generalidades
+* **Definición:** Lesión redonda u ovalada, claramente delimitada, de hasta **5 cm** de diámetro visible en radiografía.
+* **Regla de Oro:** * < 35 años: Probablemente benigno (seguimiento cauto).
+    * > 35 años: **Maligno hasta que se demuestre lo contrario.**
+* **Estadística:** ~60% son benignos (principalmente granulomas infecciosos).
 
-## 📊 Epidemiología y Factores de Riesgo
 
-| Factor | Descripción |
-|--------|-------------|
-| **Principal factor** | Tabaquismo (relación directa con número de cigarrillos, años de fumador, profundidad de inhalación) |
-| **Exposición pasiva** | Humo del cigarrillo en forma crónica |
-| **Carcinógenos laborales** | Arsénico, asbestos, cloro-metil-éter, cromo, gas mostaza, níquel, berilio, cadmio, radón, sílice, cloruro de vinilo |
-| **Patologías previas** | Fibrosis pulmonar, esclerodermia, sarcoidosis |
-| **Antecedentes** | Radiación previa pulmonar, cáncer de mama, linfomas |
-| **Contaminación** | Grandes ciudades (relacionado con algunos casos en no fumadores) |
-| **Marihuana** | Discutido como factor de riesgo |
+### 🟢 BENIGNAS
 
-&gt; 💡 **Consejo clínico:** Siempre que reciba un paciente fumador, debe pensar que puede ser un potencial portador de cáncer de pulmón. Siempre invitar al paciente a que pruebe métodos para dejar de fumar.
+| Etiología | Características Clave | Hallazgo TAC |
+|-----------|----------------------|--------------|
+| **Granuloma (TBC/hongos)** | Más frecuente. Calcificación laminada/concéntrica | Calcificación central, laminada o difusa |
+| **Hamartoma** | Tejidos pulmonares desorganizados. Más común en hombres 40-60 años | **"Popcorn calcification"** (patognomónica), bordes lisos |
+| **Pseudolinfoma** | >40 años. Nódulo único o infiltrado consolidado. Puede ser recurrente post-resección | Nódulo único o consolidación lobar |
+| **Bronquiolitis folicular con hiperplasia linfoide** | Asociada a AR, inmunodeficiencias, bronquiectasias | Patrón reticulonodulillar bilateral |
+| **Inflamatorias** | Neumonías organizadas, abscesos resueltos | Bordes irregulares, a veces neumonía en resolución |
 
----
+### 🟡 COMPORTAMIENTO INTERMEDIO / POTENCIALMENTE MALIGNAS
 
-## 🔬 Clasificación Histológica
+| Etiología | Características | Comportamiento |
+|-----------|---------------|--------------|
+| **Tumor Carcinoide Bronquial** | Baja malignidad, alta invasión vascular local | Puede ser central o periférico. **Carcinoide típico:** benigno. **Carcinoide atípico:** maligno |
+| | Signos: hemoptisis persistente, sibilancias localizadas | Obstrucción endobronquial → neumonía recurrente segmental |
+| | **Patrón flujo-volumen:** obstrucción fija (aplanamiento ambas ramas) | |
 
-### Carcinoma de Células Escamosas
-- **Origen:** Metaplasia del epitelio bronquial por acción del tabaco
-- **Inicio:** Placa granular roja o foco leucoplásico → masa oclusiva endobronquial
-- **Incidencia:** En disminución
-- **Metástasis:** Aparecen más tardíamente
-- **Detección:** Endoscopia esencial
+### 🔴 MALIGNAS
 
-### Adenocarcinoma
-| Característica | Descripción |
-|----------------|-------------|
-| **Prevalencia** | Tipo más común (40% de cánceres pulmonares) |
-| **Ubicación** | Periférica, vías aéreas periféricas |
-| **Diferencial** | Difícil distinguir de metástasis de cáncer de mama, páncreas, renal o colónico |
-| **Asociación** | Lesiones pulmonares previas |
-| **Cavitación** | Rara vez se cavan |
+| Etiología | Características | Presentación |
+|-----------|---------------|--------------|
+| **Cáncer broncogénico primario** | Adenocarcinoma 44% de los casos, epidermoide, etc. | Bordes espiculados, signo corona radiada, crecimiento rápido |
+| **Metástasis pulmonar** | Historia de cáncer primario. Múltiples > único | Bordes lisos ("cannonball"), múltiples |
+| **Linfoma pulmonar primario** | Nódulo único o múltiples, infiltrados mal definidos | Derrame pleural, adenomegalias mediastínicas. Más común en pulmón derecho |
+| | Síntomas: tos, fiebre, sudoración, pérdida de peso, hemoptisis | |
+| **Granulomatosis linfoidea pulmonar** | Proliferación células T. Progresa a linfoma | Consolidación alveolar crónica, broncograma aéreo, infiltrados evanescentes, **respeta vértices** |
+| | Edad media, pérdida de peso, fiebre, sudor nocturno. Puede cavitarse | |
 
-### Carcinoma Broncoalveolar
-| Característica | Descripción |
-|----------------|-------------|
-| **Prevalencia** | Variante más rara (1% de cánceres de pulmón) |
-| **Factor favorecedor** | Esclerodermia |
-| **Secreción** | 50% secreta mucina → broncorrea severa con deshidratación |
-| **Semiológica** | Crepitantes bilaterales a la auscultación |
-| **Propagación** | Rápida por vía aérea al otro pulmón |
-| **Resistencia** | Muy resistente a toda terapéutica |
+### 🟣 ETIOLOGÍAS ESPECIALES / ECTÓPICAS
 
-### Carcinoma de Células Grandes
-- Localización periférica
-- Pueden alcanzar gran tamaño y cavitarse
-- Forma poco diferenciada
-
-### Carcinoma de Células Pequeñas (Células en Avena / Oat Cell)
-| Característica | Descripción |
-|----------------|-------------|
-| **Origen** | Submucosa bronquial |
-| **Apariencia** | Masas blanco-grisáceas grandes que ocluyen vías aéreas proximales |
-| **Células** | Fusiformes, redondeadas o poligonales con citoplasma escaso, pequeñas |
-| **Origen celular** | Neuroendócrinas |
-| **Malignidad** | Muy maligno, metastatiza rápidamente |
-| **Tratamiento** | Solo quimioterapia o radioterapia (cirugía inútil) |
+| Etiología | Características | Notas |
+|-----------|---------------|-------|
+| **Endometriosis pulmonar (Endometrioma)** | **Tejido endometrial ectópico en pulmón** | Comportamiento benigno pero con **características de malignidad local** (invasión, recurrencia) |
+| | **Hemoptisis cíclica (catamenial):** sangrado sincronizado con menstruación | Mujeres en edad fértil |
+| | Puede presentar como NPS único o múltiples | Diagnóstico: correlación clínica + biopsia |
+| | Tratamiento: hormonal (anticonceptivos, GnRH análogos) o quirúrgico | |
 
 ---
 
-## 🏥 Manifestaciones Clínicas
+### 🚩 Factores de Riesgo: Benignidad vs. Malignidad en NPS
 
-### 1. Asintomáticos
-- Solo 10% de pacientes
-- Detectados por radiografía de tórax por otra causa
+| Factor de Riesgo | Sugiere Benignidad ✅ | Sugiere Malignidad 🚨 |
+| :--- | :--- | :--- |
+| **Edad** | < 35 años | > 35 años (Riesgo ↑ con la edad) |
+| **Tabaquismo** | No fumador | Fumador (Actual o pasado) |
+| **Tamaño** | < 2 cm | > 3 cm (A mayor tamaño, mayor riesgo) |
+| **Bordes / Contorno** | Lisos, nítidos, bien definidos | **Espiculados**, lobulados o irregulares |
+| **Calcificación** | Central, concéntrica o en **"Pochoclo"** | Excéntrica, irregular o asimétrica |
+| **Crecimiento** | Estable por > 2 años | **Duplicación rápida** de volumen |
+| **Contenido** | Presencia de **grasa** (Hamartoma) | Sólido o vidrio esmerilado persistente |
+| **Ubicación Geográfica** | Zonas de Histoplasmosis/TBC | Sin relación específica |
 
-### 2. Síntomas Tóxicos Generales (tumor maligno)
-- Pérdida de peso
-- Pérdida de apetito
-- Síndrome de impregnación
-- Anemia de trastornos crónicos
-- Malestar general, astenia
-- **Pronóstico:** Mal pronóstico, pero no frecuente
 
-### 3. Daño en el Propio Pulmón
+### 📋 Cuadro de Métodos Diagnósticos
 
-| Mecanismo | Manifestación | Frecuencia |
-|-----------|---------------|------------|
-| Irritación bronquial | Tos persistente o cambio de características de tos habitual | 75% |
-| Erosión vascular | Expectoración hemoptoica y hemoptisis | 35% |
-| Invasión local | Dolor o disconfort torácico | 50% |
-| Tumores diseminados | Disnea | 60% |
-| Oclusión bronquial total | Atelectasia | - |
-| Oclusión parcial + secreciones | Neumonía (3% de neumonías encubren cáncer) | - |
-| Necrosis y cavitación | Absceso pulmonar (expectoración material necrótico) | - |
-| Contacto pleural visceral | Neumotórax (raro) | - |
-| Extensión linfática | Linfangitis carcinomatosa pulmonar | - |
-| Carcinoma de la cicatriz | Tumor sobre zona de fibrosis previa (5-40% de tumores, usualmente adenocarcinomas) | - |
+| Método | Utilidad Principal | Observaciones |
+| :--- | :--- | :--- |
+| **Rx de Tórax Comparativa** | Evaluación de estabilidad temporal | Comparar con placas antiguas (estabilidad >2 años = benignidad). |
+| **TAC de Alta Resolución** | Detalle anatómico y densidad | Evalúa presencia de **grasa** (Hamartoma) y tipo de calcificación. **Importante** Recodar pedir ventana pulmonar y mediastínica, por que talvez la masa está en el mediastino... |
+| **TAC con Contraste** | Evaluación de vascularización | Alta sensibilidad (98%), ayuda a decidir técnicas invasivas. Profesor: Tinte dibuja mejor paredes del pulmón. **Importante**: Verificar que paciente no tenga alergias al contraste. Px con IRC no puede excepto si ya se dialisa. |
+| **PET-Scan** | Actividad metabólica (Glucosa) | El más preciso (especificidad >85%). Costo elevado. |
+| **Punción (PAAF/BAG)** | Diagnóstico histológico | Ideal para lesiones **periféricas**. Riesgo de neumotórax. |
+| **Fibrobroncoscopia** | Visualización directa y biopsia | De elección en lesiones **centrales intraluminales**. |
+| **Toracotomía** | Resección y diagnóstico definitivo | Cuando otros métodos no son concluyentes (especialmente extraluminales). |
 
-### 4. Invasión de Órganos por Contigüidad
+### 🔄 Algoritmo Clínico (Criterio del Profesor)
 
-| Estructura | Manifestación |
-|------------|---------------|
-| **Pleura** | Derrame pleural (hemorrágico o exudado), disnea, dolor puntada de costado |
-| **Vértice pulmonar** | Síndrome de Pancoast-Tobias: dolor en hombro, codo, brazo, antebrazo o mano con parestesias + compromiso simpático cervical (síndrome de Claude Bernard-Horner + Pourfour du Petit) |
-| **Vena cava superior** | Síndrome de la vena cava superior (8% de tumores pulmonares): edema "en esclavina", epistaxis, congestión nasal, edema lingual, signo de Godef |
-| **Esofago** | Disfagia, fístulas broncoesofágicas |
-| **Costillas** | Dolor costal |
-| **Vértebras torácicas** | Dolor, compresión |
-| **Pericardio** | Derrame (exudado o hemorrágico), taponamiento cardíaco |
+Ante un paciente con **Nódulo Pulmonar Solitario (NPS)**, el flujo de decisión se basa en el riesgo basal y la localización:
 
-### 5. Diseminación a Ganglios Mediastinales
+#### 1️⃣ Evaluación Inicial por Factores de Riesgo
+* **Bajo Riesgo:** `< 35 años` + `No fumador`
+  * **Conducta:** Acompañamiento radiológico cada **3 a 6 meses**.
+* **Alto Riesgo:** `> 35 años` + `Fumador`
+  * **Siguiente paso:** Realizar **Radiografía de Tórax**.
 
-| Estructura afectada | Síndrome |
-|---------------------|----------|
-| Nervio laríngeo recurrente | Disfonía con voz bitonal |
-| Nervio frénico | Parálisis diafragmática |
-| Nervio vago | Tos seca y perruna, bradicardias o taquicardias inexplicables |
-| Ganglio cervical superior (Pourfour du Petit) | Exoftalmos, midriasis, sudoración en hemicara afectada |
-| Ganglio cervical superior (Claude Bernard-Horner) | Enoftalmos, miosis, falta de sudoración en hemicara afectada |
-| Vena cava inferior | Compresión |
+#### 2️⃣ Hallazgos en Radiografía
+* **Características Benignas:** Continuar con acompañamiento/seguimiento.
+* **Características Malignas/Dudosas:** Realizar **TAC o Tomografía con contraste**.
 
-### 6. Manifestaciones Metastásicas
+#### 3️⃣ Conducta según Localización en TAC
+Si se sospecha malignidad por TAC, la técnica de biopsia depende de la ubicación:
 
-| Localización | Manifestación |
-|--------------|---------------|
-| Hepáticas | - |
-| Al otro pulmón | - |
-| Cerebrales | Convulsiones, accidente cerebrovascular hemorrágico |
-| Suprarrenal | Insuficiencia suprarrenal aguda con hiponatremia e hiperkalemia |
-| Óseas (huesos largos o vértebras) | - |
-| Válvulas cardíacas | Endocarditis marántica |
+* **📍 Zona Periférica:**
+  * Procedimiento: **Punción con aguja fina o gruesa** (Transtorácica).
+* **📍 Zona Central:** Se divide según su relación con la vía aérea:
+  1. **Intraluminal:** Se realiza **Fibrobroncoscopia**.
+  2. **Extraluminal:** Se procede a **Toracotomía**.
 
----
+## 2. Múltiples Nódulos Pulmonares (MNP)
 
-## ⚠️ Manifestaciones Paraneoplásicas
+## 📋 Etiología: ¿Por qué aparecen múltiples nódulos?
+La presencia de múltiples imágenes nodulares amplía el diferencial hacia causas sistémicas, infecciosas e inflamatorias.
 
-### Hematológicas
-- Tromboflebitis migratoria
-- Coagulación intravascular diseminada
-- Diátesis trombótica
+> **Nota:** Diferencial Rápido: Si ves múltiples nódulos con cavitación (agujeros dentro), piensa en Embolias Sépticas o Vasculitis de Wegener. Si son nódulos sólidos "sueltos", la primera sospecha es siempre Metástasis.
 
-### Osteoarticular
-| Síndrome | Descripción |
-|----------|-------------|
-| **Osteoartropatía hipertrofiante neúmica** | Más común en tumores epidermoides y oat cell. Dedos en palillo de tambor, uñas en vidrio de reloj, neoformación ósea subperióstica, dolor espontáneo. Mejora al extirpar el tumor |
-| **Artritis/artalgias** | De aparición reciente |
-
-### Neurológicas
-- Encefalopatía paraneoplásica
-- Parkinsonismo paraneoplásico
-- Degeneración cerebelosa paraneoplásica
-- Neuropatía periférica sensoriomotora (15% de casos)
-- Miopatía muscular proximal y simétrica
-- **Síndrome de Eaton-Lambert** (6% con oat cell): cuadro miasteniforme pero con aumento del potencial de acción muscular con estimulación eléctrica repetida, falta de respuesta a anticolinesterásicos
-- Miopatía necrosante paraneoplásica
-- Retinopatía paraneoplásica (oat cell)
-
-### Dermatológicas
-- Acantosis nigricans
-- Dermatopolimiositis
-- Hiperpigmentación por producción ectópica de MSH
-- Eritema gyratum (oat cell)
-- Necrosis digital rápidamente progresiva (oat cell)
-- Hipertricosis lanuginosa (epidermoide)
-- Vasculitis paraneoplásica (oat cell) con frecuente mononeuritis múltiple
-
-### Endócrinas
-| Alteración | Descripción |
-|------------|-------------|
-| **Producción ectópica de ACTH** | 50% de pacientes con oat cell (minoría con cuadro clínico). Cushing grave, evolución grave |
-| **Hipercalcemia tumoral** | Producción ectópica de PTH o prostaglandina tipo E |
-| **SIADH** | 11% de pacientes con oat cell. Hiponatremia severa, trastornos del sensorio, sin edemas, Na+ en orina elevado. Tratamiento: inhibidores de receptores de hormona antidiurética |
-| **Péptido natriurético** | Con hiponatremia |
-| **Gonadotrofinas** | En carcinomas con células grandes → ginecomastia |
-| **Prolactina** | Producción ectópica |
-| **VIP** | Producción |
+| Categoría | Causas Principales |
+| :--- | :--- |
+| **Neoplásicas** | **Metástasis (más frecuente)**, Adenocarcinoma broncoalveolar, Linfomas, Mielomas. |
+| **Infecciosas** | TBC, Micobacterias atípicas, Hongos (Histoplasma, Aspergilosis), Embolias sépticas (abscesos). |
+| **Inflamatorias / Vasculitis** | Sarcoidosis, Vasculitis de Wegener, Nódulos reumatoideos. |
+| **Otras** | Quistes hidatídicos, Malformaciones AV, Neumoconiosis, Amiloidosis, Sjögren. |
 
 ---
 
-## 🔍 Metodología de Estudio
+### 🦀 Metástasis Pulmonares (Foco Principal)
+Es la causa más común de nódulos múltiples de origen hematógeno.
 
-| Método | Indicación/Utilidad |
-|--------|---------------------|
-| **Citología de esputo seriado** | 3 días consecutivos. Útil en tumores de bronquios principales. Detecta 70% de estos tumores |
-| **Broncoscopia con biopsia** | Detecta 85% de casos. Baja sensibilidad para tumores periféricos |
-| **Biopsia pulmonar transbronquial** | Masas tumorales peribronquiales grandes |
-| **Biopsia pulmonar transparietal** | Nódulos periféricos sospechosos de malignidad |
-| **Búsqueda de células neoplásicas en líquido pleural** | - |
-| **Toracoscopía** | Biopsiar masas pleurales |
-| **Tomografías toracoabdominales** | Detección de metástasis (88% sensibilidad). PET también |
-| **Mediastinoscopía** | Visualizar y biopsiar ganglios mediastinales sospechosos |
-| **RM cerebral y centellograma óseo** | En pacientes con tumores de células pequeñas |
-| **Espirometría y estudio de difusión pulmonar** | Evaluación prequirúrgica |
-| **Centellograma de ventilación-perfusión y estudios cardiopulmonares en ejercicio** | Completa evaluación prequirúrgica |
+#### 🚩 Factores Pronósticos para Resección
+La decisión de operar (metastasectomía) depende de:
+1. **Tipo tumoral:** (Ej. Testicular tiene mejor pronóstico que Melanoma).
+2. **Intervalo libre de enfermedad:** Tiempo desde el tratamiento del tumor primario.
+3. **Número de metástasis:** * 1 lesión: 43% supervivencia a 5 años.
+   * > 4 lesiones: 27% supervivencia a 5 años.
+4. **Tiempo de duplicación:** Tumores de crecimiento lento tienen mejor pronóstico.
+5. **Afectación ganglionar:** Si hay ganglios hiliares/mediastínicos, el pronóstico empeora.
 
-### Nuevos Estudios Respiratorios en Pacientes Tumorales
-
-| Técnica | Descripción |
-|---------|-------------|
-| **Broncoscopía con fluorescencia** | Endoscopio con luz fluorescente en punta. Mayor nitidez en zonas donde prolifera el tumor |
-| **Broncoscopía virtual** | Tomografía computada con reconstrucción tridimensional. No permite biopsias |
-| **Broncoscopía con navegador electromagnético** | Biopsia por vía endobronquial a nódulos periféricos sospechosos guiado por navegador electromagnético |
-| **Imágenes tomográficas pulmonares en tiempo real** | 30 segundos mientras respira. Visualiza si tumor invade estructuras |
-| **Broncoscopía con ultrasonido** | Localiza ganglios aumentados de tamaño para biopsia |
-| **Endoscopia digestiva alta con ultrasonido** | Localiza y biopsia ganglios aumentados |
-| **Mediastinostomía** | Incisión cerca del esternón de 2 cm entre 2ª y 3ª costilla izquierda. Acceso a ganglios inaccesibles a mediastinoscopía |
-| **Detección de genes** | EGFR, ALK, RET, BRAF. Predice mejores drogas para quimioterapia |
+#### 📈 Supervivencia según Primario (Post-cirugía)
+| Tumor Primario | Supervivencia a 5 años | Notas |
+| :--- | :--- | :--- |
+| **Testículo** | **82%** | El de mejor resultado quirúrgico. |
+| **Colorrectal** | 21% - 50% | Solo 4-11% metastatizan a pulmón. |
+| **Sarcomas** | 40% | El 80% de los sarcomas dan metástasis pulmonar. |
+| **Mama** | Mal pronóstico | Suele haber afectación multiorgánica. |
+| **Melanoma** | Muy mal pronóstico | Generalmente ya hay depósitos en otros órganos. |
 
 ---
 
-## 🎯 Indicaciones para la Pesquisa
+### 🛠️ Metodología de Estudio y Tratamiento
 
-&gt; No se ha aprobado ninguna técnica para detección precoz. No sirven radiografías frecuentes, ni citológicos de esputo, ni tomografías. Podría estar justificado en familias con agregación de casos de cáncer de pulmón.
+#### Diagnóstico
+* **TAC de Alta Resolución:** Con ventana mediastínica para localizar lesiones y ver grasa/calcificación.
+* **PET-Scan:** Útil para actividad metabólica y búsqueda de otros focos.
+* **Confirmación:** Punción transtorácica o transbronquial (PAAF).
 
-**La medida más eficaz de prevención es dejar de fumar.**
+#### Tratamiento Quirúrgico
+* **Enfoque:** La resección completa mejora la supervivencia sin importar la histología.
+* **Técnica:** * **Toracotomía:** Estándar para unilaterales.
+  * **Esternotomía Media:** Recomendada para exploración bilateral (un 40% de los casos "unilaterales" tienen nódulos ocultos en el otro pulmón).
 
----
 
-## 🔄 Diagnóstico Diferencial
+## 3. Hamartomas y Tumores Carcinoides
 
-### Tumor Carcinoide Bronquial
+### 📊 Tabla Comparativa: Tumores Broncopulmonares
+| Característica | Hamartoma | Tumor Carcinoide |
+| :--- | :--- | :--- |
+| **Naturaleza** | Benigno (tejido mesenquimático) | Malignidad de bajo grado (Neuroendocrino) |
+| **Frecuencia** | Tumor benigno más frecuente | 1-2% de todos los tumores pulmonares |
+| **Imagen Típica** | Calcificación en "Pop-corn" | Masa hiliar/central bien definida |
+| **Clínica** | Suele ser asintomático | Hemoptisis recurrente, tos, neumonías |
+| **Manejo** | Observación o enucleación | Resección quirúrgica |
 
-| Característica | Descripción |
-|----------------|-------------|
-| **Prevalencia** | 0,5-2% de tumores bronquiales |
-| **Predominio** | Leve en mujeres |
-| **Localización** | Bronquios de mayor calibre, fácil observación endoscópica |
-| **Morfología** | Lesiones infiltrativas o polipoides |
-| **Benignidad** | 90% benignos, 10% malignos |
-| **Síntomas** | Cuadros obstructivos persistentes con tos, fiebre, dolor torácico. 50% hemoptisis |
-| **Imagen** | Nódulo pulmonar solitario central con contorno ligeramente lobulado. Muy vascularizado en TC con contraste |
-| **Centellograma** | Octeótrido marcado con I123 detecta 85% de lesiones |
-| **Biopsia** | No recomendada (produce hemorragias copiosas) |
-| **Síndrome carcinoide** | Broncoespasmo, diarrea, vómitos, hipotensión, flush cutáneo (con metástasis hepáticas) |
-| **Tratamiento** | Quirúrgico. Láser endoscópico en no quirúrgicos |
-| **Pronóstico** | 5 años: 90% vivos (mejor pronóstico). Con metástasis a 5 años: 60%, a 10 años: 40% |
-| **Tratamiento no resecables** | Octeotrido e interferón (estabiliza complicaciones pero no reduce tamaño tumoral) |
+> **Nota:** El **Síndrome Carcinoide** (flushing, diarrea) es raro en pulmón (<5%) y suele indicar metástasis hepáticas.
 
-### Tumores Benignos de Pulmón
+## 4. 🧬 Linfoproliferación Pulmonar
 
-| Tumor | Características |
-|-------|-----------------|
-| **Hamartomas** | Más frecuentes en hombres añosos. Origen mesenquimático (músculo liso, colágeno, cartílago). No malignizan. Periféricos, nódulo pulmonar solitario. 5-15% calcificaciones en "pop corn" (pochoclo) |
-| **Adenoma bronquial** | Síntomas de obstrucción de vía aérea |
-| **Leiomioma bronquial** | Más común en mujeres jóvenes |
-| **Lipomas, condromas** | - |
-| **Teratomas** | Pueden producir tricoptisis (expectoración de pelos) |
-| **Endometriosis pulmonar** | Nódulo pulmonar solitario, hemoptisis catamenial, neumotórax derecho a repetición |
-
-**Otros diagnósticos diferenciales:** Vasculitis de Wegener, sarcoidosis, metástasis pulmonares de tumores primarios extrapulmonares.
+Se definen como un grupo de enfermedades caracterizadas por la **proliferación endopulmonar de linfocitos**. Se clasifican según su comportamiento biológico en benignas y malignas.
 
 ---
 
-## 📈 Estadificación TNM (No de Células Pequeñas)
+### 🟢 1. Linfoproliferación Pulmonar Benigna
+*Procesos reactivos o hiperplásicos que no presentan criterios de malignidad inicial.*
 
-| Estadio | Definición | Sobrevida a 5 años |
-|---------|-----------|-------------------|
-| **Estadio 0** | Carcinoma in situ, detectado por endoscopía bronquial | - |
-| **Estadio 1** | Tumor solo localizado en pulmón | 60% |
-| → 1A1 | Hasta 1 cm de tamaño | |
-| → 1A2 | Entre 1 y 2 cm | |
-| → 1A3 | Entre 2 y 3 cm | |
-| **Estadio 2** | Tumor mayor de 3 cm con probable compromiso ganglionar | 30-40% |
-| → 2A | 3-4 cm sin afectación ganglionar | |
-| → 2B | 4-5 cm o con afectación ganglionar | |
-| **Estadio 3** | Propagación a ganglios o estructuras cercanas | 15-20% |
-| → 3A | Tumor 5-7 cm con afectación ganglionar | |
-| → 3B | Tumor &gt;7 cm con invasión de estructuras cercanas | |
-| **Estadio 4** | Propagación a órganos o tejidos distantes | 5-8% |
-| → 4A | Metástasis en un solo órgano | |
-| → 4B | Metástasis en múltiples órganos | |
+| Patología | Perfil del Paciente | Hallazgos Radiológicos | Tratamiento / Notas |
+| :--- | :--- | :--- | :--- |
+| **Pseudolinfoma** | Mayores de 40 años. | Nódulo único o infiltrado consolidado (central o periférico). | Resección quirúrgica. Puede recurrir. Responde a **Ciclofosfamida**. |
+| **Bronquiolitis Folicular** | Asociada a **AR**, inmunodeficiencias o bronquiectasias. | Compromiso bilateral intersticial **reticulonodulillar**. | Respuesta relativa a **Corticosteroides**. |
+| **Enf. de Castleman** | Variable. | Masas ganglionares (generalmente mediastinales). | (Ver tomo de Hematología). |
 
 ---
 
-## 💊 Tratamiento en Estadios I y II (No Células Pequeñas)
+### 🔴 2. Linfoproliferación Pulmonar Maligna
+*Procesos neoplásicos con capacidad de invasión y progresión sistémica.*
 
-Representan el **30%** de los casos.
+#### 📋 Cuadro Comparativo: Formas Principales
 
-### Cirugía (primera opción)
-- Lobectomía, a veces neumonectomía
-- Resección segmentaria pulmonar si es posible
-- En EPOC: evaluar capacidad de respirar con pulmón remanente (centellogramas de ventilación-perfusión)
-- Extracción de ganglios mediastinales
-- Si compromiso de pared torácica: resecar en bloque junto con tumor
-- **Recurrencias locales:** 23% de casos (pueden requerir nueva cirugía)
-
-### Radioterapia
-- Pacientes de alto riesgo quirúrgico, añosos, deteriorados o que se niegan a cirugía
-- Radiación postoperatoria disminuye recidivas locales
-
-### Quimioterapia
-
-| Protocolo | Descripción |
-|-----------|-------------|
-| **Base** | Carboplatino + pemetrexed |
-| **Inmunoterapia** | Inhibidores de PD-L1 (pembrolizumab, atezolizumab) |
-| **Inhibidores de tirosina quinasa** | Osimertinib, erlotinib (bloquean señalización de crecimiento) |
-| **Trastuzumab deruxtecan** | Solo ante células con mutaciones específicas |
-| **Inmunoterapia con nivolumab** | Puede usarse en estadios tempranos |
-
-&gt; **Ateneo de tumores:** Participan clínicos, terapistas intensivistas pulmonares, neumonólogos, cirujanos torácicos y oncólogos para decidir mejor tratamiento.
+| Patología | Clínica Sugerente | Patrón Radiológico | Evolución / Pronóstico |
+| :--- | :--- | :--- | :--- |
+| **Granulomatosis Linfoidea** | Edad media. Fiebre, sudor nocturno y pérdida de peso. | Consolidación crónica (patrón alveolar), broncograma aéreo. Infiltrados evanescentes. | Enfermedad de células T. **Respeta vértices**. Progresa frecuentemente a **Linfoma**. |
+| **Linfoma Pulmonar** | Tos, fiebre, hemoptisis, dolor torácico y pérdida de peso. | Nódulos únicos/múltiples, infiltrados mal definidos, **derrame pleural**. | Puede ser primario o secundario. Más común en el **pulmón derecho**. |
 
 ---
 
-## ⚡ El Problema del Tumor de Células Pequeñas
+#### 🔍 Otras Variedades Malignas
+Además de los anteriores, el espectro de linfoproliferación maligna incluye:
 
-| Característica | Descripción |
-|----------------|-------------|
-| **Malignidad** | Muy maligno, crecimiento muy rápido |
-| **Metástasis** | Se desarrollan rápidamente |
-| **Cirugía** | Menos del 10% son pasibles de cirugía |
-| **Relación** | Muy relacionado con tabaquismo |
-| **Origen** | Neuroendócrino |
-| **Histología** | Células malignas azuladas de 14 micrones con poco citoplasma |
-| **Coexistencia** | Puede coexistir con tumor no de células pequeñas |
-| **Paraneoplásicos** | Alta asociación con síndromes paraneoplásicos (sobre todo neurológicos) |
-| **Producción hormonal** | Pueden fabricar ACTH y ADH |
-
-### Clínica
-- Vías aéreas centrales infiltrando submucosa → obstrucción bronquial
-- Masa hilar con adenomegalias mediastinales
-- Tos, disnea, disminución de peso, adenomegalias postobstructivas
-- **70% debuta con enfermedad metastásica:** hígado, adrenal, hueso, médula ósea o cerebro
-- Raro que se presente como nódulo pulmonar periférico
-
-### Clasificación
-
-| Tipo | Descripción | Sobrevida |
-|------|-------------|-----------|
-| **a) Enfermedad limitada** | A un hemitórax y dentro de un campo único de radiación | 15-20 meses. A 5 años: 10% |
-| **b) Enfermedad extensa** | Metástasis fuera del hemitórax afectado | 8-13 meses. A 5 años: 1% |
-
-### Estudios en Estadios Avanzados
-- Tomografía de abdomen
-- Resonancia magnética cerebral
-- Centellograma óseo
-- Biopsia de médula ósea (25% tienen compromiso)
-- 15% tienen metástasis cerebrales asintomáticas
-- PET para evaluar extensión
-
-### Tratamiento
-
-| Protocolo | Uso |
-|-----------|-----|
-| Cisplatino + etopósido | Base |
-| Cisplatino + irinotecán | - |
-| Carboplatino + etopósido | - |
-| Carboplatino + irinotecán | - |
-| Cisplatino + topotecán | - |
-| **Nuevos** | Lurbinectedina, docetaxel, paclitaxel, gemcitabina, temozolomida, vinorelbina |
-
-&gt; Se trata con quimioterapia y radioterapia en algunos casos.
+* **Linfomas Hodgkin y No Hodgkin:** Primarios o secundarios.
+* **Linfadenopatía angioinmunoblástica.**
+* **Patologías de Células Plasmáticas:** Plasmocitoma extramedular y Mieloma múltiple.
+* **Gammapatías:** Macroglobulinemia de Waldenström.
+* **Leucemia:** Leucemia linfática crónica (LLC) con afectación pulmonar.
 
 ---
 
-## 📝 Notas Rápidas
+### 🚩 Puntos Clave para el Diagnóstico
+1.  **Biopsia:** Es fundamental para diferenciar un Pseudolinfoma de un Linfoma verdadero.
+2.  **Cavitación:** En la **Granulomatosis Linfoidea**, los nódulos tienen tendencia a cavitarse.
+3.  **Adenomegalias:** El Linfoma suele presentar adenomegalias mediastinales asociadas, a diferencia de las formas benignas puras.
 
-- **Carcinoma de células pequeñas = oat cell = células en avena**
-- **Síndrome de Pancoast-Tobias:** Tumor en vértice pulmonar + dolor braquial + síndrome de Horner
-- **Síndrome de la vena cava superior:** Emergencia oncológica (edema en esclavina)
-- **SIADH:** Común en oat cell, hiponatremia severa
-- **Eaton-Lambert:** Miopatía paraneoplásica específica de oat cell (mejora con estimulación repetida, a diferencia de miastenia gravis)
+> [!CAUTION]
+> **Nota:** La Granulomatosis Linfoidea es especialmente engañosa porque sus infiltrados pueden ser "evanescentes" (aparecen y desaparecen), pero su progresión a linfoma de células B es un riesgo alto.
+
+# 5. Bronquiolitis
+
+### 📌 Conceptos Generales
+La **bronquiolitis** es un proceso inflamatorio que afecta a los **bronquíolos** (vías aéreas < 2 mm de diámetro, sin cartílago).
+
+* **Diagnóstico de elección:** Tomografía Computada de Alta Resolución (TCAR).
+* **Hallazgos en TCAR:** * Si están enfermos, se ven dilatados y con paredes engrosadas.
+    * **Signos indirectos:** Patrón en "mosaico" o "geográfico" (tonos de gris por hipoventilación y vasoconstricción refleja).
+
+---
+
+### 🦠 Bronquiolitis Aguda
+*Es la forma más común, especialmente en pediatría.*
+
+- **Causas:** Infecciones virales (VSR), aspiraciones, inhalación de toxinas o bacterias (*Mycoplasma*, *Chlamydias*).
+- **Anatomía Patológica:** Inflamación, necrosis epitelial, edema y aumento de moco.
+- **TCAR:** Imágenes centrilobulillares nodulillares (moco e inflamación).
+- **Tratamiento:** Soporte (oxígeno, broncodilatadores, corticoides). Mortalidad < 1%.
+
+---
+
+### 🌏 Pan-bronquiolitis Difusa
+*Relacionada estrechamente con poblaciones asiáticas.*
+
+- **Asociación:** Siempre asociada a **sinusitis crónica**.
+- **Clínica:** Tos, expectoración purulenta, disnea y sibilancias.
+- **Laboratorio:** Aumento de aglutininas frías, eritrosedimentación y leucocitosis.
+- **Tratamiento:** **Eritromicina** (400-600 mg/día) por su efecto inmunomodulador (baja citoquinas y moco).
+
+---
+
+### 🚬 Bronquiolitis por Tabaquismo
+- **Hallazgos:** Fibrosis intersticial y presencia de **macrófagos pigmentados** (distribución bronquiolocéntrica).
+- **Clínica:** Tos, disnea, rales crepitantes y dedos en palillo de tambor.
+- **Espirometría:** Patrón mixto (obstructivo y restrictivo).
+- **Acción:** Cese inmediato del hábito de fumar.
+
+---
+
+### 🏗️ Asociada a Exposiciones y Otras Causas
+- **Neumoconiosis / Polvos Orgánicos:** Fibrosis pulmonar con bronquiolitis asociada.
+- **Histiocitosis:** Presenta fibrosis y compromiso bronquiolar simultáneo.
+
+---
+
+### ⚠️ Bronquiolitis Obliterante
+*Se caracteriza por fibrosis peribronquiolar que ocluye la luz de forma progresiva.*
+
+| Característica | Detalle |
+| :--- | :--- |
+| **Diagnóstico** | Requiere biopsia por toracoscopía. |
+| **Causas Principales** | Colagenopatías (Artritis Reumatoidea), secuelas virales (Adenovirus). |
+| **Exposiciones** | Gases de guerra, amoníaco, saborizantes (diacetil). |
+| **Trasplantes** | Rechazo crónico en trasplante de pulmón o médula ósea. |
+| **Pronóstico** | Enfermedad progresiva con **mala respuesta** a corticoides. |
+
+---
+> [!IMPORTANT]
+> **Nota clínica:** La espirometría en la mayoría de estos cuadros suele mostrar un **patrón obstructivo**.
+
+## 6. Fibrosis Quística (FQ) 🧬 (Mucoviscidosis)
+
+### 📌 Perfil de la Enfermedad
+La **Fibrosis Quística (FQ)** es una enfermedad genética autosómica recesiva producida por una mutación en el **cromosoma 7q31**.
+
+* **Proteína afectada:** CFTR (Proteína reguladora de la conductancia transmembránica).
+* **Defecto:** Canal de cloro anómalo en la membrana apical de las células epiteliales.
+* **Epidemiología:** * Incidencia: 1 en 2.500 recién nacidos.
+    * Portadores: 1 de cada 25 personas.
+    * Esperanza de vida: ~30 años.
+
+---
+
+### 🤒 Manifestaciones Clínicas
+La característica principal es la producción de **secreciones espesas** que obstruyen los conductos orgánicos.
+
+#### 🫁 Sistema Respiratorio
+* **Pulmón:** Moco espeso, tapones bronquiales, infecciones recurrentes y bronquiectasias.
+* **Microbiología:** Alta incidencia de *Pseudomonas aeruginosa* y *S. aureus*.
+* **Complicaciones:** Atelectasias, neumotórax, hemoptisis e insuficiencia cardíaca derecha.
+* **Vía aérea superior:** Sinusitis recurrente y pólipos nasales.
+
+#### Sistema Digestivo y Exocrino
+* **Páncreas:** Insuficiencia pancreática (malabsorción, esteatorrea) y diabetes mellitus (por fibrosis de los islotes).
+* **Hígado:** Bilis espesa, dificultad para absorber grasas y vitaminas liposolubles (A, D, E, K), posible cirrosis.
+* **Intestino:** Íleo meconial (recién nacidos), prolapso rectal y cuadros suboclusivos.
+* **Sudor:** Excesivamente rico en sal (**Na+**). Riesgo de deshidratación por pérdida de sal.
+
+#### 👶 Reproducción y Crecimiento
+* **Hombres:** Esterilidad por moco viscoso en el epidídimo.
+* **Mujeres:** Disminución de la fecundidad por viscosidad del moco cervical.
+* **General:** Retraso del crecimiento por malabsorción.
+
+---
+
+### 🔍 Metodología de Estudio
+1.  **Test del Sudor:** Determinación de Na+ elevado (Prueba diagnóstica clave).
+2.  **Pruebas Genéticas:** Confirmación de mutaciones.
+3.  **Imágenes:** Rx y TCAR de tórax (cortes milimétricos).
+4.  **Laboratorio:** Prueba de van de Kamer (esteatorrea), glucemia y hepatograma.
+5.  **Microbiología:** Endoscopía con cepillo envainado para detectar gérmenes específicos.
+
+---
+
+### 💊 Tratamiento
+
+#### 🛠️ Manejo Respiratorio
+* **Kinesioterapia:** Percusión y drenaje postural (2 veces al día).
+* **Antibióticos:** Tratamiento enérgico de infecciones. 
+    * *Profilaxis:* Cefalexina/Rifampicina (S. aureus) o Tobramicina nebulizada (Pseudomona).
+* **Mucolíticos:** N-acetilcisteína y **ADNasa** para fluidez del esputo.
+* **Broncodilatadores:** Si hay broncoespasmo documentado.
+
+#### 🥗 Manejo Nutricional y Metabólico
+* **Enzimas pancreáticas:** Vía oral para tratar la malabsorción.
+* **Suplementos:** Vitaminas liposolubles (A-D-E-K) y soporte nutricional.
+* **Insulina:** Para el manejo de la diabetes asociada.
+
+#### 🚀 Terapias Avanzadas
+* **Trasplante pulmonar:** Principal indicación en estadios terminales.
+* **Terapia génica:** Actualmente en fase experimental.
+
+---
+> [!TIP]
+> **Dato Genético:** Si ambos padres son portadores, el riesgo de un hijo enfermo es del **25%** y de un hijo portador sano del **50%**.
+
+## 7. Linfoproliferación Pulmonar
+
+Grupo de enfermedades caracterizadas por la **proliferación endopulmonar de linfocitos**. Se dividen en categorías benignas y malignas.
+
+---
+
+### 📊 Cuadro Comparativo de Patologías
+
+| Clasificación | Patología | Características Clínicas | Hallazgos Radiológicos / Diagnóstico | Tratamiento |
+| :--- | :--- | :--- | :--- | :--- |
+| **Benigna** | **Pseudolinfoma** | Pacientes > 40 años. Generalmente asintomáticos o nódulo aislado. | Nódulo o infiltrado consolidado (central o periférico). Biopsia necesaria. | Resección quirúrgica. Ciclofosfamida en algunos casos. |
+| **Benigna** | **Bronquiolitis Folicular** | Asociada a Artritis Reumatoidea, inmunodeficiencias o bronquiectasias. | Compromiso bilateral intersticial reticulonodulillar. | Corticosteroides (respuesta relativa). |
+| **Maligna** | **Granulomatosis Linfoidea** | Enfermedad de células T. Edad media. Presenta fiebre, pérdida de peso y sudor nocturno. | Consolidación crónica, broncograma aéreo, nódulos cavitados. Respeta vértices. | Progresa frecuentemente a Linfoma. |
+| **Maligna** | **Linfoma Pulmonar** | Primario o secundario. Síntomas B (fiebre, sudor, pérdida de peso), tos y hemoptisis. | Nódulos únicos/múltiples, infiltrados, derrame pleural y adenomegalias. | Según protocolo oncológico (Quimioterapia/Radioterapia). |
+
+---
+
+### 📋 Otras Formas Malignas
+Además de los anteriores, se incluyen en esta categoría:
+* **Linfoma de Hodgkin y no Hodgkin** (primarios o secundarios).
+* **Linfadenopatía angioinmunoblástica**.
+* **Plasmocitoma extramedular** y **Mieloma múltiple**.
+* **Macroglobulinemia de Waldenström**.
+* **Leucemia linfática crónica**.
+
+---
+> [!NOTE]
+> **Dato clave:** El Linfoma Pulmonar es más frecuente en el **pulmón derecho** y suele presentar compromiso mediastinal asociado.
