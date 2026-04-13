@@ -17,6 +17,7 @@ const cleanId = (t: string) => {
 const TableOfContents = ({ content }: { content: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const headings = useMemo(() => {
+    if (!content) return [];
     return content.split('\n')
       .filter(line => line.trim().startsWith('## '))
       .map(line => {
@@ -72,7 +73,8 @@ export default function Home() {
       setContent('---PDF---'); 
     } else {
       const cleanPath = selectedMd.startsWith('/') ? selectedMd.slice(1) : selectedMd;
-      const finalUrl = `/apuntes/${cleanPath}`;
+      // Usamos ruta absoluta para evitar confusiones de Vercel
+      const finalUrl = `${window.location.origin}/apuntes/${cleanPath}`;
 
       fetch(finalUrl)
         .then(res => {
@@ -82,7 +84,7 @@ export default function Home() {
         .then(t => setContent(t))
         .catch((err) => {
           console.error(err);
-          setContent(`# ❌ Error de Carga\nNo se pudo encontrar el archivo en: \`public/apuntes/${cleanPath}\``);
+          setContent(`# ❌ Error de Carga\nNo se pudo encontrar el archivo en la ruta:\n\n\`${finalUrl}\``);
         });
     }
   }, [selectedMd, isPdf]);
@@ -103,7 +105,7 @@ export default function Home() {
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-[#e6edf3]">
-      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50`}>
+      <aside className={`${sidebarOpen ? 'w-72' : 'w-0'} transition-all bg-[#161b22] border-r border-[#30363d] overflow-hidden flex flex-col z-50 shrink-0`}>
         <div className="p-5 border-b border-[#30363d] flex items-center gap-3 shrink-0 text-white font-bold text-lg"><Brain className="w-6 h-6 text-purple-500" /><span>Medpath</span></div>
         <div className="p-4 border-b border-[#30363d] shrink-0">
           <div className="relative text-white">
@@ -154,7 +156,7 @@ export default function Home() {
 
         <div className="flex-1 overflow-y-auto relative scroll-smooth p-6 md:p-12">
           <div className="max-w-4xl mx-auto min-h-full">
-            {selectedMd && !isPdf && <TableOfContents content={content} />}
+            {selectedMd && !isPdf && content && <TableOfContents content={content} />}
             
             {selectedMd ? (
               <SignedIn>
@@ -165,16 +167,22 @@ export default function Home() {
                       className="w-full h-[85vh] rounded-xl border border-[#30363d] z-10" 
                     /> 
                   ) : (
-                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-24 relative z-10">
-                      <Markdown 
-                        remarkPlugins={[remarkGfm, remarkSlug]} 
-                        rehypePlugins={[rehypeRaw]} 
-                        components={{ 
-                          h2: ({children}) => <h2 id={cleanId(children?.toString() || "")} className="border-b border-[#30363d] pb-2">{children}</h2> 
-                        }}
-                      >
-                        {content}
-                      </Markdown>
+                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-24 relative z-10 text-white">
+                      {content ? (
+                        <Markdown 
+                          remarkPlugins={[remarkGfm, remarkSlug]} 
+                          rehypePlugins={[rehypeRaw]} 
+                          components={{ 
+                            h2: ({children}) => <h2 id={cleanId(children?.toString() || "")} className="border-b border-[#30363d] pb-2 mt-8 text-white font-bold">{children}</h2> 
+                          }}
+                        >
+                          {content}
+                        </Markdown>
+                      ) : (
+                        <div className="flex items-center justify-center h-40">
+                          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>
+                        </div>
+                      )}
                     </article>
                   )
                 ) : ( 
@@ -188,7 +196,7 @@ export default function Home() {
             ) : ( 
               <div className="h-[70vh] flex flex-col items-center justify-center opacity-40">
                 <Brain className="w-16 h-16 animate-pulse text-purple-500" />
-                <h2 className="text-xl font-bold mt-4 text-white uppercase tracking-widest">Medpath</h2>
+                <h2 className="text-xl font-bold mt-4 text-white uppercase tracking-widest text-center">Medpath<br/><span className="text-xs font-normal">Selecciona un apunte para comenzar</span></h2>
               </div> 
             )}
           </div>
