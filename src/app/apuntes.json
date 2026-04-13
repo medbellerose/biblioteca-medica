@@ -79,7 +79,8 @@
           { "label": "S3TL: Asma Bronquial", "file": "Quinto/Interna/Pulmon/S3TL.md", "keywords": ["asma-bronquial", "hiperreactividad-bronquial", "espirometria-PBD", "GINA-2026", "corticoides-inhalados", "SABA-LABA", "asma-atopico", "montelukast", "fenotipos-asma", "crisis-asmática"] },
           { "label": "otro", "file": "Quinto/Interna/Pulmon/Cancer1.md", "keywords": ["oncología", "pulmón", "adenocarcinoma", "cancer"] },
           { "label": "S5TC: NPS, bronquiolitis, FQ", "file": "Quinto/Interna/Pulmon/S5TC.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] },
-          { "label": "S5TL: Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/S5TL.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] }
+          { "label": "S5TL: Cáncer de pulmón", "file": "Quinto/Interna/Pulmon/S5TL.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] },
+          { "label": "S6TC: Síndromes Cavitarios", "file": "Quinto/Interna/Pulmon/S6TC.md", "keywords": ["NPS", "hamartoma", "fibrosis quistica", "bronquiolitis","Linfoproliferativos"] }
         ]
       },
       {
