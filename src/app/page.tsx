@@ -63,14 +63,26 @@ export default function Home() {
 
   useEffect(() => {
     if (!selectedMd) return;
-    if (isPdf) { setContent('---PDF---'); } 
-    else {
-      fetch(`/apuntes/${selectedMd.includes('.') ? selectedMd : selectedMd + '.md'}`)
-        .then(res => res.text()).then(t => setContent(t)).catch(() => setContent('# Error'));
+    if (isPdf) { 
+      setContent('---PDF---'); 
+    } else {
+      // Limpiamos la ruta para evitar errores de barras dobles
+      const cleanPath = selectedMd.startsWith('/') ? selectedMd.slice(1) : selectedMd;
+      const finalUrl = `/apuntes/${cleanPath}`;
+
+      fetch(finalUrl)
+        .then(res => {
+          if (!res.ok) throw new Error(`404: No se encontró en ${finalUrl}`);
+          return res.text();
+        })
+        .then(t => setContent(t))
+        .catch((err) => {
+          console.error(err);
+          setContent(`# ❌ Error de Carga\nNo se pudo encontrar el archivo en la ruta:\n\n\`public/apuntes/${cleanPath}\`\n\n**Verifica:**\n1. Que el nombre tenga .md\n2. Mayúsculas y minúsculas exactas en las carpetas.`);
+        });
     }
   }, [selectedMd, isPdf]);
 
-  // LÓGICA DE FILTRADO AVANZADA
   const filteredData = useMemo(() => {
     return yearsDataRaw.map(year => {
       const filteredSubjects = year.subjects.map(sub => {
@@ -135,7 +147,7 @@ export default function Home() {
             {selectedMd ? (
               <SignedIn>
                 {allowedYears.includes(currentYear) ? (
-                  isPdf ? ( <iframe src={`${selectedMd}#view=FitH`} className="w-full h-[88vh] rounded-xl border border-[#30363d]" /> ) : (
+                  isPdf ? ( <iframe src={`${selectedMd.startsWith('/') ? '' : '/'}${selectedMd}#view=FitH`} className="w-full h-[88vh] rounded-xl border border-[#30363d]" /> ) : (
                     <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-24">
                       <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]} components={{ h2: ({children}) => <h2 id={cleanId(children?.toString() || "")}>{children}</h2> }}>{content}</Markdown>
                     </article>
