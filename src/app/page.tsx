@@ -28,7 +28,12 @@ const TableOfContents = ({ content }: { content: string }) => {
   if (headings.length === 0) return null;
 
   return (
-    <aside className="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center justify-end transition-all duration-300" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={{ width: isHovered ? '280px' : '40px' }}>
+    <aside 
+      className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center justify-end transition-all duration-300" 
+      onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)} 
+      style={{ width: isHovered ? '280px' : '40px' }}
+    >
       <div className={`flex flex-col gap-2 py-4 pr-6 transition-all ${isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'}`}>
         {headings.map((h, i) => (
           <button key={i} onClick={() => document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' })} className="text-right text-[10px] text-gray-400 font-bold uppercase hover:text-purple-400 truncate transition-colors">{h.text}</button>
@@ -66,19 +71,18 @@ export default function Home() {
     if (isPdf) { 
       setContent('---PDF---'); 
     } else {
-      // Limpiamos la ruta para evitar errores de barras dobles
       const cleanPath = selectedMd.startsWith('/') ? selectedMd.slice(1) : selectedMd;
       const finalUrl = `/apuntes/${cleanPath}`;
 
       fetch(finalUrl)
         .then(res => {
-          if (!res.ok) throw new Error(`404: No se encontró en ${finalUrl}`);
+          if (!res.ok) throw new Error(`404: No se encontró`);
           return res.text();
         })
         .then(t => setContent(t))
         .catch((err) => {
           console.error(err);
-          setContent(`# ❌ Error de Carga\nNo se pudo encontrar el archivo en la ruta:\n\n\`public/apuntes/${cleanPath}\`\n\n**Verifica:**\n1. Que el nombre tenga .md\n2. Mayúsculas y minúsculas exactas en las carpetas.`);
+          setContent(`# ❌ Error de Carga\nNo se pudo encontrar el archivo en: \`public/apuntes/${cleanPath}\``);
         });
     }
   }, [selectedMd, isPdf]);
@@ -139,23 +143,54 @@ export default function Home() {
           ))}
         </nav>
       </aside>
-      <main className="flex-1 flex flex-col bg-[#0d1117] overflow-hidden">
-        <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d]"><button onClick={() => setSidebarOpen(!sidebarOpen)}><Menu className="w-5 h-5 text-gray-400" /></button><SignedIn><UserButton afterSignOutUrl="/" /></SignedIn></header>
-        <div className="flex-1 overflow-y-auto p-6 md:p-12 relative scroll-smooth">
-          <div className="max-w-5xl mx-auto h-full">
+
+      <main className="flex-1 flex flex-col bg-[#0d1117] overflow-hidden min-h-screen relative">
+        <header className="h-14 flex items-center justify-between px-6 border-b border-[#30363d] shrink-0 z-20">
+          <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+            <Menu className="w-5 h-5 text-gray-400" />
+          </button>
+          <SignedIn><UserButton afterSignOutUrl="/" /></SignedIn>
+        </header>
+
+        <div className="flex-1 overflow-y-auto relative scroll-smooth p-6 md:p-12">
+          <div className="max-w-4xl mx-auto min-h-full">
             {selectedMd && !isPdf && <TableOfContents content={content} />}
+            
             {selectedMd ? (
               <SignedIn>
                 {allowedYears.includes(currentYear) ? (
-                  isPdf ? ( <iframe src={`${selectedMd.startsWith('/') ? '' : '/'}${selectedMd}#view=FitH`} className="w-full h-[88vh] rounded-xl border border-[#30363d]" /> ) : (
-                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-24">
-                      <Markdown remarkPlugins={[remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]} components={{ h2: ({children}) => <h2 id={cleanId(children?.toString() || "")}>{children}</h2> }}>{content}</Markdown>
+                  isPdf ? ( 
+                    <iframe 
+                      src={`${selectedMd.startsWith('/') ? '' : '/'}${selectedMd}#view=FitH`} 
+                      className="w-full h-[85vh] rounded-xl border border-[#30363d] z-10" 
+                    /> 
+                  ) : (
+                    <article className="prose prose-invert prose-purple max-w-none prose-headings:scroll-mt-24 relative z-10">
+                      <Markdown 
+                        remarkPlugins={[remarkGfm, remarkSlug]} 
+                        rehypePlugins={[rehypeRaw]} 
+                        components={{ 
+                          h2: ({children}) => <h2 id={cleanId(children?.toString() || "")} className="border-b border-[#30363d] pb-2">{children}</h2> 
+                        }}
+                      >
+                        {content}
+                      </Markdown>
                     </article>
                   )
-                ) : ( <div className="mt-20 text-center"><Lock className="w-10 h-10 mx-auto text-purple-400" /><h2 className="mt-4 font-bold text-white text-xl">Módulo no adquirido</h2></div> )
+                ) : ( 
+                  <div className="mt-20 text-center text-white">
+                    <Lock className="w-10 h-10 mx-auto text-purple-400" />
+                    <h2 className="mt-4 font-bold text-xl">Módulo no adquirido</h2>
+                  </div> 
+                )
               }
               </SignedIn>
-            ) : ( <div className="h-full flex flex-col items-center justify-center opacity-40"><Brain className="w-16 h-16 animate-pulse" /><h2 className="text-xl font-bold mt-4 text-white uppercase tracking-widest">Medpath</h2></div> )}
+            ) : ( 
+              <div className="h-[70vh] flex flex-col items-center justify-center opacity-40">
+                <Brain className="w-16 h-16 animate-pulse text-purple-500" />
+                <h2 className="text-xl font-bold mt-4 text-white uppercase tracking-widest">Medpath</h2>
+              </div> 
+            )}
           </div>
         </div>
       </main>
