@@ -93,66 +93,15 @@
 
 ## 👑 Neumonía Atípica por Coronavirus (COVID-19)
 > **Fuente:** Dr. Ricardo Juan Rey - Cap. 18
-
----
-
-### 📌 1. Epidemiología y Transmisión
-* **Incubación:** 2 a 9 días (media de 5 días).
-* **Transmisión:** Contacto estrecho por secreciones respiratorias, superficies contaminadas y, en menor medida, portadores asintomáticos.
-* **Factores de Importancia:** Contacto estrecho con casos confirmados, viajes a áreas de alta incidencia y trabajadores de la salud.
-
----
-
-### 🩺 2. Cuadro Clínico y Laboratorio
-#### Síntomas Frecuentes:
-- **Fiebre (83%)** y **Tos seca (82%)**.
-- Disnea (30%), malestar general, mialgias y cefalea.
-- **Anosmia y ageusia (30%)** (pérdida de olfato y gusto).
-- Síntomas digestivos (náuseas, vómitos, diarrea) y confusión mental en ancianos.
-
-#### Hallazgos de Laboratorio:
-- **Linfopenia** (característico).
-- Aumento de **LDH** (marcador de neumonía).
-- Elevación de transaminasas, **Dímero D** y productos de degradación del fibrinógeno (trastornos de coagulación).
-
----
-
-### 🧪 3. Diagnóstico y Seguimiento
-* **Confirmación:** PCR mediante hisopado nasal, faríngeo o test en saliva. Dosaje de anticuerpos IgM e IgG.
-* **Oximetría de pulso:** Herramienta clave para detectar **hipoxemia asintomática**. 
-    * *Criterio de internación:* Saturación **< 90%**.
-    * *Prueba de marcha:* Se considera significativa una caída > 3% tras caminar 40 pasos.
-* **Imágenes:**
-    * **Radiografía:** 20% desarrolla neumonía (infiltrados intersticiales bilaterales en **vidrio esmerilado**).
-    * **TAC de tórax:** Cortes finos para precisar la gravedad de la enfermedad.
-
----
-
-### 💊 4. Manejo y Tratamiento
-El tratamiento base es sintomático (paracetamol) y aislamiento estricto (10 días).
-
-#### Pacientes con Neumonía:
-- **Oxigenoterapia:** Reservorios de alta presión o BIPAP antes de requerir UTI.
-- **Dexametasona:** 6 mg/día por 10 días (beneficio demostrado).
-- **Remdesivir:** 200 mg IV (día 1) y luego 100 mg IV (días 2 a 5).
-- **Plasma/Suero Equino:** Útiles solo en estadios iniciales (no en distress consolidado).
-- **Ivermectina (En discusión):** 0,2 mg/kg (sin comorbilidades) o 0,6 mg/kg (con comorbilidades) por 5 días.
-
-> [!WARNING]
-> La **Hidroxicloroquina + Azitromicina** NO ha demostrado eficacia.
-
----
-
-### ⚠️ 5. Complicaciones Graves
-- **Tormenta de citoquinas:** Inflamación generalizada y fracaso multiorgánico.
-- **Microangiopatía trombótica:** Riesgo de IAM y ACV.
-- **Distress respiratorio del adulto:** 4% requiere ARM en UTI (mortalidad del 50% en esta unidad).
-
----
-
-### 💉 6. Prevención y Vacunación
-* **Medidas:** Distancia de 2 metros, ventilación, lavado de manos y uso de barbijo/máscaras.
-* **Vacunas:** Eficacia entre 75-90% (Pfizer, Moderna, Astra Zeneca, Sputnik V, Johnson & Johnson). La mayoría requiere dos dosis.
+| Patología / Virus | Características Clínicas y Diagnóstico | Manejo y Complicaciones |
+| :--- | :--- | :--- |
+| **SARS (SARS-CoV)** | Incubación 2-10 días. Fiebre alta, escalofríos, mialgias y cefalea. Tos no productiva con disnea progresiva. | **Mortalidad:** 3%. 10-20% requiere ARM. Lab: Linfocitopenia, leucopenia, CPK y transaminasas elevadas. |
+| **MERS-CoV** | Síndrome respiratorio de Oriente Medio. Brotes localizados con alta letalidad. | **Mortalidad:** Muy alta, calculada en un 34% de los casos. |
+| **COVID-19 (Clínica)** | Fiebre (83%), Tos seca (82%), Disnea (30%), Anosmia/Ageusia (30%). Confusión mental en ancianos. | **Severidad:** 20% desarrolla neumonía, 4% requiere UTI/ARM. Mortalidad global estimada: 1,7% a 2,8%. |
+| **COVID-19 (Lab/RX)** | **Lab:** Linfopenia, LDH/Dímero D elevados. **RX/TC:** Imágenes en "vidrio esmerilado" bilaterales y periféricas. | **Criterio de Internación:** SatO2 < 90% en reposo o caída > 3% tras ejercicio mínimo (test de marcha). |
+| **Tratamiento COVID-19** | **Sintomático:** Paracetamol. **Específico:** Dexametasona (6mg/día), Remdesivir, Ibuprofeno inhalatorio. | **No recomendados:** Hidroxicloroquina + Azitromicina. Ivermectina y Ac. Monoclonales (en discusión/protocolo). |
+| **Complicaciones Graves** | Falla multiorgánica por tormenta de citoquinas e inflamación generalizada. | Microangiopatía trombótica (IAM, ACV) y Distress Respiratorio del Adulto (SDRA). |
+| **Prevención** | Aislamiento (10 días), uso de barbijo, ventilación y distancia social (2m). | **Vacunas:** Pfizer, Moderna, AstraZeneca, Sputnik V, Johnson (eficacia 75-90%). |
 
 ## 🛡️ Neumonía en Inmunodeprimidos
 > **Fuente:** Dra. Diego Sánchez - Cap. 22
