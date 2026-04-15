@@ -74,3 +74,19 @@ Suele ocurrir en pacientes con:
 | **Estructurales / Congénitas** | Anomalías congénitas bronquiales, Impactación de moco, Síndrome de Kartagener, Fibrosis quística. |
 | **Obstructivas (Mismo Lóbulo)** | **Tumores:** Cáncer broncogénico, Carcinoide, Adenoma (cilindromas), Cáncer mucoepidermoide.<br>**Otros:** TBC/Micosis endobronquial, Sarcoidosis, Amiloidosis, Hamartomas, Leiomioma. |
 | **Linfáticas / Raras** | Enfermedad de Castleman, Granulomas de células plasmáticas, Granulomatosis broncocéntrica. |
+
+# 🏥 Neumonía Gravísima de la Comunidad (NAC Grave)
+
+> **Fuente:** Dra. Marisa Gutiérrez - Cap. 8
+
+| Categoría | Descripción y Hallazgos Clave |
+| :--- | :--- |
+| **Definición** | Cuadro grave que requiere admisión en **Terapia Intensiva (UTI)** y suele necesitar ARM. |
+| **Pronóstico** | Mortalidad del **20 al 50%**. Causas de muerte: Insuficiencia respiratoria, Shock refractario y Falla multiorgánica. |
+| **Etiología** | Agente no hallado en 40-70% de casos. Comunes: Neumococo, *H. influenzae*, *Klebsiella*, *Legionella*, *S. aureus*, *Pseudomona*. |
+| **Puntaje CURB-65** | **C**onfusión, **U**remia (>30 mg/dl), **R**espiración (>30 rpm), **B**aja presión (<90/60 mmHg), Edad (**65**+). **4+ puntos = UTI.** |
+| **Mal Pronóstico** | pH < 7.30, Infiltrados multilobares/bilaterales, $PaO_2$ < 54 mmHg, $PaO_2/FiO_2$ < 250, Trombocitopenia/Leucopenia e Hipotermia. |
+| **Diagnóstico** | Cultivo de esputo, Hemocultivos, BAL con endoscopía, Punción de derrame (descartar empiema). Antígenos urinarios (Legionella). |
+| **Tratamiento Empírico** | **Ceftazidime** (1g c/8h) + **Eritromicina** (500mg c/8h) + **Levofloxacina** (750mg/día). |
+| **Tratamiento SAMR** | Si se sospecha *Estafilococo aureus*: Agregar **Vancomicina + Rifampicina**. |
+| **Manejo en ARM** | Usar volúmenes corrientes bajos (**6 a 8 ml/kg**). Considerar hidrocortisona en dosis bajas por una semana. |
