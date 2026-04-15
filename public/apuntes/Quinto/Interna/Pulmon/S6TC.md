@@ -1,9 +1,9 @@
-# 🫁 Síndrome Cavitario Pulmonar
+## 🫁 Síndrome Cavitario Pulmonar
 > **Fuente:** Dra. Marisa Gutierrez - Capítulo 30
 
 ---
 
-## 📌 1. Definición y Conceptos Clave
+### 📌 1. Definición y Conceptos Clave
 Una **caverna** es un área rodeada de parénquima, generalmente redondeada, que mide $\approx 2 \text{ cm}$ de diámetro.
 
 - **Contenido:** Aire o nivel hidroaéreo (aire + líquido).
@@ -12,9 +12,9 @@ Una **caverna** es un área rodeada de parénquima, generalmente redondeada, que
 
 ---
 
-## 📊 2. Cuadros Resumen de Semiología
+### 📊 2. Cuadros Resumen de Semiología
 
-### 🔍 Hallazgos al Examen Físico
+#### 🔍 Hallazgos al Examen Físico
 | Técnica | Hallazgo Principal | Observaciones |
 | :--- | :--- | :--- |
 | **Inspección** | Retracción torácica | Menor expansión inspiratoria en bases/vértices. |
@@ -22,7 +22,7 @@ Una **caverna** es un área rodeada de parénquima, generalmente redondeada, que
 | **Percusión** | Matidez o Timpanismo | **Matidez:** por condensación vecina. <br> **Timpanismo:** si la caverna está grande y vacía. |
 | **Auscultación**| Tríada clásica | Soplo cavitario, estertores y broncofonía. |
 
-### 👂 La Tríada Auscultatoria
+#### 👂 La Tríada Auscultatoria
 | Elemento | Característica | Requisito / Nota |
 | :--- | :--- | :--- |
 | **Soplo Cavitario** | Anfórico e inspiratorio | Raro. Solo en cavidades **> 6 cm**. |
@@ -31,10 +31,9 @@ Una **caverna** es un área rodeada de parénquima, generalmente redondeada, que
 
 ---
 
-## 🧬 3. Etiología (Causas)
+### 🧬 3. Etiología (Causas)
 
-### 🏥 Cuadro Comparativo de Causas
-
+#### 🏥 Cuadro Comparativo de Causas
 | Etiología Infecciosa | Etiología NO Infecciosa |
 | :--- | :--- |
 | **Tuberculosis (TBC)** y Micobacteriosis | **Carcinoma Epidermoide** (necrosado) |
@@ -48,7 +47,7 @@ Una **caverna** es un área rodeada de parénquima, generalmente redondeada, que
 
 ---
 
-## 💡 4. Factores que Condicionan la Semiología
+### 💡 4. Factores que Condicionan la Semiología
 Para que una caverna "hable" al médico, dependen estos factores:
 1. **Tamaño:** $> 3 \text{ cm}$ para semiología general, $> 6 \text{ cm}$ para soplo.
 2. **Situación:** Debe ser superficial (cerca de la pared torácica).
@@ -56,17 +55,19 @@ Para que una caverna "hable" al médico, dependen estos factores:
 4. **Comunicación:** El bronquio debe estar permeable (no obstruido).
 5. **Contenido:** Si está llena de líquido, se comporta como un bloque sólido.
 
-# 🦠 Tuberculosis (TBC) - Síndrome Cavitario
+---
+
+## 🦠 Tuberculosis (TBC) - Síndrome Cavitario
 > **Fuente:** Dra. Marisa Gutierrez - Capítulo 30/31
 
 ---
 
-## 🔬 Microbiología y Fisiopatología
+### 🔬 Microbiología y Fisiopatología
 - **Agente:** *Mycobacterium tuberculosis complex* (M. tuberculosis, bovis, africanum).
 - **Características:** Bacilos aerobios, Ácido-Alcohol Resistentes (BAAR). Tinción: **Ziehl-Neelsen**.
 - **Vía de entrada:** Inhalación (gotitas de Flügge), ingesta de leche no pasteurizada (M. bovis) o cutánea (rara).
 
-### Proceso Infeccioso
+#### Proceso Infeccioso
 1. **Fagocitosis:** Macrófagos fagocitan el bacilo, pero este inhibe la fusión fagosoma-lisosoma.
 2. **Respuesta inmune:** Se activa a los 8 días (Linfocitos T CD4 y CD8).
 3. **Granuloma:** Centro de macrófagos rodeado de linfocitos T y B. Su objetivo es contener la infección.
@@ -74,127 +75,97 @@ Para que una caverna "hable" al médico, dependen estos factores:
 
 ---
 
-## 🏥 Cuadro Clínico y Sospecha
+### 🏥 Cuadro Clínico y Sospecha
 > **Regla de oro:** Sospechar TBC en todo paciente con **tos y expectoración > 2 semanas**.
 
-### Síntomas Principales
+#### Síntomas Principales
 - **Generales:** Astenia, adinamia, pérdida de peso.
 - **Específicos:** Tos, expectoración (posible hemoptisis), **febrícula vespertina** y **sudoración nocturna**.
 
 ---
 
-## 📐 Clasificación Clínica
-
+### 📐 Clasificación Clínica
 | Tipo | Descripción |
 | :--- | :--- |
 | **Primoinfección** | Primer contacto. Forma el **Complejo de Ghon** (lesión pulmonar + adenomegalia). |
 | **Extraprimaria** | Reinfección o reactivación (adulta). Típica **caverna tuberculosa** en vértices. |
 | **Miliar** | Diseminación hematógena. Rx: Nódulos grano de mijo. Cuadro grave, anemia, esplenomegalia. |
-| **Extrapulmonar** | Afecta otros órganos: Mal de Pott (columna), Ganglionar (escrófula), Renal (orina estéril), etc. |
+| **Extrapulmonar** | Afecta otros órganos: Mal de Pott, escrófula, Renal, etc. |
 
 ---
 
-## 🧪 Diagnóstico (Metodología)
+### 🧪 Diagnóstico (Metodología)
 
-### 1. Microbiología
+#### 1. Microbiología
 - **Baciloscopía:** Directa de esputo (Ziehl-Neelsen). Rápida pero baja sensibilidad.
-- **Cultivo:** *Lowenstein Jensen* (tarda >30 días) o automatizados (BACTEC/MGIT, tardan 15 días).
-- **Molecular (Gold Standard actual):** **XPERT MTB/RIF** (PCR que detecta ADN y resistencia a Rifampicina en <2h).
+- **Cultivo:** *Lowenstein Jensen* (tarda >30 días) o automatizados (BACTEC/MGIT, 15 días).
+- **Molecular:** **XPERT MTB/RIF** (PCR que detecta ADN y resistencia a Rifampicina).
 
-### 2. Inmunología
-- **PPD (Tuberculina):** Inyección intradérmica. Lectura a las 48h (induración, no eritema). 
-  - **(+) $\ge 10 \text{ mm}$** en población general.
-  - **(+) $\ge 5 \text{ mm}$** en HIV o inmunosuprimidos.
+#### 2. Inmunología
+- **PPD (Tuberculina):** Inyección intradérmica. Lectura a las 48h (induración). 
+  - **(+) $\ge 10 \text{ mm}$** en población general.
+  - **(+) $\ge 5 \text{ mm}$** en HIV o inmunosuprimidos.
 - **Quantiferón:** Mide Interferón gamma en sangre. No se altera por vacuna BCG.
 
-### 3. Imágenes
+#### 3. Imágenes
 - **Rx Tórax:** Cavidades apicales, fibrosis, nódulos miliares.
 - **TAC:** Mejor definición de extensión y ganglios.
 
 ---
 
-## 💊 Tratamiento Farmacológico
+### 💊 Tratamiento Farmacológico
 
-### Esquema Básico (6 meses)
+#### Esquema Básico (6 meses)
 1. **Fase Inicial (2 meses):** Isoniacida (H) + Rifampicina (R) + Pirazinamida (Z) + Etambutol (E).
 2. **Fase de Consolidación (4 meses):** Isoniacida + Rifampicina.
 
-### Resumen de Drogas de 1° Línea
+#### Resumen de Drogas de 1° Línea
 | Droga | Acción | Efecto Adverso Principal | Nota |
 | :--- | :--- | :--- | :--- |
-| **Isoniacida (H)** | Bactericida | **Hepatitis**, Neuropatía periférica | Dar con Vitamina B6 (Piridoxina). |
-| **Rifampicina (R)** | Bactericida | **Color naranja en orina/lágrimas**, Hepatitis | Controla adherencia. |
-| **Pirazinamida (Z)**| Bactericida | **Hiperuricemia (Gota)**, Hepatotoxicidad | Actúa en medio ácido. |
-| **Etambutol (E)** | Bacteriostático| **Neuritis óptica** (visión rojo/verde) | Requiere control oftalmológico. |
+| **Isoniacida (H)** | Bactericida | **Hepatitis**, Neuropatía periférica | Dar con Vitamina B6. |
+| **Rifampicina (R)** | Bactericida | **Color naranja en orina**, Hepatitis | Controla adherencia. |
+| **Pirazinamida (Z)**| Bactericida | **Hiperuricemia (Gota)**, Hepatotoxicidad | Medio ácido. |
+| **Etambutol (E)** | Bacteriostático| **Neuritis óptica** | Control oftalmológico. |
 
 ---
 
-## ⚠️ Resistencia y Toxicidad
-
+### ⚠️ Resistencia y Toxicidad
 - **Multirresistencia (MDR):** Resistencia a Isoniacida + Rifampicina.
 - **Extremadamente resistente (XDR):** MDR + resistencia a quinolonas e inyectables.
-- **Hepatitis Medicamentosa:** Suspender si transaminasas $> 5\times$ el valor normal o $> 3\times$ con síntomas.
-- **Tratamiento DOT:** Tratamiento directamente observado para asegurar adherencia y evitar resistencias.
-# 💧 Síndrome Cavitario: Micobacterias Ambientales (MA)
+- **Hepatitis Medicamentosa:** Suspender si transaminasas $> 5\times$ valor normal.
+
+---
+
+## 💧 Síndrome Cavitario: Micobacterias Ambientales (MA)
 > **Fuente:** Dra. Marisa Gutierrez - Capítulo 32
 
 ---
 
-## 📌 1. Conceptos Fundamentales
-Las **Micobacterias Ambientales** (también llamadas Atípicas o No tuberculosas) se encuentran en agua y suelo.
-
-* **Transmisión:** Desde el ambiente al huésped.
+### 📌 1. Conceptos Fundamentales
+Las **Micobacterias Ambientales** se encuentran en agua y suelo.
 * **Contagio:** 🚫 **No hay contagio interhumano**.
-* **Salud Pública:** No son de denuncia obligatoria ni requieren control de contactos.
-* **Morfología:** Son Bacilos Ácido-Alcohol Resistentes (**BAAR**) indistinguibles del Bacilo de Koch en tinción (Z. Neelsen). **El cultivo es mandatorio para especie.**
+* **Salud Pública:** No son de denuncia obligatoria.
+* **Morfología:** BAAR indistinguibles del bacilo de Koch (Z. Neelsen). **Cultivo mandatorio**.
 
 ---
 
-## 🔬 2. Diagnóstico Diferencial con TBC
-Es crucial distinguir entre infección, enfermedad y colonización:
-
+### 🔬 2. Diagnóstico Diferencial con TBC
 | Característica | *M. tuberculosis* | Micobacterias Ambientales |
 | :--- | :--- | :--- |
 | **Colonización** | No existe. | **Frecuente.** |
-| **Criterio de tto** | 1 sola colonia en cultivo = Tratamiento. | Requiere repetir muestras para jerarquizar. |
-| **Denuncia** | Obligatoria. | No obligatoria. |
+| **Criterio de tto** | 1 colonia = Tratamiento. | Requiere repetir muestras para jerarquizar. |
 | **Contagio** | Persona a persona. | Desde el ambiente. |
 
 ---
 
-## 🧬 3. Principales Especies y Clínica
-### Especies más comunes:
-- *M. avium complex* (MAC: *avium* e *intracellulare*) → **La más frecuente.**
-- *M. kansasii*, *M. fortuitum*, *M. abscessus*, *M. xenopi*, *M. zulgai*.
-
-### Huésped Susceptible:
-Principalmente pacientes con compromiso inmunológico o estructural:
-* **HIV (+):** Especialmente con **CD4 < 100** (riesgo de enfermedad diseminada).
-* **Inmunodepresión:** Cáncer, corticoides, quimioterapia, diabetes.
-* **Daño Pulmonar Previo:** Fibrosis quística, fumadores, bronquiectasias.
-
-### Cuadro Clínico e Imágenes:
-- **Síntomas:** Tos crónica, expectoración, astenia, pérdida de peso, febrícula y hemoptisis.
-- **Radiología:** Lesiones cavitadas en campos superiores o nódulos con bronquiectasias.
+### 🧬 3. Principales Especies y Clínica
+- **Especie común:** *M. avium complex* (MAC).
+- **Huésped:** HIV con **CD4 < 100**, cáncer, EPOC, fibrosis quística.
+- **Imágenes:** Lesiones cavitadas superiores o nódulos con bronquiectasias.
 
 ---
 
-## 💊 4. Tratamiento (*M. avium complex*)
-El manejo es complejo por la toxicidad de las drogas y debe ser realizado por especialistas.
-
-### Esquema Clásico:
-1.  **Eje central:** Macrólidos (**Claritromicina** o Azitromicina).
-2.  **Acompañamiento:** Rifampicina + Etambutol (o Moxifloxacina como alternativa al Etambutol).
-
-### Duración y Pronóstico:
-- **Tiempo:** Generalmente hasta **1 año después** de la negativización del último cultivo.
-- **Evolución:** Las recaídas y reinfecciones son frecuentes.
-
----
-
-## 📒 Cuadro Resumen de Diagnóstico
-| Método | Resultado / Utilidad |
-| :--- | :--- |
-| **Baciloscopía** | Positiva para BAAR (no distingue especie). |
-| **Cultivo** | **Indispensable.** Define morfología y pruebas bioquímicas. |
-| **Nuevas muestras** | Obligatorias si da (+) para MA para descartar colonización. |
+### 💊 4. Tratamiento (*M. avium complex*)
+1.  **Eje:** Macrólidos (**Claritromicina** o Azitromicina).
+2.  **Acompañamiento:** Rifampicina + Etambutol.
+- **Tiempo:** Generalmente hasta **1 año después** de la negativización del cultivo.
