@@ -4,8 +4,6 @@
 
 ## 📌 1. Generalidades y Clasificación
 * Definición: Inflamación del parénquima pulmonar por un agente infeccioso.
-* **NAC (Extrahospitalaria):** Se adquiere en el entorno cotidiano.
-* **NIH (Intrahospitalaria):** Aparece **> 48 horas** post-ingreso. Peor pronóstico.
 * **Mecanismo:** Inhalación y microaspiración de secreciones orofaríngeas colonizadas.
 * **Dato clave:** El 2% de las NAC ocultan un **Cáncer de Pulmón**.
 
@@ -13,13 +11,13 @@
 
 | Ámbito de Adquisición | Subtipos / Categorías |
 | :--- | :--- |
-| **NEUMONÍA EXTRAHOSPITALARIA (NAC)** <br> (Adquirida en la comunidad) | • Neumonía típica <br> • Neumonía atípica <br> • Neumonía del paciente con EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunosuprimido |
-| **NEUMONÍA INTRAHOSPITALARIA (NIH)** <br> (Nosocomial) | • Neumonía típica <br> • Neumonía atípica (muy rara) <br> • Neumonía del EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunocomprometido |
+| **NEUMONÍA EXTRAHOSPITALARIA (NAC)** <br> (Adquirida en la comunidad) 85% de los casos: Streptococo pneumoniae | • Neumonía típica <br> • Neumonía atípica <br> • Neumonía del paciente con EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunosuprimido |
+| **NEUMONÍA INTRAHOSPITALARIA (NIH)** <br> (Nosocomial) Aparece **> 48 horas** post-ingreso. Peor pronóstico. | • Neumonía típica <br> • Neumonía atípica (muy rara) <br> • Neumonía del EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunocomprometido |
 
 ---
 
-## 🦠 2. Neumonía Típica (Streptococo pneumoniae)
-Es el patógeno más frecuente (85%). 
+## 🦠 2. Neumonía Típica 
+Streptococo pneumoniae: Es el patógeno más frecuente (85%). 
 - **Fisiopatología:** Provee un exudado alveolar que pasa por fases de **Hepatización Roja** (eritrocitos) y **Gris** (leucocitos). 
 - **Mecanismo de daño:** Usa **neumolisina** para matar células alveolares tipo II e invadir el intersticio.
 
