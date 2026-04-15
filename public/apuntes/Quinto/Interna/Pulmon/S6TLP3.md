@@ -76,7 +76,6 @@ Suele ocurrir en pacientes con:
 | **Linfáticas / Raras** | Enfermedad de Castleman, Granulomas de células plasmáticas, Granulomatosis broncocéntrica. |
 
 ## 🏥 Neumonía Gravísima de la Comunidad (NAC Grave)
-
 > **Fuente:** Dra. Marisa Gutiérrez - Cap. 8
 
 | Categoría | Descripción y Hallazgos Clave |
@@ -84,31 +83,8 @@ Suele ocurrir en pacientes con:
 | **Definición** | Cuadro grave que requiere admisión en **Terapia Intensiva (UTI)** y suele necesitar ARM. |
 | **Pronóstico** | Mortalidad del **20 al 50%**. Causas de muerte: Insuficiencia respiratoria, Shock refractario y Falla multiorgánica. |
 | **Etiología** | Agente no hallado en 40-70% de casos. Comunes: Neumococo, *H. influenzae*, *Klebsiella*, *Legionella*, *S. aureus*, *Pseudomona*. |
-| **Puntaje CURB-65** | **C**onfusión, **U**remia (>30 mg/dl), **R**espiración (>30 rpm), **B**aja presión (<90/60 mmHg), Edad (**65**+). **4+ puntos = UTI.** |
-| **Mal Pronóstico** | 1-	pH menor de 7,30
-2-	TA sistólica menor de 90 mmHG
-3-	Confusión mental
-4-	Uremia mayor de 30 mg/dl
-5-	Frecuencia respiratoria mayor de 30
-6-	Infiltrados pulmonares multilobares o bilaterales
-7-	PaO2 menor de 54 mmHg
-8-	PaO2/FIO2 menor de 250
-9-	Edad mayor de 70 años
-10-	Taquicardia mayor de 110 por minuto
-11-	Trombocitopenia y leucopenia
-12-	Hipotermia |
-| **Diagnóstico** | Para aislar el germen recurrimos a:
-1-	Cultivo de esputo
-2-	Hemocultivos
-3-	Lavado broncoalveolar con endoscopía
-4-	Toma de muestra con endoscopio con cepillo envainado
-5-	Punción de derrame pleural para descartar empiema
-
-Se deben solicitar en todos los casos
-1-	Antígeno urinario para Legionella
-2-	Serologías para Micoplasma y Clamidias
-3-	Antígenos de Influenza A o B mediante hisopado o aspirado nasofaríngeo.
- Dx diferencial:zoonosis (psitacosis, fiebre Q, meliodosis, carbunco, peste, tularemia. ) |
-| **Tratamiento Empírico** | **Ceftazidime** (1g c/8h) + **Eritromicina** (500mg c/8h) + **Levofloxacina** (750mg/día). |
-| **Tratamiento SAMR** | Si se sospecha *Estafilococo aureus*: Agregar **Vancomicina + Rifampicina**. |
-| **Manejo en ARM** | Usar volúmenes corrientes bajos (**6 a 8 ml/kg**). Considerar hidrocortisona en dosis bajas por una semana. |
+| **CURB-65** | **C**onfusión, **U**remia (>30 mg/dl), **R**espiración (>30 rpm), **B**aja presión (<90/60 mmHg), Edad (**65**+). **4+ puntos = UTI.** |
+| **Mal Pronóstico** | pH < 7.30; TAS < 90 mmHg; Confusión mental; Uremia > 30 mg/dl; FR > 30; Infiltrados multilobares/bilaterales; $PaO_2$ < 54; $PaO_2/FiO_2$ < 250; Edad > 70 años; Taquicardia > 110; Trombocitopenia/Leucopenia e Hipotermia. |
+| **Diagnóstico** | **Aislamiento:** Cultivo de esputo, Hemocultivos, BAL, Cepillado envainado y Punción pleural (empiema).<br>**Obligatorios:** Ag urinario (Legionella), Serologías (Micoplasma/Clamidias), Ag Influenza A/B (Hisopado).<br>**Dx diferencial:** Zoonosis (Psitacosis, Fiebre Q, Meliodosis, Carbunco, Peste, Tularemia). |
+| **Tratamiento** | **Empírico:** Ceftazidime (1g c/8h) + Eritromicina (500mg c/8h) + Levofloxacina (750mg/día).<br>**SAMR:** Agregar Vancomicina + Rifampicina. |
+| **Manejo en ARM** | Volúmenes corrientes bajos (**6 a 8 ml/kg**). Considerar hidrocortisona en dosis bajas por una semana para modular linfoquinas. |
