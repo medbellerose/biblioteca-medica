@@ -53,24 +53,21 @@ Es fundamental recordar que en adultos mayores el cuadro suele ser **insidioso**
 - **Estado Neurológico:** La encefalopatía puede deberse a la **hipoxemia** o a la propia **sepsis**.
 - **Lóbulo Medio:** Recordar que solo se detecta semiológicamente por la cara **anterior** del tórax.
 ---
+## 🔬 Metodología de estudio
 
-## 📊 4. Criterios de Internación (Grupo II)
-Se debe internar si presenta cualquiera de los siguientes:
-
-### A. Factores del Paciente
-- Edad $> 65$ años.
-- Comorbilidades: EPOC, Diabetes, Insuficiencia Renal/Cardíaca, Alcoholismo.
-- Aspecto social: Vive solo, bajo nivel de alarma.
-
-### B. Alteraciones Fisiológicas y Laboratorio
-- **FR > 30 vpm** / **Saturación < 90%** (PaO2 < 60 mmHg).
-- **Hipotensión:** TAS < 90 o TAD < 60 mmHg.
-- **Laboratorio:** Leucopenia (< 4.000) o Leucocitosis (> 30.000). Creatinina > 1.2 mg/dl.
-- **Radiología:** Afectación de > 1 lóbulo, cavitación o derrame pleural.
+| Categoría | Detalles, Hallazgos y Parámetros Críticos |
+| :--- | :--- |
+| **Radiografía (Rx)** | Consolidación lobar/segmentaria, broncograma aéreo y signo de la silueta. Control evolutivo a las **3 semanas** (la mejora radiológica es más lenta que la clínica). |
+| **Laboratorio** | Leucocitosis con desviación a la izquierda (neutrofilia). LDH levemente elevada. Antígeno en orina (ELISA): +80% en bacteremia y +65% en neumonía sin bacteremia. |
+| **Muestra de Esputo** | **Criterio de calidad:** >25 PMN y <10 células epiteliales. Sensibilidad de antígeno: 63-94%. Suele ser negativo en el 50% de los casos. |
+| **Hemocultivos** | **Obligatorio:** 3 muestras en neumonía típica. 30% de positividad indica sepsis y peor pronóstico (requiere ecocardiograma para descartar endocarditis). |
+| **Resistencia (CIM)** | **Moderada:** 0,1 a 1 µg/ml. **Alta:** > 2 µg/ml. Se debe medir en toda muestra positiva para Neumococo. |
+| **Epidemiología** | Resistencia a penicilina: Argentina (15%), EE.UU. (25%), Brasil y España (30%). Común en niños (serotipos 6A, 6B, 14, 9V, 23F, 19A). |
+| **Tratamiento Cepas R** | Ante resistencia a penicilinas/cefalosporinas: se prefiere **Levofloxacina**. También se puede usar **Vancomicina**. |
 
 ---
 
-## 💊 5. Tratamiento Empírico
+## 💊 Tratamiento Empírico
 
 | Grupo | Perfil | Esquema Sugerido |
 | :--- | :--- | :--- |
@@ -79,15 +76,6 @@ Se debe internar si presenta cualquiera de los siguientes:
 
 - **Duración:** 7 a 14 días.
 - **Rotación a VO:** A partir del 5to día si hay buena tolerancia y evolución.
-
----
-
-## 🔬 6. Diagnóstico y Seguimiento
-1. **Rx Tórax:** Consolidación con **Broncograma aéreo** y Signo de la silueta.
-2. **Laboratorio:** Leucocitosis con desviación a la izquierda.
-3. **Bacteriología:** - **Esputo:** Debe tener $> 25$ PMN y $< 10$ células epiteliales para ser válido.
-   - **Hemocultivos:** Positivos en el 30% (indican sepsis/peor pronóstico).
-   - **Antígeno en Orina:** Útil si el paciente ya tomó antibióticos (Sens: 80% en bacteremia).
 
 ---
 
