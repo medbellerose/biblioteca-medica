@@ -91,7 +91,7 @@
 | **Tratamiento** | **No hay tratamiento específico.** Si el paciente supera la fase crítica, la restitución del parénquima pulmonar es *ad integrum*. |
 | **Diag. Diferencial** | Leptospirosis, fiebres hemorrágicas (arenavirus, flavivirus) y paludismo. |
 
-## 👑 Neumonía Atípica por Coronavirus (COVID-19)
+## 👑 Neumonía Atípica por Coronavirus
 > **Fuente:** Dr. Ricardo Juan Rey - Cap. 18
 
 | Patología / Virus | Características Clínicas y Diagnóstico | Manejo y Complicaciones |
