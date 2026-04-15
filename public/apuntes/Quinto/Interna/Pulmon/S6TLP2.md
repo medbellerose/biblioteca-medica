@@ -4,32 +4,39 @@
 ---
 
 ### 📌 Características Generales
-Se define por la **disociación clínico-radiológica**:
-* **Clínica:** Cuadro gripal (mialgias, cefalea, fiebre sin escalofríos) y tos mucoide (clara y adherente).
-* **Examen Físico:** No hay síndrome de condensación; solo se auscultan **crepitantes** (afectación intersticial).
-* **Radiografía:** Imágenes radiopacas subsegmentarias múltiples de aspecto intersticial (**"vidrio esmerilado"**), predominio en bases.
-
+| Categoría | Características y Hallazgos |
+| :--- | :--- |
+| **Definición Clave** | Se caracteriza por la **disociación clínico-radiológica** (los síntomas no coinciden con la gravedad aparente en imágenes). |
+| **Clínica (Síntomas)** | Tos mucoide (clara, viscosa), mialgias, artralgias, cefalea y **fiebre sin escalofríos**. Simula un cuadro gripal. |
+| **Examen Físico** | **No hay síndrome de condensación**. Solo se auscultan crepitantes en la zona afectada (compromiso del intersticio). |
+| **Radiografía (Rx)** | Sin signos de consolidación. Imágenes radiopacas subsegmentarias múltiples de **aspecto intersticial** ("vidrio esmerilado"). Lesiones uni o bilaterales, predominan en las bases. |
+| **Agentes Causales** | **Bacterias/Otros:** *Micoplasma pneumoniae*, *Clamidiae pneumoniae*, *Clamidia psitacci*, *Coxiella burnetti* (Fiebre Q), *Legionella*. <br> **Otros:** Virus y, ocasionalmente, Hongos. |
 ---
 
 ### 🧬 Neumonías Bacterianas Atípicas
 
 #### 1. Mycoplasma pneumoniae
-Responsable del 10-35% de las NAC. Común en jóvenes y ancianos.
-* **Peculiaridades:** Traqueobronquitis (dolor retrosternal), faringitis, otitis y **miringitis** (inflamación del tímpano).
-* **Laboratorio:** Eritrosedimentación acelerada, anemia hemolítica por **crioaglutininas** (anticuerpos fríos).
-* **Diagnóstico:** ELISA o PCR.
-* **Tratamiento:** Macrólidos (Claritromicina/Roxitromicina) o Doxiciclina por 14 días.
+| Categoría | Detalles y Hallazgos Específicos |
+| :--- | :--- |
+| **Epidemiología** | Responsable del 10 al 35% de las neumonías de la comunidad. Afecta principalmente a jóvenes y ancianos. |
+| **Clínica Peculiar** | Dolor retrosternal (traqueobronquitis), faringitis, rinitis, **otitis y miringitis** (inflamación del tímpano). Posible broncoespasmo asmatiforme. |
+| **Laboratorio** | Eritrosedimentación acelerada, leve leucocitosis (sin neutrofilia). **Anemia hemolítica** por crioaglutininas (anticuerpos fríos). |
+| **Diagnóstico** | PCR (sangre, esputo, líq. pleural). Serología (ELISA, aglutinación). La fijación del complemento suele dar diagnóstico retrospectivo. |
+| **Complicaciones** | Derrame pleural serofibrinoso. Graves: CID, Raynaud, hepatitis, eritema multiforme, SIADH, pericarditis, Guillain-Barré, mielitis transversa. |
+| **Tratamiento** | **Macrólidos (1ra línea):** Roxitromicina 150mg/8h o Claritromicina 500mg/8h (v.o.). <br> **Alternativas:** Doxiciclina 100mg/12h o fluoroquinolonas. |
+| **Pronóstico** | Baja mortalidad (0,1%). Solo el 2% requiere hospitalización. Duración mínima del tratamiento: **14 días**. |
 
-#### 2. Chlamydia pneumoniae
-Bacteria Gram-negativa intracelular.
-* **Clínica:** Similar al neumococo pero puede ser más severa. Riesgo de bronquiolitis obliterante.
-* **Tratamiento:** Macrólidos o tetraciclinas.
-
-#### 3. Chlamydia psittaci (Psitacosis)
-Zoonosis transmitida por **aves** (loros, palomas) por inhalación de heces/secreciones.
-* **Clínica:** Fiebre tifoidea-like en casos graves (cianosis, encefalopatía, diarrea). Puede haber hepato/esplenomegalia.
-* **Imagen:** Neumonía radiológica sin correlato semiológico claro.
-* **Tratamiento:** Tetraciclinas (2-3 g/día) por **3 semanas**.
+#### 2. Chlamydia pneumoniae y psittaci (Psitacosis)
+| Característica | Neumonía por *Chlamydia pneumoniae* | Neumonía por *Chlamydia psittaci* (Psitacosis) |
+| :--- | :--- | :--- |
+| **Naturaleza** | Bacteria Gram-negativa, intracelular obligatoria. (3 al 22% de NAC). | Zoonosis transmitida por aves (loros, pájaros silvestres, palomas). |
+| **Transmisión** | Epidemias estacionales (humano a humano). | Inhalación de heces o secreciones nasales de aves infectadas. |
+| **Cuadro Clínico** | Similar a *S. pneumoniae* pero a veces más severo. Puede causar bronquiolitis obliterante. | Fiebre, escalofríos, gran decaimiento, tos seca/penosa (puede ser hemoptoica). Simula fiebre tifoidea. |
+| **Examen Físico** | Hallazgos de neumonía típica o atípica según severidad. | Sin consolidación, algunos crepitantes locales. Puede haber **hepato y/o esplenomegalia**. |
+| **Radiología** | Cuadro similar al neumococo; puede requerir hospitalización. | Opacidad extendida e insospechada. "Neumonía radiológica sin neumonía semiológica". |
+| **Diagnóstico** | Fijación del complemento, Microinmunofluorescencia, ELISA o PCR (sangre, esputo, líq. pleural). | Serología, PCR de esputo o inmunofluorescencia directa para anticuerpos. |
+| **Tratamiento** | **Macrólidos** (Roxitromicina, Claritromicina) o **Tetraciclinas** (Doxiciclina). | **Tetraciclinas** (2-3 g/día) por 3 semanas. Casos severos: asociar Macrólidos y Levofloxacina. |
+| **Evolución** | Variable según el estado del paciente. | Mejora en 3-4 días con tto, pero la astenia persiste por muchas semanas. |
 
 #### 4. Legionella (Enfermedad de los Legionarios)
 Bacteria Gram-negativa asociada a agua estancada, refrigeradores y nebulizadores.
