@@ -97,7 +97,18 @@ Suele ocurrir en pacientes con:
 10-	Taquicardia mayor de 110 por minuto
 11-	Trombocitopenia y leucopenia
 12-	Hipotermia |
-| **Diagnóstico** | Cultivo de esputo, Hemocultivos, BAL con endoscopía, Punción de derrame (descartar empiema). Antígenos urinarios (Legionella). Dx diferencial:zoonosis (psitacosis, fiebre Q, meliodosis, carbunco, peste, tularemia. ) |
+| **Diagnóstico** | Para aislar el germen recurrimos a:
+1-	Cultivo de esputo
+2-	Hemocultivos
+3-	Lavado broncoalveolar con endoscopía
+4-	Toma de muestra con endoscopio con cepillo envainado
+5-	Punción de derrame pleural para descartar empiema
+
+Se deben solicitar en todos los casos
+1-	Antígeno urinario para Legionella
+2-	Serologías para Micoplasma y Clamidias
+3-	Antígenos de Influenza A o B mediante hisopado o aspirado nasofaríngeo.
+ Dx diferencial:zoonosis (psitacosis, fiebre Q, meliodosis, carbunco, peste, tularemia. ) |
 | **Tratamiento Empírico** | **Ceftazidime** (1g c/8h) + **Eritromicina** (500mg c/8h) + **Levofloxacina** (750mg/día). |
 | **Tratamiento SAMR** | Si se sospecha *Estafilococo aureus*: Agregar **Vancomicina + Rifampicina**. |
 | **Manejo en ARM** | Usar volúmenes corrientes bajos (**6 a 8 ml/kg**). Considerar hidrocortisona en dosis bajas por una semana. |
