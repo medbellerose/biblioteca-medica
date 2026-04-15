@@ -1,15 +1,20 @@
 # 🫁 Neumonía Adquirida en la Comunidad (NAC)
 > **Fuente:** Dr. Martín Bertini / Dr. Roberto Miguel - Cap. 15 y 16
-
 ---
 
 ## 📌 1. Generalidades y Clasificación
-La neumonía es la inflamación del parénquima pulmonar por un agente infeccioso.
-
+* Definición: Inflamación del parénquima pulmonar por un agente infeccioso.
 * **NAC (Extrahospitalaria):** Se adquiere en el entorno cotidiano.
 * **NIH (Intrahospitalaria):** Aparece **> 48 horas** post-ingreso. Peor pronóstico.
 * **Mecanismo:** Inhalación y microaspiración de secreciones orofaríngeas colonizadas.
 * **Dato clave:** El 2% de las NAC ocultan un **Cáncer de Pulmón**.
+
+### 📊 Cuadro Resumen de Clasificación
+
+| Ámbito de Adquisición | Subtipos / Categorías |
+| :--- | :--- |
+| **NEUMONÍA EXTRAHOSPITALARIA (NAC)** <br> (Adquirida en la comunidad) | • Neumonía típica <br> • Neumonía atípica <br> • Neumonía del paciente con EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunosuprimido |
+| **NEUMONÍA INTRAHOSPITALARIA (NIH)** <br> (Nosocomial) | • Neumonía típica <br> • Neumonía atípica (muy rara) <br> • Neumonía del EPOC <br> • Neumonía aspirativa <br> • Neumonía del inmunocomprometido |
 
 ---
 
@@ -89,84 +94,5 @@ Se debe internar si presenta cualquiera de los siguientes:
 - **PNEUMOVAX 23:** Protege contra 23 serotipos (eficacia 65-85%).
 - **Indicación:** Mayores de 65 años o adultos con comorbilidades (EPOC, HIV, esplenectomizados).
 
-## 🤒 Neumonía Extrahospitalaria Atípica
-> **Fuente:** Dra. Patricia Romero - Cap. 17
 
----
-
-### 📌 Características Generales
-Se define por la **disociación clínico-radiológica**:
-* **Clínica:** Cuadro gripal (mialgias, cefalea, fiebre sin escalofríos) y tos mucoide (clara y adherente).
-* **Examen Físico:** No hay síndrome de condensación; solo se auscultan **crepitantes** (afectación intersticial).
-* **Radiografía:** Imágenes radiopacas subsegmentarias múltiples de aspecto intersticial (**"vidrio esmerilado"**), predominio en bases.
-
----
-
-### 🧬 Neumonías Bacterianas Atípicas
-
-#### 1. Mycoplasma pneumoniae
-Responsable del 10-35% de las NAC. Común en jóvenes y ancianos.
-* **Peculiaridades:** Traqueobronquitis (dolor retrosternal), faringitis, otitis y **miringitis** (inflamación del tímpano).
-* **Laboratorio:** Eritrosedimentación acelerada, anemia hemolítica por **crioaglutininas** (anticuerpos fríos).
-* **Diagnóstico:** ELISA o PCR.
-* **Tratamiento:** Macrólidos (Claritromicina/Roxitromicina) o Doxiciclina por 14 días.
-
-#### 2. Chlamydia pneumoniae
-Bacteria Gram-negativa intracelular.
-* **Clínica:** Similar al neumococo pero puede ser más severa. Riesgo de bronquiolitis obliterante.
-* **Tratamiento:** Macrólidos o tetraciclinas.
-
-#### 3. Chlamydia psittaci (Psitacosis)
-Zoonosis transmitida por **aves** (loros, palomas) por inhalación de heces/secreciones.
-* **Clínica:** Fiebre tifoidea-like en casos graves (cianosis, encefalopatía, diarrea). Puede haber hepato/esplenomegalia.
-* **Imagen:** Neumonía radiológica sin correlato semiológico claro.
-* **Tratamiento:** Tetraciclinas (2-3 g/día) por **3 semanas**.
-
-#### 4. Legionella (Enfermedad de los Legionarios)
-Bacteria Gram-negativa asociada a agua estancada, refrigeradores y nebulizadores.
-* **Clínica:** Cuadro grave con fiebre muy alta (40°C), **hiponatremia dilucional** (por SIADH), diarrea acuosa y confusión mental.
-* **Laboratorio:** Hipofosfatemia, azoemia y transaminasas elevadas.
-* **Diagnóstico:** Antígeno urinario para Legionella.
-* **Tratamiento:** Triple esquema: Eritromicina IV + Doxiciclina + Levofloxacina.
-
-#### 5. Coxiella burnetii (Fiebre Q)
-Transmitida por ganado (vacuno, ovino, caprino) durante la parición (leche, placenta).
-* **Clínica:** Neumonía, hepatitis granulomatosa o endocarditis.
-* **Tratamiento:** Doxiciclina + Rifampicina + Macrólidos.
-
----
-
-### 🍄 Neumonía por Histoplasma
-Se presenta como neumonía atípica con **adenopatías hiliares/mediastinales**.
-* **Secuelas:** Calcificaciones en pulmón, ganglios, hígado y bazo.
-* **Tratamiento:** Itraconazol.
-
----
-
-### 👾 Neumonías Virales
-Suelen ser insidiosas, con febrícula, fotofobia y tos no productiva.
-
-#### Influenza (A y B)
-* **Tipo A:** Principal causa en adultos (invierno).
-* **Variante H1N1:** Sintomatología digestiva, **LDH > 1000 UI/l**, aumento de CPK y linfopenia.
-* **Tratamiento:** Oseltamivir 75 mg (2 veces/día) por 7-10 días.
-
-#### Otros Virus específicos
-* **Sincitial Respiratorio:** Alta mortalidad en bebés de 3-4 meses. Tratamiento: Ribavirina aerosolizada.
-* **Varicela-Zóster:** Grave en adultos jóvenes. Tratamiento: Aciclovir IV.
-
----
-
-### 🐁 Neumonía por Hantavirus
-Transmitido por excrementos de ratón. En el sur de Argentina (Andes) hay transmisión interhumana.
-* **Clínica:** Gripe con dolor abdominal y **ausencia de signos de vía aérea superior** (dato clave).
-* **Evolución:** Rápida hacia el **Distress Respiratorio** con alta mortalidad.
-* **Laboratorio:** Hematocrito aumentado, plaquetopenia y linfocitos atípicos.
-* **Tratamiento:** No hay específico.
-
----
-
-### 👑 Coronavirus (SARS / MERS)
-* **SARS:** Neumonía no productiva con disnea progresiva e imágenes distressiformes. Mortalidad 3%.
-* **MERS (Oriente Medio):** Muy alta mortalidad (34%).
 
