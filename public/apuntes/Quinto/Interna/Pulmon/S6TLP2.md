@@ -93,14 +93,15 @@
 
 ## 👑 Neumonía Atípica por Coronavirus (COVID-19)
 > **Fuente:** Dr. Ricardo Juan Rey - Cap. 18
-| Patología | Clínica y Diagnóstico | Manejo y Tratamiento |
+| Patología / Virus | Características Clínicas y Diagnóstico | Manejo y Complicaciones |
 | :--- | :--- | :--- |
-| **SARS-CoV** | Incubación 2-10 días. Fiebre alta, mialgias, disnea progresiva. Linfopenia y CPK alta. | Mortalidad 3%. 10-20% requiere ARM. |
-| **MERS-CoV** | Síndrome respiratorio de Oriente Medio. Muy letal. | Mortalidad elevada (~34%). |
-| **COVID-19** | Fiebre (83%), tos seca, disnea, anosmia/ageusia. Confusión en ancianos. | 20% neumonía, 4% UTI. Mortalidad 1.7-2.8%. |
-| **Hallazgos** | **RX/TC:** Vidrio esmerilado bilateral. **Lab:** Linfopenia, LDH y Dímero D elevados. | **Internar si:** SatO2 < 90% o caída > 3% en test de marcha. |
-| **Fármacos** | Dexametasona (6mg/d), Remdesivir, Ibuprofeno inhalatorio. | **No usar:** Hidroxicloroquina o Ivermectina. |
-| **Riesgos** | Tormenta de citoquinas, microangiopatía (IAM/ACV) y Distress (SDRA). | **Prevención:** Vacunas (Pfizer, Spuntik, etc.), barbijo y distancia. |
+| **SARS (SARS-CoV)** | Incubación 2-10 días. Fiebre alta, escalofríos, mialgias y cefalea. Tos no productiva con disnea progresiva. | **Mortalidad:** 3%. 10-20% requiere ARM. Lab: Linfocitopenia, leucopenia, CPK y transaminasas elevadas. |
+| **MERS-CoV** | Síndrome respiratorio de Oriente Medio. Brotes localizados con alta letalidad. | **Mortalidad:** Muy alta, calculada en un 34% de los casos. |
+| **COVID-19 (Clínica)** | Fiebre (83%), Tos seca (82%), Disnea (30%), Anosmia/Ageusia (30%). Confusión mental en ancianos. | **Severidad:** 20% desarrolla neumonía, 4% requiere UTI/ARM. Mortalidad global estimada: 1,7% a 2,8%. |
+| **COVID-19 (Lab/RX)** | **Lab:** Linfopenia, LDH/Dímero D elevados. **RX/TC:** Imágenes en "vidrio esmerilado" bilaterales y periféricas. | **Criterio de Internación:** SatO2 < 90% en reposo o caída > 3% tras ejercicio mínimo (test de marcha). |
+| **Tratamiento COVID-19** | **Sintomático:** Paracetamol. **Específico:** Dexametasona (6mg/día), Remdesivir, Ibuprofeno inhalatorio. | **No recomendados:** Hidroxicloroquina + Azitromicina. Ivermectina y Ac. Monoclonales (en discusión/protocolo). |
+| **Complicaciones Graves** | Falla multiorgánica por tormenta de citoquinas e inflamación generalizada. | Microangiopatía trombótica (IAM, ACV) y Distress Respiratorio del Adulto (SDRA). |
+| **Prevención** | Aislamiento (10 días), uso de barbijo, ventilación y distancia social (2m). | **Vacunas:** Pfizer, Moderna, AstraZeneca, Sputnik V, Johnson (eficacia 75-90%). |
 
 ## 🛡️ Neumonía en Inmunodeprimidos
 > **Fuente:** Dra. Diego Sánchez - Cap. 22
