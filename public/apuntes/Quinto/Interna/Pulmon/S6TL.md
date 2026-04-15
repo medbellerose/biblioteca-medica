@@ -2,7 +2,7 @@
 > **Fuente:** Dr. Martín Bertini / Dr. Roberto Miguel - Cap. 15 y 16
 ---
 
-## 📌 1. Generalidades y Clasificación
+## 📌 Generalidades y Clasificación
 * Definición: Inflamación del parénquima pulmonar por un agente infeccioso.
 * **Mecanismo:** Inhalación y microaspiración de secreciones orofaríngeas colonizadas.
 * **Dato clave:** El 2% de las NAC ocultan un **Cáncer de Pulmón**.
@@ -16,7 +16,7 @@
 
 ---
 
-## 🦠 2. Neumonía Típica 
+## 🦠 Neumonía Típica 
 Streptococo pneumoniae: Es el patógeno más frecuente (85%). 
 - **Fisiopatología:** Provee un exudado alveolar que pasa por fases de **Hepatización Roja** (eritrocitos) y **Gris** (leucocitos). 
 - **Mecanismo de daño:** Usa **neumolisina** para matar células alveolares tipo II e invadir el intersticio.
@@ -90,7 +90,7 @@ Es fundamental recordar que en adultos mayores el cuadro suele ser **insidioso**
 
 ---
 
-## 💉 8. Prevención: Vacunas
+## 💉 Prevención: Vacunas
 | Categoría | Grupos de Riesgo (Indicaciones) | Características de las Vacunas |
 | :--- | :--- | :--- |
 | **Población General y Patologías** | Mayores de **65 años**, adultos con EPOC, enfermedades cardiovasculares avanzadas, Diabetes, Alcoholismo, Cirrosis e Insuficiencia Renal Crónica. | **Esquema Secuencial (EE.UU.):** Se recomienda aplicar **PREVNAR 13** y, al año siguiente, la **PNEUMOVAX 23** para máxima protección. |
