@@ -85,7 +85,18 @@ Suele ocurrir en pacientes con:
 | **Pronóstico** | Mortalidad del **20 al 50%**. Causas de muerte: Insuficiencia respiratoria, Shock refractario y Falla multiorgánica. |
 | **Etiología** | Agente no hallado en 40-70% de casos. Comunes: Neumococo, *H. influenzae*, *Klebsiella*, *Legionella*, *S. aureus*, *Pseudomona*. |
 | **Puntaje CURB-65** | **C**onfusión, **U**remia (>30 mg/dl), **R**espiración (>30 rpm), **B**aja presión (<90/60 mmHg), Edad (**65**+). **4+ puntos = UTI.** |
-| **Mal Pronóstico** | pH < 7.30, Infiltrados multilobares/bilaterales, $PaO_2$ < 54 mmHg, $PaO_2/FiO_2$ < 250, Trombocitopenia/Leucopenia e Hipotermia. |
+| **Mal Pronóstico** | 1-	pH menor de 7,30
+2-	TA sistólica menor de 90 mmHG
+3-	Confusión mental
+4-	Uremia mayor de 30 mg/dl
+5-	Frecuencia respiratoria mayor de 30
+6-	Infiltrados pulmonares multilobares o bilaterales
+7-	PaO2 menor de 54 mmHg
+8-	PaO2/FIO2 menor de 250
+9-	Edad mayor de 70 años
+10-	Taquicardia mayor de 110 por minuto
+11-	Trombocitopenia y leucopenia
+12-	Hipotermia |
 | **Diagnóstico** | Cultivo de esputo, Hemocultivos, BAL con endoscopía, Punción de derrame (descartar empiema). Antígenos urinarios (Legionella). Dx diferencial:zoonosis (psitacosis, fiebre Q, meliodosis, carbunco, peste, tularemia. ) |
 | **Tratamiento Empírico** | **Ceftazidime** (1g c/8h) + **Eritromicina** (500mg c/8h) + **Levofloxacina** (750mg/día). |
 | **Tratamiento SAMR** | Si se sospecha *Estafilococo aureus*: Agregar **Vancomicina + Rifampicina**. |
