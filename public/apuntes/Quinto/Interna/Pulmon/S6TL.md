@@ -69,15 +69,13 @@ Es fundamental recordar que en adultos mayores el cuadro suele ser **insidioso**
 
 ## 💊 Tratamiento Empírico
 
-| Grupo | Perfil | Esquema Sugerido |
+| Grupo de Paciente | Perfil y Criterios de Riesgo | Esquema Terapéutico (Tratamiento) |
 | :--- | :--- | :--- |
-| **I (Ambulatorio)** | < 60 años, sin comorbilidades. | Amoxicilina 1g c/8h o Levofloxacina. |
-| **II (Internado)** | > 60 años o comorbilidades. | **Ceftriaxona (IV) + Claritromicina (VO)** o Levofloxacina 750mg. |
-
-- **Duración:** 7 a 14 días.
-- **Rotación a VO:** A partir del 5to día si hay buena tolerancia y evolución.
-
----
+| **GRUPO I (Ambulatorio)** | < 60 años, sin enfermedades asociadas, buen estado general y nivel de alarma. Baja mortalidad (1-5%). | **Opción A:** Amoxicilina 1g/8h (v.o.). <br> **Opción B:** Ceftriaxona 1g/12h (IM). <br> **Opción C:** Levofloxacina 400mg/día (v.o.). <br> *Duración: 14 días. Alérgicos: Macrólidos o Levofloxacina.* |
+| **GRUPO II (Internación)** | > 60 años, con comorbilidades o repercusión clínica moderada. Mortalidad 5-25%. | **Vía Inicial:** Intravenosa (IV). <br> **Opción A:** Ceftriaxona 1g/12h (IV) + Claritromicina 500mg/12h (v.o.). <br> **Opción B:** Amoxi+Clavulánico 1g/8h (IV) + Claritromicina 500mg/12h (v.o.). <br> **Opción C:** Levofloxacina 750mg/día (v.o.). |
+| **Indicaciones de Internación (Comorbilidades)** | EPOC, Diabetes, Insuficiencia Renal/Cardíaca, Daño Hepático, Alcoholismo, Inmunosupresión, Esplenectomía, Neoplasia. | **Factores Sociales:** Bajo nivel de alarma, dificultad económica, falta de cuidados en el hogar o vive solo. |
+| **Criterios de Gravedad (Fisiológicos/Lab)** | FR > 30/min, PA < 90/60 mmHg, Temp > 38°C, Alteración de conciencia, Metástasis sépticas. | **Laboratorio/RX:** Leucopenia (<4k) o Leucocitosis (>30k), $PaO_2$ < 60, Creatinina > 1.2, Hto < 30%. Afectación multilobar o cavitación. |
+| **Sospecha de Sepsis** | Trombocitopenia, aumento de TP (Quick) y KPTT, aumento de PDF, acidosis metabólica. | Requiere manejo hospitalario inmediato y monitoreo estricto de la función orgánica. |
 
 ## ⚠️ 7. Complicaciones y Diagnóstico Diferencial
 - **Derrame Paraneumónico:** Exudado común. **Si el pH < 7.15 o es purulento, es un Empiema** y requiere tubo de drenaje.
