@@ -21,20 +21,37 @@ Streptococo pneumoniae: Es el patógeno más frecuente (85%).
 - **Fisiopatología:** Provee un exudado alveolar que pasa por fases de **Hepatización Roja** (eritrocitos) y **Gris** (leucocitos). 
 - **Mecanismo de daño:** Usa **neumolisina** para matar células alveolares tipo II e invadir el intersticio.
 
+### 📊 Factores de riesgo (mal pronóstico):
+
+| Categoría | Factores de Riesgo / Hallazgos |
+| :--- | :--- |
+| **Parámetros Clínicos** | • Fiebre **> 38.5°C** <br> • Hipoxemia severa (**pO2 < 50 mmHg**) |
+| **Estado Inmunológico** | • **Inmunodepresión** <br> • Bacteremia (diseminación hematógena) |
+| **Antecedentes y Edad** | • Edad **> 65 años** <br> • Hospitalización reciente |
+| **Comorbilidades** | • Diabetes mellitus <br> • Insuficiencia Renal <br> • Insuficiencia Cardíaca |
+
+### 👴 La Neumonía en el Anciano
+Es fundamental recordar que en adultos mayores el cuadro suele ser **insidioso** (no presenta la tríada clásica de forma clara).
+* **Signos de alerta:** Trastornos del sensorio (confusión), hipotermia y evolución rápida al shock.
+
 ---
 
-## 🩺 3. Semiología del Síndrome de Condensación
-| Técnica | Hallazgo en Neumonía Típica |
-| :--- | :--- |
-| **Inspección** | Taquipnea, taquicardia, posible herpes labial. |
-| **Palpación** | **Vibraciones Vocales (VV) Aumentadas**. |
-| **Percusión** | **Matidez** en la zona del block (Columna sonora). |
-| **Auscultación**| **Crepitantes** (inicio/fin) y **Soplo Tubario** (periodo de estado). |
-| **Voz** | Pectoriloquia y Pectoriloquia áfona. |
+### 📊 Cuadro del Examen Físico (Semiología)
 
-> [!NOTE]
-> En el **Lóbulo Medio**, la semiología solo es detectable por la cara **anterior** del tórax.
+| Técnica Semiológica | Hallazgos Característicos | Observaciones |
+| :--- | :--- | :--- |
+| **Signos Vitales** | Taquicardia y Taquipnea | Indican respuesta sistémica y esfuerzo respiratorio. |
+| **Inspección** | **Herpes labial** | Frecuente coexistencia durante el episodio. |
+| **Inspección Dinámica**| ↓ Excursión respiratoria | Debido al dolor pleurítico (puntada de costado). |
+| **Palpación** | **VV Aumentadas** | Específicamente en la zona del block neumónico. |
+| **Percusión** | **Mate** | Sobre el block. La **columna es sonora**. |
+| **Auscultación (I)** | Crepitantes | Inspiratorios, presentes al inicio y al final. |
+| **Auscultación (II)** | **Soplo Tubario** | Aparece en el periodo de estado (reemplaza al MV). |
+| **Auscultación (III)** | Pectoriloquia áfona | Percepción clara de la voz cuchicheada. |
 
+- **Signos de Insuficiencia:** Buscar activamente uso de músculos accesorios y cianosis.
+- **Estado Neurológico:** La encefalopatía puede deberse a la **hipoxemia** o a la propia **sepsis**.
+- **Lóbulo Medio:** Recordar que solo se detecta semiológicamente por la cara **anterior** del tórax.
 ---
 
 ## 📊 4. Criterios de Internación (Grupo II)
