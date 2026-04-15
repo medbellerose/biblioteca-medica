@@ -77,23 +77,26 @@ Es fundamental recordar que en adultos mayores el cuadro suele ser **insidioso**
 | **Criterios de Gravedad (Fisiológicos/Lab)** | FR > 30/min, PA < 90/60 mmHg, Temp > 38°C, Alteración de conciencia, Metástasis sépticas. | **Laboratorio/RX:** Leucopenia (<4k) o Leucocitosis (>30k), PaO2 < 60 PCO2 >50, Creatinina > 1.2, NU >20, Hto < 30%, Hb <9. Afectación multilobar o cavitación. |
 | **Sospecha de Sepsis** | Trombocitopenia, aumento de TP (Quick) y KPTT, aumento de PDF, acidosis metabólica. | Requiere manejo hospitalario inmediato y monitoreo estricto de la función orgánica. |
 
-## ⚠️ 7. Complicaciones y Diagnóstico Diferencial
-- **Derrame Paraneumónico:** Exudado común. **Si el pH < 7.15 o es purulento, es un Empiema** y requiere tubo de drenaje.
-- **Absceso Pulmonar:** 6% de los casos.
-- **Falla terapéutica:** Evaluar a las 72hs. Si no mejora, sospechar patógeno no cubierto, empiema o causa no infecciosa (TEP, Vasculitis).
-
-### Diagnóstico Diferencial (Imagen Alveolar No Neumónica):
-- Edema agudo de pulmón (EAP).
-- Hemorragia alveolar.
-- Infarto pulmonar (TEP).
-- Carcinoma broncoalveolar.
+## Evolución
+| Categoría | Parámetros y Signos de Evolución | Complicaciones y Consideraciones Médicas |
+| :--- | :--- | :--- |
+| **Duración del Tratamiento** | **14 días** (pacientes internados/comorbilidades). **7 días** en bajo riesgo con buena evolución. | Rotación a vía oral tras 5 días si hay estabilidad clínica y buena tolerancia digestiva. |
+| **Signos de Buena Evolución** | Fiebre cae (día 2-4), leucocitos normalizan (día 4). Rx puede tardar **un mes** en normalizarse. | No modificar antibiótico antes de las **72 horas** a menos que haya deterioro significativo. |
+| **Falla Terapéutica** | **Precoz:** < 72 hs sin respuesta. <br> **Tardía:** > 72 hs con deterioro tras mejora inicial. | Causas: Empiema, patógeno no cubierto, resistencia, causas no infecciosas (TEP, vasculitis) o sepsis. |
+| **Empiema Pleural** | Sospechar si no hay mejora. Líquido purulento/verdoso. **pH < 7,15 y glucosa baja**. | Requiere **tubo de drenaje pleural** y TC de tórax para evaluar progresión mediastinal. |
+| **Derrame Paraneumónico** | Casi siempre presente (pleuritis serofibrinosa). Genera dolor tipo **puntada de costado**. | Es un exudado. Generalmente no se punza y desaparece solo con el antibiótico. |
+| **Complicaciones Extra-pulmonares** | Pericarditis (4-20%), Meningitis (2%), Endocarditis (6%), Artritis/Osteomielitis (<1%). | La presencia de sepsis por Neumococo con hemocultivos positivos implica mayor gravedad. |
+| **Métodos de Diagnóstico Invasivo** | **Fibrobroncoscopia (BAL):** Sensibilidad 86-100%. <br> **Aspiración Percutánea:** Efectiva en bloques consolidados. | **Biopsia por toracoscopía:** Para bacteriología y anatomía patológica. TC/Angiografía para descarte diferencial. |
 
 ---
 
 ## 💉 8. Prevención: Vacunas
-- **PREVNAR 13:** Protege contra 13 serotipos.
-- **PNEUMOVAX 23:** Protege contra 23 serotipos (eficacia 65-85%).
-- **Indicación:** Mayores de 65 años o adultos con comorbilidades (EPOC, HIV, esplenectomizados).
+| Categoría | Grupos de Riesgo (Indicaciones) | Características de las Vacunas |
+| :--- | :--- | :--- |
+| **Población General y Patologías** | Mayores de **65 años**, adultos con EPOC, enfermedades cardiovasculares avanzadas, Diabetes, Alcoholismo, Cirrosis e Insuficiencia Renal Crónica. | **Esquema Secuencial (EE.UU.):** Se recomienda aplicar **PREVNAR 13** y, al año siguiente, la **PNEUMOVAX 23** para máxima protección. |
+| **Inmunocomprometidos** | Disfunción esplénica, esplenectomizados, HIV, trasplantes de órganos, Mieloma Múltiple, Linfoma y Enfermedad de Hodgkin. | Los inmunodeprimidos pueden presentar una respuesta inmune menor a la vacunación. |
+| **PREVNAR 13 (Conjugada)** | Cubre **13 serotipos**. Uso en adultos > 18 años y niños (6 semanas a 5 años). Dosis: 0,5 ml intramuscular. | **Efectos Adversos:** Fatiga, cefalea, mialgias/artralgias, fiebre, vómitos, rash, disminución del apetito. |
+| **PNEUMOVAX 23 (Polisacárida)** | Cubre **23 serotipos**. Uso en adultos > 50 años y niños > 2 años. Dosis única (IM o Subcutánea). **Eficacia: 65-85%**. | **Efectos Adversos:** Dolor e induración en sitio de aplicación, cefalea, astenia, fatiga y mialgias. |
 
 
 
