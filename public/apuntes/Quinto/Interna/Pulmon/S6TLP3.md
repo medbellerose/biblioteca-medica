@@ -75,7 +75,7 @@ Suele ocurrir en pacientes con:
 | **Obstructivas (Mismo Lóbulo)** | **Tumores:** Cáncer broncogénico, Carcinoide, Adenoma (cilindromas), Cáncer mucoepidermoide.<br>**Otros:** TBC/Micosis endobronquial, Sarcoidosis, Amiloidosis, Hamartomas, Leiomioma. |
 | **Linfáticas / Raras** | Enfermedad de Castleman, Granulomas de células plasmáticas, Granulomatosis broncocéntrica. |
 
-# 🏥 Neumonía Gravísima de la Comunidad (NAC Grave)
+## 🏥 Neumonía Gravísima de la Comunidad (NAC Grave)
 
 > **Fuente:** Dra. Marisa Gutiérrez - Cap. 8
 
