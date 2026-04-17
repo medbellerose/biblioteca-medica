@@ -1,38 +1,66 @@
 # 🫁 SEMIOLOGÍA Y DIAGNÓSTICO RESPIRATORIO 
 
-## 1. Síntomas Cardinales y Fisiopatología
+# 🫁 CAPÍTULO 1: DISNEA - Semiología Médica
 
-### 🏃‍♂️ Disnea
-Sensación subjetiva de falta de aire. Se produce por una desproporción entre el impulso respiratorio y la respuesta ventilatoria.
-* **Tipos específicos:**
-    * **Ortopnea:** Al estar acostado; mejora al sentarse (típica de IC, EPOC, Asma).
-    * **Trepopnea:** Disnea que aparece solo en un determinado decúbito lateral.
-    * **Platipnea:** Aparece al adoptar la posición de pie (bipedestación).
-    * **Disnea Paroxística Nocturna (DPN):** Despertar brusco tras 2-3h de sueño; puede haber expectoración serosa asalmonada por edema.
-* **Índice de Diferenciación (IDD):** Se calcula como `(Pico Flujo x PaO2) / 1000`. Si el resultado es > 13 es de causa cardíaca; si es < 13 es respiratoria.
-* **Péptido Natriurético (PPNA):** Si es > 400 pg/ml es cardíaco; < 100 pg/ml es respiratorio.
+## 1. DEFINICIÓN Y FISIOPATOLOGÍA
+La disnea es la **percepción subjetiva de dificultad para respirar** (sensación de falta de aire o de ahogo) que solo se experimenta estando despierto.
+
+### ⚙️ Mecanismo Generador
+Se genera por una desproporción entre el impulso respiratorio central y la respuesta mecánica ventilatoria.
+* **Integración Central:** Depende de los centros bulbo-protuberanciales, el control cortical y los quimiorreceptores (sensibles a variaciones de PaO2 y PaCO2).
+* **Mecanorreceptores:** Ubicados en la vía aérea, pulmón y pared torácica.
+* **Receptores C y J:** Se estimulan con el edema intersticial y alveolar (típico del Edema Agudo de Pulmón) e inducen disnea a través del vago.
+* **Fatiga Muscular:** Las enfermedades neuromusculares producen un desequilibrio neuromecánico que deriva en disnea.
 
 ---
 
-## ⚡ CAUSAS DE DISNEA AGUDA
+## 2. CLASIFICACIÓN SEGÚN EL TIEMPO
 
-| Tipo de Falla | Causas del Texto | ¿Qué está pasando? |
-| :--- | :--- | :--- |
-| **1. "Espacio"** | Neumotórax / D. pleural / Atelectasia | Algo (aire o agua) ocupa el lugar del pulmón y lo aplasta. |
-| **2. "Bomba/Tubería"** | IC Descompensada / Arritmias | El corazón no mueve la sangre o el ritmo es caótico. |
-| **3. "Filtro"** | TEP (Tromboembolismo) | Un coágulo tapa el paso de sangre hacia el pulmón. |
-| **4. "Tubo de aire"** | Asma / EPOC | Los bronquios se cierran (broncoespasmo). |
-| **5. "Tejido"** | Neumonía / SDRA / Hemorragia | El alveolo se llena de pus, agua o sangre. |
+### ⚡ Disnea Aguda (Aparición en pocas horas)
+* Neumotórax.
+* Tromboembolismo pulmonar (TEP).
+* Insuficiencia cardíaca descompensada (Edema agudo de pulmón).
+* Crisis asmática / Descompensación de EPOC.
+* Neumonía.
+* Arritmias o Sepsis.
+
+### 🐢 Disnea Crónica
+* **Causas Respiratorias:** Asma, EPOC, fibrosis quística, neoplasias pulmonares, enfermedad neuromuscular, cifoscoliosis severa.
+* **Causas Cardíacas:** Insuficiencia cardíaca izquierda, miocardiopatías, valvulopatías, cardiopatía isquémica.
+* **Otras:** Anemia, hipertiroidismo, acidosis metabólica, reflujo gastroesofágico o causa psicógena (ansiedad).
+
 ---
 
-## ⏳ CAUSAS DE DISNEA CRÓNICA RESPIRATORIAS
+## 3. VARIANTES CLÍNICAS Y POSICIONALES
+* **Ortopnea:** Disnea que aparece al adoptar el decúbito supino y obliga al paciente a usar varias almohadas o sentarse. Típica de la **IC izquierda**.
+* **Trepopnea:** Disnea que ocurre en decúbito lateral (izquierdo o derecho). Se da en patologías pulmonares con compromiso de un solo lado.
+* **Platipnea:** Disnea que aparece al ponerse de pie y mejora al acostarse. Asociada a deficiencia de la musculatura abdominal.
+* **Disnea Paroxística Nocturna (DPN):** El paciente despierta angustiado con falta de aire horas después de dormirse; suele sentarse al borde de la cama o abrir ventanas para respirar.
+* **Equivalente Anginoso:** Episodios de disnea que se producen por isquemia miocárdica en lugar del dolor de pecho típico.
 
-| Mecanismo fisiopatológico | Qué ocurre | Enfermedades |
-| :--- | :--- | :--- |
-| **1️⃣ Obstrucción al flujo de aire** | Aumenta la resistencia de la vía aérea → el aire entra con dificultad | Asma, Enfermedad pulmonar obstructiva crónica, Fibrosis quística, oclusión de vía aérea superior |
-| **2️⃣ Pulmón rígido o alteración del parénquima** | Disminuye la distensibilidad pulmonar o la superficie de intercambio gaseoso | Enfermedad pulmonar intersticial (EPIC), neumonías crónicas, neoplasias pulmonares o pleurales, linfangitis pulmonar, enfermedad pulmonar laboral |
-| **3️⃣ Alteración de la circulación pulmonar** | El problema está en el flujo sanguíneo pulmonar → mala perfusión o intercambio | Hipertensión pulmonar, Tromboembolismo pulmonar crónico, malformaciones arteriovenosas pulmonares, vasculitis pulmonares |
-| **4️⃣ Limitación mecánica ventilatoria** | El pulmón podría funcionar, pero el sistema respiratorio no puede expandirse adecuadamente | enfermedad neuromuscular, cifoescoliosis severa |
+---
+
+## 4. METODOLOGÍA DE ESTUDIO
+
+### 📊 Clasificación del Grado de Disnea
+* **Grado I:** Disnea a grandes esfuerzos.
+* **Grado II:** Disnea a medianos esfuerzos.
+* **Grado III:** Disnea al efectuar actividades ordinarias hogareñas.
+* **Grado IV:** Disnea de reposo.
+
+### 🔬 Laboratorio y Diferenciación
+* **IDD (Índice de Diferenciación de la Disnea):** `(Pico flujo ml/seg x PaO2) / 1000`. Si es menor de 13, sugiere causa respiratoria.
+* **BNP (Factor Natriurético):**
+    * `< 100 pg/ml`: Excluye falla cardíaca.
+    * `> 400 pg/ml`: Confirma insuficiencia cardíaca.
+* **Estudios Complementarios:** Rx de tórax, ECG, Ecocardiograma, Espirometría y TAC.
+
+---
+
+## 5. PRUEBAS DE ESFUERZO Y TRATAMIENTO
+* **Umbral Anaerobio:** Nivel de ejercicio donde el músculo usa energía obtenida por catabolismo de glucosa (lactato). Está disminuido en cardiópatas.
+* **Prueba de la Marcha:** Test de 6 a 12 minutos para valorar la capacidad funcional y oxigenación.
+* **Tratamiento Paliativo:** En pacientes terminales, la **morfina** disminuye eficazmente la percepción de la disnea.
 
 ---
 
