@@ -48,7 +48,7 @@ Reintentar con mejor ángulo o por la otra fosa
 
 👉 “Recto hacia atrás, bien lubricado y sin forzar”
 
-##🩺 ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
+## 🩺 ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
 👄 PILARES DEL PALADAR
 
 👉 Se organizan en 2 pares (a cada lado):
@@ -137,8 +137,8 @@ Más estímulo directo sobre epiglotis
 👉 Macintosh = valécula (IX)
 👉 Miller = epiglotis (X) → más vagal
 
-🫁 #SISTEMAS DE OXÍGENO SUPLEMENTARIO
-🔵 ##CLASIFICACIÓN GENERAL
+ # 🫁 SISTEMAS DE OXÍGENO SUPLEMENTARIO
+ ## 🔵 CLASIFICACIÓN GENERAL
 
 👉 Se dividen en:
 
