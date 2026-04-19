@@ -48,7 +48,7 @@ Reintentar con mejor ángulo o por la otra fosa
 
 👉 “Recto hacia atrás, bien lubricado y sin forzar”
 
-🩺 ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
+##🩺 ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
 👄 PILARES DEL PALADAR
 
 👉 Se organizan en 2 pares (a cada lado):
@@ -136,3 +136,108 @@ Más estímulo directo sobre epiglotis
 👉 Espacio retrofaríngeo = peligro de obstrucción
 👉 Macintosh = valécula (IX)
 👉 Miller = epiglotis (X) → más vagal
+
+🫁 #SISTEMAS DE OXÍGENO SUPLEMENTARIO
+🔵 ##CLASIFICACIÓN GENERAL
+
+👉 Se dividen en:
+
+1. 🟡 Sistemas de BAJO flujo
+Cánula nasal
+Máscara facial simple
+Máscara con bolsa reservorio
+
+📌 Característica clave:
+👉 ❗ FIO₂ VARIABLE
+
+2. 🔴 Sistemas de ALTO flujo
+
+📌 Característica clave:
+👉 ✅ FIO₂ CONSTANTE
+
+🧠 ¿POR QUÉ LOS DE BAJO FLUJO SON VARIABLES?
+
+👉 Porque:
+
+El flujo del dispositivo NO cubre toda la demanda del paciente
+
+😮‍💨 Entonces el paciente:
+
+Inhala O₂ del dispositivo ➕ aire ambiente
+📊 LA FIO₂ DEPENDE DE:
+📦 Tamaño del reservorio
+🚰 Velocidad de llenado
+😮‍💨 Demanda ventilatoria del paciente
+🔴 SISTEMAS DE ALTO FLUJO
+
+👉 Logran FIO₂ constante porque:
+
+💨 El flujo supera la demanda inspiratoria
+o
+⚙️ Mezclan aire + O₂ en proporción fija
+🟡 DISPOSITIVOS DE BAJO FLUJO
+👃 1. CÁNULA NASAL
+📌 Características
+✔️ Bien tolerada 👍
+✔️ Permite hablar, comer
+
+📍 Funciona como reservorio:
+
+Nasofaringe + orofaringe (~50 ml)
+⚙️ Flujo y FIO₂
+1–6 L/min
+FIO₂ aprox: 24–44%
+
+🚫 >6 L/min:
+
+❌ No aumenta FIO₂
+😖 Disminuye tolerancia
+🧰 Equipamiento
+Fuente de O₂
+Flujímetro
+Cánula nasal
+⚠️ Consideraciones
+👃 Fosas nasales permeables
+😌 Evaluar confort del paciente
+😷 2. MÁSCARA FACIAL SIMPLE
+📌 Características
+Reservorio: 100–200 ml
+Orificios laterales:
+Eliminan CO₂
+Permiten entrada de aire ambiente
+⚙️ Flujo y FIO₂
+🔽 Mínimo: 5 L/min
+❗ Evita reinhalación de CO₂
+🔼 Óptimo: 5–8 L/min
+FIO₂ hasta ~60%
+
+🚫 >8 L/min:
+
+❌ No aumenta FIO₂
+⚠️ Consideraciones
+Ajuste laxo
+👀 Evitar irritación ocular (posición correcta)
+😷💨 3. MÁSCARA CON BOLSA RESERVORIO
+📌 Características
+Reservorio grande:
+📦 600–1000 ml
+
+👉 Mayor aporte de O₂
+
+🔄 Tipos
+1. 🔸 Reinhalación parcial
+Permite inhalar parte del aire exhalado
+2. 🔹 No reinhalación (con válvula unidireccional)
+🚫 No entra aire ambiente
+🚫 No reinhala CO₂
+
+👉 🔥 Mayor FIO₂ posible dentro de bajo flujo
+
+💡 RESUMEN ULTRA RÁPIDO
+
+👉 Bajo flujo = ❗FIO₂ VARIABLE
+👉 Alto flujo = ✅FIO₂ CONSTANTE
+
+👉 Cánula: cómoda 😌 pero limitada
+👉 Máscara simple: ↑ FIO₂ moderado
+👉 Reservorio: ↑↑ FIO₂ (mejor opción en hipoxia)
