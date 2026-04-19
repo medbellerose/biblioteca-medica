@@ -99,8 +99,8 @@
         ]
       },
       {
-        "name": "TERAPEUTICA",
-        "topics": [{ "label": "Trastornos del Humor", "file": "Quinto/Terapeutica/C1ATBP1.md", "keywords": ["antibiotico", "lactamico", "glucopeptido", "penicilina"] }]
+        "name": "SIMULACIÓN",
+        "topics": [{ "label": "Ventilación y Sondas", "file": "Quinto/Simulacion/Ventilacion.md", "keywords": ["antibiotico", "lactamico", "glucopeptido", "penicilina"] }]
       }
     ]
   }
