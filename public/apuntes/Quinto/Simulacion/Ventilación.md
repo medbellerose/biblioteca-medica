@@ -241,3 +241,93 @@ Permite inhalar parte del aire exhalado
 👉 Cánula: cómoda 😌 pero limitada
 👉 Máscara simple: ↑ FIO₂ moderado
 👉 Reservorio: ↑↑ FIO₂ (mejor opción en hipoxia)
+
+## 🔴 DISPOSITIVO DE ALTO FLUJO: MÁSCARA DE VENTURI
+
+---
+
+### 🫁 ¿QUÉ LA HACE DIFERENTE?
+
+👉 Es un sistema de **ALTO FLUJO**
+
+📌 Característica clave:
+👉 ✅ **Entrega FIO₂ CONSTANTE**
+(independiente del patrón respiratorio)
+
+---
+
+### 🧠 PRINCIPIO FÍSICO: BERNOULLI
+
+P + 1/2 ρv² + ρgh = constante
+
+---
+
+### 💡 ¿Cómo funciona en la práctica?
+
+1. 💨 El O₂ pasa por un **orificio estrecho (jet)**
+2. 🚀 Aumenta su **velocidad**
+3. 📉 Disminuye la **presión lateral**
+4. 🌬️ Se “aspira” aire ambiente hacia el sistema
+5. ➕ Se mezcla O₂ + aire → flujo total alto
+
+---
+
+### ⚙️ RESULTADO FINAL
+
+👉 Se genera:
+- 💨 **Flujo total elevado**
+- 🎯 **FIO₂ fija y precisa**
+
+---
+
+### 📊 ¿DE QUÉ DEPENDE LA FIO₂?
+
+👉 En Venturi es **predecible** porque:
+
+- Existe una relación fija entre:
+  - 🚰 Flujo de O₂
+  - 🔘 Tamaño del orificio (adaptador de color)
+  - 🌬️ Aire ambiente entrante
+
+👉 💡 Cada adaptador entrega una **FIO₂ específica** (ej: 24%, 28%, 35%, etc.)
+
+---
+
+### 🔥 CLAVE FISIOLÓGICA
+
+👉 El sistema debe generar:
+
+📈 **3–4 veces la ventilación minuto del paciente**
+
+👉 Así logra:
+- Cubrir TODA la demanda inspiratoria
+- 🚫 Evitar entrada de aire ambiente extra
+- ✅ Mantener FIO₂ constante
+
+---
+
+### ⚠️ IMPORTANCIA CLÍNICA
+
+👉 Ideal en pacientes donde necesitas **control preciso de FIO₂**:
+- EPOC (muy preguntado 👀)
+- Insuficiencia respiratoria controlada
+
+---
+
+## 🧰 OTROS DISPOSITIVOS DE ALTO FLUJO
+
+- 🌫️ Máscaras para **aerosolterapia**
+- 🔄 **Collar de traqueostomía**
+- 🔧 **Tubo en T**
+
+👉 Todos permiten:
+- Aporte de O₂ humidificado
+- FIO₂ más controlada que bajo flujo
+
+---
+
+## 💡 RESUMEN ULTRA RÁPIDO
+
+👉 Venturi = 🎯 **precisión**  
+👉 Bernoulli = 💨 ↑ velocidad → ↓ presión → entra aire  
+👉 Flujo alto = cubre demanda → FIO₂ constante  
