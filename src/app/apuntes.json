@@ -100,7 +100,7 @@
       },
       {
         "name": "SIMULACIÓN",
-        "topics": [{ "label": "Ventilación y Sondas", "file": "Quinto/Simulacion/Ventilacion.md", "keywords": ["antibiotico", "lactamico", "glucopeptido", "penicilina"] }]
+        "topics": [{ "label": "Ventilación y Sondas", "file": "Quinto/Simulacion/ventilacion.md", "keywords": ["antibiotico", "lactamico", "glucopeptido", "penicilina"] }]
       }
     ]
   }
