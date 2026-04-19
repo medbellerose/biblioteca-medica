@@ -1,7 +1,7 @@
-Cartílagos de la nariz pueden romperse si se introducen tubos tubos demasiado grandes 
-Lámina cribiforme al estar comprometida por traumas, deja expuesto organo, por lo tanto se contraindica introducción de sondas por nariz.
+- Cartílagos de la nariz pueden romperse si se introducen tubos tubos demasiado grandes 
+- Lámina cribiforme al estar comprometida por traumas, deja expuesto organo, por lo tanto se contraindica introducción de sondas por nariz.
 
-##🩺 COLOCACIÓN DE TUBOS NASALES (sonda / tubo nasotraqueal)
+## 🩺 COLOCACIÓN DE TUBOS NASALES (sonda / tubo nasotraqueal)
 ⚠️ ¿Por qué hay que tener cuidado?
 
 La nariz NO es un tubo recto 😅 → tiene cornetes y estructuras delicadas.
