@@ -1,141 +1,103 @@
-- Cartílagos de la nariz pueden romperse si se introducen tubos tubos demasiado grandes 
-- Lámina cribiforme al estar comprometida por traumas, deja expuesto organo, por lo tanto se contraindica introducción de sondas por nariz.
+# Información Clínica: Vía Aérea y Anatomía Aplicada
 
-## 🩺 COLOCACIÓN DE TUBOS NASALES (sonda / tubo nasotraqueal)
-⚠️ ¿Por qué hay que tener cuidado?
+## 1. CONSIDERACIONES PREVIAS Y CONTRAINDICACIONES
+- **Cartílagos de la nariz:** Pueden romperse si se introducen tubos demasiado grandes.
+- **Lámina cribiforme:** Al estar comprometida por traumas, deja expuesto el órgano; por lo tanto, se contraindica la introducción de sondas por la nariz.
 
-La nariz NO es un tubo recto 😅 → tiene cornetes y estructuras delicadas.
+---
 
-👉 Riesgos principales:
+## 2. COLOCACIÓN DE TUBOS NASALES (Sonda / Tubo Nasotraqueal)
 
-❌ Lesión de cornetes (sobre todo el inferior)
-🩸 Epistaxis (sangrado nasal)
-💥 Lesión de la arteria esfenopalatina → sangrado posterior importante
-🚫 Obstrucción de meatos
-🤧 Sinusitis por acumulación de secreciones
-✅ TÉCNICA CORRECTA (LO MÁS IMPORTANTE)
+### ⚠️ ¿Por qué hay que tener cuidado?
+La nariz **NO** es un tubo recto, tiene cornetes y estructuras delicadas.
 
-🧴 1. Lubricar MUY bien el tubo
+### 👉 Riesgos principales:
+- ❌ Lesión de cornetes (sobre todo el inferior).
+- 🩸 Epistaxis (sangrado nasal).
+- 💥 Lesión de la arteria esfenopalatina → sangrado posterior importante.
+- 🚫 Obstrucción de meatos.
+- 🤧 Sinusitis por acumulación de secreciones.
 
-📏 2. Dirección correcta
+### ✅ Técnica Correcta (Lo más importante)
+1. 🧴 **Lubricar MUY bien el tubo.**
+2. 📏 **Dirección correcta:**
+   - Hacia atrás (NO hacia arriba 🚫).
+   - Paralelo al piso de la cavidad nasal.
+   - Como si fueras hacia la garganta.
+3. 📐 **Orientación del bisel:**
+   - Debe ir paralelo al tabique nasal.
+   - ✔️ Evita que se meta debajo de un cornete.
 
-👉 Hacia atrás (NO hacia arriba 🚫)
-👉 Paralelo al piso de la cavidad nasal
-👉 Como si fueras hacia la garganta
+### ⚡ Tip Clínico Clave
+- 🚫 **Si sientes resistencia → NO FORZAR.**
+- Retirar y reintentar con mejor ángulo o por la otra fosa.
+- 👉 Forzar = 🩸 sangrado seguro.
 
-📐 3. Orientación del bisel
+### 🧠 Anatomía que debes recordar
+- **Cornete inferior:** Es el más lesionado.
+- **Arteria esfenopalatina:** Pasa debajo (zona posterior). Si se rompe, genera un sangrado importante.
 
-Debe ir paralelo al tabique nasal
-✔️ Evita que se meta debajo de un cornete
-⚡ TIP CLÍNICO CLAVE
+### ⏳ Complicaciones por dejar el tubo
+- 🚫 Bloqueo de meatos.
+- 💧 Acumulación de secreciones.
+- 🤧 Infección → SINUSITIS.
 
-🚫 Si sientes resistencia → NO FORZAR
+> 💡 **RESUMEN ULTRA RÁPIDO:** “Recto hacia atrás, bien lubricado y sin forzar”.
 
-Retirar
-Reintentar con mejor ángulo o por la otra fosa
+---
 
-👉 Forzar = 🩸 sangrado seguro
+## 3. ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
 
-🧠 ANATOMÍA QUE DEBES RECORDAR
-👃 Cornete inferior → el más lesionado
-🩸 Debajo (zona posterior) pasa la arteria esfenopalatina
-→ si se rompe = sangrado importante
-⏳ COMPLICACIONES POR DEJAR EL TUBO
-🚫 Bloqueo de meatos
-💧 Acumulación de secreciones
-🤧 Infección → SINUSITIS
-💡 RESUMEN ULTRA RÁPIDO
+### 👄 Pilares del Paladar
+Se organizan en 2 pares (a cada lado):
+- 🔹 **Pilar anterior:** Glosopalatino.
+- 🔹 **Pilar posterior:** Faríngopalatino.
 
-👉 “Recto hacia atrás, bien lubricado y sin forzar”
+**📍 Ubicación:**
+- A ambos lados del paladar blando.
+- Forman la arcada posterior de la cavidad oral.
 
-## 🩺 ANATOMÍA CLAVE EN INTUBACIÓN Y LARINGOSCOPÍA
-👄 PILARES DEL PALADAR
+**⚠️ Importancia clínica:**
+Son tejidos muy frágiles (friables). Se lesionan fácilmente con la punta del laringoscopio o maniobras bruscas.
+- 💥 **Consecuencia:** Sangrado profuso y difícil de controlar.
 
-👉 Se organizan en 2 pares (a cada lado):
+### 🧠 Espacio Retrofaríngeo
+**📍 Ubicación:** La pared posterior de la faringe contacta con la fascia prevertebral, creando un **“espacio virtual retrofaríngeo”**.
 
-🔹 Pilar anterior: glosopalatino
-🔹 Pilar posterior: faríngopalatino
+**⚠️ ¿Por qué es importante?**
+Cualquier lesión en la zona cervical alta (C1–C3) puede expandirse ahí (hematomas, edema, infecciones).
+- 👉 Si atraviesan la fascia y ocupan el espacio retrofaríngeo:
+- 💥 **Consecuencia grave:** Obstrucción de la vía aérea.
 
-📍 Ubicación:
+**😷 Otros factores que dificultan la intubación:**
+- 💨 Enfisema.
+- 📦 Ocupación del espacio retrofaríngeo.
+- 👉 **Resultado:** Intubación orotraqueal más difícil.
 
-A ambos lados del paladar blando
-Forman la arcada posterior de la cavidad oral
-⚠️ IMPORTANCIA CLÍNICA
+---
 
-😬 Son tejidos muy frágiles (friables)
+## 🔍 TIPOS DE LARINGOSCOPIO
 
-👉 Se lesionan fácilmente con:
+### 🔵 Laringoscopio tipo Macintosh (Curvo)
+- **📍 Ubicación:** Se coloca en la **Valécula**.
+- **🧠 Inervación:** Nervio glosofaríngeo (IX).
 
-Punta del laringoscopio
-Maniobras bruscas
+### 🔴 Laringoscopio tipo Miller (Recto)
+- **📍 Acción:** Actúa directamente sobre la **Epiglotis** (la levanta).
+- **🧠 Inervación:** Rama interna del nervio laríngeo superior, deriva del nervio vago (X).
 
-💥 Consecuencia:
+**⚠️ Diferencia clínica importante:**
+- El Miller (recto) genera más estímulo directo sobre la epiglotis.
+- ⚡ Mayor riesgo de **estimulación vagal**.
+- 💥 Puede provocar: **Bradicardia** (↓ respuesta cardiovascular).
 
-🩸 Sangrado profuso
-❗ Difícil de controlar
-🧠 ESPACIO RETROFARÍNGEO
+---
 
-📍 La pared posterior de la faringe contacta con la fascia prevertebral
-
-➡️ Esto crea un:
-
-👉 “Espacio virtual retrofaríngeo”
-⚠️ ¿Por qué es importante?
-
-Cualquier lesión en la zona cervical alta (C1–C3) puede expandirse ahí:
-
-🩸 Hematomas
-💧 Edema
-🦠 Infecciones
-
-👉 Si atraviesan la fascia:
-➡️ Ocupan el espacio retrofaríngeo
-
-💥 Consecuencia grave:
-
-🚫 Obstrucción de la vía aérea
-😷 OTROS FACTORES QUE DIFICULTAN LA INTUBACIÓN
-💨 Enfisema
-📦 Ocupación del espacio retrofaríngeo
-
-👉 Resultado:
-❌ Intubación orotraqueal más difícil
-
-🔍 TIPOS DE LARINGOSCOPIO
-🔵 Laringoscopio tipo Macintosh (curvo)
-
-📍 Se coloca en:
-👉 Valécula
-
-🧠 Inervación:
-
-Nervio glosofaríngeo (IX)
-🔴 Laringoscopio tipo Miller (recto)
-
-📍 Actúa directamente sobre:
-👉 Epiglotis (la levanta)
-
-🧠 Inervación:
-
-Rama interna del nervio laríngeo superior
-Deriva del nervio vago (X)
-⚠️ DIFERENCIA CLÍNICA IMPORTANTE
-
-👉 Miller (recto):
-
-Más estímulo directo sobre epiglotis
-⚡ Mayor riesgo de estimulación vagal
-
-💥 Puede provocar:
-
-🫀 Bradicardia
-↓ respuesta cardiovascular
-💡 RESUMEN ULTRA RÁPIDO
-
-👉 Pilares = frágiles → sangran fácil
-👉 Espacio retrofaríngeo = peligro de obstrucción
-👉 Macintosh = valécula (IX)
-👉 Miller = epiglotis (X) → más vagal
+> 💡 **RESUMEN ULTRA RÁPIDO FINAL:**
+> - **Pilares** = frágiles → sangran fácil.
+> - **Espacio retrofaríngeo** = peligro de obstrucción.
+> - **Macintosh** = valécula (IX).
+> - **Miller** = epiglotis (X) → más vagal.
 
  # 🫁 SISTEMAS DE OXÍGENO SUPLEMENTARIO
  ## 🔵 CLASIFICACIÓN GENERAL
