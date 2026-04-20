@@ -111,3 +111,10 @@ Coloración azulada por hemoglobina reducida > 5 g/dl (Saturación < 85%).
 * El **90%** de los casos se origina en las **arterias bronquiales** (circulación sistémica de alta presión).
 * La principal causa de muerte en hemoptisis masiva es la **asfixia**, no el shock hipovolémico.
 * **Manejo:** Reposo en **decúbito lateral sobre el lado afectado** para evitar que la sangre inunde el pulmón sano.
+
+## 4 Factores protectores del pulmón: 
+De acuerdo con las fuentes, los cuatro sistemas o factores protectores del pulmón que se mencionan (y que suelen verse comprometidos en pacientes vulnerables como los ancianos) son los siguientes:
+- La tos: Se describe como un mecanismo de defensa que en los abuelitos puede no ser eficiente o, en muchos casos, estar ausente
+- Sistema mucociliar: Este sistema se encarga del transporte del moco y se ve afectado significativamente si el paciente está deshidratado
+- Sistema fagocitario: Es el sistema que se activa para combatir la infección en la neumonía; su alteración puede predisponer a complicaciones
+- Sistema inmune: Representa la capacidad de respuesta general del organismo, la cual suele estar disminuida en pacientes de edad avanzada o con comorbilidades.
