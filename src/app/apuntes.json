@@ -83,7 +83,8 @@
           { "label": "S6TC: Síndromes Cavitarios", "file": "Quinto/Interna/Pulmon/S6TC.md", "keywords": ["cavitario", "tuberculosis", "nocardia", "micosis","hidatidosis"] },
           { "label": "S6TL: Neumonías Típicas", "file": "Quinto/Interna/Pulmon/S6TL.md", "keywords": ["neumonia", "NAC", "streptococo pneumoniae ", "vacuna","neumococo"] },
           { "label": "S6TL Pt.2: Neumonías Atípicas", "file": "Quinto/Interna/Pulmon/S6TLP2.md", "keywords": ["neumonia", "NAC", "streptococo pneumoniae", "vacuna","neumococo"] },
-          { "label": "S6TL Pt.3: Neumonías Intrahospitalarias", "file": "Quinto/Interna/Pulmon/S6TLP3.md", "keywords": ["neumonia", "intrahospitalaria", "crónica", "pseudomona", "gravisima","klebsiella"] }
+          { "label": "S6TL Pt.3: Neumonías Intrahospitalarias", "file": "Quinto/Interna/Pulmon/S6TLP3.md", "keywords": ["neumonia", "intrahospitalaria", "crónica", "pseudomona", "gravisima","klebsiella"] },
+          { "label": "📝 Notas en Vivo (Drive)", "file": "https://docs.google.com/document/d/e/2PACX-1vS1zuJ5BZJ6CNlMrn9p0V3k79he2H4oFXduMLzRvlOFtnA-WEir8iG30_V3GKAZWjPUAOgiVyLkWovE/pub", "keywords": ["notas", "google drive", "neumonia", "intrahospitalaria"] }
         ]
       },
       {
