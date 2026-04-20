@@ -99,197 +99,37 @@ Cualquier lesión en la zona cervical alta (C1–C3) puede expandirse ahí (hema
 > - **Macintosh** = valécula (IX).
 > - **Miller** = epiglotis (X) → más vagal.
 
- # 🫁 SISTEMAS DE OXÍGENO SUPLEMENTARIO
- ## 🔵 CLASIFICACIÓN GENERAL
+# 🫁 Resumen: Oxigenoterapia y Sistemas de Entrega
 
-👉 Se dividen en:
+## 1. El Concepto Clave: Flujo vs. FiO2
+Para entender la diferencia entre bajo y alto flujo, debemos comparar el flujo del dispositivo con el **Pico Flujo Inspiratorio** del paciente (la velocidad de su "bocanada" de aire, aprox. **20-30 L/min**).
 
-1. 🟡 Sistemas de BAJO flujo
-Cánula nasal
-Máscara facial simple
-Máscara con bolsa reservorio
-
-📌 Característica clave:
-👉 ❗ FIO₂ VARIABLE
-
-2. 🔴 Sistemas de ALTO flujo
-
-📌 Característica clave:
-👉 ✅ FIO₂ CONSTANTE
-
-🧠 ¿POR QUÉ LOS DE BAJO FLUJO SON VARIABLES?
-
-👉 Porque:
-
-El flujo del dispositivo NO cubre toda la demanda del paciente
-
-😮‍💨 Entonces el paciente:
-
-Inhala O₂ del dispositivo ➕ aire ambiente
-📊 LA FIO₂ DEPENDE DE:
-📦 Tamaño del reservorio
-🚰 Velocidad de llenado
-😮‍💨 Demanda ventilatoria del paciente
-🔴 SISTEMAS DE ALTO FLUJO
-
-👉 Logran FIO₂ constante porque:
-
-💨 El flujo supera la demanda inspiratoria
-o
-⚙️ Mezclan aire + O₂ en proporción fija
-🟡 DISPOSITIVOS DE BAJO FLUJO
-👃 1. CÁNULA NASAL
-📌 Características
-✔️ Bien tolerada 👍
-✔️ Permite hablar, comer
-
-📍 Funciona como reservorio:
-
-Nasofaringe + orofaringe (~50 ml)
-⚙️ Flujo y FIO₂
-1–6 L/min
-FIO₂ aprox: 24–44%
-
-🚫 >6 L/min:
-
-❌ No aumenta FIO₂
-😖 Disminuye tolerancia
-🧰 Equipamiento
-Fuente de O₂
-Flujímetro
-Cánula nasal
-⚠️ Consideraciones
-👃 Fosas nasales permeables
-😌 Evaluar confort del paciente
-😷 2. MÁSCARA FACIAL SIMPLE
-📌 Características
-Reservorio: 100–200 ml
-Orificios laterales:
-Eliminan CO₂
-Permiten entrada de aire ambiente
-⚙️ Flujo y FIO₂
-🔽 Mínimo: 5 L/min
-❗ Evita reinhalación de CO₂
-🔼 Óptimo: 5–8 L/min
-FIO₂ hasta ~60%
-
-🚫 >8 L/min:
-
-❌ No aumenta FIO₂
-⚠️ Consideraciones
-Ajuste laxo
-👀 Evitar irritación ocular (posición correcta)
-😷💨 3. MÁSCARA CON BOLSA RESERVORIO
-📌 Características
-Reservorio grande:
-📦 600–1000 ml
-
-👉 Mayor aporte de O₂
-
-🔄 Tipos
-1. 🔸 Reinhalación parcial
-Permite inhalar parte del aire exhalado
-2. 🔹 No reinhalación (con válvula unidireccional)
-🚫 No entra aire ambiente
-🚫 No reinhala CO₂
-
-👉 🔥 Mayor FIO₂ posible dentro de bajo flujo
-
-💡 RESUMEN ULTRA RÁPIDO
-
-👉 Bajo flujo = ❗FIO₂ VARIABLE
-👉 Alto flujo = ✅FIO₂ CONSTANTE
-
-👉 Cánula: cómoda 😌 pero limitada
-👉 Máscara simple: ↑ FIO₂ moderado
-👉 Reservorio: ↑↑ FIO₂ (mejor opción en hipoxia)
-
-## 🔴 DISPOSITIVO DE ALTO FLUJO: MÁSCARA DE VENTURI
+* **Bajo Flujo:** El dispositivo entrega < 20 L/min. El paciente "rellena" lo que falta con aire ambiente (21%). La **FiO2 es variable**.
+* **Alto Flujo:** El dispositivo entrega > 30-40 L/min. Cubre toda la demanda del paciente. La **FiO2 es exacta y constante**.
 
 ---
 
-### 🫁 ¿QUÉ LA HACE DIFERENTE?
+## 2. Tabla Comparativa de Dispositivos
 
-👉 Es un sistema de **ALTO FLUJO**
-
-📌 Característica clave:
-👉 ✅ **Entrega FIO₂ CONSTANTE**
-(independiente del patrón respiratorio)
-
----
-
-### 🧠 PRINCIPIO FÍSICO: BERNOULLI
-
-P + 1/2 ρv² + ρgh = constante
+| Dispositivo | Clasificación | FiO2 Estimada | Flujo Sugerido | Perla Clínica (Ejemplo de Paciente) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Cánula Nasal** | Bajo Flujo | 24% - 44% | 1 - 5 L/min | **Paciente estable:** Post-op, neumonía leve. Sumar 4% por litro. |
+| **Máscara Simple** | Bajo Flujo | 40% - 60% | 5 - 8 L/min | **Paciente moderado:** Requiere más flujo que la cánula. Mínimo 5L para barrer CO2. |
+| **Bolsa Reservorio** | Bajo Flujo | 60% - 90%+ | 10 - 15 L/min | **Paciente crítico:** Emergencia, edema agudo de pulmón. Bolsa siempre inflada. |
+| **Venturi** | **Alto Flujo** | **24% - 50%** | Variable (picos) | **Paciente EPOC:** Necesita FiO2 precisa para no anular el estímulo respiratorio. |
 
 ---
 
-### 💡 ¿Cómo funciona en la práctica?
+## 3. Dinámica de la FiO2 (Efecto Dilución)
+¿Por qué la FiO2 baja si el paciente respira más rápido en sistemas de bajo flujo?
 
-1. 💨 El O₂ pasa por un **orificio estrecho (jet)**
-2. 🚀 Aumenta su **velocidad**
-3. 📉 Disminuye la **presión lateral**
-4. 🌬️ Se “aspira” aire ambiente hacia el sistema
-5. ➕ Se mezcla O₂ + aire → flujo total alto
+* **Respiración tranquila:** Menos aire ambiente entra → El O2 puro de la cánula está más concentrado → **FiO2 ALTA.**
+* **Respiración agitada:** Mucho aire ambiente (21%) entra rápido → Se "diluye" el O2 puro de la cánula → **FiO2 BAJA.**
 
 ---
 
-### ⚙️ RESULTADO FINAL
-
-👉 Se genera:
-- 💨 **Flujo total elevado**
-- 🎯 **FIO₂ fija y precisa**
-
----
-
-### 📊 ¿DE QUÉ DEPENDE LA FIO₂?
-
-👉 En Venturi es **predecible** porque:
-
-- Existe una relación fija entre:
-  - 🚰 Flujo de O₂
-  - 🔘 Tamaño del orificio (adaptador de color)
-  - 🌬️ Aire ambiente entrante
-
-👉 💡 Cada adaptador entrega una **FIO₂ específica** (ej: 24%, 28%, 35%, etc.)
-
----
-
-### 🔥 CLAVE FISIOLÓGICA
-
-👉 El sistema debe generar:
-
-📈 **3–4 veces la ventilación minuto del paciente**
-
-👉 Así logra:
-- Cubrir TODA la demanda inspiratoria
-- 🚫 Evitar entrada de aire ambiente extra
-- ✅ Mantener FIO₂ constante
-
----
-
-### ⚠️ IMPORTANCIA CLÍNICA
-
-👉 Ideal en pacientes donde necesitas **control preciso de FIO₂**:
-- EPOC (muy preguntado 👀)
-- Insuficiencia respiratoria controlada
-
----
-
-## 🧰 OTROS DISPOSITIVOS DE ALTO FLUJO
-
-- 🌫️ Máscaras para **aerosolterapia**
-- 🔄 **Collar de traqueostomía**
-- 🔧 **Tubo en T**
-
-👉 Todos permiten:
-- Aporte de O₂ humidificado
-- FIO₂ más controlada que bajo flujo
-
----
-
-## 💡 RESUMEN ULTRA RÁPIDO
-
-👉 Venturi = 🎯 **precisión**  
-👉 Bernoulli = 💨 ↑ velocidad → ↓ presión → entra aire  
-👉 Flujo alto = cubre demanda → FIO₂ constante  
+## 4. Notas de Seguridad y Monitoreo
+> [!IMPORTANT]
+> 1. **Oxímetro de Pulso:** Cuidado en intoxicación por CO (da falsos normales).
+> 2. **Humedificación:** Necesaria solo en flujos > 4 L/min para evitar lesiones en la mucosa.
+> 3. **EPOC:** Controlar la terapia al menos cada 2 horas por su alta sensibilidad al O2.
